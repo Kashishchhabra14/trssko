@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRSSKO Enterprises | Global Export House</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- GLOBAL VARIABLES --- */
+        :root {
+            --primary: #0f172a;       /* Deep Navy */
+            --secondary: #b8860b;     /* Dark Gold */
+            --light: #f8fafc;
+            --text-gray: #64748b;
+            --white: #ffffff;
+            --transition: all 0.3s ease-in-out;
+            --whatsapp-green: #25d366;
+        }
+
+        /* --- RESET & BASE --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--primary);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--primary); }
+        p { line-height: 1.8; color: var(--text-gray); font-size: 1rem; }
+        a { text-decoration: none; transition: var(--transition); }
+        ul { list-style: none; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 8%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .logo { font-size: 1.8rem; font-weight: 700; letter-spacing: 1px; color: var(--primary); }
+        .logo span { color: var(--secondary); }
+
+        .nav-links { display: flex; gap: 40px; align-items: center; }
+        .nav-links a { color: var(--primary); font-weight: 500; font-size: 0.9rem; text-transform: uppercase; }
+        .nav-links a:hover { color: var(--secondary); }
+
+        .cta-nav { padding: 10px 25px; background: var(--primary); color: var(--white) !important; border-radius: 50px; }
+        .cta-nav:hover { background: var(--secondary); transform: translateY(-2px); }
+
+        /* Hamburger Icon */
+        .hamburger { display: none; cursor: pointer; font-size: 1.8rem; color: var(--primary); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            color: var(--white);
+            margin-top: -90px;
+            padding-top: 90px;
+        }
+
+        .hero-content { max-width: 600px; animation: fadeIn 1.5s ease; }
+        .hero-subtitle { color: var(--secondary); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 10px; display: block; }
+        .hero h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 20px; color: var(--white); }
+        .hero p { color: #cbd5e1; font-size: 1.1rem; margin-bottom: 30px; }
+        .hero-btn { padding: 15px 40px; background: var(--secondary); color: var(--white); font-weight: 600; border-radius: 2px; display: inline-block; }
+        .hero-btn:hover { background: var(--white); color: var(--primary); }
+
+        /* --- DIRECTOR MESSAGE SECTION --- */
+        .director-section {
+            padding: 100px 8%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .director-image-box { flex: 1; position: relative; }
+
+        /* UPDATED: Path changed to local resource folder */
+        .director-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 4px;
+            background: url('resource/director.jpg') center/cover;
+            box-shadow: 20px 20px 0 var(--primary);
+        }
+
+        .director-content { flex: 1.2; }
+        .director-content h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .quote-icon { font-size: 3rem; color: var(--secondary); opacity: 0.3; margin-bottom: -20px; display: block; }
+        
+        .director-text {
+            font-size: 1.1rem;
+            color: #334155;
+            margin-bottom: 30px;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .director-sign { margin-top: 20px; }
+        .sign-name { font-family: 'Dancing Script', cursive; font-size: 2rem; color: var(--primary); }
+        .sign-title { font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: var(--secondary); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+
+        /* --- SERVICES --- */
+        .services { padding: 100px 8%; background: var(--light); }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 15px; }
+        .section-header .divider { height: 3px; width: 60px; background: var(--secondary); margin: 0 auto; }
+
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .service-card {
+            background: var(--white); padding: 40px; border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03); transition: var(--transition);
+            border-top: 3px solid transparent; position: relative;
+        }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-top: 3px solid var(--secondary); }
+        .icon-box { font-size: 2.5rem; color: var(--secondary); margin-bottom: 20px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; font-weight: 600; }
+        .service-list li { padding: 8px 0; border-bottom: 1px solid #f1f1f1; font-size: 0.9rem; color: #555; display: flex; align-items: center; }
+        .service-list li i { color: var(--secondary); margin-right: 10px; }
+
+        /* --- FOOTER --- */
+        footer { background: #0b1120; color: #fff; padding: 80px 8% 30px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px; }
+        
+        .footer-logo { font-size: 1.5rem; font-weight: bold; margin-bottom: 20px; display: block; color: var(--white); }
+        
+        .contact-item { display: flex; align-items: start; gap: 15px; margin-bottom: 15px; color: #94a3b8; font-size: 0.9rem; }
+        a.contact-item:hover { color: var(--secondary); }
+        .contact-item i { color: var(--secondary); margin-top: 5px; }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%; padding: 12px; margin-bottom: 15px; background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; border-radius: 4px; font-family: 'Poppins', sans-serif;
+        }
+        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--secondary); background: rgba(255, 255, 255, 0.1); }
+        .form-btn {
+            background: var(--secondary); color: var(--white); border: none; padding: 10px 25px;
+            cursor: pointer; font-weight: 600; border-radius: 2px; transition: var(--transition);
+        }
+        .form-btn:hover { background: var(--white); color: var(--primary); }
+
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; text-align: center; color: #64748b; font-size: 0.85rem; }
+
+        /* --- WHATSAPP FLOATING BUTTON --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp-green);
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 2000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 20px rgba(0,0,0,0.4);
+            color: #fff;
+        }
+        .whatsapp-float i { margin-top: 2px; }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                height: calc(100vh - 80px);
+                width: 100%;
+                background: #ffffff;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 50px;
+                transition: 0.4s ease-in-out;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active { right: 0; }
+            .nav-links a { margin: 20px 0; font-size: 1.2rem; }
+            .director-section { flex-direction: column; }
+            .director-img { height: 300px; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero-content { margin-top: 50px; }
+            
+            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 25px; }
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">TRSSKO <span>GROUP</span></div>
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="#home" onclick="closeMenu()">Home</a>
+            <a href="#director" onclick="closeMenu()">Director's Desk</a>
+            <a href="#services" onclick="closeMenu()">Divisions</a>
+            <a href="#contact" class="cta-nav" onclick="closeMenu()">Get Quote</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-subtitle">International Trade Specialists</span>
+            <h1>Bridging Global Markets with Integrity</h1>
+            <p>From the fields of India to the global marketplace. We are a diversified export house specializing in Premium FMCG, Pharmaceuticals, and High-End Apparel.</p>
+            <a href="#director" class="hero-btn">Meet Our Leadership</a>
+        </div>
+    </section>
+
+    <section class="director-section" id="director">
+        <div class="director-image-box">
+            <div class="director-img"></div>
+        </div>
+        <div class="director-content">
+            <span style="color: var(--secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Leadership & Vision</span>
+            <h2>From the Director's Desk</h2>
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p class="director-text">
+                "At TRSSKO, we believe that international trade is built not just on products, but on promises kept. As a legal professional and entrepreneur, I founded this company with a singular vision: to bring the transparency and integrity of the legal world into the dynamism of global exports.
+                <br><br>
+                Whether it is the purity of our agricultural produce, the safety of our pharmaceuticals, or the quality of our textiles, we stand behind every shipment. We don't just export goods; we export trust."
+            </p>
+            <div class="director-sign">
+                <div class="sign-name">Adv. Kashish</div>
+                <div class="sign-title">Director, TRSSKO Fashion (OPC) Pvt Ltd</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>Our Business Divisions</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-leaf"></i></div>
+                <h3>TRSSKO Agro & FMCG</h3>
+                <p>Delivering the pure taste of India. We source directly from farmers to ensure organic quality.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check"></i> Premium Jaggery Powder</li>
+                    <li><i class="fas fa-check"></i> Pure Mustard Oil</li>
+                    <li><i class="fas fa-check"></i> Spices & Grains</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-prescription-bottle-medical"></i></div>
+                <h3>TRSSKO Pharma</h3>
+                <p>Meeting global healthcare standards. Our pharmaceutical line focuses on safety and regulatory compliance.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check"></i> DSR Capsules</li>
+                    <li><i class="fas fa-check"></i> Generic Medicines</li>
+                    <li><i class="fas fa-check"></i> Third-Party Mfg</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-tshirt"></i></div>
+                <h3>TRSSKO Fashion</h3>
+                <p>Where tradition meets trend. We export high-quality garments with focus on fabric excellence.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check"></i> Women's Ethnic Wear</li>
+                    <li><i class="fas fa-check"></i> Western Apparel</li>
+                    <li><i class="fas fa-check"></i> Textile Export</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="#" class="footer-logo">TRSSKO <span>ENTERPRISES</span></a>
+                <p style="color: #64748b; font-size: 0.9rem;">A multi-disciplinary export house committed to quality, speed, and integrity. We bridge the gap between Indian manufacturers and global buyers.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4 style="margin-bottom: 20px;">Contact Us</h4>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+91 9808685168</span>
+                </div>
+                <a href="mailto:kashish@trssko.in" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>kashish@trssko.in</span>
+                </a>
+                <a href="https://maps.google.com/?q=Ramraj,+Uttar+Pradesh,+India" target="_blank" class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Ramraj, Uttar Pradesh, India</span>
+                </a>
+            </div>
+
+            <div class="footer-col">
+                <h4 style="margin-bottom: 20px;">Quick Enquiry</h4>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="3" placeholder="Message or Requirement"></textarea>
+                    <button type="submit" class="form-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 TRSSKO FASHION (OPC) PRIVATE LIMITED. All Rights Reserved.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919808685168?text=Hello%20TRSSKO%20Team,%20I%20am%20interested%20in%20your%20products." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        const icon = hamburger.querySelector('i');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        function closeMenu() {
+            navLinks.classList.remove('active');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    </script>
+
+</body>
+</html>
