@@ -8,10 +8,9 @@
         /* General Reset */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         
-        /* Variables for TRSSKO Brand Colors */
         :root {
-            --primary-blue: #003366; /* Professional Corporate Blue */
-            --accent-gold: #C5A059; /* Gold for Quality/Export */
+            --primary-blue: #003366; 
+            --accent-gold: #C5A059; 
             --light-gray: #f4f4f4;
             --text-dark: #333;
         }
@@ -40,7 +39,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1600&q=80'); 
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80'); 
             background-size: cover;
             background-position: center;
             color: #fff;
@@ -59,7 +58,6 @@
             font-weight: bold;
             transition: background 0.3s;
         }
-        .btn:hover { background: #b08d4b; }
 
         /* Business Verticals */
         .verticals { padding: 80px 5%; background: #fff; text-align: center; }
@@ -75,52 +73,55 @@
             background: var(--light-gray);
             padding: 30px;
             border-radius: 8px;
-            transition: transform 0.3s;
             text-align: left;
             border-bottom: 4px solid var(--accent-gold);
         }
-        
-        .card:hover { transform: translateY(-5px); }
         .card h3 { color: var(--primary-blue); margin-bottom: 15px; font-size: 1.5rem; }
-        .card ul { margin-left: 20px; margin-bottom: 20px; color: #555; }
 
-        /* Director Section (Integration) */
+        /* Director Section */
         .director-section {
-            background: #fff;
             padding: 80px 5%;
+            background: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 50px;
+            gap: 60px;
             flex-wrap: wrap;
         }
 
         .director-img {
             width: 320px;
-            height: 400px;
+            height: 420px;
             object-fit: cover;
-            border: 8px solid var(--light-gray);
-            border-bottom: 8px solid var(--accent-gold);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border: 10px solid var(--light-gray);
+            border-bottom: 10px solid var(--accent-gold);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
 
         .director-text { flex: 1; max-width: 600px; }
-        .director-text h2 { color: var(--primary-blue); margin-bottom: 10px; font-size: 2.2rem; }
-        .director-text .title { color: var(--accent-gold); font-weight: bold; font-size: 1.1rem; display: block; margin-bottom: 20px; }
+        .director-text h2 { color: var(--primary-blue); font-size: 2.5rem; margin-bottom: 10px; }
+        .director-text .title { color: var(--accent-gold); font-weight: bold; display: block; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* About & Export */
-        .about { background: var(--primary-blue); color: #fff; padding: 60px 5%; text-align: center; }
-        .about-text h2 { margin-bottom: 20px; color: var(--accent-gold); }
+        /* Legal Badges */
+        .legal-info {
+            background: var(--primary-blue);
+            color: #fff;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+        }
+        .legal-item { border: 1px solid var(--accent-gold); padding: 10px 20px; border-radius: 4px; }
 
         /* Footer */
-        footer { background: #222; color: #fff; padding: 40px 5%; text-align: center; }
+        footer { background: #111; color: #fff; padding: 60px 5%; text-align: center; }
         .contact-info { margin-top: 20px; color: #ccc; }
-        .contact-info p { margin: 5px 0; }
+        .footer-bottom { margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; font-size: 0.8rem; color: #777; }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
-            header { flex-direction: column; gap: 10px; }
             .director-section { text-align: center; }
         }
     </style>
@@ -131,9 +132,7 @@
         <div class="logo">TRSSKO <span>ENTERPRISES</span></div>
         <nav>
             <ul>
-                <li><a href="#fmcg">FMCG</a></li>
-                <li><a href="#pharma">Pharma</a></li>
-                <li><a href="#apparel">Apparel</a></li>
+                <li><a href="#divisions">Divisions</a></li>
                 <li><a href="#director">Director</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -142,48 +141,29 @@
 
     <section class="hero">
         <h1>Quality Beyond Borders</h1>
-        <p>Your trusted partner for premium Indian Exports. Specializing in FMCG, Pharmaceutical Solutions, and Fashion Apparel.</p>
+        <p>Premium Indian Exports specializing in FMCG, Pharma Solutions, and Fashion Apparel.</p>
         <a href="#contact" class="btn">Partner With Us</a>
     </section>
 
-    <section class="verticals">
-        <h2>Our Divisions</h2>
+    <div class="legal-info">
+        <div class="legal-item"><strong>CIN:</strong> U18209UP2023OPC176366</div>
+        <div class="legal-item"><strong>TRADEMARK REG:</strong> 7277253</div>
+    </div>
+
+    <section class="verticals" id="divisions">
+        <h2>Our Global Divisions</h2>
         <div class="grid-container">
-            <div class="card" id="fmcg">
+            <div class="card">
                 <h3>TRSSKO Foods & Spices</h3>
-                <p>Authentic Indian flavors delivered globally. We ensure the highest purity standards for international markets.</p>
-                <br>
-                <strong>Key Products:</strong>
-                <ul>
-                    <li>Premium Jaggery Powder</li>
-                    <li>Pure Mustard Oil</li>
-                    <li>Rice, Pulses & Tea</li>
-                    <li>Indian Spices</li>
-                </ul>
+                <p>Authentic Indian flavors: Jaggery Powder, Mustard Oil, and Premium Spices meeting international purity standards.</p>
             </div>
-
-            <div class="card" id="pharma">
+            <div class="card">
                 <h3>TRSSKO Pharma</h3>
-                <p>Committed to health and wellness. We provide high-quality pharmaceutical formulations with complete documentation for export.</p>
-                <br>
-                <strong>Key Products:</strong>
-                <ul>
-                    <li>DSR Capsules (Domperidone & Pantoprazole)</li>
-                    <li>Third-Party Manufacturing</li>
-                    <li>Generic Medicines</li>
-                </ul>
+                <p>High-quality formulations including DSR Capsules and generic medicines with full export documentation.</p>
             </div>
-
-            <div class="card" id="apparel">
+            <div class="card">
                 <h3>TRSSKO Fashion</h3>
-                <p>Merging traditional craftsmanship with modern style. Our apparel division focuses on quality fabrics and trendy designs.</p>
-                <br>
-                <strong>Key Products:</strong>
-                <ul>
-                    <li>Women's Ethnic & Western Wear</li>
-                    <li>Textiles & Fabrics</li>
-                    <li>Custom Manufacturing</li>
-                </ul>
+                <p>Export-quality Women's Ethnic and Western wear, merging traditional craft with modern global trends.</p>
             </div>
         </div>
     </section>
@@ -193,28 +173,24 @@
         <div class="director-text">
             <h2>Kashish Chhabra</h2>
             <span class="title">Founder & Director</span>
-            <p>A Law Graduate and registered Advocate with the Bar Council of Uttar Pradesh, Kashish Chhabra brings a unique blend of legal integrity and technical expertise (BCA) to the world of international trade. </p>
-            <p>Under her leadership, TRSSKO FASHION (OPC) PRIVATE LIMITED has grown into a multi-disciplinary enterprise, ensuring that every product exported meets the highest standards of quality and compliance for global markets.</p>
-        </div>
-    </section>
-
-    <section class="about">
-        <div class="about-text">
-            <h2>Why Choose TRSSKO?</h2>
-            <p>Whether it is the purity of our agricultural products or the precision of our pharmaceuticals, we strictly adhere to export quality standards for markets including the UAE and Southeast Asia.</p>
+            <p>As a Law Graduate and registered Advocate with the Bar Council of Uttar Pradesh, Kashish Chhabra leads TRSSKO with a foundation of legal integrity and technical precision (BCA). </p>
+            <br>
+            <p>Under her guidance, TRSSKO FASHION (OPC) PRIVATE LIMITED ensures seamless global trade, adhering strictly to the highest quality benchmarks for international markets including the UAE and Southeast Asia.</p>
         </div>
     </section>
 
     <footer id="contact">
-        <h3>Contact Us</h3>
-        <p>Ready to discuss your requirements?</p>
+        <h3>Contact Our Office</h3>
         <div class="contact-info">
             <p><strong>Phone:</strong> +91 9808685168</p>
             <p><strong>Email:</strong> kashish@trssko.in</p>
             <p><strong>Address:</strong> Ramraj, Meerut, Uttar Pradesh, India</p>
         </div>
-        <br>
-        <p style="font-size: 0.8rem; color: #666;">&copy; 2026 TRSSKO FASHION (OPC) PRIVATE LIMITED. All Rights Reserved.</p>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 TRSSKO FASHION (OPC) PRIVATE LIMITED. All Rights Reserved.</p>
+            <p>Company Registered under MCA | CIN: U18209UP2023OPC176366 | Trademark Application No: 7277253</p>
+        </div>
     </footer>
 
 </body>
