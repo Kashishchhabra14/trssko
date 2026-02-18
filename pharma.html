@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRSSKO Life Science | Pharmaceutical Solutions</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        :root { --primary-blue: #003366; --accent-gold: #C5A059; --light-gray: #f4f4f4; }
+        
+        body { background: #fff; color: #333; line-height: 1.6; }
+        header { background: #fff; padding: 1.5rem 5%; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-blue); text-decoration: none; text-transform: uppercase; }
+        .logo span { color: var(--accent-gold); }
+
+        .container { padding: 60px 5%; max-width: 1200px; margin: 0 auto; text-align: center; }
+        h1 { color: var(--primary-blue); margin-bottom: 10px; font-size: 2.5rem; }
+        .subtitle { color: var(--accent-gold); font-weight: bold; margin-bottom: 50px; display: block; letter-spacing: 1px; }
+
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .product-card { border: 1px solid #eee; padding: 25px; border-radius: 12px; transition: 0.4s; background: var(--light-gray); text-align: left; position: relative; }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: var(--accent-gold); }
+        
+        .product-card h3 { color: var(--primary-blue); margin-bottom: 10px; font-size: 1.4rem; border-bottom: 2px solid var(--accent-gold); display: inline-block; padding-bottom: 5px; }
+        .product-card p { color: #666; font-size: 0.95rem; margin: 15px 0; }
+        
+        .price-tag { background: #fff; border: 1px dashed var(--accent-gold); padding: 10px; border-radius: 5px; margin-bottom: 20px; }
+        .price-tag span { font-weight: bold; color: var(--primary-blue); font-size: 1.1rem; }
+        
+        .buy-btn { background: #25D366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: block; text-align: center; transition: 0.3s; }
+        .buy-btn:hover { background: #128C7E; }
+
+        footer { background: #111; color: white; padding: 40px 5%; text-align: center; margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">TRSSKO <span>LIFE SCIENCE</span></a>
+        <nav><a href="index.html" style="text-decoration: none; color: var(--primary-blue); font-weight: bold;">← Back to Home</a></nav>
+    </header>
+
+    <div class="container">
+        <h1>Pharmaceutical Division</h1>
+        <span class="subtitle">Quality Formulations • Global Compliance • Expert Care</span>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>DSR Capsules</h3>
+                <p>Advanced formulation for effective relief. High-quality gastro-resistant capsules.</p>
+                <div class="price-tag">
+                    Price: <span>₹250 per Box (10x10)</span>
+                </div>
+                <a href="https://wa.me/919808685168?text=Hello%20TRSSKO,%20I%20want%20to%20order%20DSR%20Capsules" class="buy-btn">Order on WhatsApp</a>
+            </div>
+
+            <div class="product-card">
+                <h3>SP Tablets</h3>
+                <p>Trusted pharmaceutical solution for pain and inflammation management.</p>
+                <div class="price-tag">
+                    Price: <span>₹350 per Box</span>
+                </div>
+                <a href="https://wa.me/919808685168?text=Hello%20TRSSKO,%20I%20want%20to%20order%20SP%20Tablets" class="buy-btn">Order on WhatsApp</a>
+            </div>
+
+            <div class="product-card">
+                <h3>Sildenafil Jelly</h3>
+                <p>Premium grade oral jelly formulation manufactured to global standards.</p>
+                <div class="price-tag">
+                    Price: <span>₹250 per Box</span>
+                </div>
+                <a href="https://wa.me/919808685168?text=Hello%20TRSSKO,%20I%20want%20to%20order%20Sildenafil%20Jelly" class="buy-btn">Order on WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 TRSSKO FASHION (OPC) PRIVATE LIMITED. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
