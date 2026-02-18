@@ -3,212 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRSSKO FASHION | Official Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>TRSSKO Enterprises | FMCG, Pharma & Apparel Exports</title>
     <style>
+        /* General Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        /* Variables for TRSSKO Brand Colors */
         :root {
-            --gold: #C5A059;
-            --dark-gold: #9A7B4F;
-            --white: #ffffff;
-            --light-gray: #f9f9f9;
-            --text: #333;
+            --primary-blue: #003366; /* Professional Corporate Blue */
+            --accent-gold: #C5A059; /* Gold for Quality/Export */
+            --light-gray: #f4f4f4;
+            --text-dark: #333;
         }
 
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            color: var(--text);
-            line-height: 1.6;
-            background-color: var(--white);
-        }
+        body { color: var(--text-dark); line-height: 1.6; scroll-behavior: smooth; }
 
-        /* Navigation */
-        nav {
+        /* Header */
+        header {
+            background: #fff;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 10%;
-            background: var(--white);
-            border-bottom: 1px solid #eee;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            color: var(--gold);
-            text-decoration: none;
-            letter-spacing: 2px;
-        }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-blue); text-transform: uppercase; letter-spacing: 2px; }
+        .logo span { color: var(--accent-gold); }
 
-        .nav-links a {
-            margin-left: 30px;
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--gold);
-        }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a { text-decoration: none; color: var(--text-dark); font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--primary-blue); }
 
         /* Hero Section */
         .hero {
-            height: 60vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1600&q=80'); 
             background-size: cover;
             background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
+            color: #fff;
             text-align: center;
+            padding: 120px 20px;
         }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 48px;
-            margin-bottom: 10px;
+        
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px auto; }
+        .btn {
+            background: var(--accent-gold);
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
         }
+        .btn:hover { background: #b08d4b; }
 
-        /* Products Section */
-        .section {
-            padding: 80px 10%;
-            text-align: center;
-        }
-
-        .grid {
+        /* Business Verticals */
+        .verticals { padding: 80px 5%; background: #fff; text-align: center; }
+        .verticals h2 { margin-bottom: 50px; color: var(--primary-blue); font-size: 2.5rem; }
+        
+        .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 40px;
         }
 
         .card {
-            padding: 30px;
             background: var(--light-gray);
-            border: 1px solid #eee;
-            transition: 0.3s;
+            padding: 30px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            text-align: left;
+            border-bottom: 4px solid var(--accent-gold);
         }
+        
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--primary-blue); margin-bottom: 15px; font-size: 1.5rem; }
+        .card ul { margin-left: 20px; margin-bottom: 20px; color: #555; }
 
-        .card:hover {
-            border-color: var(--gold);
-            transform: translateY(-5px);
-        }
-
-        .card h3 {
-            color: var(--gold);
-            margin-bottom: 15px;
-        }
-
-        /* Director Section */
+        /* Director Section (Integration) */
         .director-section {
-            background-color: var(--light-gray);
+            background: #fff;
+            padding: 80px 5%;
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 50px;
             flex-wrap: wrap;
-            padding: 80px 10%;
         }
 
         .director-img {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            border: 5px solid var(--gold);
+            width: 320px;
+            height: 400px;
             object-fit: cover;
-            margin-right: 50px;
+            border: 8px solid var(--light-gray);
+            border-bottom: 8px solid var(--accent-gold);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
-        .director-info {
-            max-width: 500px;
-            text-align: left;
-        }
+        .director-text { flex: 1; max-width: 600px; }
+        .director-text h2 { color: var(--primary-blue); margin-bottom: 10px; font-size: 2.2rem; }
+        .director-text .title { color: var(--accent-gold); font-weight: bold; font-size: 1.1rem; display: block; margin-bottom: 20px; }
 
-        .director-info h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            margin-bottom: 5px;
-        }
-
-        .director-info .title {
-            color: var(--gold);
-            font-weight: 600;
-            margin-bottom: 20px;
-            display: block;
-        }
+        /* About & Export */
+        .about { background: var(--primary-blue); color: #fff; padding: 60px 5%; text-align: center; }
+        .about-text h2 { margin-bottom: 20px; color: var(--accent-gold); }
 
         /* Footer */
-        footer {
-            background: #111;
-            color: white;
-            padding: 40px 10%;
-            text-align: center;
-        }
+        footer { background: #222; color: #fff; padding: 40px 5%; text-align: center; }
+        .contact-info { margin-top: 20px; color: #ccc; }
+        .contact-info p { margin: 5px 0; }
 
+        /* Responsive */
         @media (max-width: 768px) {
-            .director-img { margin-right: 0; margin-bottom: 30px; }
-            .director-info { text-align: center; }
-            .nav-links { display: none; }
+            .hero h1 { font-size: 2.2rem; }
+            header { flex-direction: column; gap: 10px; }
+            .director-section { text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="#" class="logo">TRSSKO FASHION</a>
-        <div class="nav-links">
-            <a href="#products">Products</a>
-            <a href="#about">Director</a>
-            <a href="mailto:kashish@trssko.in">Contact</a>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <h1>Elevate Your Lifestyle</h1>
-        <p>Apparel • Spices • Pharma • Legal</p>
+    <header>
+        <div class="logo">TRSSKO <span>ENTERPRISES</span></div>
+        <nav>
+            <ul>
+                <li><a href="#fmcg">FMCG</a></li>
+                <li><a href="#pharma">Pharma</a></li>
+                <li><a href="#apparel">Apparel</a></li>
+                <li><a href="#director">Director</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="section" id="products">
-        <h2>Our Diversified Ventures</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Apparel</h3>
-                <p>Premium quality clothing and fashion essentials under the TRSSKO brand.</p>
+    <section class="hero">
+        <h1>Quality Beyond Borders</h1>
+        <p>Your trusted partner for premium Indian Exports. Specializing in FMCG, Pharmaceutical Solutions, and Fashion Apparel.</p>
+        <a href="#contact" class="btn">Partner With Us</a>
+    </section>
+
+    <section class="verticals">
+        <h2>Our Divisions</h2>
+        <div class="grid-container">
+            <div class="card" id="fmcg">
+                <h3>TRSSKO Foods & Spices</h3>
+                <p>Authentic Indian flavors delivered globally. We ensure the highest purity standards for international markets.</p>
+                <br>
+                <strong>Key Products:</strong>
+                <ul>
+                    <li>Premium Jaggery Powder</li>
+                    <li>Pure Mustard Oil</li>
+                    <li>Rice, Pulses & Tea</li>
+                    <li>Indian Spices</li>
+                </ul>
             </div>
-            <div class="card">
-                <h3>Spices & Food</h3>
-                <p>Pure Jaggery, Spices, and Mustard Oil sourced from the heart of Meerut.</p>
+
+            <div class="card" id="pharma">
+                <h3>TRSSKO Pharma</h3>
+                <p>Committed to health and wellness. We provide high-quality pharmaceutical formulations with complete documentation for export.</p>
+                <br>
+                <strong>Key Products:</strong>
+                <ul>
+                    <li>DSR Capsules (Domperidone & Pantoprazole)</li>
+                    <li>Third-Party Manufacturing</li>
+                    <li>Generic Medicines</li>
+                </ul>
             </div>
-            <div class="card">
-                <h3>Health & Pharma</h3>
-                <p>Ensuring wellness through our dedicated pharmaceutical and capsule range.</p>
+
+            <div class="card" id="apparel">
+                <h3>TRSSKO Fashion</h3>
+                <p>Merging traditional craftsmanship with modern style. Our apparel division focuses on quality fabrics and trendy designs.</p>
+                <br>
+                <strong>Key Products:</strong>
+                <ul>
+                    <li>Women's Ethnic & Western Wear</li>
+                    <li>Textiles & Fabrics</li>
+                    <li>Custom Manufacturing</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section class="director-section" id="about">
+    <section class="director-section" id="director">
         <img src="https://instasize.com/p/73607e4607a3c0c3d5c8cce3c08761744cf64b8e4d2ecdd06d54a92d48d6a10a" alt="Kashish Chhabra" class="director-img">
-        
-        <div class="director-info">
+        <div class="director-text">
             <h2>Kashish Chhabra</h2>
             <span class="title">Founder & Director</span>
-            <p>
-                An Advocate with the Bar Council of Uttar Pradesh and a BCA graduate, Kashish Chhabra blends legal precision with technical innovation. 
-                As the proprietor of TRSSKO Enterprises, she has successfully expanded the brand across multiple industries including export, 
-                retail, and pharmaceuticals.
-            </p>
-            <p><strong>Location:</strong> Ramraj, Meerut, Uttar Pradesh</p>
+            <p>A Law Graduate and registered Advocate with the Bar Council of Uttar Pradesh, Kashish Chhabra brings a unique blend of legal integrity and technical expertise (BCA) to the world of international trade. </p>
+            <p>Under her leadership, TRSSKO FASHION (OPC) PRIVATE LIMITED has grown into a multi-disciplinary enterprise, ensuring that every product exported meets the highest standards of quality and compliance for global markets.</p>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 TRSSKO FASHION (OPC) PRIVATE LIMITED. All Rights Reserved.</p>
-        <p>Contact: kashish@trssko.in</p>
+    <section class="about">
+        <div class="about-text">
+            <h2>Why Choose TRSSKO?</h2>
+            <p>Whether it is the purity of our agricultural products or the precision of our pharmaceuticals, we strictly adhere to export quality standards for markets including the UAE and Southeast Asia.</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h3>Contact Us</h3>
+        <p>Ready to discuss your requirements?</p>
+        <div class="contact-info">
+            <p><strong>Phone:</strong> +91 9808685168</p>
+            <p><strong>Email:</strong> kashish@trssko.in</p>
+            <p><strong>Address:</strong> Ramraj, Meerut, Uttar Pradesh, India</p>
+        </div>
+        <br>
+        <p style="font-size: 0.8rem; color: #666;">&copy; 2026 TRSSKO FASHION (OPC) PRIVATE LIMITED. All Rights Reserved.</p>
     </footer>
 
 </body>
