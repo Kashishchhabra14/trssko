@@ -9,106 +9,90 @@
             --primary-blue: #003366; 
             --accent-gold: #C5A059; 
             --bg-light: #ffffff;
-            --card-bg: #fdfdfd;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Helvetica Neue', Arial, sans-serif; }
-        body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
         
         header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--accent-gold); position: sticky; top: 0; z-index: 1000; }
-        .logo { font-size: 1.4rem; font-weight: bold; color: var(--primary-blue); }
-        .back-link { text-decoration: none; color: var(--primary-blue); font-weight: 600; border: 1px solid var(--primary-blue); padding: 5px 15px; border-radius: 20px; transition: 0.3s; }
+        .logo { font-size: 1.4rem; font-weight: bold; color: var(--primary-blue); text-transform: uppercase; }
+        .back-link { text-decoration: none; color: var(--primary-blue); font-weight: 600; border: 1px solid var(--primary-blue); padding: 8px 20px; border-radius: 25px; transition: 0.3s; }
         .back-link:hover { background: var(--primary-blue); color: white; }
 
-        .hero-small { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=1200&q=80'); height: 300px; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
-        
-        .container { padding: 50px 5%; max-width: 1200px; margin: auto; }
+        .container { padding: 40px 5%; max-width: 1200px; margin: auto; }
         .intro { text-align: center; margin-bottom: 50px; }
         .intro h1 { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 10px; }
         
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .product-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s; }
-        .product-card:hover { transform: translateY(-5px); }
-        .product-card img { width: 100%; height: 250px; object-fit: cover; }
-        .product-info { padding: 20px; text-align: center; }
-        .product-info h3 { color: var(--primary-blue); margin-bottom: 10px; font-size: 1.3rem; }
-        .product-info p { font-size: 0.95rem; color: #666; margin-bottom: 15px; }
-        .tag { background: var(--accent-gold); color: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
+        .product-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: transform 0.3s; }
+        .product-card:hover { transform: translateY(-10px); }
+        
+        /* Fixed image sizing for uniformity */
+        .img-container { width: 100%; height: 280px; overflow: hidden; background: #eee; }
+        .product-card img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .product-info { padding: 25px; text-align: center; }
+        .product-info h3 { color: var(--primary-blue); margin-bottom: 12px; font-size: 1.4rem; }
+        .product-info p { font-size: 0.95rem; color: #666; margin-bottom: 20px; }
+        .tag { background: var(--accent-gold); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
 
-        footer { background: var(--primary-blue); color: white; padding: 40px 5%; text-align: center; margin-top: 50px; }
+        footer { background: var(--primary-blue); color: white; padding: 30px; text-align: center; margin-top: 50px; }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo">TRSSKO <span style="color:var(--accent-gold)">FMCG</span></div>
-    <a href="index.html" class="back-link">← Back to Main</a>
+    <a href="index.html" class="back-link">← Back to Home</a>
 </header>
-
-<section class="hero-small">
-    <div>
-        <h1>Pure. Natural. Authentic.</h1>
-        <p>Bringing the best of Indian agriculture to the global table.</p>
-    </div>
-</section>
 
 <div class="container">
     <div class="intro">
-        <h1>Our Product Catalog</h1>
-        <p>Premium quality export-grade food products processed with the highest hygiene standards.</p>
+        <h1>Our Premium Food Products</h1>
+        <p>Premium quality with the highest hygiene standards, delivered worldwide.</p>
     </div>
 
     <div class="product-grid">
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1621460248085-062e73a0e1b6?auto=format&fit=crop&w=600&q=80" alt="Jaggery Powder">
+            <div class="img-container">
+                <img src="https://instasize.com/api/image/42e56dded0cac1afa0d1821873bc0efcbe1d46521dd13e32b5d3708c817c5ba1.jpeg" alt="TRSSKO Jaggery Powder">
+            </div>
             <div class="product-info">
                 <span class="tag">Natural Sweetener</span>
                 <h3>Jaggery Powder</h3>
-                <p>Pure, chemical-free jaggery powder rich in iron and minerals. Perfect for health-conscious consumers.</p>
+                <p>Pure, chemical-free and natural jaggery processed for iron and mineral richness. Global export quality.</p>
             </div>
         </div>
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&q=80" alt="Mustard Oil">
+            <div class="img-container">
+                <img src="https://instasize.com/api/image/ffe26f0d77beabebc84354e13010c392fd13f1708f360b97ccca4c803552aa91.jpeg" alt="TRSSKO Tea">
+            </div>
+            <div class="product-info">
+                <span class="tag">Premium Blend</span>
+                <h3>Tea & Masala Tea</h3>
+                <p>Professional grade CTC tea and aromatic spice blends sourced from the finest gardens of Assam.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&q=80" alt="Mustard Oil">
+            </div>
             <div class="product-info">
                 <span class="tag">Cold Pressed</span>
                 <h3>Mustard Oil</h3>
-                <p>Authentic Kachi Ghani Mustard Oil with high pungency and natural nutrients preserved.</p>
+                <p>Traditional Kachi Ghani Mustard Oil with high pungency and nutrient-rich formulation.</p>
             </div>
         </div>
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&w=600&q=80" alt="Tea and Masala Tea">
-            <div class="product-info">
-                <span class="tag">Premium Blends</span>
-                <h3>Tea & Masala Tea</h3>
-                <p>Carefully selected CTC tea and aromatic Masala Tea blends, sourced directly from Assam gardens.</p>
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80" alt="Indian Spices">
             </div>
-        </div>
-
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80" alt="Spices">
             <div class="product-info">
-                <span class="tag">Essential Spices</span>
+                <span class="tag">Authentic</span>
                 <h3>Indian Spices</h3>
-                <p>Turmeric, Chilli, and Coriander powders with high curcumin and essential oil content.</p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&q=80" alt="Rice">
-            <div class="product-info">
-                <span class="tag">Grains</span>
-                <h3>Premium Rice</h3>
-                <p>Long-grain Basmati and non-basmati varieties, aged perfectly for the finest aroma and taste.</p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1515942400420-2b98fed1f515?auto=format&fit=crop&w=600&q=80" alt="Pulses">
-            <div class="product-info">
-                <span class="tag">Nutritious</span>
-                <h3>Pulses & Lentils</h3>
-                <p>Unpolished pulses including Moong, Chana, and Toor dal, packed with natural protein.</p>
+                <p>Pure Turmeric, Chilli, and Coriander powders processed to retain natural oils and aroma.</p>
             </div>
         </div>
     </div>
@@ -116,7 +100,7 @@
 
 <footer>
     <p><strong>TRSSKO FASHION (OPC) PRIVATE LIMITED</strong></p>
-    <p>Exporting Quality from Ramraj, Meerut to the World.</p>
+    <p>CIN: U18209UP2023OPC176366</p>
 </footer>
 
 </body>
