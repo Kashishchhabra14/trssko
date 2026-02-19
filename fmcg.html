@@ -3,100 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FMCG & Food Products | TRSSKO Enterprises</title>
+    <title>FMCG Products | TRSSKO Enterprises</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --primary: #003366; --gold: #C5A059; --light: #f8f9fa; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
-        body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
+        body { background: var(--light); color: #333; }
         
-        header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--gold); position: sticky; top: 0; z-index: 1000; }
-        .logo { font-size: 1.4rem; font-weight: bold; color: var(--primary); text-transform: uppercase; }
-        .back-link { text-decoration: none; color: var(--primary); font-weight: 600; border: 1px solid var(--primary); padding: 8px 20px; border-radius: 25px; transition: 0.3s; }
-        .back-link:hover { background: var(--primary); color: white; }
-
-        .container { padding: 40px 5%; max-width: 1200px; margin: auto; }
-        .intro { text-align: center; margin-bottom: 50px; }
-        .intro h1 { font-size: 2.5rem; color: var(--primary); margin-bottom: 10px; }
+        header { background: var(--primary); color: white; padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; }
+        .back-btn { color: white; text-decoration: none; font-weight: bold; }
         
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .product-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; border-bottom: 4px solid var(--gold); }
-        .product-card:hover { transform: translateY(-10px); }
+        .container { padding: 50px 8%; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
         
-        .img-holder { width: 100%; height: 280px; overflow: hidden; background: #eee; }
-        .img-holder img { width: 100%; height: 100%; object-fit: cover; }
+        .product-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; padding-bottom: 20px; }
+        .product-card img { width: 100%; height: 200px; object-fit: cover; }
+        .product-card h3 { margin: 15px 0; color: var(--primary); }
+        .product-card p { padding: 0 15px; font-size: 0.9rem; color: #666; margin-bottom: 15px; }
         
-        .product-info { padding: 25px; text-align: center; }
-        .product-info h3 { color: var(--primary); margin-bottom: 12px; font-size: 1.4rem; }
-        .tag { background: var(--gold); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; margin-bottom: 10px; display: inline-block; }
-
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 3px #999; z-index: 100; transition: 0.3s; }
-        .whatsapp-float i { margin-top: 16px; }
-
-        footer { background: #001a33; color: white; padding: 40px 5%; text-align: center; margin-top: 50px; }
-        .maintained-by { font-size: 0.9rem; margin-top: 10px; color: var(--gold); font-weight: bold; }
+        .buy-btn { background: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">TRSSKO <span style="color:var(--gold)">ENTERPRISES</span></div>
-    <a href="index.html" class="back-link">← Back to Home</a>
+    <div style="font-size: 1.4rem; font-weight: 800;">TRSSKO<span> FMCG</span></div>
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
 </header>
 
 <div class="container">
-    <div class="intro">
-        <h1>FMCG & Food Products</h1>
-        <p>Premium export-quality goods processed with the highest hygiene standards.</p>
-    </div>
-
+    <h1 style="color: var(--primary); border-bottom: 3px solid var(--gold); display: inline-block; padding-bottom: 10px;">Our FMCG Catalog</h1>
+    
     <div class="product-grid">
         <div class="product-card">
-            <div class="img-holder">
-                <img src="https://instasize.com/api/image/42e56dded0cac1afa0d1821873bc0efcbe1d46521dd13e32b5d3708c817c5ba1.jpeg" alt="Pure Jaggery Powder">
-            </div>
-            <div class="product-info">
-                <span class="tag">Natural Sweetener</span>
-                <h3>Pure Jaggery Powder</h3>
-                <p>100% natural, chemical-free sweetener processed for international export.</p>
-            </div>
+            <img src="https://images.unsplash.com/photo-1621430037303-34e2c0746979?auto=format&fit=crop&w=500&q=80" alt="Jaggery">
+            <h3>Pure Jaggery Powder</h3>
+            <p>100% Organic and chemical-free Jaggery sourced from the heart of Uttar Pradesh.</p>
+            <a href="https://wa.me/919808685168?text=I%20am%20interested%20in%20Jaggery%20Powder" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
         </div>
 
         <div class="product-card">
-            <div class="img-holder">
-                <img src="https://instasize.com/api/image/ffe26f0d77beabebc84354e13010c392fd13f1708f360b97ccca4c803552aa91.jpeg" alt="Premium Tea">
-            </div>
-            <div class="product-info">
-                <span class="tag">Premium Blend</span>
-                <h3>Tea & Masala Tea</h3>
-                <p>Professional grade CTC tea and aromatic blends from Assam.</p>
-            </div>
+            <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=500&q=80" alt="Mustard Oil">
+            <h3>Cold-Pressed Mustard Oil</h3>
+            <p>Pure, pungent, and traditional mustard oil processed for export quality.</p>
+            <a href="https://wa.me/919808685168?text=I%20am%20interested%20in%20Mustard%20Oil" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
         </div>
 
         <div class="product-card">
-            <div class="img-holder">
-                <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&q=80" alt="Mustard Oil">
-            </div>
-            <div class="product-info">
-                <span class="tag">Cold Pressed</span>
-                <h3>Mustard Oil</h3>
-                <p>Traditional Kachi Ghani oil, rich in nutrients and pungency.</p>
-            </div>
+            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=500&q=80" alt="Spices">
+            <h3>Indian Spices Range</h3>
+            <p>Export-grade Turmeric, Red Chili, and Blended Spices (Masalas).</p>
+            <a href="https://wa.me/919808685168?text=I%20am%20interested%20in%20Spices" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
         </div>
     </div>
 </div>
 
-<a href="https://wa.me/919808685168" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
-
-<footer>
-    <p><strong>TRSSKO ENTERPRISES</strong></p>
-    <p>Contact: +91 9808685168 | Email: kashish@trssko.in</p>
-    <p class="maintained-by">Site Maintained by TRSSKO Infotech</p>
-    <div style="margin-top: 20px;">
-        <img src="https://www.cutercounter.com/hits.php?id=gvuoop&nd=5&style=1" border="0" alt="visitor counter">
-    </div>
+<footer style="text-align: center; padding: 40px; color: #888;">
+    © 2026 TRSSKO Enterprises. All Rights Reserved.
 </footer>
 
 </body>
