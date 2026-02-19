@@ -23,9 +23,6 @@
         nav a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
         nav a:hover { color: var(--gold); }
 
-        /* Visitor Counter Bar */
-        .counter-bar { background: #eee; color: var(--primary); padding: 8px; text-align: center; font-size: 0.85rem; border-bottom: 1px solid #ddd; }
-
         /* Hero Section */
         .hero { background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1600&q=80'); 
                 height: 60vh; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
@@ -53,7 +50,9 @@
         .whatsapp-float:hover { transform: scale(1.1); background-color: #128C7E; }
         .whatsapp-float i { margin-top: 16px; }
 
+        /* Footer & Visitor Counter */
         footer { background: #001a33; color: white; padding: 60px 5% 30px; text-align: center; }
+        .visitor-counter { margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); display: inline-block; }
     </style>
 </head>
 <body>
@@ -70,15 +69,10 @@
     </nav>
 </header>
 
-<div class="counter-bar">
-    <i class="fas fa-globe"></i> Global Visitors: 
-    <img src="https://hitwebcounter.com/counter/counter.php?page=TRSSKO_MAIN&style=0006&nbdigits=5&type=page&initCount=1500" border="0" style="vertical-align: middle; margin-left: 5px;">
-</div>
-
 <section class="hero" id="home">
     <div>
         <h1>Purity & Global Trust</h1>
-        <p>Expert Exporters of FMCG, Pharmaceuticals, and Premium Fashion.</p>
+        <p>Leading Exporters of FMCG, Pharmaceuticals, and Premium Fashion.</p>
     </div>
 </section>
 
@@ -128,14 +122,14 @@
             <i class="fas fa-phone-alt"></i>
             <div>
                 <p style="font-size: 0.8rem; color: #666;">Contact Number</p>
-                <a href="tel:+918449303577">+91 8449303577</a>
+                <a href="tel:+919808685168">+91 9808685168</a>
             </div>
         </div>
         <div class="contact-item">
             <i class="fas fa-envelope"></i>
             <div>
                 <p style="font-size: 0.8rem; color: #666;">Email Address</p>
-                <a href="mailto:kashishchhabra0@gmail.com">kashishchhabra0@gmail.com</a>
+                <a href="mailto:kashish@trssko.in">kashish@trssko.in</a>
             </div>
         </div>
         <div class="contact-item">
@@ -158,13 +152,19 @@
     </div>
 </section>
 
-<a href="https://wa.me/918449303577" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/919808685168" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
 
 <footer>
     <p><strong>TRSSKO FASHION (OPC) PRIVATE LIMITED</strong></p>
     <p>Operated by Advocate Kashish Chhabra</p>
+    
+    <div class="visitor-counter">
+        <p style="font-size: 0.85rem; margin-bottom: 5px;">Global Visitors</p>
+        <img src="https://www.cutercounter.com/hits.php?id=gvuoop&nd=5&style=1" border="0" alt="visitor counter">
+    </div>
+    
     <p style="margin-top: 15px; opacity: 0.6; font-size: 0.8rem;">© 2026 TRSSKO Enterprises. All Rights Reserved.</p>
 </footer>
 
