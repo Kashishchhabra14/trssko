@@ -3,242 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRSSKO Enterprises | Global FMCG, Pharma & Apparel Exports</title>
+    <title>TRSSKO Enterprises | Global FMCG & Pharma</title>
     <style>
-        /* General Reset */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        
         :root {
-            --primary-blue: #003366; 
-            --accent-gold: #C5A059; 
+            --primary-blue: #003366;
+            --accent-gold: #b8860b;
             --light-gray: #f4f4f4;
-            --text-dark: #333;
         }
-
-        body { color: var(--text-dark); line-height: 1.6; scroll-behavior: smooth; }
-
-        /* Header */
-        header {
-            background: #fff;
-            padding: 1rem 5%;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-blue); text-transform: uppercase; letter-spacing: 2px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; line-height: 1.6; }
+        header { background: white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--light-gray); }
+        .logo { font-weight: bold; font-size: 1.5rem; color: var(--primary-blue); }
         .logo span { color: var(--accent-gold); }
-
-        nav ul { list-style: none; display: flex; gap: 20px; }
-        nav a { text-decoration: none; color: var(--text-dark); font-weight: 600; transition: color 0.3s; }
-        nav a:hover { color: var(--accent-gold); }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80'); 
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            text-align: center;
-            padding: 140px 20px;
-        }
         
-        .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 20px; text-transform: uppercase; }
-        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px auto; font-weight: 300; }
+        .hero { text-align: center; padding: 60px 20px; background: var(--light-gray); }
         
-        .btn {
-            background: var(--accent-gold);
-            color: #fff;
-            padding: 14px 35px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            display: inline-block;
-            border: none;
-            cursor: pointer;
-        }
-        .btn:hover { background: #b08d4b; transform: translateY(-2px); }
-
-        /* Legal Banner */
-        .legal-info {
-            background: var(--primary-blue);
-            color: #fff;
-            padding: 25px 5%;
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            font-size: 0.95rem;
-            flex-wrap: wrap;
-            border-bottom: 4px solid var(--accent-gold);
-        }
-        .legal-item { border-left: 2px solid var(--accent-gold); padding-left: 20px; }
-
-        /* Business Verticals */
-        .verticals { padding: 80px 5%; background: #fff; text-align: center; }
-        .verticals h2 { margin-bottom: 50px; color: var(--primary-blue); font-size: 2.5rem; position: relative; }
-        .verticals h2::after { content: ''; display: block; width: 60px; height: 4px; background: var(--accent-gold); margin: 15px auto; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 50px 5%; }
+        .product-card { border: 1px solid #ddd; border-radius: 12px; overflow: hidden; transition: transform 0.3s; background: #fff; text-align: center; padding-bottom: 20px; }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .product-card img { width: 100%; height: 250px; object-fit: cover; }
+        .product-card h3 { color: var(--primary-blue); margin: 15px 0; }
+        .product-card p { padding: 0 15px; font-size: 0.9rem; color: #666; }
         
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .card {
-            background: var(--light-gray);
-            padding: 40px;
-            border-radius: 12px;
-            text-align: left;
-            transition: 0.3s;
-            border-top: 5px solid transparent;
-        }
-        .card:hover { transform: translateY(-10px); border-top: 5px solid var(--accent-gold); box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-        .card h3 { color: var(--primary-blue); margin-bottom: 15px; font-size: 1.6rem; }
-
-        /* Director Section */
-        .director-section {
-            padding: 100px 5%;
-            background: #fdfdfd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 80px;
-            flex-wrap: wrap;
-        }
-
-        .director-img {
-            width: 350px;
-            height: 450px;
-            object-fit: cover;
-            border: 10px solid #fff;
-            border-bottom: 15px solid var(--accent-gold);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        .director-text { flex: 1; max-width: 650px; }
-        .director-text h2 { color: var(--primary-blue); font-size: 2.8rem; margin-bottom: 5px; }
-        .director-text .title { color: var(--accent-gold); font-weight: bold; display: block; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px; font-size: 1.1rem; }
-        .director-text p { margin-bottom: 18px; font-size: 1.05rem; color: #444; }
-
-        /* Contact Form Section */
-        .contact-section { background: var(--light-gray); padding: 80px 5%; text-align: center; }
-        .contact-form { max-width: 700px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 12px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: var(--primary-blue); }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
-        .form-group textarea { height: 150px; }
-
-        /* Footer */
-        footer { background: #0b0b0b; color: #fff; padding: 80px 5% 40px 5%; text-align: center; }
-        .footer-bottom { margin-top: 50px; padding-top: 30px; border-top: 1px solid #222; font-size: 0.85rem; color: #666; }
-
-        @media (max-width: 900px) {
-            .hero h1 { font-size: 2.5rem; }
-            .director-section, .contact-section { text-align: center; }
-        }
+        .btn { background: var(--accent-gold); color: white; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">TRSSKO <span>ENTERPRISES</span></div>
-        <nav>
-            <ul>
-                <li><a href="fmcg.html">FMCG</a></li>
-                <li><a href="pharma.html">Pharma</a></li>
-                <li><a href="#director">Director</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <div class="logo">TRSSKO <span>ENTERPRISES</span></div>
+    <nav>
+        <a href="#fmcg">FMCG</a> | <a href="#pharma">Pharma</a> | <a href="#fashion">Fashion</a>
+    </nav>
+</header>
 
-    <section class="hero">
-        <h1>Quality Beyond Borders</h1>
-        <p>Premium Indian Exports. Specializing in FMCG, Pharma Solutions, and Fashion Apparel.</p>
-        <a href="#divisions" class="btn">Explore Divisions</a>
-    </section>
+<section class="hero">
+    <h1>Quality Products for Global Markets</h1>
+    <p>TRSSKO is a leading exporter of Premium Foods, Pharmaceutical Formulations, and High-End Fashion.</p>
+</section>
 
-    <div class="legal-info">
-        <div class="legal-item"><strong>CIN:</strong> U18209UP2023OPC176366</div>
-        <div class="legal-item"><strong>TRADEMARK REG:</strong> 7277253</div>
+<div class="product-grid">
+    <div class="product-card" id="fmcg">
+        <img src="https://chatgpt.com/backend-api/estuary/content?id=file_000000007bc87208b58b7e11ad83569c&ts=492076&p=fs&cid=1&sig=da6a62d8072f2b86514846463be434adc41d7dad7b4d7b8e7bec78f42ce36545&v=0" alt="TRSSKO Spices">
+        <h3>TRSSKO Spices</h3>
+        <p>Pure Indian spices processed to international purity standards.</p>
+        <a href="#" class="btn">Shop Now</a>
     </div>
 
-    <section class="verticals" id="divisions">
-        <h2>Our Business Verticals</h2>
-        <div class="grid-container">
-            <div class="card">
-                <h3>TRSSKO Foods & Spices</h3>
-                <p>Premium Jaggery Powder, Mustard Oil, and Spices meeting global purity standards.</p>
-                <a href="fmcg.html" class="btn" style="padding: 10px 20px; font-size: 0.9rem; margin-top: 15px;">Shop Online</a>
-            </div>
-            <div class="card">
-                <h3>TRSSKO Pharma</h3>
-                <p>High-quality formulations including DSR Capsules and SP Tablets with full export documentation.</p>
-                <a href="pharma.html" class="btn" style="padding: 10px 20px; font-size: 0.9rem; margin-top: 15px;">View Range</a>
-            </div>
-            <div class="card">
-                <h3>TRSSKO Fashion</h3>
-                <p>Export-quality apparel merging traditional craftsmanship with modern trends.</p>
-            </div>
-        </div>
-    </section>
+    <div class="product-card">
+        <img src="https://instasize.com/p/ffe26f0d77beabebc84354e13010c392fd13f1708f360b97ccca4c803552aa93" alt="TRSSKO Tea">
+        <h3>Premium Tea</h3>
+        <p>Export-quality tea leaves for the perfect global blend.</p>
+        <a href="#" class="btn">Shop Now</a>
+    </div>
 
-    <section class="director-section" id="director">
-        <img src="https://instasize.com/api/image/73607e4607a3c0c3d5c8cce3c08761744cf64b8e4d2ecdd06d54a92d48d6a10a.jpeg" alt="Kashish Chhabra" class="director-img">
-        <div class="director-text">
-            <h2>Kashish Chhabra</h2>
-            <span class="title">Founder & Managing Director</span>
-            <p>A distinguished legal professional and technologist, Kashish Chhabra serves as the visionary lead for TRSSKO Enterprises. Registered as an <strong>Advocate with the Bar Council of Uttar Pradesh</strong>, he infuses operations with a rigorous framework of legal compliance.</p>
-            <p>Complementing his legal acumen, his background as a <strong>BCA graduate</strong> allows him to leverage digital infrastructure to ensure technical precision in export logistics.</p>
-            <p>Since 2021, he has scaled TRSSKO into a multi-sectoral powerhouse across FMCG, Pharma, and Apparel.</p>
-        </div>
-    </section>
+    <div class="product-card" id="pharma">
+        <img src="https://instasize.com/p/0ff5863e1cd8f1a92e628eb3ed7cf3a1faaaeb8b63cf9bc2441d5b05b7dc7780" alt="TRSSKO Pharma">
+        <h3>Panto-DSR Capsules</h3>
+        <p>High-quality pharmaceutical formulations with full export documentation.</p>
+        <a href="#" class="btn">View Range</a>
+    </div>
 
-    <section class="contact-section" id="contact">
-        <h2>Inquiry Form</h2>
-        <p style="margin-bottom: 40px;">Send us your requirements for bulk export inquiries.</p>
-        
-        <form action="https://formspree.io/f/mqakeewl" method="POST" class="contact-form">
-            <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" name="name" required placeholder="Enter your name">
-            </div>
-            <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" name="_replyto" required placeholder="name@company.com">
-            </div>
-            <div class="form-group">
-                <label>Phone / WhatsApp</label>
-                <input type="text" name="phone" placeholder="+91 00000-00000">
-            </div>
-            <div class="form-group">
-                <label>Your Inquiry</label>
-                <textarea name="message" required placeholder="Describe your product needs and quantity..."></textarea>
-            </div>
-            <button type="submit" class="btn" style="width: 100%;">Submit Inquiry</button>
-        </form>
-    </section>
+    <div class="product-card">
+        <img src="https://instasize.com/p/42e56dded0cac1afa0d1821873bc0efcbe1d46521dd13e32b5d3708c817c5ba1" alt="TRSSKO Jaggery">
+        <h3>Jaggery Powder</h3>
+        <p>Pure, chemical-free jaggery powder.</p>
+        <a href="#" class="btn">Shop Now</a>
+    </div>
+</div>
 
-    <footer>
-        <h3>TRSSKO Global Office</h3>
-        <p style="margin-top: 10px;">Ramraj, Meerut, Uttar Pradesh, India</p>
-        <p>Email: kashish@trssko.in | Phone: +91 9808685168</p>
-        
-        <div style="margin-top: 30px; padding: 15px; background: rgba(255,255,255,0.05); display: inline-block; border-radius: 8px; border: 1px solid rgba(197, 160, 89, 0.2);">
-            <p style="font-size: 0.75rem; color: #C5A059; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">Live Traffic Monitor</p>
-            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftrssko.in&count_bg=%23C5A059&title_bg=%23003366&icon=&icon_color=%23E7E7E7&title=Total%20Visits&edge_flat=false" alt="Visitor Counter"/>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 TRSSKO FASHION (OPC) PRIVATE LIMITED. All Rights Reserved.</p>
-            <p>CIN: U18209UP2023OPC176366 | Trademark No: 7277253</p>
-        </div>
-    </footer>
+<footer style="text-align: center; padding: 40px; background: #333; color: white;">
+    <p>&copy; 2026 TRSSKO FASHION (OPC) PRIVATE LIMITED. All Rights Reserved.</p>
+    <p>Location: Ramraj, Meerut, Uttar Pradesh.</p>
+</footer>
 
 </body>
 </html>
