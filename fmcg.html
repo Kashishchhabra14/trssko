@@ -3,64 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FMCG Products | TRSSKO Enterprises</title>
+    <title>FMCG Specifications | TRSSKO</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --primary: #003366; --gold: #C5A059; --light: #f8f9fa; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
-        body { background: var(--light); color: #333; }
-        
+        body { background: var(--light); color: #333; line-height: 1.6; }
         header { background: var(--primary); color: white; padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; }
-        .back-btn { color: white; text-decoration: none; font-weight: bold; }
-        
-        .container { padding: 50px 8%; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
-        
-        .product-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; padding-bottom: 20px; }
-        .product-card img { width: 100%; height: 200px; object-fit: cover; }
-        .product-card h3 { margin: 15px 0; color: var(--primary); }
-        .product-card p { padding: 0 15px; font-size: 0.9rem; color: #666; margin-bottom: 15px; }
-        
-        .buy-btn { background: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; }
+        .container { padding: 40px 8%; max-width: 1200px; margin: auto; }
+        .spec-card { background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--gold); }
+        h2 { color: var(--primary); margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid #eee; }
+        th { background: #fdfaf5; color: var(--primary); width: 30%; }
+        .whatsapp-btn { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
-    <div style="font-size: 1.4rem; font-weight: 800;">TRSSKO<span> FMCG</span></div>
-    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <div style="font-size: 1.5rem; font-weight: bold;">TRSSKO<span> FMCG</span></div>
+    <a href="index.html" style="color:white; text-decoration:none;"><i class="fas fa-home"></i> Home</a>
 </header>
 
 <div class="container">
-    <h1 style="color: var(--primary); border-bottom: 3px solid var(--gold); display: inline-block; padding-bottom: 10px;">Our FMCG Catalog</h1>
-    
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1621430037303-34e2c0746979?auto=format&fit=crop&w=500&q=80" alt="Jaggery">
-            <h3>Pure Jaggery Powder</h3>
-            <p>100% Organic and chemical-free Jaggery sourced from the heart of Uttar Pradesh.</p>
-            <a href="https://wa.me/919808685168?text=I%20am%20interested%20in%20Jaggery%20Powder" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-        </div>
+    <h1>Product Specifications</h1>
+    <p>Detailed technical data for our export-grade FMCG products.</p>
 
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=500&q=80" alt="Mustard Oil">
-            <h3>Cold-Pressed Mustard Oil</h3>
-            <p>Pure, pungent, and traditional mustard oil processed for export quality.</p>
-            <a href="https://wa.me/919808685168?text=I%20am%20interested%20in%20Mustard%20Oil" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-        </div>
+    <div class="spec-card">
+        <h2><i class="fas fa-leaf"></i> Organic Jaggery Powder</h2>
+        <table>
+            <tr><th>Origin</th><td>Uttar Pradesh, India</td></tr>
+            <tr><th>Form</th><td>Fine Powder / Granules</td></tr>
+            <tr><th>Purity</th><td>100% Sugarcane Juice (No Chemicals)</td></tr>
+            <tr><th>Shelf Life</th><td>12 Months</td></tr>
+            <tr><th>Packaging</th><td>500g, 1kg, 25kg (Bulk)</td></tr>
+        </table>
+        <a href="https://wa.me/919808685168?text=I%20need%20quote%20for%20Jaggery" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Get Quote</a>
+    </div>
 
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=500&q=80" alt="Spices">
-            <h3>Indian Spices Range</h3>
-            <p>Export-grade Turmeric, Red Chili, and Blended Spices (Masalas).</p>
-            <a href="https://wa.me/919808685168?text=I%20am%20interested%20in%20Spices" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-        </div>
+    <div class="spec-card">
+        <h2><i class="fas fa-tint"></i> Cold-Pressed Mustard Oil</h2>
+        <table>
+            <tr><th>Process</th><td>Kachi Ghani (Cold Pressed)</td></tr>
+            <tr><th>Pungency</th><td>High (Natural Allyl Isothiocyanate)</td></tr>
+            <tr><th>Acid Value</th><td>Max 0.5%</td></tr>
+            <tr><th>Packaging</th><td>1L Bottle, 5L Jar, 15L Tin</td></tr>
+        </table>
+        <a href="https://wa.me/919808685168?text=I%20need%20quote%20for%20Mustard%20Oil" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Get Quote</a>
     </div>
 </div>
-
-<footer style="text-align: center; padding: 40px; color: #888;">
-    © 2026 TRSSKO Enterprises. All Rights Reserved.
-</footer>
 
 </body>
 </html>
