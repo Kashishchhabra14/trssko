@@ -3,65 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRSSKO Foods | Shop Jaggery, Oil & Spices</title>
+    <title>FMCG & Foods | TRSSKO Enterprises</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        :root { --primary-blue: #003366; --accent-gold: #C5A059; --light-gray: #f4f4f4; }
+        :root { --primary-blue: #003366; --accent-gold: #C5A059; --bg-gray: #f9f9f9; }
+        body { font-family: 'Arial', sans-serif; margin: 0; background: var(--bg-gray); color: #333; }
         
-        body { background: #fff; color: #333; }
-        header { background: #fff; padding: 1rem 5%; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-blue); text-decoration: none; }
-        .logo span { color: var(--accent-gold); }
+        header { background: #white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--accent-gold); }
+        .back-btn { text-decoration: none; color: var(--primary-blue); font-weight: bold; }
 
-        .container { padding: 50px 5%; text-align: center; }
-        h1 { color: var(--primary-blue); margin-bottom: 40px; }
+        .container { padding: 50px 5%; max-width: 1200px; margin: auto; }
+        h1 { color: var(--primary-blue); text-align: center; margin-bottom: 40px; }
 
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .product-card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; transition: 0.3s; }
-        .product-card:hover { border-color: var(--accent-gold); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .product-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px; background: #eee; }
-        
-        .price { font-size: 1.2rem; color: var(--primary-blue); font-weight: bold; margin: 10px 0; }
-        .buy-btn { background: #25D366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .product-card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        .product-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; }
+        .product-card h3 { margin: 15px 0 10px; color: var(--primary-blue); }
+        .product-card p { font-size: 0.9rem; color: #666; }
     </style>
 </head>
 <body>
 
-    <header>
-        <a href="index.html" class="logo">TRSSKO <span>FOODS</span></a>
-        <a href="index.html" style="text-decoration: none; color: var(--primary-blue); font-weight: bold;">← Back to Home</a>
-    </header>
+<header>
+    <div style="font-weight:bold; font-size: 1.2rem;">TRSSKO <span style="color:var(--accent-gold)">FMCG</span></div>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+</header>
 
-    <div class="container">
-        <h1>Our Premium FMCG Range</h1>
-        <div class="product-grid">
-            
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1620054362143-6c7c60e4876b?auto=format&fit=crop&w=400&q=80" alt="Jaggery Powder">
-                <h3>Premium Jaggery Powder</h3>
-                <p>100% Pure & Natural</p>
-                <div class="price">₹150 / kg</div>
-                <a href="https://wa.me/919808685168?text=I%20want%20to%20order%20Jaggery%20Powder" class="btn buy-btn">Order on WhatsApp</a>
-            </div>
+<div class="container">
+    <h1>Our Premium Food Products</h1>
+    
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1621460248085-062e73a0e1b6?auto=format&fit=crop&w=500&q=80" alt="Jaggery Powder">
+            <h3>Pure Jaggery Powder</h3>
+            <p>100% natural, chemical-free sweetener processed for international export.</p>
+        </div>
 
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1474979266404-7eaacbadcbaf?auto=format&fit=crop&w=400&q=80" alt="Mustard Oil">
-                <h3>Pure Mustard Oil</h3>
-                <p>Cold Pressed, Grade A</p>
-                <div class="price">₹180 / Litre</div>
-                <a href="https://wa.me/919808685168?text=I%20want%20to%20order%20Mustard%20Oil" class="btn buy-btn">Order on WhatsApp</a>
-            </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=500&q=80" alt="Mustard Oil">
+            <h3>Cold-Pressed Mustard Oil</h3>
+            <p>Traditional Kachi Ghani oil, rich in nutrients and pungency.</p>
+        </div>
 
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1532336411638-af7294203460?auto=format&fit=crop&w=400&q=80" alt="Indian Spices">
-                <h3>TRSSKO Special Spices</h3>
-                <p>Hand-picked Export Quality</p>
-                <div class="price">₹99 / Pack</div>
-                <a href="https://wa.me/919808685168?text=I%20want%20to%20order%20Spices" class="btn buy-btn">Order on WhatsApp</a>
-            </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=500&q=80" alt="Indian Spices">
+            <h3>Traditional Spices</h3>
+            <p>Hand-picked Turmeric, Chilli, and Coriander powders from Indian farms.</p>
+        </div>
 
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&w=500&q=80" alt="Assam Tea">
+            <h3>Premium Tea</h3>
+            <p>Authentic Assam and Darjeeling blends for the global market.</p>
         </div>
     </div>
+</div>
+
+<footer style="text-align: center; padding: 40px; background: var(--primary-blue); color: white; margin-top: 50px;">
+    <p>TRSSKO Enterprises - Committed to Quality</p>
+</footer>
 
 </body>
 </html>
