@@ -3,121 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRSSKO Enterprises | Global FMCG, Pharma & Apparel Exports</title>
+    <title>FMCG & Foods | TRSSKO Enterprises</title>
     <style>
-        :root {
-            --primary-blue: #003366; 
-            --accent-gold: #C5A059; 
-            --light-gray: #f4f4f4;
-            --text-dark: #333;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { color: var(--text-dark); line-height: 1.6; scroll-behavior: smooth; }
-        
-        /* Header & Nav */
-        header { background: #fff; padding: 1rem 5%; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        .logo { font-size: 1.5rem; font-weight: 2000; color: var(--primary-blue); text-transform: uppercase; letter-spacing: 2px; }
-        .logo span { color: var(--accent-gold); }
-        nav ul { list-style: none; display: flex; gap: 20px; }
-        nav a { text-decoration: none; color: var(--primary-blue); font-weight: 500; transition: 0.3s; }
-        nav a:hover { color: var(--accent-gold); }
-
-        /* Hero Section */
-        .hero { background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80'); 
-                height: 60vh; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
-
-        /* Cards Section */
-        .section-padding { padding: 60px 5%; text-align: center; }
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; border-bottom: 4px solid var(--accent-gold); }
-        .card:hover { transform: translateY(-10px); }
-        .card img { width: 100%; height: 250px; object-fit: cover; }
-        .card-content { padding: 20px; }
-        .card-content h3 { color: var(--primary-blue); margin-bottom: 10px; }
-        .btn { display: inline-block; padding: 10px 20px; background: var(--primary-blue); color: white; text-decoration: none; border-radius: 4px; margin-top: 15px; transition: 0.3s; }
-        .btn:hover { background: var(--accent-gold); }
-
-        /* Director Section */
-        .director-section { background: var(--light-gray); padding: 60px 5%; display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
-        .director-img { width: 300px; height: 300px; border-radius: 50%; object-fit: cover; border: 5px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-        .director-text { flex: 1; min-width: 300px; }
-        .director-text h2 { color: var(--primary-blue); margin-bottom: 15px; }
-
-        /* Footer */
-        footer { background: var(--primary-blue); color: white; padding: 40px 5%; text-align: center; }
-        .footer-details { font-size: 0.9rem; margin-top: 20px; opacity: 0.8; }
+        :root { --primary-blue: #003366; --accent-gold: #C5A059; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f9f9f9; color: #333; }
+        header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--accent-gold); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.4rem; font-weight: bold; color: var(--primary-blue); }
+        .back-link { text-decoration: none; color: var(--primary-blue); font-weight: 600; }
+        .container { padding: 40px 5%; max-width: 1200px; margin: auto; text-align: center; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .product-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .img-container { width: 100%; height: 250px; background: #eee; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .product-info { padding: 20px; }
+        .product-info h3 { color: var(--primary-blue); margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">TRSSKO<span>FASHION</span></div>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#director">Director</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="logo">TRSSKO <span style="color:var(--accent-gold)">ENTERPRISES</span></div>
+    <a href="index.html" class="back-link">← Back to Home</a>
 </header>
 
-<section class="hero" id="home">
-    <div>
-        <h1>Excellence in Global Exports</h1>
-        <p>Your Trusted Partner for Quality FMCG, Pharma, and Apparel.</p>
-    </div>
-</section>
-
-<section class="section-padding" id="products">
-    <h2>Our Business Wings</h2>
-    <div class="grid-container">
-        <div class="card">
-            <img src="https://chatgpt.com/backend-api/estuary/content?id=file_000000007bc87208b58b7e11ad83569c&ts=492076&p=fs&cid=1&sig=da6a62d8072f2b86514846463be434adc41d7dad7b4d7b8e7bec78f42ce36545&v=0" alt="FMCG & Spices">
-            <div class="card-content">
-                <h3>FMCG & Foods</h3>
-                <p>High-purity Jaggery Powder, Mustard Oil, and traditional Indian Spices processed for global standards.</p>
-                <a href="fmcg.html" class="btn">View Products</a>
+<div class="container">
+    <h1>Our Premium Food Products</h1>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="img-container">
+                <img src="https://instasize.com/api/image/42e56dded0cac1afa0d1821873bc0efcbe1d46521dd13e32b5d3708c817c5ba1.jpeg" alt="Pure Jaggery Powder">
+            </div>
+            <div class="product-info">
+                <h3>Pure Jaggery Powder</h3>
+                <p>100% natural, chemical-free sweetener processed for international export.</p>
             </div>
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1587854680352-936b22b91030?auto=format&fit=crop&w=800&q=80" alt="TRSSKO Pharma">
-            <div class="card-content">
-                <h3>TRSSKO Pharma</h3>
-                <p>Innovative healthcare solutions and pharmaceutical products through our dedicated Lifescience wing.</p>
-                <a href="pharma.html" class="btn">Learn More</a>
+        <div class="product-card">
+            <div class="img-container">
+                <img src="https://instasize.com/api/image/ffe26f0d77beabebc84354e13010c392fd13f1708f360b97ccca4c803552aa91.jpeg" alt="Premium Tea">
+            </div>
+            <div class="product-info">
+                <h3>Premium Tea</h3>
+                <p>Authentic Assam and Darjeeling blends for the global market.</p>
             </div>
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="TRSSKO Fashion">
-            <div class="card-content">
-                <h3>TRSSKO Fashion</h3>
-                <p>Export-oriented apparel and clothing lines combining modern style with premium fabric quality.</p>
-                <a href="#" class="btn">View Catalog</a>
+        <div class="product-card">
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&q=80" alt="Mustard Oil">
+            </div>
+            <div class="product-info">
+                <h3>Cold-Pressed Mustard Oil</h3>
+                <p>Traditional Kachi Ghani oil, rich in nutrients and pungency.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80" alt="Spices">
+            </div>
+            <div class="product-info">
+                <h3>Traditional Spices</h3>
+                <p>Hand-picked Turmeric, Chilli, and Coriander powders from Indian farms.</p>
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<section class="director-section" id="director">
-    <img src="https://instasize.com/api/image/73607e4607a3c0c3d5c8cce3c08761744cf64b8e4d2ecdd06d54a92d48d6a10a.jpeg" alt="Director Kashish Chhabra" class="director-img">
-    <div class="director-text">
-        <h2>From the Director's Desk</h2>
-        <p>I am <strong>Kashish Chhabra</strong>, a law graduate and registered advocate with the Bar Council of Uttar Pradesh. With a background in Computer Applications and a passion for entrepreneurship, I founded TRSSKO to bridge the gap between Indian quality and global demand.</p>
-        <p style="margin-top: 10px;">Our mission is to deliver purity and excellence across all our verticals—from the food we eat to the clothes we wear.</p>
-    </div>
-</section>
-
-<footer id="contact">
-    <h3>TRSSKO FASHION (OPC) PRIVATE LIMITED</h3>
-    <p>Ramraj, Meerut, Uttar Pradesh, India</p>
-    <div class="footer-details">
-        <p><strong>CIN:</strong> U18209UP2023OPC176366 | <strong>Trademark:</strong> 7277253</p>
-        <p>&copy; 2026 TRSSKO Enterprises. All Rights Reserved.</p>
-    </div>
+<footer style="background: var(--primary-blue); color: white; padding: 20px; text-align: center; margin-top: 50px;">
+    <p>&copy; 2026 TRSSKO Enterprises. All Rights Reserved.</p>
 </footer>
 
 </body>
