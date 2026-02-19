@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRSSKO Enterprises | Global Exports</title>
+    <title>TRSSKO Enterprises | Global Merchant Exporters</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -17,8 +17,9 @@
         
         body { color: var(--dark); line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; background-color: #fff; }
 
+        /* Navigation */
         header { 
-            background: rgba(255, 255, 255, 0.95); 
+            background: rgba(255, 255, 255, 0.98); 
             padding: 1rem 8%; 
             box-shadow: 0 2px 15px rgba(0,0,0,0.1); 
             display: flex; 
@@ -27,17 +28,17 @@
             position: sticky; 
             top: 0; 
             z-index: 1000; 
-            backdrop-filter: blur(5px);
         }
-        .logo { font-size: 1.6rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
+        .logo { font-size: 1.6rem; font-weight: 800; color: var(--primary); text-transform: uppercase; }
         .logo span { color: var(--gold); }
         
         nav ul { list-style: none; display: flex; gap: 25px; }
-        nav a { text-decoration: none; color: var(--primary); font-weight: 700; font-size: 0.85rem; transition: 0.3s; text-transform: uppercase; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; }
         nav a:hover { color: var(--gold); }
 
+        /* Hero */
         .hero { 
-            background: linear-gradient(rgba(0,51,102,0.75), rgba(0,51,102,0.75)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1600&q=80'); 
+            background: linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.8)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1600&q=80'); 
             height: 60vh; 
             background-size: cover; 
             background-position: center; 
@@ -46,63 +47,56 @@
             justify-content: center; 
             color: white; 
             text-align: center; 
-            padding: 0 20px;
         }
-        .hero-content h1 { font-size: calc(2rem + 2vw); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; }
+        .hero-content h1 { font-size: 3rem; margin-bottom: 10px; letter-spacing: 2px; }
 
+        /* Business Wings Grid */
         .section { padding: 80px 8%; text-align: center; }
-        .bg-light { background: var(--light); }
-
         .grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 35px; 
+            gap: 30px; 
             margin-top: 40px; 
         }
         .card { 
             background: var(--white); 
             border-radius: 15px; 
             overflow: hidden; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
             transition: 0.4s; 
-            border-bottom: 4px solid transparent;
+            border-bottom: 5px solid transparent;
         }
-        .card:hover { transform: translateY(-10px); border-bottom: 4px solid var(--gold); }
+        .card:hover { transform: translateY(-10px); border-bottom-color: var(--gold); }
         .card img { width: 100%; height: 250px; object-fit: cover; }
         .card-body { padding: 30px; }
+        .card-body h3 { color: var(--primary); margin-bottom: 15px; }
 
         .btn { 
             display: inline-block; 
-            padding: 12px 30px; 
+            padding: 12px 25px; 
             background: var(--primary); 
             color: white; 
             text-decoration: none; 
             border-radius: 5px; 
-            margin-top: 15px; 
             font-weight: 600; 
-            transition: 0.3s; 
+            margin-top: 15px;
+            transition: 0.3s;
         }
         .btn:hover { background: var(--gold); }
 
-        /* Product Detail Styling */
-        .product-detail-box {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            border: 1px solid #eee;
-            text-align: left;
-            margin-top: 20px;
-        }
-        .product-detail-box h4 { color: var(--gold); margin-bottom: 10px; text-transform: uppercase; font-size: 0.9rem;}
+        /* Director Section */
+        #director { padding: 80px 10%; background: var(--light); display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+        .dir-img { width: 300px; border-radius: 15px; box-shadow: 15px 15px 0 var(--gold); }
+        .dir-text { flex: 1; min-width: 300px; }
 
-        #director { padding: 80px 10%; display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }
-        .director-img { width: 300px; height: 380px; object-fit: cover; border-radius: 15px; box-shadow: 15px 15px 0 var(--gold); }
+        /* Contact */
+        #contact { padding: 80px 8%; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .contact-box { background: var(--primary); color: white; padding: 40px; border-radius: 15px; }
 
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 100; }
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background: #25d366; color: white; border-radius: 50%; text-align: center; font-size: 30px; z-index: 100; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
         .whatsapp-float i { margin-top: 16px; }
 
-        footer { background: #001a33; color: white; padding: 60px 8% 30px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
+        footer { background: #001a33; color: white; padding: 40px 8%; text-align: center; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -112,8 +106,7 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#wings">Wings</a></li>
-            <li><a href="#products">Products</a></li>
+            <li><a href="#wings">Our Wings</a></li>
             <li><a href="#director">Director</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -123,73 +116,61 @@
 <section class="hero" id="home">
     <div class="hero-content">
         <h1>Global Export Excellence</h1>
-        <p>Purity, Ethics, and Professionalism in every shipment.</p>
+        <p>Reliable sourcing for Pharma, FMCG, and Fashion.</p>
+        <a href="#wings" class="btn" style="background:var(--gold)">Explore Our Catalog</a>
     </div>
 </section>
 
-<section class="section bg-light" id="wings">
-    <h2 style="font-size: 2.5rem; color: var(--primary);">Our Business Wings</h2>
+<section class="section" id="wings">
+    <h2>Our Business Wings</h2>
+    <p>Select a sector to view full product specifications.</p>
     <div class="grid">
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80" alt="FMCG">
+            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80">
             <div class="card-body">
                 <h3>FMCG & Foods</h3>
-                <p>Pure Jaggery, Mustard Oil, and traditional spices.</p>
-                <a href="#fmcg-detail" class="btn">View Products</a>
+                <p>Pure Jaggery Powder, Mustard Oil, and Spices.</p>
+                <a href="fmcg.html" class="btn">View Specifications</a>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1587854680352-936b22b91030?auto=format&fit=crop&w=800&q=80" alt="Pharma">
+            <img src="https://images.unsplash.com/photo-1587854680352-936b22b91030?auto=format&fit=crop&w=800&q=80">
             <div class="card-body">
                 <h3>TRSSKO Pharma</h3>
-                <p>WHO-GMP certified healthcare and lifescience solutions.</p>
-                <a href="#pharma-detail" class="btn">Lifescience Wing</a>
+                <p>WHO-GMP Health Solutions & DSR Capsules.</p>
+                <a href="pharma.html" class="btn">View Specifications</a>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Fashion">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80">
             <div class="card-body">
                 <h3>TRSSKO Fashion</h3>
                 <p>Premium export-quality apparel and textiles.</p>
-                <a href="#contact" class="btn">Portfolio</a>
+                <a href="#contact" class="btn">Inquire Now</a>
             </div>
         </div>
-    </div>
-</section>
-
-<section class="section" id="products">
-    <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 40px;">Product Specifications</h2>
-    
-    <div id="fmcg-detail" class="product-detail-box">
-        <h4><i class="fas fa-leaf"></i> FMCG & Food Wing</h4>
-        <p><strong>Primary Products:</strong> Pure Jaggery Powder, Cold-Pressed Mustard Oil, Premium Spices, and Organic Honey.</p>
-        <p><strong>Quality Standrads:</strong> FSSAI Certified, Grade-A Sourcing, Chemical-Free Processing.</p>
-        <a href="https://wa.me/919808685168?text=I%20want%20to%20inquire%20about%20FMCG%20Products" class="btn" style="background: #25d366;"><i class="fab fa-whatsapp"></i> Inquire Now</a>
-    </div>
-
-    <div id="pharma-detail" class="product-detail-box" style="margin-top: 40px; border-left: 5px solid var(--gold);">
-        <h4><i class="fas fa-pills"></i> TRSSKO Pharma (Lifescience)</h4>
-        <p><strong>Primary Products:</strong> DSR Capsules, Multi-vitamins, and specialized WHO-GMP formulations.</p>
-        <p><strong>Quality Standards:</strong> WHO-GMP Certified Manufacturing, Global Export Compliance.</p>
-        <a href="https://wa.me/919808685168?text=I%20want%20to%20inquire%20about%20Pharma%20Products" class="btn" style="background: #25d366;"><i class="fab fa-whatsapp"></i> Inquire Now</a>
     </div>
 </section>
 
 <section id="director">
-    <img src="https://instasize.com/api/image/73607e4607a3c0c3d5c8cce3c08761744cf64b8e4d2ecdd06d54a92d48d6a10a.jpeg" alt="Kashish Chhabra" class="director-img">
-    <div class="director-content">
-        <h2 style="color: var(--primary);">Director's Desk</h2>
-        <p><strong>Kashish Chhabra</strong> is a Law Graduate and Advocate registered with the Bar Council of UP. He leads TRSSKO with a focus on legal transparency and global quality standards.</p>
+    <img src="https://instasize.com/api/image/73607e4607a3c0c3d5c8cce3c08761744cf64b8e4d2ecdd06d54a92d48d6a10a.jpeg" class="dir-img" alt="Kashish Chhabra">
+    <div class="dir-text">
+        <h2 style="color:var(--primary)">Director's Desk</h2>
+        <p style="margin: 20px 0;"><strong>Kashish Chhabra</strong> is a Law Graduate and Advocate registered with the Bar Council of Uttar Pradesh. His leadership ensures that TRSSKO operates with 100% legal transparency and global quality standards.</p>
+        <p><em>"We bridge the gap between Indian quality and global markets."</em></p>
     </div>
 </section>
 
-<section id="contact" class="section bg-light">
-    <div style="max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 15px; text-align: left;">
-        <h2 style="color: var(--primary); margin-bottom: 20px;">Contact Us</h2>
-        <p><i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> Ramraj, Meerut, Uttar Pradesh - 250404</p>
-        <p><i class="fas fa-envelope" style="color: var(--gold);"></i> kashish@trssko.in</p>
-        <p><i class="fas fa-phone" style="color: var(--gold);"></i> +91 9808685168</p>
-        <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">IEC: BKQPC7409C | CIN: U18209UP2023OPC176366</p>
+<section id="contact">
+    <div class="contact-box">
+        <h3>Global Trade Inquiries</h3>
+        <p style="margin-top:20px;"><i class="fas fa-map-marker-alt"></i> Ramraj, Meerut, UP, India</p>
+        <p><i class="fas fa-envelope"></i> kashish@trssko.in</p>
+        <p><i class="fas fa-phone"></i> +91 9808685168</p>
+        <p style="margin-top:20px; font-size: 0.8rem; opacity: 0.7;">IEC: BKQPC7409C | CIN: U18209UP2023OPC176366</p>
+    </div>
+    <div style="background:#eee; border-radius:15px; display:flex; align-items:center; justify-content:center; color:#999;">
+        <p>Map View Placeholder</p>
     </div>
 </section>
 
@@ -198,18 +179,7 @@
 </a>
 
 <footer>
-    <div class="footer-grid">
-        <div>
-            <div class="footer-logo">TRSSKO<span> ENTERPRISES</span></div>
-            <p>Maintained by TRSSKO Infotech</p>
-        </div>
-        <div>
-            <h4 style="color: var(--gold);">Quick Links</h4>
-            <p><a href="#home" style="color:white; text-decoration:none;">Home</a></p>
-            <p><a href="#wings" style="color:white; text-decoration:none;">Business Wings</a></p>
-        </div>
-    </div>
-    <p style="margin-top: 30px; opacity: 0.5;">© 2026 TRSSKO Enterprises. All Rights Reserved.</p>
+    <p>© 2026 TRSSKO Enterprises. Maintained by TRSSKO Infotech.</p>
 </footer>
 
 </body>
