@@ -3,90 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRSSKO Life Science | Pharmaceutical Solutions</title>
+    <title>TRSSKO Lifescience | Pharmaceutical Exports</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        :root { --primary-blue: #003366; --accent-gold: #C5A059; --light-gray: #f4f4f4; }
+        :root { --med-blue: #0056b3; --med-light: #e3f2fd; --accent-gold: #C5A059; --text-dark: #2c3e50; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f8f9fa; color: var(--text-dark); }
         
-        body { background: #fff; color: #333; line-height: 1.6; }
-        header { background: #fff; padding: 1.5rem 5%; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-blue); text-decoration: none; text-transform: uppercase; }
-        .logo span { color: var(--accent-gold); }
+        header { background: white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--med-blue); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .back-btn { text-decoration: none; color: var(--med-blue); font-weight: 600; font-size: 0.9rem; }
+        
+        .pharma-hero { background: linear-gradient(135deg, var(--med-blue), #003366); color: white; padding: 60px 5%; text-align: center; }
+        .pharma-hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .pharma-hero p { opacity: 0.9; font-size: 1.1rem; max-width: 700px; margin: auto; }
 
-        .container { padding: 60px 5%; max-width: 1200px; margin: 0 auto; text-align: center; }
-        h1 { color: var(--primary-blue); margin-bottom: 10px; font-size: 2.5rem; }
-        .subtitle { color: var(--accent-gold); font-weight: bold; margin-bottom: 50px; display: block; letter-spacing: 1px; }
+        .container { padding: 50px 5%; max-width: 1200px; margin: auto; }
+        .section-title { text-align: center; margin-bottom: 40px; color: var(--med-blue); font-size: 2rem; }
 
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .product-card { border: 1px solid #eee; padding: 25px; border-radius: 12px; transition: 0.4s; background: var(--light-gray); text-align: left; position: relative; }
-        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: var(--accent-gold); }
-        
-        .product-card h3 { color: var(--primary-blue); margin-bottom: 10px; font-size: 1.4rem; border-bottom: 2px solid var(--accent-gold); display: inline-block; padding-bottom: 5px; }
-        .product-card p { color: #666; font-size: 0.95rem; margin: 15px 0; }
-        
-        .price-tag { background: #fff; border: 1px dashed var(--accent-gold); padding: 10px; border-radius: 5px; margin-bottom: 20px; }
-        .price-tag span { font-weight: bold; color: var(--primary-blue); font-size: 1.1rem; }
-        
-        .buy-btn { background: #25D366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: block; text-align: center; transition: 0.3s; }
-        .buy-btn:hover { background: #128C7E; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .pharma-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-left: 5px solid var(--med-blue); display: flex; flex-direction: column; }
+        .pharma-card h3 { color: var(--med-blue); margin-bottom: 12px; font-size: 1.4rem; }
+        .pharma-card .formula { font-style: italic; color: #666; font-size: 0.9rem; margin-bottom: 15px; background: var(--med-light); padding: 5px 10px; border-radius: 4px; display: inline-block; }
+        .pharma-card p { font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px; }
+        .price-tag { font-weight: bold; color: var(--accent-gold); margin-top: auto; }
 
-        footer { background: #111; color: white; padding: 40px 5%; text-align: center; margin-top: 60px; }
+        .manufacturing-info { background: var(--med-light); padding: 40px; border-radius: 15px; margin-top: 50px; text-align: center; }
+        .manufacturing-info h2 { color: var(--med-blue); margin-bottom: 15px; }
+        
+        footer { text-align: center; padding: 30px; background: #2c3e50; color: white; margin-top: 50px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <a href="index.html" class="logo">TRSSKO <span>LIFE SCIENCE</span></a>
-        <nav><a href="index.html" style="text-decoration: none; color: var(--primary-blue); font-weight: bold;">← Back to Home</a></nav>
-    </header>
+<header>
+    <div style="font-size: 1.5rem; font-weight: bold; color: var(--med-blue);">TRSSKO <span style="color:var(--accent-gold)">LIFESCIENCE</span></div>
+    <a href="index.html" class="back-btn">← RETURN TO HOME</a>
+</header>
 
-    <div class="container">
-        <h1>Pharmaceutical Division</h1>
-        <span class="subtitle">Quality Formulations • Global Compliance • Expert Care</span>
-        <div class="product-card">
-    <img src="https://instasize.com/p/0ff5863e1cd8f1a92e628eb3ed7cf3a1faaaeb8b63cf9bc2441d5b05b7dc7780" alt="TRSSKO Panto-DSR Capsules" style="width:100%; height:auto;">
-    <h3>Panto-DSR Capsules</h3>
-    <p>High-quality formulations for gastric health.</p>
-    <button class="shop-btn">Shop Online</button>
-</div>
-        <div class="product-grid">
-            <div class="product-card">
-                <h3>DSR Capsules</h3>
-                <p>Advanced formulation for effective relief. High-quality gastro-resistant capsules.</p>
-                <div class="price-tag">
-                    Price: <span>₹250 per Box (10x10)</span>
-                </div>
-                <a href="https://wa.me/919808685168?text=Hello%20TRSSKO,%20I%20want%20to%20order%20DSR%20Capsules" class="buy-btn">Order on WhatsApp</a>
-            </div>
-<div class="product-card">
-    <img src="YOUR_IMAGE_LINK_HERE" alt="TRSSKO Panto-DSR Capsules" style="width:100%; height:auto;">
-    <h3>Panto-DSR Capsules</h3>
-    <p>High-quality formulations for gastric health.</p>
-    <button class="shop-btn">Shop Online</button>
-</div>
-            <div class="product-card">
-                <h3>SP Tablets</h3>
-                <p>Trusted pharmaceutical solution for pain and inflammation management.</p>
-                <div class="price-tag">
-                    Price: <span>₹350 per Box</span>
-                </div>
-                <a href="https://wa.me/919808685168?text=Hello%20TRSSKO,%20I%20want%20to%20order%20SP%20Tablets" class="buy-btn">Order on WhatsApp</a>
-            </div>
+<section class="pharma-hero">
+    <h1>Quality Healthcare Solutions</h1>
+    <p>Global suppliers of WHO-GMP certified pharmaceutical formulations and healthcare products.</p>
+</section>
 
-            <div class="product-card">
-                <h3>Sildenafil Jelly</h3>
-                <p>Premium grade oral jelly formulation manufactured to global standards.</p>
-                <div class="price-tag">
-                    Price: <span>₹250 per Box</span>
-                </div>
-                <a href="https://wa.me/919808685168?text=Hello%20TRSSKO,%20I%20want%20to%20order%20Sildenafil%20Jelly" class="buy-btn">Order on WhatsApp</a>
-            </div>
+<div class="container">
+    <h2 class="section-title">Our Key Formulations</h2>
+    
+    <div class="product-grid">
+        <div class="pharma-card">
+            <h3>TRSSKO Panto-DSR</h3>
+            <span class="formula">Pantoprazole 40mg + Domperidone 30mg SR</span>
+            <p>Effective treatment for gastroesophageal reflux disease (GERD) and peptic ulcers. High-stability sustained-release formula.</p>
+            <div class="price-tag">Export Quality | 10x10 AL-AL Pack</div>
+        </div>
+
+        <div class="pharma-card">
+            <h3>TRSSKO-SP</h3>
+            <span class="formula">Aceclofenac + Paracetamol + Serratiopeptidase</span>
+            <p>A powerful anti-inflammatory and analgesic combination used for rapid relief from pain and swelling in bone and joint conditions.</p>
+            <div class="price-tag">Certified Formulation</div>
+        </div>
+
+        <div class="pharma-card">
+            <h3>Sildenafil Oral Jelly</h3>
+            <span class="formula">Sildenafil Citrate USP</span>
+            <p>Fast-acting oral jelly formulation for men's wellness. Available in various flavors for the international export market.</p>
+            <div class="price-tag">Custom Flavor Packaging Available</div>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 TRSSKO FASHION (OPC) PRIVATE LIMITED. All Rights Reserved.</p>
-    </footer>
+    <div class="manufacturing-info">
+        <h2>Third-Party Manufacturing</h2>
+        <p>At TRSSKO, we partner with world-class WHO-GMP manufacturing facilities to produce customized pharmaceutical labels for our clients. We handle the entire process from formulation and quality control to export-ready packaging.</p>
+    </div>
+</div>
+
+<footer>
+    <p>TRSSKO FASHION (OPC) PRIVATE LIMITED - Pharma Division</p>
+    <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Note: All pharmaceutical products are for export only and subject to local drug regulations.</p>
+</footer>
 
 </body>
 </html>
