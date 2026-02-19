@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRSSKO Enterprises | Premium Global Exports</title>
+    <title>TRSSKO Enterprises | Global FMCG, Pharma & Fashion</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #003366; --gold: #C5A059; --light: #f8f9fa; --dark: #1a1a1a; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        :root {
+            --primary: #003366; 
+            --gold: #C5A059; 
+            --light: #f8f9fa;
+            --dark: #1a1a1a;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
         body { color: var(--dark); line-height: 1.6; scroll-behavior: smooth; }
         
         /* Navigation */
@@ -21,12 +26,12 @@
         /* Visitor Counter Bar */
         .counter-bar { background: #eee; color: var(--primary); padding: 8px; text-align: center; font-size: 0.85rem; border-bottom: 1px solid #ddd; }
 
-        /* Hero */
+        /* Hero Section */
         .hero { background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1600&q=80'); 
                 height: 60vh; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
-        .hero h1 { font-size: 3rem; letter-spacing: 2px; text-transform: uppercase; }
+        .hero h1 { font-size: 3rem; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* Business Wings Grid */
+        /* Business Wings */
         .section { padding: 80px 5%; text-align: center; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
         .card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--gold); transition: 0.3s; }
@@ -36,11 +41,12 @@
         .btn { display: inline-block; padding: 12px 30px; background: var(--primary); color: white; text-decoration: none; border-radius: 5px; margin-top: 15px; font-weight: 600; transition: 0.3s; }
         .btn:hover { background: var(--gold); }
 
-        /* Contact Section */
-        #contact { background: var(--light); padding: 80px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        /* Contact Details Section */
+        #contact { background: var(--light); padding: 80px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
         .contact-box { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
         .contact-item { margin-bottom: 25px; display: flex; align-items: center; gap: 20px; }
         .contact-item i { color: var(--primary); font-size: 1.4rem; width: 30px; }
+        .contact-item a { text-decoration: none; color: var(--dark); font-weight: 600; }
         
         /* Floating WhatsApp Button */
         .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 3px #999; z-index: 100; transition: 0.3s; }
@@ -65,25 +71,25 @@
 </header>
 
 <div class="counter-bar">
-    <i class="fas fa-chart-line"></i> Global Visitors: 
-    <img src="https://hitwebcounter.com/counter/counter.php?page=TRSSKO_PROFESSIONAL&style=0006&nbdigits=5&type=page&initCount=1500" title="Free Counter" Alt="web counter" border="0" style="vertical-align: middle;">
+    <i class="fas fa-globe"></i> Global Visitors: 
+    <img src="https://hitwebcounter.com/counter/counter.php?page=TRSSKO_MAIN&style=0006&nbdigits=5&type=page&initCount=1500" border="0" style="vertical-align: middle; margin-left: 5px;">
 </div>
 
 <section class="hero" id="home">
     <div>
-        <h1>TRSSKO ENTERPRISES</h1>
-        <p>Leading the way in FMCG, Pharma, and Fashion Excellence.</p>
+        <h1>Purity & Global Trust</h1>
+        <p>Expert Exporters of FMCG, Pharmaceuticals, and Premium Fashion.</p>
     </div>
 </section>
 
 <section class="section" id="wings">
-    <h2 style="font-size: 2.2rem; color: var(--primary);">Our Business Wings</h2>
+    <h2>Our Business Verticals</h2>
     <div class="grid">
         <div class="card">
             <img src="https://chatgpt.com/backend-api/estuary/content?id=file_000000007bc87208b58b7e11ad83569c&ts=492076&p=fs&cid=1&sig=da6a62d8072f2b86514846463be434adc41d7dad7b4d7b8e7bec78f42ce36545&v=0" alt="FMCG">
             <div class="card-body">
                 <h3>FMCG & Foods</h3>
-                <p>Pure Jaggery Powder, Mustard Oil, and Tea for global health standards.</p>
+                <p>High-purity Jaggery, Mustard Oil, and traditional Indian Spices.</p>
                 <a href="fmcg.html" class="btn">View Products</a>
             </div>
         </div>
@@ -91,7 +97,7 @@
             <img src="https://images.unsplash.com/photo-1587854680352-936b22b91030?auto=format&fit=crop&w=800&q=80" alt="Pharma">
             <div class="card-body">
                 <h3>TRSSKO Pharma</h3>
-                <p>WHO-GMP certified pharmaceutical formulations and Lifescience solutions.</p>
+                <p>Innovative healthcare solutions and WHO-GMP pharmaceutical products.</p>
                 <a href="pharma.html" class="btn">Lifescience Wing</a>
             </div>
         </div>
@@ -99,42 +105,67 @@
             <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Fashion">
             <div class="card-body">
                 <h3>TRSSKO Fashion</h3>
-                <p>Export-oriented apparel combining modern style with premium fabric quality.</p>
-                <a href="#" class="btn">Fashion Portfolio</a>
+                <p>Export-oriented apparel combining modern style with premium quality.</p>
+                <a href="#" class="btn">Portfolio</a>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section" id="director" style="background: var(--light); display: flex; align-items: center; gap: 50px; flex-wrap: wrap;">
-    <img src="https://instasize.com/api/image/73607e4607a3c0c3d5c8cce3c08761744cf64b8e4d2ecdd06d54a92d48d6a10a.jpeg" alt="Director" style="width: 300px; height: 400px; border-radius: 10px; object-fit: cover; box-shadow: 10px 10px 0 var(--gold);">
-    <div style="flex: 1; text-align: left; min-width: 300px;">
+<section class="section" id="director" style="background: var(--light); display: flex; align-items: center; gap: 50px; flex-wrap: wrap; text-align: left;">
+    <img src="https://instasize.com/api/image/73607e4607a3c0c3d5c8cce3c08761744cf64b8e4d2ecdd06d54a92d48d6a10a.jpeg" alt="Kashish Chhabra" style="width: 300px; height: 400px; border-radius: 10px; object-fit: cover; box-shadow: 15px 15px 0 var(--gold);">
+    <div style="flex: 1; min-width: 300px;">
         <h2 style="color: var(--primary);">Director's Desk</h2>
-        <p style="margin-top: 20px;"><strong>Kashish Chhabra</strong> is a Law Graduate and registered Advocate with the Bar Council of Uttar Pradesh. Under his leadership, TRSSKO Enterprises operates with the highest levels of legal and ethical compliance.</p>
-        <p style="margin-top: 10px;">Our mission is to bring premium Indian products to the global stage while maintaining purity and trust.</p>
+        <p style="margin-top: 20px;"><strong>Kashish Chhabra</strong> is a Law Graduate and a registered Advocate with the Bar Council of Uttar Pradesh. With a background in Computer Applications (BCA), he leads TRSSKO Enterprises with a focus on ethical compliance and technological efficiency.</p>
+        <p style="margin-top: 10px;">Our mission is to bring the highest quality of Indian goods to the international market through transparent and trusted business practices.</p>
     </div>
 </section>
 
 <section id="contact">
     <div class="contact-box">
-        <h2 style="color: var(--primary); margin-bottom: 30px;">Contact Details</h2>
-        <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Ramraj, Meerut, Uttar Pradesh, India</div>
-        <div class="contact-item"><i class="fas fa-envelope"></i> contact@trssko.in</div>
-        <div class="contact-item"><i class="fas fa-id-card"></i> CIN: U18209UP2023OPC176366</div>
-        <div class="contact-item"><i class="fas fa-trademark"></i> Trademark: 7277253</div>
+        <h2 style="color: var(--primary); margin-bottom: 30px;">Get In Touch</h2>
+        <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+                <p style="font-size: 0.8rem; color: #666;">Contact Number</p>
+                <a href="tel:+918449303577">+91 8449303577</a>
+            </div>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+                <p style="font-size: 0.8rem; color: #666;">Email Address</p>
+                <a href="mailto:kashishchhabra0@gmail.com">kashishchhabra0@gmail.com</a>
+            </div>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+                <p style="font-size: 0.8rem; color: #666;">Headquarters</p>
+                <p>Ramraj, Meerut, Uttar Pradesh, India</p>
+            </div>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-id-card"></i>
+            <div>
+                <p style="font-size: 0.8rem; color: #666;">Corporate Identity</p>
+                <p>CIN: U18209UP2023OPC176366 | Trademark: 7277253</p>
+            </div>
+        </div>
     </div>
     <div style="border-radius: 12px; overflow: hidden; background: #ddd;">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111453.64433615178!2d77.63293816738592!3d28.9893322197472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c64f45773d725%3A0x867018305c4864!2sMeerut%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen></iframe>
     </div>
 </section>
 
-<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/918449303577" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
 
 <footer>
     <p><strong>TRSSKO FASHION (OPC) PRIVATE LIMITED</strong></p>
-    <p style="margin-top: 15px; opacity: 0.7;">© 2026 TRSSKO Enterprises. All Rights Reserved.</p>
+    <p>Operated by Advocate Kashish Chhabra</p>
+    <p style="margin-top: 15px; opacity: 0.6; font-size: 0.8rem;">© 2026 TRSSKO Enterprises. All Rights Reserved.</p>
 </footer>
 
 </body>
