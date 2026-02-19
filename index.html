@@ -3,78 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRSSKO Enterprises | Global FMCG & Pharma</title>
-    <style>
-        :root {
-            --primary-blue: #003366;
-            --accent-gold: #b8860b;
-            --light-gray: #f4f4f4;
-        }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; line-height: 1.6; }
-        header { background: white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--light-gray); }
-        .logo { font-weight: bold; font-size: 1.5rem; color: var(--primary-blue); }
-        .logo span { color: var(--accent-gold); }
-        
-        .hero { text-align: center; padding: 60px 20px; background: var(--light-gray); }
-        
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 50px 5%; }
-        .product-card { border: 1px solid #ddd; border-radius: 12px; overflow: hidden; transition: transform 0.3s; background: #fff; text-align: center; padding-bottom: 20px; }
-        .product-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .product-card img { width: 100%; height: 250px; object-fit: cover; }
-        .product-card h3 { color: var(--primary-blue); margin: 15px 0; }
-        .product-card p { padding: 0 15px; font-size: 0.9rem; color: #666; }
-        
-        .btn { background: var(--accent-gold); color: white; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer; text-decoration: none; font-weight: bold; }
-    </style>
+    <title>TRSSKO | Excellence in FMCG, Pharma & Fashion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-<header>
-    <div class="logo">TRSSKO <span>ENTERPRISES</span></div>
-    <nav>
-        <a href="#fmcg">FMCG</a> | <a href="#pharma">Pharma</a> | <a href="#fashion">Fashion</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <h1>Quality Products for Global Markets</h1>
-    <p>TRSSKO is a leading exporter of Premium Foods, Pharmaceutical Formulations, and High-End Fashion.</p>
-</section>
-
-<div class="product-grid">
-    <div class="product-card" id="fmcg">
-        <img src="https://chatgpt.com/backend-api/estuary/content?id=file_000000007bc87208b58b7e11ad83569c&ts=492076&p=fs&cid=1&sig=da6a62d8072f2b86514846463be434adc41d7dad7b4d7b8e7bec78f42ce36545&v=0" alt="TRSSKO Spices">
-        <h3>TRSSKO Spices</h3>
-        <p>Pure Indian spices processed to international purity standards.</p>
-        <a href="#" class="btn">Shop Now</a>
+    <div class="top-bar">
+        <div class="container">
+            <span>CIN: U18209UP2023OPC176366 | TM Reg: 7277253</span>
+            <span><i class="fas fa-map-marker-alt"></i> Ramraj, Meerut, UP</span>
+        </div>
     </div>
 
-    <div class="product-card">
-        <img src="https://instasize.com/p/ffe26f0d77beabebc84354e13010c392fd13f1708f360b97ccca4c803552aa93" alt="TRSSKO Tea">
-        <h3>Premium Tea</h3>
-        <p>Export-quality tea leaves for the perfect global blend.</p>
-        <a href="#" class="btn">Shop Now</a>
-    </div>
+    <header>
+        <nav class="container">
+            <div class="logo">TRSSKO<span>FASHION</span></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#fmcg">FMCG (Foods)</a></li>
+                <li><a href="#pharma">Pharma</a></li>
+                <li><a href="#fashion">Fashion</a></li>
+                <li><a href="#director">Director</a></li>
+                <li><a href="#" class="btn-order">Order Online</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="product-card" id="pharma">
-        <img src="https://instasize.com/p/0ff5863e1cd8f1a92e628eb3ed7cf3a1faaaeb8b63cf9bc2441d5b05b7dc7780" alt="TRSSKO Pharma">
-        <h3>Panto-DSR Capsules</h3>
-        <p>High-quality pharmaceutical formulations with full export documentation.</p>
-        <a href="#" class="btn">View Range</a>
-    </div>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Global Quality, Indian Roots</h1>
+            <p>Exporting Purity in Jaggery, Spices, and Healthcare across the Globe.</p>
+            <div class="hero-btns">
+                <a href="#fmcg" class="btn-gold">Explore FMCG</a>
+                <a href="#pharma" class="btn-outline">Pharma Division</a>
+            </div>
+        </div>
+    </section>
 
-    <div class="product-card">
-        <img src="https://instasize.com/p/42e56dded0cac1afa0d1821873bc0efcbe1d46521dd13e32b5d3708c817c5ba1" alt="TRSSKO Jaggery">
-        <h3>Jaggery Powder</h3>
-        <p>Pure, chemical-free jaggery powder.</p>
-        <a href="#" class="btn">Shop Now</a>
-    </div>
-</div>
+    <section class="container divisions">
+        <div class="card" id="fmcg">
+            <i class="fas fa-leaf"></i>
+            <h3>FMCG & Spices</h3>
+            <p>Pure Jaggery Powder, Mustard Oil, and Premium Spices.</p>
+            <button class="shop-btn">Order Online</button>
+        </div>
+        <div class="card" id="pharma">
+            <i class="fas fa-capsules"></i>
+            <h3>TRSSKO Pharma</h3>
+            <p>Reliable Pharmaceutical solutions and health supplements.</p>
+        </div>
+        <div class="card" id="fashion">
+            <i class="fas fa-tshirt"></i>
+            <h3>TRSSKO Fashion</h3>
+            <p>High-quality apparel for the international market.</p>
+        </div>
+    </section>
 
-<footer style="text-align: center; padding: 40px; background: #333; color: white;">
-    <p>&copy; 2026 TRSSKO FASHION (OPC) PRIVATE LIMITED. All Rights Reserved.</p>
-    <p>Location: Ramraj, Meerut, Uttar Pradesh.</p>
-</footer>
+    <section id="director" class="director-section">
+        <div class="container director-flex">
+            <div class="director-img">
+                <div class="img-placeholder">Kashish Chhabra</div>
+            </div>
+            <div class="director-text">
+                <h2>Message from the Director</h2>
+                <h4>Advocate Kashish Chhabra (BCA, LL.B)</h4>
+                <p>Leading TRSSKO with a vision to merge traditional Indian quality with modern technological and legal standards. Our commitment is to provide unadulterated products globally.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TRSSKO FASHION (OPC) PRIVATE LIMITED. All Rights Reserved.</p>
+            <div class="visitor-counter">
+                <i class="fas fa-users"></i> Visitors: <span id="count">1,245</span>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
