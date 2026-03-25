@@ -3,76 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FMCG Specifications | TRSSKO</title>
+    <title>FMCG Specifications | TRSSKO Enterprises</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #003366; --gold: #C5A059; --light: #f8f9fa; }
+        :root { --primary: #003366; --gold: #C5A059; --light: #f4f7f9; --white: #ffffff; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
-        body { background-color: var(--light); color: #333; line-height: 1.6; min-height: 100vh; }
-        header { background: var(--primary); color: white; padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; }
-        .container { padding: 40px 8%; max-width: 1200px; margin: auto; }
-        .spec-card { background: white; border-radius: 12px; padding: 30px; margin-bottom: 40px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-top: 5px solid var(--gold); text-align: center; }
-        .spec-card img { width: 100%; max-width: 450px; border-radius: 12px; margin: 20px 0; border: 1px solid #ddd; display: block; margin-left: auto; margin-right: auto; }
-        h2 { color: var(--primary); margin-bottom: 15px; text-align: left; font-size: 1.8rem; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; text-align: left; background: #fff; }
-        th, td { padding: 15px; border-bottom: 1px solid #eee; }
-        th { background: #fdfaf5; color: var(--primary); width: 40%; font-weight: 700; }
-        .whatsapp-btn { background: #25d366; color: white; padding: 15px 35px; text-decoration: none; border-radius: 30px; display: inline-block; margin-top: 30px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); transition: 0.3s; }
-        .whatsapp-btn:hover { background: #128c7e; transform: scale(1.05); }
-        @media (max-width: 768px) { .container { padding: 20px 5%; } th { width: 45%; } }
+        body { background-color: var(--light); color: #333; line-height: 1.6; }
+        
+        header { background: var(--primary); color: white; padding: 25px 8%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 800; letter-spacing: 1px; }
+        .logo span { color: var(--gold); }
+        
+        .container { padding: 50px 8%; max-width: 1100px; margin: auto; }
+        h1 { text-align: center; color: var(--primary); font-size: 2.5rem; margin-bottom: 10px; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 50px; }
+
+        .spec-card { background: var(--white); border-radius: 15px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 6px solid var(--gold); }
+        .card-content { padding: 35px; }
+        
+        /* Image Styling */
+        .product-image { width: 100%; max-width: 500px; height: auto; border-radius: 10px; margin: 0 auto 25px auto; display: block; border: 1px solid #eee; }
+        
+        h2 { color: var(--primary); font-size: 1.8rem; margin-bottom: 20px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { text-align: left; padding: 15px; border-bottom: 1px solid #f0f0f0; }
+        th { background: #f9f9f9; color: var(--primary); width: 35%; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; }
+
+        .btn-container { text-align: center; padding-bottom: 35px; }
+        .whatsapp-btn { background: #25d366; color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; display: inline-block; font-weight: 700; font-size: 1.1rem; transition: 0.3s; }
+        .whatsapp-btn:hover { background: #128c7e; transform: translateY(-3px); }
+
+        /* Trust Section */
+        .trust-banner { background: var(--primary); color: white; padding: 40px; border-radius: 15px; text-align: center; margin-top: 60px; }
+        .cred-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
+        .cred-item { border: 1px solid rgba(255,255,255,0.2); padding: 15px; border-radius: 8px; }
+
+        footer { text-align: center; padding: 40px; color: #999; }
+        @media (max-width: 768px) { .container { padding: 30px 5%; } th { width: 45%; } }
     </style>
 </head>
 <body>
 
 <header>
-    <div style="font-size: 1.6rem; font-weight: bold; letter-spacing: 1px;">TRSSKO<span> FMCG</span></div>
-    <a href="index.html" style="color:white; text-decoration:none; font-weight:600;"><i class="fas fa-arrow-left"></i> Back Home</a>
+    <div class="logo">TRSSKO<span> FMCG</span></div>
+    <a href="index.html" style="color:white; text-decoration:none;"><i class="fas fa-home"></i> Home</a>
 </header>
 
 <div class="container">
-    <h1 style="text-align: center; margin-bottom: 10px; color: var(--primary);">Product Specifications</h1>
-    <p style="text-align: center; margin-bottom: 40px; color: #666;">Export Quality Standards & Technical Data for Global Markets</p>
+    <h1>Product Specifications</h1>
+    <p class="subtitle">Global Standard Technical Data for TRSSKO Export Products</p>
 
     <div class="spec-card">
-        <h2><i class="fas fa-mug-hot"></i> TRSSKO Best Masala Tea</h2>
-        <img src="https://instasize.com/p/06c4efcc8e6cfd3e1490e07e45535962c4e8b3d053ed39b5e75cc2f509195960" alt="TRSSKO Masala Tea">
-        <table>
-            <tr><th>Blend Type</th><td>Premium CTC + Indian Spices</td></tr>
-            <tr><th>Net Weight</th><td>200g Pouch</td></tr>
-            <tr><th>Certifications</th><td>FSSAI Approved</td></tr>
-            <tr><th>Export Quality</th><td>High Aroma, Vacuum Sealed</td></tr>
-        </table>
-        <a href="https://wa.me/917417685168?text=Interested%20in%20TRSSKO%20Tea" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Inquiry for Tea</a>
+        <div class="card-content">
+            <h2><i class="fas fa-mug-hot"></i> TRSSKO Best Masala Tea</h2>
+            <img src="https://instasize.com/p/06c4efcc8e6cfd3e1490e07e45535962c4e8b3d053ed39b5e75cc2f509195960/image.jpg" alt="TRSSKO Masala Tea" class="product-image">
+            <table>
+                <tr><th>Ingredients</th><td>Assam Tea Leaf, Ginger, Cardamom, Clove</td></tr>
+                <tr><th>Net Weight</th><td>200 gm Pouch</td></tr>
+                <tr><th>Grade</th><td>Export Quality CTC + Natural Spices</td></tr>
+                <tr><th>FSSAI No.</th><td>10820093022177366</td></tr>
+            </table>
+        </div>
+        <div class="btn-container">
+            <a href="https://wa.me/919808685168?text=Inquiry%20for%20TRSSKO%20Tea" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Get Export Price</a>
+        </div>
     </div>
 
     <div class="spec-card">
-        <h2><i class="fas fa-tint"></i> Pure Cold Pressed Mustard Oil</h2>
-        <img src="https://instasize.com/p/4c174c6e997d689ef91fbfc1115d4fb8ee58e99cca0bab4972cf2cfa9cbc9f62" alt="TRSSKO Mustard Oil">
-        <table>
-            <tr><th>Extraction Method</th><td>Cold Pressed (Kachi Ghani)</td></tr>
-            <tr><th>Purity</th><td>100% Natural, No Preservatives</td></tr>
-            <tr><th>Grade</th><td>Grade A Export Quality</td></tr>
-            <tr><th>Packaging</th><td>Leak-proof PET/Glass Bottles</td></tr>
-        </table>
-        <a href="https://wa.me/917417685168?text=Interested%20in%20Mustard%20Oil" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Inquiry for Oil</a>
+        <div class="card-content">
+            <h2><i class="fas fa-tint"></i> Pure Cold Pressed Mustard Oil</h2>
+            <img src="https://instasize.com/p/4c174c6e997d689ef91fbfc1115d4fb8ee58e99cca0bab4972cf2cfa9cbc9f62/image.jpg" alt="TRSSKO Mustard Oil" class="product-image">
+            <table>
+                <tr><th>Method</th><td>Kachi Ghani (Cold Pressed)</td></tr>
+                <tr><th>Purity</th><td>100% Natural, Unrefined</td></tr>
+                <tr><th>Packaging</th><td>Leak-Proof Export Grade Bottle</td></tr>
+                <tr><th>Free From</th><td>Mineral Oil, Argemone Oil</td></tr>
+            </table>
+        </div>
+        <div class="btn-container">
+            <a href="https://wa.me/919808685168?text=Inquiry%20for%20Mustard%20Oil" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Get Export Price</a>
+        </div>
     </div>
 
     <div class="spec-card">
-        <h2><i class="fas fa-cubes"></i> Dry Fruit Jaggery Cubes</h2>
-        <img src="https://instasize.com/p/0434330f5a384714eb6d4221642b2d3fe6b1339ec5bfb3546f648f453787bf0b" alt="TRSSKO Jaggery Cubes">
-        <table>
-            <tr><th>Key Ingredients</th><td>Natural Jaggery, Sesame, Fennel</td></tr>
-            <tr><th>Unit Size</th><td>Convenient Bite-sized Cubes</td></tr>
-            <tr><th>Health Benefit</th><td>Rich in Iron & Digestion Friendly</td></tr>
-            <tr><th>Usage</th><td>Direct Consumption / Sweetener</td></tr>
-        </table>
-        <a href="https://wa.me/917417685168?text=Interested%20in%20Jaggery%20Cubes" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Inquiry for Cubes</a>
+        <div class="card-content">
+            <h2><i class="fas fa-cubes"></i> Dry Fruit Jaggery Cubes</h2>
+            <img src="https://instasize.com/p/0434330f5a384714eb6d4221642b2d3fe6b1339ec5bfb3546f648f453787bf0b/image.jpg" alt="TRSSKO Jaggery Cubes" class="product-image">
+            <table>
+                <tr><th>Base</th><td>Organic Sugarcane Jaggery</td></tr>
+                <tr><th>Additives</th><td>Sesame Seeds, Fennel, Dry Fruits</td></tr>
+                <tr><th>Benefit</th><td>No Added Sugar, Iron Rich</td></tr>
+                <tr><th>HS Code</th><td>170113 (Cane Jaggery)</td></tr>
+            </table>
+        </div>
+        <div class="btn-container">
+            <a href="https://wa.me/919808685168?text=Inquiry%20for%20Jaggery%20Cubes" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Get Export Price</a>
+        </div>
     </div>
 
+    <div class="trust-banner">
+        <h3>TRSSKO Enterprises Credentials</h3>
+        <p>Verified Merchant Exporter from Uttar Pradesh, India</p>
+        <div class="cred-grid">
+            <div class="cred-item"><strong>GSTIN</strong><br>09BKQPC7409C1Z6</div>
+            <div class="cred-item"><strong>PAN</strong><br>BKQPC7409C</div>
+            <div class="cred-item"><strong>CIN</strong><br>U18209UP2023OPC176366</div>
+        </div>
+    </div>
 </div>
 
-<footer style="text-align: center; padding: 40px; color: #888; font-size: 0.9rem;">
-    &copy; 2026 TRSSKO Enterprises. All Rights Reserved.
+<footer>
+    &copy; 2026 TRSSKO Fashion (OPC) Private Limited | www.trssko.in
 </footer>
 
 </body>
