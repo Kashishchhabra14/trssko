@@ -1,250 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8LR6NJ7W0M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LR6NJ7W0M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8LR6NJ7W0M');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TRSSKO Enterprises – Global Merchant Exporter from India. Premium Pharma, FMCG, and Fashion exports. WHO-GMP certified. IEC: BKQPC7409C.">
+  <meta name="keywords" content="TRSSKO, India export, pharma export, FMCG export, mustard oil, jaggery, DSR capsules, Meerut exporter">
+  <meta property="og:title" content="TRSSKO Enterprises | Global Merchant Exporters">
+  <meta property="og:description" content="Bridging Indian quality with global markets in Pharma, FMCG, and Fashion.">
+  <meta property="og:type" content="website">
+  <title>TRSSKO Enterprises | Global Merchant Exporters</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #002147;
+      --navy2: #003366;
+      --gold: #C5A059;
+      --gold-light: #f5e8cc;
+      --light: #f8f9fb;
+      --dark: #1a1a2e;
+      --white: #ffffff;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--dark); line-height: 1.6; overflow-x: hidden; background: #fff; }
 
-  gtag('config', 'G-8LR6NJ7W0M');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRSSKO Enterprises | Global Merchant Exporters</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #003366; 
-            --gold: #C5A059; 
-            --light: #f8f9fa;
-            --dark: #1a1a1a;
-            --white: #ffffff;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
-        
-        body { color: var(--dark); line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; background-color: #fff; }
+    /* ── HEADER ── */
+    header {
+      background: rgba(255,255,255,0.97);
+      padding: 0 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.09);
+      backdrop-filter: blur(10px);
+    }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 900; color: var(--navy2); letter-spacing: 1px; text-decoration: none; }
+    .logo span { color: var(--gold); }
+    nav ul { list-style: none; display: flex; gap: 30px; align-items: center; }
+    nav a { text-decoration: none; color: var(--navy2); font-weight: 600; font-size: 0.83rem; text-transform: uppercase; letter-spacing: 0.8px; transition: color 0.2s; }
+    nav a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--navy2); color: #fff !important;
+      padding: 9px 20px; border-radius: 6px; transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold) !important; color: #fff !important; }
 
-        /* Navigation */
-        header { 
-            background: rgba(255, 255, 255, 0.98); 
-            padding: 1rem 8%; 
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1); 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-        }
-        .logo { font-size: 1.6rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
-        .logo span { color: var(--gold); }
-        
-        nav ul { list-style: none; display: flex; gap: 25px; }
-        nav a { text-decoration: none; color: var(--primary); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--gold); }
+    /* Mobile nav */
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy2); margin: 5px 0; border-radius: 2px; transition: 0.3s; }
+    .mobile-menu { display: none; position: absolute; top: 72px; left: 0; right: 0; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.12); padding: 20px 6%; z-index: 999; }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a { display: block; padding: 12px 0; color: var(--navy2); text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid var(--border); }
+    .mobile-menu a:last-child { border-bottom: none; }
 
-        /* Hero Section */
-        .hero { 
-            background: linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.8)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1600&q=80'); 
-            height: 65vh; 
-            background-size: cover; 
-            background-position: center; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            color: white; 
-            text-align: center; 
-            padding: 0 20px;
-        }
-        .hero-content h1 { font-size: calc(2rem + 2vw); margin-bottom: 15px; letter-spacing: 2px; text-transform: uppercase; }
-        .hero-content p { font-size: 1.2rem; font-weight: 300; margin-bottom: 25px; }
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, rgba(0,33,71,0.88) 0%, rgba(0,51,102,0.82) 60%),
+                  url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 6%;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 80px;
+      background: linear-gradient(to top, #fff, transparent);
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 800px; }
+    .hero-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(197,160,89,0.18); border: 1px solid rgba(197,160,89,0.45);
+      color: var(--gold-light); font-size: 0.78rem; font-weight: 600;
+      padding: 7px 18px; border-radius: 40px; margin-bottom: 24px;
+      letter-spacing: 1.5px; text-transform: uppercase;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      color: #fff; line-height: 1.15; margin-bottom: 20px;
+      font-weight: 900;
+    }
+    .hero h1 em { color: var(--gold); font-style: normal; }
+    .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.78); max-width: 560px; margin: 0 auto 36px; font-weight: 300; line-height: 1.75; }
+    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--gold); color: #fff; text-decoration: none;
+      padding: 15px 34px; border-radius: 6px; font-weight: 700; font-size: 0.9rem;
+      text-transform: uppercase; letter-spacing: 0.8px; transition: all 0.25s;
+      display: inline-flex; align-items: center; gap: 9px;
+    }
+    .btn-primary:hover { background: #a8832a; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(197,160,89,0.4); }
+    .btn-outline {
+      background: transparent; color: #fff; text-decoration: none;
+      padding: 14px 32px; border-radius: 6px; font-weight: 600; font-size: 0.9rem;
+      text-transform: uppercase; letter-spacing: 0.8px; border: 1.5px solid rgba(255,255,255,0.4);
+      transition: all 0.25s; display: inline-flex; align-items: center; gap: 9px;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); }
 
-        /* Business Wings Section */
-        .section { padding: 80px 8%; text-align: center; }
-        .section-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 10px; }
-        .section-subtitle { color: #666; margin-bottom: 40px; }
+    /* Stats bar */
+    .stats-bar {
+      background: var(--navy2);
+      padding: 22px 6%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0;
+    }
+    .stat-item { text-align: center; padding: 0 20px; border-right: 1px solid rgba(255,255,255,0.12); }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 1.9rem; color: var(--gold); font-weight: 700; display: block; }
+    .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; }
 
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 30px; 
-        }
-        .card { 
-            background: var(--white); 
-            border-radius: 15px; 
-            overflow: hidden; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
-            transition: 0.4s; 
-            border-bottom: 5px solid transparent;
-            display: flex;
-            flex-direction: column;
-        }
-        .card:hover { transform: translateY(-10px); border-bottom-color: var(--gold); }
-        .card img { width: 100%; height: 250px; object-fit: cover; }
-        .card-body { padding: 30px; flex-grow: 1; }
-        .card-body h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; }
-        
-        .btn { 
-            display: inline-block; 
-            padding: 12px 28px; 
-            background: var(--primary); 
-            color: white; 
-            text-decoration: none; 
-            border-radius: 5px; 
-            font-weight: 600; 
-            margin-top: 15px;
-            transition: 0.3s;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-        }
-        .btn:hover { background: var(--gold); color: white; }
+    /* ── SECTIONS ── */
+    .section { padding: 90px 6%; }
+    .section-label { display: inline-block; font-size: 0.72rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--navy2); margin-bottom: 14px; line-height: 1.25; }
+    .section-sub { color: var(--text-muted); font-size: 1rem; max-width: 520px; line-height: 1.7; }
+    .section-head { text-align: center; max-width: 600px; margin: 0 auto 56px; }
 
-        /* Director's Desk Section */
-        #director { padding: 100px 10%; background: var(--light); display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }
-        .dir-img-container { flex-shrink: 0; position: relative; }
-        .dir-img { width: 320px; border-radius: 15px; box-shadow: 20px 20px 0 var(--gold); display: block; }
-        .dir-text { flex: 1; min-width: 350px; }
-        .dir-text h2 { color: var(--primary); font-size: 2.2rem; margin-bottom: 20px; }
-        .dir-text p { margin-bottom: 15px; font-size: 1.05rem; color: #444; }
-        .dir-text blockquote { font-style: italic; border-left: 4px solid var(--gold); padding-left: 20px; margin: 30px 0; color: #555; font-size: 1.15rem; line-height: 1.4; }
+    /* Wings grid */
+    .wings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; max-width: 1200px; margin: 0 auto; }
+    .wing-card {
+      background: var(--white); border-radius: 16px;
+      overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      border: 1px solid var(--border); display: flex; flex-direction: column;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .wing-card:hover { transform: translateY(-8px); box-shadow: 0 16px 48px rgba(0,33,71,0.14); }
+    .wing-img { width: 100%; height: 230px; object-fit: cover; display: block; }
+    .wing-body { padding: 28px; flex: 1; }
+    .wing-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--gold-light); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.1rem; margin-bottom: 16px; }
+    .wing-body h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--navy2); margin-bottom: 10px; }
+    .wing-body p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; margin-bottom: 20px; }
+    .wing-tag { display: inline-block; background: #e8f5e9; color: #2e7d32; font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; letter-spacing: 0.5px; margin-bottom: 16px; }
+    .btn-wing {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--navy2); color: #fff; text-decoration: none;
+      padding: 11px 22px; border-radius: 6px; font-weight: 600; font-size: 0.84rem;
+      text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.2s;
+    }
+    .btn-wing:hover { background: var(--gold); transform: translateX(3px); }
 
-        /* Contact Section */
-        #contact { padding: 80px 8%; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
-        .contact-info { background: var(--primary); color: white; padding: 50px; border-radius: 15px; }
-        .contact-info h3 { font-size: 1.8rem; margin-bottom: 30px; color: var(--gold); }
-        .contact-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 25px; }
-        .contact-item i { color: var(--gold); font-size: 1.2rem; margin-top: 5px; }
-        .contact-item p { font-size: 0.95rem; line-height: 1.5; }
-        .credentials { margin-top: 35px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; opacity: 0.8; }
+    /* Director section */
+    #director { background: var(--light); }
+    .director-inner { display: flex; align-items: center; gap: 70px; max-width: 1100px; margin: 0 auto; flex-wrap: wrap; }
+    .dir-img-wrap { flex-shrink: 0; position: relative; }
+    .dir-img {
+      width: 300px; height: 360px; object-fit: cover; object-position: top;
+      border-radius: 14px; display: block;
+      box-shadow: 24px 24px 0 var(--gold);
+    }
+    .dir-badge {
+      position: absolute; bottom: -12px; left: 24px;
+      background: var(--navy2); color: #fff;
+      padding: 10px 18px; border-radius: 8px;
+      font-size: 0.78rem; font-weight: 600;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    .dir-badge span { color: var(--gold); display: block; font-size: 0.7rem; margin-bottom: 2px; text-transform: uppercase; letter-spacing: 1px; }
+    .dir-text { flex: 1; min-width: 300px; }
+    .dir-text h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--navy2); margin-bottom: 20px; }
+    .dir-text p { color: #444; font-size: 0.95rem; line-height: 1.75; margin-bottom: 14px; }
+    .dir-text strong { color: var(--navy2); }
+    blockquote {
+      border-left: 4px solid var(--gold);
+      padding: 16px 20px;
+      margin: 28px 0;
+      background: var(--gold-light);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      color: #555;
+      font-size: 1.05rem;
+      line-height: 1.65;
+    }
+    .dir-creds { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 22px; }
+    .cred-chip {
+      background: #fff; border: 1px solid var(--border);
+      padding: 8px 16px; border-radius: 6px;
+      font-size: 0.78rem; color: var(--navy2); font-weight: 600;
+    }
+    .cred-chip span { color: var(--text-muted); font-weight: 400; display: block; font-size: 0.7rem; }
 
-        /* Floating WhatsApp */
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background: #25d366; color: white; border-radius: 50%; text-align: center; font-size: 30px; z-index: 100; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s; }
-        .whatsapp-float:hover { transform: scale(1.1); background: #128c7e; }
-        .whatsapp-float i { margin-top: 16px; }
+    /* Trust badges */
+    .trust-strip { background: var(--navy2); padding: 36px 6%; }
+    .trust-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+    .trust-item { display: flex; align-items: center; gap: 14px; }
+    .trust-icon { width: 46px; height: 46px; background: rgba(197,160,89,0.18); border: 1px solid rgba(197,160,89,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.1rem; flex-shrink: 0; }
+    .trust-text strong { color: #fff; font-size: 0.88rem; display: block; margin-bottom: 2px; }
+    .trust-text span { color: rgba(255,255,255,0.55); font-size: 0.78rem; }
 
-        /* Footer */
-        footer { background: #001a33; color: white; padding: 50px 8% 30px; text-align: center; }
-        .footer-content { border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 30px; margin-bottom: 30px; }
-        .footer-logo { font-size: 1.4rem; font-weight: 800; color: var(--white); text-transform: uppercase; margin-bottom: 10px; }
-        .footer-logo span { color: var(--gold); }
-        .copyright { font-size: 0.8rem; opacity: 0.6; }
+    /* Contact */
+    #contact { background: var(--light); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; max-width: 1100px; margin: 0 auto; }
+    .contact-card {
+      background: var(--navy2); border-radius: 16px;
+      padding: 44px; color: #fff;
+    }
+    .contact-card h3 { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: var(--gold); margin-bottom: 30px; }
+    .contact-item { display: flex; gap: 16px; margin-bottom: 22px; align-items: flex-start; }
+    .contact-item i { color: var(--gold); font-size: 1rem; margin-top: 4px; width: 16px; flex-shrink: 0; }
+    .contact-item p { font-size: 0.9rem; line-height: 1.55; color: rgba(255,255,255,0.85); }
+    .contact-item a { color: rgba(255,255,255,0.85); text-decoration: none; }
+    .contact-item a:hover { color: var(--gold); }
+    .contact-divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 28px 0; }
+    .creds-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .cred-box { background: rgba(255,255,255,0.06); border: 1px solid rgba(197,160,89,0.2); border-radius: 8px; padding: 12px 14px; }
+    .cred-box span { font-size: 0.65rem; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; display: block; margin-bottom: 4px; }
+    .cred-box strong { font-size: 0.82rem; color: #fff; font-weight: 600; }
+    .map-wrap { border-radius: 16px; overflow: hidden; min-height: 420px; border: 1px solid var(--border); }
+    .map-wrap iframe { width: 100%; height: 100%; border: 0; display: block; min-height: 420px; }
+    .whatsapp-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #25d366; color: #fff; text-decoration: none;
+      padding: 13px 24px; border-radius: 8px;
+      font-weight: 700; font-size: 0.9rem; margin-top: 24px;
+      transition: all 0.2s;
+    }
+    .whatsapp-cta:hover { background: #1da851; transform: translateY(-2px); }
 
-        @media (max-width: 992px) {
-            #director { flex-direction: column; text-align: center; padding: 60px 5%; }
-            .dir-img-container { margin-bottom: 40px; }
-            .dir-text blockquote { border-left: none; border-top: 2px solid var(--gold); padding: 20px 0 0; }
-        }
-    </style>
+    /* WhatsApp float */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px;
+      width: 58px; height: 58px;
+      background: #25d366; color: #fff;
+      border-radius: 50%; font-size: 1.6rem;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.45);
+      z-index: 500; text-decoration: none;
+      transition: all 0.25s;
+    }
+    .wa-float:hover { background: #1da851; transform: scale(1.1); }
+    .wa-float-label {
+      position: absolute; right: 68px;
+      background: var(--dark); color: #fff;
+      font-size: 0.78rem; font-weight: 600;
+      padding: 6px 12px; border-radius: 6px;
+      white-space: nowrap; opacity: 0; pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .wa-float:hover .wa-float-label { opacity: 1; }
+
+    /* Footer */
+    footer { background: #001226; color: rgba(255,255,255,0.55); padding: 48px 6% 28px; }
+    .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 24px; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #fff; font-weight: 900; text-decoration: none; }
+    .footer-logo span { color: var(--gold); }
+    .footer-tagline { font-size: 0.82rem; margin-top: 6px; }
+    .footer-links { display: flex; gap: 22px; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.83rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.78rem; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      nav ul { display: none; }
+      .hamburger { display: block; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .director-inner { flex-direction: column; text-align: center; gap: 50px; }
+      .dir-img { width: 260px; height: 300px; }
+      .dir-badge { left: 50%; transform: translateX(-50%); white-space: nowrap; }
+      .dir-creds { justify-content: center; }
+      blockquote { text-align: left; }
+      .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 20px 0; }
+      .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 16px; }
+      .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.12); }
+      .stat-item:last-child, .stat-item:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+    }
+    @media (max-width: 560px) {
+      .hero { min-height: 70vh; }
+      .section { padding: 60px 5%; }
+      .wings-grid { grid-template-columns: 1fr; }
+      .creds-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">TRSSKO<span> ENTERPRISES</span></div>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#wings">Our Wings</a></li>
-            <li><a href="#director">Director</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <a href="index.html" class="logo">TRSSKO<span> ENTERPRISES</span></a>
+  <nav>
+    <ul>
+      <li><a href="#wings">Our Wings</a></li>
+      <li><a href="#director">Director</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://wa.me/917417685168" class="nav-cta" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+    </ul>
+  </nav>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </header>
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="#wings" onclick="toggleMenu()">Our Wings</a>
+  <a href="#director" onclick="toggleMenu()">Director's Desk</a>
+  <a href="#contact" onclick="toggleMenu()">Contact Us</a>
+  <a href="https://wa.me/917417685168" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+</nav>
 
+<!-- HERO -->
 <section class="hero" id="home">
-    <div class="hero-content">
-        <h1>Global Export Excellence</h1>
-        <p>Bridging Indian quality with global markets in Pharma, FMCG, and Fashion.</p>
-        <a href="#wings" class="btn" style="background:var(--gold)">Explore Our Catalog</a>
+  <div class="hero-content">
+    <div class="hero-pill"><i class="fas fa-globe"></i> Trusted Global Merchant Exporter — Est. India</div>
+    <h1>Exporting <em>Indian Excellence</em> to the World</h1>
+    <p>From WHO-GMP certified pharmaceuticals to premium FMCG and fashion — TRSSKO bridges Indian quality with global markets.</p>
+    <div class="hero-btns">
+      <a href="#wings" class="btn-primary"><i class="fas fa-th-large"></i> Explore Our Products</a>
+      <a href="#contact" class="btn-outline"><i class="fas fa-envelope"></i> Get in Touch</a>
     </div>
+  </div>
 </section>
 
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item"><span class="stat-num">3+</span><span class="stat-label">Business Verticals</span></div>
+  <div class="stat-item"><span class="stat-num">WHO</span><span class="stat-label">GMP Certified Pharma</span></div>
+  <div class="stat-item"><span class="stat-num">IEC</span><span class="stat-label">Licensed Exporter</span></div>
+  <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Quality Assured</span></div>
+</div>
+
+<!-- WINGS -->
 <section class="section" id="wings">
+  <div class="section-head">
+    <span class="section-label">What We Offer</span>
     <h2 class="section-title">Our Business Wings</h2>
-    <p class="section-subtitle">Select a sector to view full product specifications and export details.</p>
-    <div class="grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80" alt="FMCG Products">
-            <div class="card-body">
-                <h3>FMCG & Foods</h3>
-                <p>Export-grade Jaggery Powder, Cold-Pressed Mustard Oil, and Premium Indian Spices.</p>
-                <a href="fmcg.html" class="btn">View Specifications</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1587854680352-936b22b91030?auto=format&fit=crop&w=800&q=80" alt="Pharmaceuticals">
-            <div class="card-body">
-                <h3>TRSSKO Pharma</h3>
-                <p>WHO-GMP certified healthcare solutions including DSR Capsules under Certified  third party Pharma cpmpanies.</p>
-                <a href="pharma.html" class="btn">View Specifications</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Fashion Apparel">
-            <div class="card-body">
-                <h3>TRSSKO Fashion</h3>
-                <p>Premium export apparel and textiles managed by TRSSKO Fashion (OPC) Private Limited.</p>
-                <a href="#contact" class="btn">Inquire Now</a>
-            </div>
-        </div>
+    <p class="section-sub">Select a sector to view full product specifications, pricing, and ordering options.</p>
+  </div>
+  <div class="wings-grid">
+
+    <div class="wing-card">
+      <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80" alt="FMCG Products — Mustard Oil, Jaggery, Spices" class="wing-img">
+      <div class="wing-body">
+        <div class="wing-icon"><i class="fas fa-seedling"></i></div>
+        <div class="wing-tag"><i class="fas fa-check-circle"></i> FSSAI Licensed</div>
+        <h3>FMCG &amp; Foods</h3>
+        <p>Export-grade Jaggery Cubes, Cold-Pressed Mustard Oil, Masala Tea, Turmeric, Desi Ghee, and Premium Indian Spices. Direct from source.</p>
+        <a href="fmcg.html" class="btn-wing">View &amp; Purchase <i class="fas fa-arrow-right"></i></a>
+      </div>
     </div>
+
+    <div class="wing-card">
+      <img src="https://images.unsplash.com/photo-1587854680352-936b22b91030?auto=format&fit=crop&w=800&q=80" alt="TRSSKO Pharma — WHO-GMP Certified" class="wing-img">
+      <div class="wing-body">
+        <div class="wing-icon"><i class="fas fa-capsules"></i></div>
+        <div class="wing-tag"><i class="fas fa-check-circle"></i> WHO-GMP Certified</div>
+        <h3>TRSSKO Pharma</h3>
+        <p>Certified third-party manufactured healthcare formulations including DSR Capsules, Multivitamins, and Sildenafil 100mg under TRSSKO's quality standards.</p>
+        <a href="pharma.html" class="btn-wing">View Specifications <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="wing-card">
+      <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="TRSSKO Fashion — Export Apparel" class="wing-img">
+      <div class="wing-body">
+        <div class="wing-icon"><i class="fas fa-tshirt"></i></div>
+        <div class="wing-tag"><i class="fas fa-building"></i> OPC Private Limited</div>
+        <h3>TRSSKO Fashion</h3>
+        <p>Premium export apparel and textiles. TRSSKO Fashion (OPC) Private Limited — CIN: U18209UP2023OPC176366. Inquire for bulk export pricing.</p>
+        <a href="#contact" class="btn-wing">Inquire Now <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<section id="director">
-    <div class="dir-img-container">
-        <img src="https://instasize.com/api/image/73607e4607a3c0c3d5c8cce3c08761744cf64b8e4d2ecdd06d54a92d48d6a10a.jpeg" class="dir-img" alt="Kashish Chhabra">
+<!-- TRUST -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="trust-icon"><i class="fas fa-certificate"></i></div>
+      <div class="trust-text"><strong>WHO-GMP Certified</strong><span>Pharma Manufacturing</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon"><i class="fas fa-passport"></i></div>
+      <div class="trust-text"><strong>IEC: BKQPC7409C</strong><span>Import-Export Code</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon"><i class="fas fa-trademark"></i></div>
+      <div class="trust-text"><strong>Trademark Reg: 7277253</strong><span>Officially Registered Brand</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon"><i class="fas fa-balance-scale"></i></div>
+      <div class="trust-text"><strong>Advocate — Bar Council UP</strong><span>Legal &amp; Ethical Foundation</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- DIRECTOR -->
+<section class="section" id="director">
+  <div class="director-inner">
+    <div class="dir-img-wrap">
+      <img
+        src="https://instasize.com/api/image/73607e4607a3c0c3d5c8cce3c08761744cf64b8e4d2ecdd06d54a92d48d6a10a.jpeg"
+        class="dir-img"
+        alt="Kashish Chhabra — Director, TRSSKO Enterprises"
+        onerror="this.style.background='var(--gold-light)';this.src='https://ui-avatars.com/api/?name=Kashish+Chhabra&background=002147&color=C5A059&size=300&font-size=0.35';"
+      >
+      <div class="dir-badge"><span>Director</span>Kashish Chhabra</div>
     </div>
     <div class="dir-text">
-        <h2>Director's Desk</h2>
-        <p><strong>Kashish Chhabra</strong> is a Law Graduate and a registered Advocate with the Bar Council of Uttar Pradesh. Leveraging this strong legal foundation, he has established <strong>TRSSKO Enterprises</strong> as a symbol of transparency and ethical excellence in global trade.</p>
-        
-        <p>As the proprietor of TRSSKO Enterprises and owner of TRSSKO FASHION (OPC) PRIVATE LIMITED, Kashish has spearheaded diversification into high-demand sectors, including <strong>Pharmaceuticals (TRSSKO Pharma)</strong>, <strong>FMCG</strong>, and <strong>International Fashion</strong>. Under his leadership, the firm ensures rigorous quality benchmarks and professional integrity in every shipment.</p>
-
-        <blockquote>"We don't just export products; we export the trust, purity, and tradition of Indian quality to the world."</blockquote>
+      <span class="section-label">Director's Desk</span>
+      <h2 class="section-title">Built on Law,<br>Driven by Trust</h2>
+      <p><strong>Kashish Chhabra</strong> is a Law Graduate and a registered Advocate with the Bar Council of Uttar Pradesh. Leveraging this strong legal foundation, he established <strong>TRSSKO Enterprises</strong> as a symbol of transparency and ethical excellence in global trade.</p>
+      <p>As Proprietor of TRSSKO Enterprises and Director of <strong>TRSSKO Fashion (OPC) Private Limited</strong>, Kashish has spearheaded diversification into high-demand sectors including Pharmaceuticals, FMCG, and International Fashion.</p>
+      <blockquote>"We don't just export products — we export the trust, purity, and tradition of Indian quality to the world."</blockquote>
+      <div class="dir-creds">
+        <div class="cred-chip">GSTIN<span>09BKQPC7409C1Z6</span></div>
+        <div class="cred-chip">PAN<span>BKQPC7409C</span></div>
+        <div class="cred-chip">CIN<span>U18209UP2023OPC176366</span></div>
+      </div>
     </div>
+  </div>
 </section>
 
-<section id="contact">
-    <div class="contact-info">
-        <h3>Global Trade Inquiries</h3>
-        <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <p>Near Shiv Chowk, Main Market, Hastinapur Road, Ramraj, Meerut, UP - 250404</p>
-        </div>
-        <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <p>kashish@trssko.in</p>
-        </div>
-        <div class="contact-item">
-            <i class="fas fa-phone-alt"></i>
-            <p>+91 7417685168</p>
-        </div>
-        <div class="credentials">
-            <p><strong>IEC Code:</strong> BKQPC7409C</p>
-            <p><strong>CIN:</strong> U18209UP2023OPC176366</p>
-            <p><strong>Trademark Reg:</strong> 7277253</p>
-        </div>
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-head">
+    <span class="section-label">Reach Us</span>
+    <h2 class="section-title">Global Trade Inquiries</h2>
+    <p class="section-sub">For bulk orders, export inquiries, or partnerships — we respond within 24 hours.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3>Contact Details</h3>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>Near Shiv Chowk, Main Market, Hastinapur Road, Ramraj, Meerut, UP — 250404, India</p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <p><a href="mailto:kashish@trssko.in">kashish@trssko.in</a></p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone-alt"></i>
+        <p><a href="tel:+917417685168">+91 74176 85168</a></p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-globe"></i>
+        <p>www.trssko.in</p>
+      </div>
+      <hr class="contact-divider">
+      <div class="creds-grid">
+        <div class="cred-box"><span>IEC Code</span><strong>BKQPC7409C</strong></div>
+        <div class="cred-box"><span>GSTIN</span><strong>09BKQPC7409C1Z6</strong></div>
+        <div class="cred-box"><span>Trademark</span><strong>7277253</strong></div>
+        <div class="cred-box"><span>CIN</span><strong>U18209UP2023OPC176366</strong></div>
+      </div>
+      <a href="https://wa.me/917417685168?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20TRSSKO%20products." class="whatsapp-cta" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
     </div>
-    <div style="background:#eee; border-radius:15px; overflow:hidden; min-height:350px;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3480.23456789!2d77.9!3d29.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDEyJzAwLjAiTiA3N8KwNTQnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3479.5!2d77.9537!3d29.1503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c6584b69bfc83%3A0xb4c2f35c73e26bad!2sMeerut%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000"
+        allowfullscreen=""
+        loading="lazy"
+        title="TRSSKO Enterprises Location — Meerut, Uttar Pradesh"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
+  </div>
 </section>
 
-<a href="https://wa.me/917417685168" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+<!-- WhatsApp Float -->
+<a href="https://wa.me/917417685168" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with TRSSKO on WhatsApp">
+  <span class="wa-float-label">Chat with us</span>
+  <i class="fab fa-whatsapp"></i>
 </a>
 
+<!-- Footer -->
 <footer>
-    <div class="footer-content">
-        <div class="footer-logo">TRSSKO<span> ENTERPRISES</span></div>
-        <p style="font-size: 0.9rem; opacity: 0.7;">Maintained by TRSSKO Infotech</p>
+  <div class="footer-top">
+    <div>
+      <a href="index.html" class="footer-logo">TRSSKO<span> ENTERPRISES</span></a>
+      <p class="footer-tagline">Global Merchant Exporters — Meerut, India</p>
     </div>
-    <p class="copyright">© 2026 TRSSKO Enterprises. All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="#wings">Our Wings</a>
+      <a href="fmcg.html">FMCG Products</a>
+      <a href="pharma.html">Pharma</a>
+      <a href="#director">Director</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 TRSSKO Enterprises. All Rights Reserved.</span>
+    <span>Maintained by TRSSKO Infotech</span>
+  </div>
 </footer>
 
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  // Close mobile menu on outside click
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.querySelector('.hamburger');
+    if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+  // Smooth anchor scroll with offset for sticky header
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
 </body>
 </html>
-
-
-
