@@ -3,78 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pharma Specifications | TRSSKO</title>
+    <title>TRSSKO | Coming Soon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --primary: #003366; --blue: #00a8cc; --light: #f4f7f6; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
         body { background: var(--light); padding-bottom: 50px; }
-        header { background: white; padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .container { padding: 40px 8%; max-width: 1200px; margin: auto; }
-        .pharma-card { background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; border-top: 5px solid var(--blue); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        h1 { color: var(--primary); margin-bottom: 30px; }
-        h2 { color: var(--primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-        .spec-table { width: 100%; margin-top: 15px; border-collapse: collapse; }
-        .spec-table th { background: #eef8fb; color: var(--primary); padding: 12px; text-align: left; border-bottom: 2px solid #fff; width: 35%; }
-        .spec-table td { background: #fff; padding: 12px; border-bottom: 1px solid #eee; }
-        .cert-tag { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 10px; }
-        .whatsapp-btn { background:#25d366; color:white; padding:12px 25px; text-decoration:none; border-radius:5px; display:inline-block; margin-top:20px; font-weight:bold; transition: 0.3s; }
-        .whatsapp-btn:hover { background: #128c7e; transform: translateY(-2px); }
+        header {
+            background: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .container {
+            padding: 80px 8%;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+        .notice-card {
+            background: white;
+            border-radius: 12px;
+            padding: 60px 40px;
+            border-top: 5px solid var(--blue);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .notice-card i {
+            font-size: 3rem;
+            color: var(--blue);
+            margin-bottom: 20px;
+        }
+        .notice-card h1 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        .notice-card p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+        .contact-btn {
+            background: var(--primary);
+            color: white;
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .contact-btn:hover {
+            background: var(--blue);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary);">TRSSKO<span> PHARMA</span></div>
+    <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary);">TRSSKO<span style="color: var(--blue);"> FASHION</span></div>
     <a href="index.html" style="color:var(--primary); text-decoration:none; font-weight:bold;"><i class="fas fa-home"></i> Home</a>
 </header>
 
 <div class="container">
-    <span class="cert-tag"><i class="fas fa-check-circle"></i> WHO-GMP CERTIFIED FORMULATIONS</span>
-    <h1>Technical Specifications</h1>
-    
-    <div class="pharma-card">
-        <h2><i class="fas fa-capsules"></i> DSR Capsules</h2>
-        <p>Rabeprazole & Domperidone Sustained Release formulation for gastric care.</p>
-        <table class="spec-table">
-            <tr><th>Composition</th><td>Rabeprazole Sodium IP (20mg) + Domperidone IP (30mg SR)</td></tr>
-            <tr><th>Dosage Form</th><td>Hard Gelatin Capsule (Sustained Release)</td></tr>
-            <tr><th>Therapeutic Class</th><td>Anti-Ulcerant / Pro-kinetic</td></tr>
-            <tr><th>Storage</th><td>Store below 25°C, Protect from moisture</td></tr>
-            <tr><th>Marketed By</th><td>TRSSKO PHARMA</td></tr>
-            <tr><th>Manufactured By</th><td>Certified Third Party (TRSSKO Approved Facility)</td></tr>
-        </table>
-        <a href="https://wa.me/917417685168?text=Technical%20Query%20on%20DSR%20Capsules" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Inquire Technical Sheet</a>
+    <div class="notice-card">
+        <i class="fas fa-store-slash"></i>
+        <h1>Section Temporarily Unavailable</h1>
+        <p>Our pharmaceutical product listings have been <strong>temporarily removed</strong> while we complete the necessary licensing and compliance requirements.</p>
+        <p>We are committed to operating fully within regulatory guidelines. This section will be restored once all required licences are in place.</p>
+        <p>Thank you for your understanding.</p>
+        <a href="index.html" class="contact-btn"><i class="fas fa-arrow-left"></i> &nbsp;Back to Home</a>
     </div>
-
-    <div class="pharma-card">
-        <h2><i class="fas fa-pills"></i> Multivitamin & Multimineral Capsules</h2>
-        <p>Premium Daily Supplement for Immunity and Vitality.</p>
-        <table class="spec-table">
-            <tr><th>Composition</th><td>Vitamins A, C, E, B-Complex + Zinc + Magnesium + Antioxidants</td></tr>
-            <tr><th>Dosage Form</th><td>Softgel / Hard Gelatin Capsule</td></tr>
-            <tr><th>Therapeutic Class</th><td>Nutraceutical / Health Supplement</td></tr>
-            <tr><th>Packing</th><td>10x1x10 (Alu-Alu / Blister)</td></tr>
-            <tr><th>Indication</th><td>General Weakness, Immunity Support, Nutritional Deficiency</td></tr>
-            <tr><th>Marketed By</th><td>TRSSKO PHARMA</td></tr>
-        </table>
-        <a href="https://wa.me/917417685168?text=Technical%20Query%20on%20Multivitamin%20Capsules" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Inquire Technical Sheet</a>
-    </div>
-
-    <div class="pharma-card">
-        <h2><i class="fas fa-tablets"></i> Sildenafil Citrate Tablets 100mg</h2>
-        <p>High-purity formulation for Erectile Dysfunction management.</p>
-        <table class="spec-table">
-            <tr><th>Composition</th><td>Sildenafil Citrate IP equivalent to Sildenafil (100mg)</td></tr>
-            <tr><th>Dosage Form</th><td>Film Coated Tablet</td></tr>
-            <tr><th>Therapeutic Class</th><td>PDE5 Inhibitor</td></tr>
-            <tr><th>Packing</th><td>1x4 / 1x10 Tablets per strip</td></tr>
-            <tr><th>Caution</th><td>Schedule H Prescription Drug - To be taken under medical supervision</td></tr>
-            <tr><th>Marketed By</th><td>TRSSKO PHARMA</td></tr>
-        </table>
-        <a href="https://wa.me/917417685168?text=Technical%20Query%20on%20Sildenafil%20100mg" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Inquire Technical Sheet</a>
-    </div>
-
 </div>
 
 </body>
