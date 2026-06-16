@@ -8,6 +8,27 @@
     .payment-box { background: white; padding: 40px; border-radius: 12px; text-align: center; }
   </style>
 </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Legal Consultation | TRSSKO</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 50px; background: #f4f4f4; }
+    .payment-box { background: white; padding: 40px; border-radius: 12px; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="payment-box">
+    <h1>Professional Legal Consultation</h1>
+    <p>Get expert trade and corporate advisory from our Director and registered advocate.</p>
+    <h2 style="color: #1B365D;">Consultation Fee: ₹2100</h2>
+    
+    <!-- Integration: Replace with your actual Razorpay/UPI Payment Link -->
+    <a href="https://rzp.io/l/YOUR_LINK" class="btn" style="background:#1B365D; display:inline-block; padding:15px 30px; color:white; border-radius:8px; text-decoration:none;">Pay ₹2100 & Book Now</a>
+  </div>
+</body>
+</html>
 <body>
   <div class="payment-box">
     <h1>Professional Legal Consultation</h1>
