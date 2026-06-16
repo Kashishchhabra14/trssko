@@ -5,15 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TRSSKO Enterprises | Premium Indian FMCG & Fashion Exports</title>
   <meta name="description" content="TRSSKO — India's trusted merchant exporter of premium FMCG foods and fashion apparel. IEC licensed. Shipping to UAE, UK, USA and 40+ countries." />
-  <meta property="og:title" content="TRSSKO Enterprises | Premium Indian Exports" />
-  <meta property="og:description" content="Jaggery, Mustard Oil, Masala Tea, Turmeric and more — export-grade quality from India to the world." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.trssko.in" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-    /* ── TOKENS & DESIGN SYSTEM ──────────────────────── */
+    /* ── DESIGN SYSTEM TOKENS ──────────────────────── */
     :root {
       --saffron: #D4621B;
       --saffron-lt: #F5E8DF;
@@ -36,923 +32,175 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--ff-body);
-      background: var(--cream);
-      color: var(--ink);
-      font-size: 16px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-
+    body { font-family: var(--ff-body); background: var(--cream); color: var(--ink); -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.6; }
     img { display: block; max-width: 100%; height: auto; }
     a { text-decoration: none; color: inherit; }
-    button, input, select, textarea { font-family: inherit; }
 
-    /* ── STRUCTURE & UTILITIES ──────────────────────── */
+    /* ── SECTIONS ──────────────────────────────────── */
     section { padding: 100px 24px; }
     .section-inner { max-width: var(--max-w); margin: 0 auto; }
-    .section-label {
-      font-family: var(--ff-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--saffron);
-      margin-bottom: 12px;
-      display: block;
-    }
-    .section-title {
-      font-family: var(--ff-display);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 600;
-      line-height: 1.15;
-      color: var(--ink);
-      margin-bottom: 16px;
-    }
-    .section-sub {
-      color: var(--ink-60);
-      font-size: 1rem;
-      max-width: 580px;
-      margin-bottom: 56px;
-    }
+    .section-label { font-family: var(--ff-mono); font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--saffron); margin-bottom: 12px; display: block; }
+    .section-title { font-family: var(--ff-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; color: var(--ink); margin-bottom: 16px; }
+    .section-sub { color: var(--ink-60); font-size: 1rem; max-width: 580px; margin-bottom: 56px; }
 
     /* ── NAVIGATION BAR ──────────────────────────────── */
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(250,247,242,0.92);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-inner {
-      max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
-      height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px;
-    }
-    .nav-logo {
-      font-family: var(--ff-display); font-size: 1.65rem; font-weight: 600;
-      letter-spacing: 0.1em; color: var(--ink);
-    }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(250,247,242,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--ff-display); font-size: 1.65rem; font-weight: 600; letter-spacing: 0.1em; }
     .nav-logo span { color: var(--saffron); }
-    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--ink-60); transition: color 0.25s; }
     .nav-links a:hover { color: var(--ink); }
-    
-    .nav-actions { display: flex; align-items: center; gap: 16px; }
-    .nav-cta {
-      background: var(--saffron); color: var(--white) !important; padding: 10px 20px;
-      border-radius: var(--r); font-weight: 600 !important; transition: background 0.25s, transform 0.2s;
-    }
-    .nav-cta:hover { background: #B8521A; transform: translateY(-1px); }
-    
-    .currency-toggle {
-      font-family: var(--ff-mono); font-size: 0.8rem; background: var(--saffron-lt);
-      border: 1px solid var(--border); border-radius: 20px; padding: 6px 14px;
-      cursor: pointer; color: var(--saffron); font-weight: 600; transition: all 0.25s;
-    }
-    .currency-toggle:hover { background: #EDCFBD; }
+    .nav-cta { background: var(--saffron); color: var(--white) !important; padding: 10px 20px; border-radius: var(--r); font-weight: 600; transition: all 0.2s; }
+    .nav-cta:hover { background: #B8521A; }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 5px 0; }
 
-    .cart-trigger {
-      background: transparent; border: 1px solid var(--border); border-radius: var(--r);
-      padding: 8px 14px; cursor: pointer; display: flex; align-items: center; gap: 8px;
-      font-weight: 500; color: var(--ink); font-size: 0.9rem; transition: all 0.25s;
-    }
-    .cart-trigger:hover { background: var(--white); border-color: var(--ink); }
-    .cart-count { background: var(--leaf); color: var(--white); font-size: 0.75rem; font-weight: 600; padding: 2px 6px; border-radius: 10px; }
-
-    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; z-index: 110; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 5px 0; transition: 0.3s var(--transition); }
-    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.active span:nth-child(2) { opacity: 0; }
-    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    /* ── HERO SECTION ────────────────────────────────── */
-    .hero {
-      max-width: var(--max-w); margin: 0 auto; padding: 90px 24px 70px;
-      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center;
-    }
-    .hero-eyebrow {
-      font-family: var(--ff-mono); font-size: 0.75rem; letter-spacing: 0.15em;
-      text-transform: uppercase; color: var(--saffron); margin-bottom: 20px;
-      display: flex; align-items: center; gap: 12px;
-    }
-    .hero-eyebrow::before { content: ''; display: inline-block; width: 32px; height: 1px; background: var(--saffron); }
-    .hero h1 {
-      font-family: var(--ff-display); font-size: clamp(2.8rem, 5.5vw, 4.2rem);
-      font-weight: 600; line-height: 1.1; color: var(--ink); margin-bottom: 24px;
-    }
-    .hero h1 em { font-style: italic; font-weight: 400; color: var(--saffron); }
-    .hero-sub { font-size: 1.05rem; color: var(--ink-60); margin-bottom: 40px; max-width: 480px; line-height: 1.7; }
-    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-    
-    .btn-primary, .btn-outline {
-      padding: 16px 32px; border-radius: var(--r); font-weight: 600; font-size: 0.95rem;
-      cursor: pointer; transition: all 0.25s var(--transition); display: inline-flex; align-items: center; gap: 8px;
-    }
-    .btn-primary { background: var(--saffron); color: var(--white); border: none; }
-    .btn-primary:hover { background: #B8521A; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(212,98,27,0.2); }
-    .btn-outline { background: transparent; color: var(--ink); border: 1.5px solid var(--border); }
-    .btn-outline:hover { border-color: var(--ink); background: rgba(0,0,0,0.02); }
-
-    .hero-trust { display: flex; gap: 28px; margin-top: 48px; flex-wrap: wrap; }
-    .trust-pill { display: flex; align-items: center; gap: 10px; font-size: 0.82rem; color: var(--ink-60); font-weight: 500; }
-    .trust-pill .icon {
-      width: 32px; height: 32px; background: var(--leaf-lt); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center; font-size: 0.95rem; color: var(--leaf);
-    }
-    
-    .hero-visual { position: relative; }
+    /* ── HERO BANNER ────────────────────────────────── */
+    .hero { max-width: var(--max-w); margin: 0 auto; padding: 90px 24px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
+    .hero h1 { font-family: var(--ff-display); font-size: clamp(2.8rem, 5.5vw, 4.2rem); font-weight: 600; line-height: 1.1; margin-bottom: 24px; }
+    .hero em { font-style: italic; color: var(--saffron); font-weight: 400; }
+    .hero-sub { font-size: 1.05rem; color: var(--ink-60); margin-bottom: 40px; max-width: 480px; }
+    .hero-actions { display: flex; gap: 16px; }
+    .btn-primary { background: var(--saffron); color: var(--white); padding: 16px 32px; border-radius: var(--r); font-weight: 600; border: none; cursor: pointer; }
+    .btn-outline { background: transparent; color: var(--ink); padding: 16px 32px; border-radius: var(--r); font-weight: 600; border: 1.5px solid var(--border); }
     .hero-mosaic { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 16px; }
-    .hero-mosaic img { border-radius: 8px; width: 100%; object-fit: cover; background: #E8E0D8; }
-    .mosaic-main { height: 460px; }
-    .mosaic-sm { height: 222px; }
-    .hero-badge {
-      position: absolute; bottom: 24px; left: -24px; background: var(--white);
-      border: 1px solid var(--border); border-radius: 8px; padding: 14px 20px;
-      display: flex; align-items: center; gap: 14px; box-shadow: 0 12px 32px rgba(26,20,16,0.08);
-    }
-    .hero-badge-icon { font-size: 1.75rem; }
-    .hero-badge-text strong { display: block; font-weight: 600; color: var(--ink); font-size: 0.88rem; }
-    .hero-badge-text span { color: var(--ink-60); font-size: 0.78rem; }
+    .hero-mosaic img { border-radius: 8px; width: 100%; height: 400px; object-fit: cover; }
 
-    /* ── TRUST TICKER BAR ────────────────────────────── */
-    .trust-bar { background: var(--ink); color: var(--white); padding: 20px 24px; overflow: hidden; }
-    .trust-bar-inner {
-      max-width: var(--max-w); margin: 0 auto; display: flex; gap: 48px;
-      justify-content: center; flex-wrap: wrap; align-items: center;
-    }
-    .trust-item { display: flex; align-items: center; gap: 12px; font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.75); }
-    .trust-item strong { color: var(--white); font-weight: 600; letter-spacing: 0.03em; }
-    .trust-sep { color: rgba(255,255,255,0.25); font-weight: 300; }
+    /* ── SUBSIDIARY SECTOR GRIDS ──────────────────────── */
+    .sector-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .sector-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: all 0.3s var(--transition); }
+    .sector-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(26,20,16,0.06); border-color: var(--saffron); }
+    .sector-img { height: 220px; width: 100%; object-fit: cover; }
+    .sector-body { padding: 32px; flex: 1; display: flex; flex-direction: column; }
+    .sector-title { font-family: var(--ff-display); font-size: 1.6rem; font-weight: 600; margin-bottom: 12px; }
+    .sector-desc { font-size: 0.9rem; color: var(--ink-60); margin-bottom: 24px; flex: 1; }
+    .sector-link { color: var(--saffron); font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; }
 
-    /* ── PRODUCTS GRID ───────────────────────────────── */
-    #products { background: var(--white); }
-    .filter-bar { display: flex; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
-    .filter-btn {
-      background: transparent; border: 1.5px solid var(--border); border-radius: 100px;
-      padding: 10px 22px; font-size: 0.88rem; font-weight: 500; color: var(--ink-60);
-      cursor: pointer; transition: all 0.25s var(--transition);
-    }
-    .filter-btn.active, .filter-btn:hover { background: var(--saffron); border-color: var(--saffron); color: var(--white); }
-    
-    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 32px; }
-    .product-card {
-      background: var(--cream); border: 1px solid var(--border); border-radius: 12px;
-      overflow: hidden; transition: all 0.3s var(--transition); display: flex; flex-direction: column;
-    }
-    .product-card:hover { box-shadow: 0 16px 40px rgba(26,20,16,0.08); transform: translateY(-4px); border-color: var(--ink-30); }
-    .product-img-wrap { position: relative; height: 240px; background: #EFECE6; overflow: hidden; }
-    .product-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s var(--transition); }
-    .product-card:hover .product-img-wrap img { transform: scale(1.05); }
-    
-    .product-badge {
-      position: absolute; top: 16px; left: 16px; background: var(--leaf); color: var(--white);
-      font-size: 0.72rem; font-weight: 600; padding: 4px 12px; border-radius: 100px; letter-spacing: 0.04em; text-transform: uppercase;
-    }
-    .product-badge.hot { background: var(--saffron); }
-    
-    .product-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
-    .product-category { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-60); margin-bottom: 8px; }
-    .product-name { font-family: var(--ff-display); font-size: 1.35rem; font-weight: 600; color: var(--ink); margin-bottom: 8px; line-height: 1.25; }
-    .product-desc { font-size: 0.88rem; color: var(--ink-60); margin-bottom: 20px; line-height: 1.6; flex: 1; }
-    
-    .product-meta { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 20px; }
-    .product-price { font-family: var(--ff-display); font-size: 1.55rem; font-weight: 600; color: var(--ink); }
-    .product-moq { font-size: 0.75rem; background: var(--saffron-lt); color: var(--saffron); padding: 4px 10px; border-radius: 4px; font-weight: 600; }
-    
-    .add-to-cart {
-      width: 100%; background: var(--saffron); color: var(--white); border: none; border-radius: var(--r);
-      padding: 14px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background 0.2s;
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-    }
-    .add-to-cart:hover { background: #B8521A; }
-
-    /* ── VALUE PROPOSITION / WHY US ──────────────────── */
-    #why { background: var(--cream); border-top: 1px solid var(--border); }
-    .why-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 32px; }
-    .why-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 36px; transition: border-color 0.25s; }
-    .why-card:hover { border-color: var(--saffron); }
-    .why-icon {
-      width: 54px; height: 54px; background: var(--saffron-lt); border-radius: 10px;
-      display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--saffron); margin-bottom: 24px;
-    }
-    .why-card h3 { font-family: var(--ff-display); font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; color: var(--ink); }
-    .why-card p { font-size: 0.9rem; color: var(--ink-60); line-height: 1.65; }
-
-    /* ── CREDENTIALS SECTION ────────────────────────── */
-    #credentials { background: var(--ink); color: var(--white); }
-    #credentials .section-label { color: var(--gold); }
-    #credentials .section-title { color: var(--white); }
-    #credentials .section-sub { color: rgba(255,255,255,0.6); }
-    .cred-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
-    .cred-card { border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.02); border-radius: 8px; padding: 24px 28px; }
-    .cred-label { font-family: var(--ff-mono); font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
-    .cred-value { font-size: 1rem; font-weight: 500; color: var(--white); word-break: break-all; font-family: var(--ff-mono); }
-    .cred-desc { font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-top: 6px; }
-
-    /* ── GLOBAL DESTINATIONS ────────────────────────── */
-    #destinations { background: var(--white); text-align: center; }
-    #destinations .section-sub { margin-left: auto; margin-right: auto; }
-    .dest-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; }
-    .dest-card {
-      background: var(--cream); border: 1px solid var(--border); border-radius: 8px;
-      padding: 24px; text-align: center; transition: all 0.25s var(--transition);
-    }
-    .dest-card:hover { background: var(--white); border-color: var(--saffron); transform: translateY(-2px); }
-    .dest-flag { font-size: 2.2rem; display: block; margin-bottom: 10px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05)); }
-    .dest-name { font-size: 0.95rem; font-weight: 600; color: var(--ink); }
-
-    /* ── HOW TO ORDER / SUPPLY CHAIN ────────────────── */
-    #how { background: var(--saffron-lt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .steps { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0; border-radius: 12px; overflow: hidden; background: var(--white); border: 1px solid var(--border); }
-    .step { padding: 36px; border-right: 1px solid var(--border); background: var(--white); position: relative; }
-    .step:last-child { border-right: none; }
-    .step-num { font-family: var(--ff-display); font-size: 3.5rem; font-weight: 600; color: rgba(212,98,27,0.18); line-height: 1; margin-bottom: 12px; }
-    .step h4 { font-weight: 600; font-size: 1.05rem; margin-bottom: 8px; color: var(--ink); }
-    .step p { font-size: 0.88rem; color: var(--ink-60); line-height: 1.6; }
-
-    /* ── CALL TO ACTION BANNER ──────────────────────── */
-    .cta-banner { background: var(--leaf); color: var(--white); padding: 80px 24px; text-align: center; position: relative; }
-    .cta-banner h2 { font-family: var(--ff-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; margin-bottom: 16px; }
-    .cta-banner p { color: rgba(255,255,255,0.8); margin-bottom: 36px; font-size: 1.05rem; max-width: 600px; margin-left: auto; margin-right: auto; }
-    .cta-banner-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    
-    .btn-white, .btn-outline-white {
-      padding: 16px 32px; border-radius: var(--r); font-weight: 600; font-size: 0.95rem;
-      cursor: pointer; transition: all 0.25s var(--transition); display: inline-flex; align-items: center; gap: 8px;
-    }
-    .btn-white { background: var(--white); color: var(--leaf); border: none; }
-    .btn-white:hover { opacity: 0.95; transform: translateY(-1px); }
-    .btn-outline-white { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.3); }
-    .btn-outline-white:hover { border-color: var(--white); background: rgba(255,255,255,0.05); }
-
-    /* ── CONTACT & REGULATORY INTAKE ────────────────── */
-    #contact { background: var(--cream); }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: start; }
-    .contact-info h3 { font-family: var(--ff-display); font-size: 1.75rem; font-weight: 600; margin-bottom: 16px; color: var(--ink); }
-    .contact-info p { color: var(--ink-60); font-size: 0.95rem; margin-bottom: 32px; line-height: 1.6; }
-    .contact-links { display: flex; flex-direction: column; gap: 16px; }
-    .contact-link {
-      display: flex; align-items: center; gap: 16px; font-size: 0.95rem; font-weight: 500; color: var(--ink);
-      padding: 16px; background: var(--white); border: 1px solid var(--border); border-radius: 8px; transition: border-color 0.25s;
-    }
-    .contact-link:hover { border-color: var(--saffron); }
-    .contact-link .cl-icon { font-size: 1.3rem; color: var(--saffron); }
-    
-    .contact-form { display: flex; flex-direction: column; gap: 18px; background: var(--white); padding: 40px; border-radius: 12px; border: 1px solid var(--border); }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .form-group { display: flex; flex-direction: column; gap: 8px; }
-    .form-group label { font-size: 0.8rem; font-weight: 600; color: var(--ink-60); letter-spacing: 0.03em; text-transform: uppercase; }
-    .form-group input, .form-group select, .form-group textarea {
-      background: var(--cream); border: 1.5px solid var(--border); border-radius: var(--r);
-      padding: 12px 16px; font-size: 0.95rem; color: var(--ink); transition: border-color 0.2s; outline: none; width: 100%;
-    }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--saffron); background: var(--white); }
-    .form-group textarea { resize: vertical; min-height: 110px; }
-    .form-submit {
-      background: var(--saffron); color: var(--white); border: none; border-radius: var(--r);
-      padding: 16px 32px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; align-self: flex-start;
-    }
-    .form-submit:hover { background: #B8521A; }
-
-    /* ── SLIDE OVER ENQUIRY DRAWER ──────────────────── */
-    .cart-drawer {
-      position: fixed; top: 0; right: -400px; width: 100%; max-width: 400px; height: 100%;
-      background: var(--white); box-shadow: -8px 0 32px rgba(0,0,0,0.1); z-index: 150;
-      transition: right 0.4s var(--transition); display: flex; flex-direction: column;
-    }
-    .cart-drawer.active { right: 0; }
-    .cart-header { padding: 24px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
-    .cart-header h3 { font-family: var(--ff-display); font-size: 1.4rem; font-weight: 600; }
-    .cart-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--ink-60); }
-    .cart-items-wrapper { flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
-    .cart-empty { text-align: center; color: var(--ink-60); margin-top: 40px; font-size: 0.95rem; }
-    .cart-item { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--border); padding-bottom: 16px; }
-    .cart-item-info h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
-    .cart-item-info p { font-size: 0.85rem; color: var(--ink-60); }
-    .cart-item-actions { display: flex; align-items: center; gap: 12px; }
-    .cart-qty-btn { background: var(--cream); border: 1px solid var(--border); width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 4px; font-weight: 600; }
-    .cart-footer { padding: 24px; border-top: 1px solid var(--border); background: var(--cream); }
-    .cart-total-row { display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 16px; font-size: 1.05rem; }
-    .cart-checkout-btn { width: 100%; background: var(--leaf); color: var(--white); border: none; padding: 14px; border-radius: var(--r); font-weight: 600; cursor: pointer; text-align: center; font-size: 0.95rem; }
-    .cart-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 140; display: none; }
-    .cart-overlay.active { display: block; }
-
-    /* ── FOOTER ──────────────────────────────────────── */
+    /* ── FOOTER STYLE ───────────────────────────────── */
     footer { background: var(--ink); color: rgba(255,255,255,0.55); padding: 80px 24px 32px; border-top: 4px solid var(--saffron); }
-    .footer-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1.5fr 0.8fr 0.8fr 0.9fr; gap: 48px; margin-bottom: 64px; }
-    .footer-brand .nav-logo { margin-bottom: 16px; font-size: 1.45rem; color: var(--white); }
-    .footer-brand p { font-size: 0.88rem; line-height: 1.7; max-width: 320px; }
-    .footer-col h4 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.9); margin-bottom: 20px; }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand h3 { color: var(--white); font-family: var(--ff-display); font-size: 1.5rem; margin-bottom: 16px; }
+    .footer-col h4 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: rgba(255,255,255,0.9); margin-bottom: 20px; letter-spacing: 0.1em; }
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-    .footer-col ul li a { font-size: 0.88rem; color: rgba(255,255,255,0.6); transition: color 0.2s; }
+    .footer-col ul li a { font-size: 0.88rem; color: rgba(255,255,255,0.6); }
     .footer-col ul li a:hover { color: var(--white); }
-    .footer-bottom { max-width: var(--max-w); margin: 0 auto; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 0.82rem; }
+    .footer-bottom { max-width: var(--max-w); margin: 0 auto; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; font-size: 0.82rem; }
 
-    /* ── RESPONSIVE MEDIA QUERIES ────────────────────── */
-    @media (max-width: 1024px) {
-      .hero { grid-template-columns: 1fr; gap: 48px; text-align: center; }
-      .hero-eyebrow { justify-content: center; }
-      .hero-eyebrow::before { display: none; }
-      .hero-sub { margin-left: auto; margin-right: auto; }
-      .hero-actions { justify-content: center; }
-      .hero-trust { justify-content: center; }
-      .hero-mosaic { max-width: 600px; margin: 0 auto; }
-      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
-    }
-    @media (max-width: 768px) {
-      .hamburger { display: block; }
-      .nav-links {
-        position: fixed; top: 72px; left: -100%; width: 100%; height: calc(100vh - 72px);
-        background: var(--cream); flex-direction: column; padding: 40px 24px; gap: 28px;
-        transition: left 0.35s var(--transition); border-top: 1px solid var(--border);
-      }
-      .nav-links.active { left: 0; }
-      .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
-      .steps { grid-template-columns: 1fr; }
-      .step { border-right: none; border-bottom: 1px solid var(--border); }
-      .step:last-child { border-bottom: none; }
-      .form-row { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 480px) {
-      .footer-inner { grid-template-columns: 1fr; }
-      .hero-badge { display: none; }
+    @media (max-width: 968px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .hero-mosaic { display: none; }
+      .sector-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- SLIDE OUT CART DRAWER -->
-  <div class="cart-overlay" id="cartOverlay"></div>
-  <div class="cart-drawer" id="cartDrawer">
-    <div class="cart-header">
-      <h3>Enquiry Manifest</h3>
-      <button class="cart-close" id="closeCart">&times;</button>
-    </div>
-    <div class="cart-items-wrapper" id="cartItemsContainer">
-      <div class="cart-empty">Your breakdown is empty. Add industrial configurations below.</div>
-    </div>
-    <div class="cart-footer">
-      <div class="cart-total-row">
-        <span>Estimated Bulk Matrix:</span>
-        <span id="cartTotalValue">₹0</span>
-      </div>
-      <button class="cart-checkout-btn" onclick="document.getElementById('contact').scrollIntoView(); document.getElementById('closeCart').click();">Initiate Commercial Order</button>
-    </div>
-  </div>
-
-  <!-- NAVIGATION SYSTEM -->
+  <!-- MASTER NAVIGATION -->
   <nav>
     <div class="nav-inner">
-      <div class="nav-logo">TRSSKO<span>.</span></div>
+      <div class="nav-logo"><a href="index.html">TRSSKO<span>.</span></a></div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#products">Product Catalog</a></li>
-        <li><a href="#why">Quality Protocol</a></li>
-        <li><a href="#credentials">Compliance & Credentials</a></li>
-        <li><a href="#destinations">Global Matrix</a></li>
-        <li><a href="#contact">Contact Hub</a></li>
+        <li><a href="fmcg.html">FMCG Portfolio</a></li>
+        <li><a href="cloth.html">Textile & Apparel</a></li>
+        <li><a href="legal.html">Regulatory File</a></li>
       </ul>
-      <div class="nav-actions">
-        <button class="currency-toggle" id="currencyToggle" data-curr="INR">₹ INR</button>
-        <button class="cart-trigger" id="cartTrigger">
-          📦 Bulk List <span class="cart-count" id="cartCount">0</span>
-        </button>
-        <button class="hamburger" id="hamburgerMenu">
-          <span></span><span></span><span></span>
-        </button>
+      <div>
+        <a href="#contact" class="nav-cta">Corporate Intake</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO PANEL -->
+  <!-- ENTRY HERO PORTAL -->
   <section class="hero">
     <div>
-      <div class="hero-eyebrow">Government Registered Merchant Exporter</div>
-      <h1>Connecting Indian Agribusiness to <em>Global Supply Networks</em></h1>
-      <p class="hero-sub">TRSSKO Enterprises orchestrates premium global deployment metrics for premium high-grade Indian FMCG products, premium foodstuffs, and retail-ready fashion textiles.</p>
+      <div class="section-label">Global Export Enterprise</div>
+      <h1>Connecting Indian Agribusiness to <em>Global Supply Lines</em></h1>
+      <p class="hero-sub">TRSSKO Enterprises orchestrates multi-ton commodity logistics and premium retail apparel exports matching strict regulatory standards.</p>
       <div class="hero-actions">
-        <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView();">Explore Manifest</button>
-        <button class="btn-outline" onclick="document.getElementById('contact').scrollIntoView();">Corporate RFQ</button>
-      </div>
-      <div class="hero-trust">
-        <div class="trust-pill"><span class="icon">✓</span> APEDA Certified</div>
-        <div class="trust-pill"><span class="icon">✓</span> IEC Licensed Network</div>
-        <div class="trust-pill"><span class="icon">✓</span> SGS Verified Batches</div>
+        <a href="#divisions" class="btn-primary">Browse Divisions</a>
+        <a href="legal.html" class="btn-outline">Verify Licenses</a>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="hero-mosaic">
-        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=600" alt="Premium Indian Spices Production Line" class="mosaic-main" />
-        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=400" alt="Export Packaging Operations" class="mosaic-sm" />
-      </div>
-      <div class="hero-badge">
-        <span class="hero-badge-icon">🌐</span>
-        <div class="hero-badge-text">
-          <strong>40+ Destinations</strong>
-          <span>Cross-Border Logistics Protocol</span>
-        </div>
-      </div>
+    <div class="hero-mosaic">
+      <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=600" alt="Indian Trade Operations" />
     </div>
   </section>
 
-  <!-- TRUST TICKER SYSTEM -->
-  <div class="trust-bar">
-    <div class="trust-bar-inner">
-      <div class="trust-item">FMCG VERTICAL: <strong>EXPORT GRADE STANDARDS</strong></div>
-      <div class="trust-sep">|</div>
-      <div class="trust-item">GLOBAL COMPLIANCE: <strong>FDA & ESMA COMPLIANT</strong></div>
-      <div class="trust-sep">|</div>
-      <div class="trust-item">LOGISTICS: <strong>CIF / FOB SEAMLESS ASSURANCE</strong></div>
-    </div>
-  </div>
-
-  <!-- PRODUCTS SYSTEM -->
-  <section id="products">
+  <!-- SECTOR LINK PANELS -->
+  <section id="divisions" style="background: var(--white);">
     <div class="section-inner">
-      <span class="section-label">Institutional Supply Manifest</span>
-      <h2 class="section-title">Verified Export Portfolios</h2>
-      <p class="section-sub">Standardized technical units tailored for global tier-1 distribution networks and food service conglomerates.</p>
+      <span class="section-label">Enterprise Divisions</span>
+      <h2 class="section-title">Primary Operational Gateways</h2>
+      <p class="section-sub">Select a corporate segment below to view custom specifications, dynamic item grids, and target freight pricing indexes.</p>
       
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">Complete Portfolio</button>
-        <button class="filter-btn" data-filter="fmcg">Premium Foods / FMCG</button>
-        <button class="filter-btn" data-filter="apparel">Fashion & Garments</button>
-      </div>
-
-      <div class="product-grid" id="productGrid">
-        <!-- JS injected cards or fallback static semantic blocks -->
-        <div class="product-card" data-cat="fmcg">
-          <div class="product-img-wrap">
-            <span class="product-badge hot">Top Cargo</span>
-            <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=500" alt="Organic Solid Jaggery Blocks" />
-          </div>
-          <div class="product-body">
-            <span class="product-category">Agri Commodities</span>
-            <h3 class="product-name">Artisanal Jaggery Blocks</h3>
-            <p class="product-desc">Clarified organic sugarcane derivatives processed without sulphur contamination modifiers.</p>
-            <div class="product-meta">
-              <span class="product-price" data-base="140">₹140 <small style="font-size:0.75rem; color:var(--ink-60);">/ KG</small></span>
-              <span class="product-moq">MOQ: 5 Metric Tons</span>
-            </div>
-            <button class="add-to-cart" data-id="p1" data-name="Artisanal Jaggery Blocks" data-price="140">Include in Enquiry</button>
+      <div class="sector-grid">
+        <!-- FMCG LINK BLOCK -->
+        <div class="sector-card">
+          <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=500" class="sector-img" alt="Premium Foods Division" />
+          <div class="sector-body">
+            <h3 class="sector-title">Premium FMCG Foods</h3>
+            <p class="sector-desc">Export-grade spices, cold-pressed vegetable oils, processed grains, and pure sugarcane derivatives optimized for international food frameworks.</p>
+            <a href="fmcg.html" class="sector-link">Access FMCG Catalog &rarr;</a>
           </div>
         </div>
 
-        <div class="product-card" data-cat="fmcg">
-          <div class="product-img-wrap">
-            <span class="product-badge">Organic</span>
-            <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&q=80&w=500" alt="Kachi Ghani Pure Mustard Oil" />
-          </div>
-          <div class="product-body">
-            <span class="product-category">Edible Oils</span>
-            <h3 class="product-name">Cold-Pressed Mustard Oil</h3>
-            <p class="product-desc">High pungency, cold-expressed brassica seed oils retaining maximum natural erucic parameters.</p>
-            <div class="product-meta">
-              <span class="product-price" data-base="190">₹190 <small style="font-size:0.75rem; color:var(--ink-60);">/ LTR</small></span>
-              <span class="product-moq">MOQ: 2000 Liters</span>
-            </div>
-            <button class="add-to-cart" data-id="p2" data-name="Cold-Pressed Mustard Oil" data-price="190">Include in Enquiry</button>
+        <!-- CLOTH LINK BLOCK -->
+        <div class="sector-card">
+          <img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&q=80&w=500" class="sector-img" alt="Textile Division" />
+          <div class="sector-body">
+            <h3 class="sector-title">Fashion & Textiles</h3>
+            <p class="sector-desc">Combed industrial cotton, retail-weight ready garments, and customized manufacturing production cycles engineered for global apparel labels.</p>
+            <a href="cloth.html" class="sector-link">Explore Textile Line &rarr;</a>
           </div>
         </div>
 
-        <div class="product-card" data-cat="fmcg">
-          <div class="product-img-wrap">
-            <span class="product-badge">FDA Verified</span>
-            <img src="https://images.unsplash.com/photo-1627754432135-c06db1eb87bf?auto=format&fit=crop&q=80&w=500" alt="High Curcumin Alleppey Turmeric Powder" />
-          </div>
-          <div class="product-body">
-            <span class="product-category">Spices / Powders</span>
-            <h3 class="product-name">Premium Dhaniya Powder</h3>
-            <p class="product-desc">Compliance checked ultra-pure ground coriander offering absolute technical aroma preservation.</p>
-            <div class="product-meta">
-              <span class="product-price" data-base="240">₹240 <small style="font-size:0.75rem; color:var(--ink-60);">/ KG</small></span>
-              <span class="product-moq">MOQ: 1 Metric Ton</span>
-            </div>
-            <button class="add-to-cart" data-id="p3" data-name="Premium Dhaniya Powder" data-price="240">Include in Enquiry</button>
-          </div>
-        </div>
-
-        <div class="product-card" data-cat="apparel">
-          <div class="product-img-wrap">
-            <span class="product-badge hot">Textile</span>
-            <img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&q=80&w=500" alt="Premium Retail Apparel Consignments" />
-          </div>
-          <div class="product-body">
-            <span class="product-category">Garments</span>
-            <h3 class="product-name">Combed Cotton Apparel</h3>
-            <p class="product-desc">Premium combed retail-weight fabrics engineered for international fashion labels and high-end chains.</p>
-            <div class="product-meta">
-              <span class="product-price" data-base="450">₹450 <small style="font-size:0.75rem; color:var(--ink-60);">/ UNIT</small></span>
-              <span class="product-moq">MOQ: 500 Units</span>
-            </div>
-            <button class="add-to-cart" data-id="p4" data-name="Combed Cotton Apparel" data-price="450">Include in Enquiry</button>
+        <!-- LEGAL LINK BLOCK -->
+        <div class="sector-card">
+          <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=500" class="sector-img" alt="Legal Assurance" />
+          <div class="sector-body">
+            <h3 class="sector-title">Governance & Legal</h3>
+            <p class="sector-desc">Complete transparency file containing active government registration IDs, IEC codes, APEDA memberships, and custom clearance parameters.</p>
+            <a href="legal.html" class="sector-link">View Legal Registry &rarr;</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- VALUE ARCHITECTURE / WHY US -->
-  <section id="why">
-    <div class="section-inner">
-      <span class="section-label">Logistical Integrity Protocol</span>
-      <h2 class="section-title">Engineered Supply Mechanisms</h2>
-      <p class="section-sub">Why sovereign supply hubs select TRSSKO for bulk multi-ton cross-border distribution.</p>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon">🛡️</div>
-          <h3>Sovereign Compliance</h3>
-          <p>We enforce strict baseline alignments with APEDA standards alongside rigorous international sanitary rules.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">🧪</div>
-          <h3>Phytosanitary Isolation</h3>
-          <p>All items endure independent lab clearances to ensure zero heavy metal concentrations or pesticide residues.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">📦</div>
-          <h3>Preservation Seal Layers</h3>
-          <p>High barrier flexible multi-ply structures protect dry loads against structural thermal shifts during ocean transits.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">⚖️</div>
-          <h3>Transparent Clearing</h3>
-          <p>Full tracking documentation control loops speed up customs clearings across major international maritime zones.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMPLIANCE & CREDENTIALS -->
-  <section id="credentials">
-    <div class="section-inner">
-      <span class="section-label">Corporate Assurance Architecture</span>
-      <h2 class="section-title">Government Accreditations & Licenses</h2>
-      <p class="section-sub">Verifiable verification arrays securing sovereign customs clearances without friction.</p>
-      <div class="cred-grid">
-        <div class="cred-card">
-          <div class="cred-label">DGFT Registry</div>
-          <div class="cred-value">IEC LICENSED</div>
-          <div class="cred-desc">Import Export Code required for authorized maritime freight processing out of Indian ports.</div>
-        </div>
-        <div class="cred-card">
-          <div class="cred-label">Export Authority</div>
-          <div class="cred-value">APEDA CERTIFIED</div>
-          <div class="cred-desc">Agricultural and Processed Food Products Export Development Authority system registration.</div>
-        </div>
-        <div class="cred-card">
-          <div class="cred-label">Tax Sovereign ID</div>
-          <div class="cred-value">GST COMPLIANT</div>
-          <div class="cred-desc">Fully registered corporate ledger matching unified inter-state trade tax networks cleanly.</div>
-        </div>
-        <div class="cred-card">
-          <div class="cred-label">Quality Assured</div>
-          <div class="cred-value">SGS MAPPED</div>
-          <div class="cred-desc">Standard operating rules to execute container sealing under third-party verification protocols.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GLOBAL LOGISTICS MATRIX -->
-  <section id="destinations">
-    <div class="section-inner">
-      <span class="section-label">Active Trade Portfolios</span>
-      <h2 class="section-title">Primary Operational Corridors</h2>
-      <p class="section-sub">We maintain continuous deepwater routes into terminal hubs across forty sovereign markets.</p>
-      <div class="dest-grid">
-        <div class="dest-card"><span class="dest-flag">🇦🇪</span><div class="dest-name">United Arab Emirates</div></div>
-        <div class="dest-card"><span class="dest-flag">🇬🇧</span><div class="dest-name">United Kingdom</div></div>
-        <div class="dest-card"><span class="dest-flag">🇺🇸</span><div class="dest-name">United States</div></div>
-        <div class="dest-card"><span class="dest-flag">🇸🇦</span><div class="dest-name">Saudi Arabia</div></div>
-        <div class="dest-card"><span class="dest-flag">🇨🇦</span><div class="dest-name">Canada</div></div>
-        <div class="dest-card"><span class="dest-flag">🇸🇬</span><div class="dest-name">Singapore</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WORKFLOW STRUCTURE -->
-  <section id="how">
-    <div class="section-inner">
-      <span class="section-label">Execution Architecture</span>
-      <h2 class="section-title">The Procurement Pipeline</h2>
-      <p class="section-sub">Our predictable procurement process reduces corporate risk and shortens turnaround delays.</p>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">01</div>
-          <h4>RFQ & Specification</h4>
-          <p>Submit bulk metric demands and packaging definitions through our secure global intake terminal.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">02</div>
-          <h4>Proforma Projections</h4>
-          <p>Receive explicit per-ton commercial calculations mapped cleanly against spot freight indices.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">03</div>
-          <h4>Compliance Load</h4>
-          <p>Consignments undergo strict analytical checks with full paperwork processing before final port staging.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">04</div>
-          <h4>Ocean Transit Trace</h4>
-          <p>Container batches transfer securely onto blue-water freight networks with clean Bills of Lading.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MIDPAGE INTENSITY ACCELERATOR -->
-  <div class="cta-banner">
-    <h2>Secure Production Volumes Now</h2>
-    <p>Talk to our corporate logistics coordinators to lock down allocation weights for the upcoming seasonal harvest calendar cycle.</p>
-    <div class="cta-banner-btns">
-      <button class="btn-white" onclick="document.getElementById('contact').scrollIntoView();">Initiate Freight Evaluation</button>
-      <button class="btn-outline-white" onclick="window.open('mailto:info.chhabraenterprices@gmail.com')">Email Direct Desk</button>
-    </div>
-  </div>
-
-  <!-- CONTACT & REGULATORY INTAKE ENGINE -->
-  <section id="contact">
-    <div class="section-inner">
-      <div class="contact-grid">
-        <div class="contact-info">
-          <span class="section-label">Global Intake Terminal</span>
-          <h3>Initiate Commercial Operations</h3>
-          <p>Connect with our primary export offices. Let us know what product volume matrices your distribution network requires.</p>
-          
-          <div class="contact-links">
-            <div class="contact-link">
-              <span class="cl-icon">✉️</span>
-              <div>
-                <span style="font-size:0.75rem; color:var(--ink-60); display:block; text-transform:uppercase; font-weight:600;">Corporate Desk</span>
-                <a href="mailto:info.chhabraenterprices@gmail.com" style="font-weight:600; color:var(--saffron);">info.chhabraenterprices@gmail.com</a>
-              </div>
-            </div>
-            <div class="contact-link">
-              <span class="cl-icon">📍</span>
-              <div>
-                <span style="font-size:0.75rem; color:var(--ink-60); display:block; text-transform:uppercase; font-weight:600;">Sovereign Registration</span>
-                <span style="font-weight:600;">TRSSKO Enterprises, India</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Your procurement query has been logged into our trade index. Our trade desk will respond within 12 standard business hours.');">
-          <div class="form-row">
-            <div class="form-group">
-              <label>Corporate Name</label>
-              <input type="text" placeholder="John Doe" required />
-            </div>
-            <div class="form-group">
-              <label>Enterprise Domain Email</label>
-              <input type="email" placeholder="procurement@firm.com" required />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Target Destination Hub</label>
-              <select required>
-                <option value="">Select Target Country Hub...</option>
-                <option value="uae">United Arab Emirates</option>
-                <option value="uk">United Kingdom</option>
-                <option value="usa">United States</option>
-                <option value="other">Other Global Port Area</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Required Freight Base</label>
-              <select required>
-                <option value="fob">FOB - Free On Board</option>
-                <option value="cif">CIF - Cost, Insurance & Freight</option>
-                <option value="cfr">CFR - Cost & Freight</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Detailed Freight Manifest Details</label>
-            <textarea placeholder="Outline commodity matrices, targeted ton parameters, and structural custom timeline prerequisites..." required></textarea>
-          </div>
-          <button type="submit" class="form-submit">Submit Formal RFQ Protocol</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMPREHENSIVE FOOTER STRUCTURE -->
+  <!-- MASTER UNIFIED FOOTER SYSTEM -->
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="nav-logo" style="color: #fff;">TRSSKO<span>.</span></div>
-        <p>Premium global merchant exporter specializing in secure supply pipelines for FMCG foods and advanced garment systems worldwide.</p>
+        <h3>TRSSKO Enterprises</h3>
+        <p>Premium global merchant exporter managing safe international shipping lines for agricultural foods and ready-made clothing lines.</p>
       </div>
       <div class="footer-col">
-        <h4>Trade Arrays</h4>
+        <h4>Operational Sectors</h4>
         <ul>
-          <li><a href="#products">Agri Commodities</a></li>
-          <li><a href="#products">Edible Extracts</a></li>
-          <li><a href="#products">Spices Portfolio</a></li>
-          <li><a href="#products">Retail Apparel</a></li>
+          <li><a href="fmcg.html">Foods & Agri Products</a></li>
+          <li><a href="cloth.html">Apparel & Fabrics</a></li>
+          <li><a href="legal.html">Compliance Portfolio</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Enterprise Architecture</h4>
+        <h4>Enterprise Hub</h4>
         <ul>
-          <li><a href="#why">Quality Protocols</a></li>
-          <li><a href="#credentials">Compliance Files</a></li>
-          <li><a href="#destinations">Global Distribution</a></li>
-          <li><a href="#how">Supply Mechanisms</a></li>
+          <li><a href="index.html">Master Homepage</a></li>
+          <li><a href="legal.html">IEC Certificate Files</a></li>
+          <li><a href="mailto:info.chhabraenterprices@gmail.com">Corporate Mail Desk</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Regulatory Compliance</h4>
-        <ul>
-          <li><a href="#credentials">IEC Registry File</a></li>
-          <li><a href="#credentials">APEDA Allocation</a></li>
-          <li><a href="#contact">Corporate Intake</a></li>
-        </ul>
+        <h4>Contact Point</h4>
+        <p style="font-size:0.85rem; line-height:1.6; color:rgba(255,255,255,0.7);">Email: info.chhabraenterprices@gmail.com<br>Location: Registered Hub, India</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 TRSSKO Enterprises. All Rights Reserved. Scheduled updates adhere to global trade compliance rules.</p>
-      <p>Technical Infrastructure Optimized by AI Collaborative Matrix Modules.</p>
+      <p>&copy; 2026 TRSSKO Enterprises. All Rights Reserved. Tracked changes obey global trade compliance laws.</p>
+      <p>Global Architecture Managed with AI Collaborative Framework Modules.</p>
     </div>
   </footer>
 
-  <!-- DYNAMIC RUNTIME CONTROL INTERFACES -->
-  <script>
-    // ── APPLICATION LAYER STATES ──────────────────────
-    let activeCurrency = 'INR';
-    const currencyFactor = 0.012; // Static conversion index map: 1 INR to USD
-    let clientCart = [];
-
-    // ── INTERACTIVE UX ELEMENTS ───────────────────────
-    const hamburgerMenu = document.getElementById('hamburgerMenu');
-    const navLinks = document.getElementById('navLinks');
-    const currencyToggle = document.getElementById('currencyToggle');
-    const cartTrigger = document.getElementById('cartTrigger');
-    const cartDrawer = document.getElementById('cartDrawer');
-    const cartOverlay = document.getElementById('cartOverlay');
-    const closeCart = document.getElementById('closeCart');
-    const productGrid = document.getElementById('productGrid');
-    const filterButtons = document.querySelectorAll('.filter-btn');
-
-    // Mobile Navigation Toggle Handling
-    hamburgerMenu.addEventListener('click', () => {
-      hamburgerMenu.classList.toggle('active');
-      navLinks.classList.toggle('active');
-    });
-
-    // Close Nav menu on link selection
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburgerMenu.classList.remove('active');
-        navLinks.classList.remove('active');
-      });
-    });
-
-    // ── MULTI-CURRENCY CONVERTER ENGINE ───────────────
-    currencyToggle.addEventListener('click', () => {
-      if (activeCurrency === 'INR') {
-        activeCurrency = 'USD';
-        currencyToggle.textContent = '$ USD';
-        currencyToggle.style.background = 'var(--leaf-lt)';
-        currencyToggle.style.color = 'var(--leaf)';
-      } else {
-        activeCurrency = 'INR';
-        currencyToggle.textContent = 'Hex Value: ₹ INR';
-        currencyToggle.textContent = '临 INR';
-        currencyToggle.textContent = '₹ INR';
-        currencyToggle.style.background = 'var(--saffron-lt)';
-        currencyToggle.style.color = 'var(--saffron)';
-      }
-      recalculatePricingGrid();
-      renderCartUI();
-    });
-
-    function recalculatePricingGrid() {
-      const pricingNodes = document.querySelectorAll('.product-price');
-      pricingNodes.forEach(node => {
-        const baseCost = parseFloat(node.getAttribute('data-base'));
-        const unitLabel = node.querySelector('small').outerHTML;
-        if (activeCurrency === 'USD') {
-          const transformedValue = (baseCost * currencyFactor).toFixed(2);
-          node.innerHTML = `$${transformedValue} ${unitLabel}`;
-        } else {
-          node.innerHTML = `₹${baseCost} ${unitLabel}`;
-        }
-      });
-    }
-
-    // ── TAXONOMY / CATALOG FILTER LAYER ───────────────
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const processingScope = btn.getAttribute('data-filter');
-        
-        const matchingCards = document.querySelectorAll('.product-card');
-        matchingCards.forEach(card => {
-          if (processingScope === 'all' || card.getAttribute('data-cat') === processingScope) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-
-    // ── INDUSTRIAL CART CONTROLLER ─────────────────────
-    cartTrigger.addEventListener('click', () => toggleDrawerState(true));
-    closeCart.addEventListener('click', () => toggleDrawerState(false));
-    cartOverlay.addEventListener('click', () => toggleDrawerState(false));
-
-    function toggleDrawerState(open) {
-      if (open) {
-        cartDrawer.classList.add('active');
-        cartOverlay.classList.add('active');
-      } else {
-        cartDrawer.classList.remove('active');
-        cartOverlay.classList.remove('active');
-      }
-    }
-
-    document.querySelectorAll('.add-to-cart').forEach(button => {
-      button.addEventListener('click', (e) => {
-        const itemID = button.getAttribute('data-id');
-        const itemName = button.getAttribute('data-name');
-        const itemPrice = parseFloat(button.getAttribute('data-price'));
-        
-        const preExistingRecord = clientCart.find(item => item.id === itemID);
-        if (preExistingRecord) {
-          preExistingRecord.qty += 1;
-        } else {
-          clientCart.push({ id: itemID, name: itemName, price: itemPrice, qty: 1 });
-        }
-        
-        renderCartUI();
-        toggleDrawerState(true);
-      });
-    });
-
-    function alterQuantity(id, scalarDelta) {
-      const targetingRecord = clientCart.find(item => item.id === id);
-      if (targetingRecord) {
-        targetingRecord.qty += scalarDelta;
-        if (targetingRecord.qty <= 0) {
-          clientCart = clientCart.filter(item => item.id !== id);
-        }
-      }
-      renderCartUI();
-    }
-
-    function renderCartUI() {
-      const container = document.getElementById('cartItemsContainer');
-      const cartCountNode = document.getElementById('cartCount');
-      const cartTotalValueNode = document.getElementById('cartTotalValue');
-      
-      // Update line totals
-      const processingTotalCount = clientCart.reduce((acc, current) => acc + current.qty, 0);
-      cartCountNode.textContent = processingTotalCount;
-
-      if (clientCart.length === 0) {
-        container.innerHTML = `<div class="cart-empty">Your breakdown is empty. Add industrial configurations below.</div>`;
-        cartTotalValueNode.textContent = activeCurrency === 'INR' ? '₹0' : '$0.00';
-        return;
-      }
-
-      container.innerHTML = '';
-      let cumulativeSum = 0;
-
-      clientCart.forEach(item => {
-        const structuralPriceValue = activeCurrency === 'USD' ? (item.price * currencyFactor) : item.price;
-        const totalLineValue = structuralPriceValue * item.qty;
-        cumulativeSum += totalLineValue;
-
-        const stringPriceFormatted = activeCurrency === 'USD' ? `$${structuralPriceValue.toFixed(2)}` : `₹${item.price}`;
-        const stringTotalLineFormatted = activeCurrency === 'USD' ? `$${totalLineValue.toFixed(2)}` : `₹${totalLineValue}`;
-
-        const DOMitemBlock = document.createElement('div');
-        DOMitemBlock.classList.add('cart-item');
-        DOMitemBlock.innerHTML = `
-          <div class="cart-item-info">
-            <h4>${item.name}</h4>
-            <p>${stringPriceFormatted} per unit metric</p>
-            <strong style="font-size:0.85rem; color:var(--ink); display:block; margin-top:2px;">Total: ${stringTotalLineFormatted}</strong>
-          </div>
-          <div class="cart-item-actions">
-            <button class="cart-qty-btn" onclick="alterQuantity('${item.id}', -1)">-</button>
-            <span style="font-size:0.9rem; font-weight:600;">${item.qty}</span>
-            <button class="cart-qty-btn" onclick="alterQuantity('${item.id}', 1)">+</button>
-          </div>
-        `;
-        container.appendChild(DOMitemBlock);
-      });
-
-      cartTotalValueNode.textContent = activeCurrency === 'USD' ? `$${cumulativeSum.toFixed(2)}` : `₹${cumulativeSum}`;
-    }
-  </script>
 </body>
 </html>
