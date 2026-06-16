@@ -1,97 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TRSSKO Enterprises | Premium Global Conglomerate</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      /* Dynamic Color Palette */
-      --fmcg-bg: #E8F5E9; --fmcg-prime: #2E7D32;
-      --cloth-bg: #FFF3E0; --cloth-prime: #E65100;
-      --legal-bg: #E3F2FD; --legal-prime: #1565C0;
-      --ink: #1A1410; --white: #FFFFFF;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'DM Sans', sans-serif; background: #fff; color: var(--ink); line-height: 1.6; }
-
-    /* Hero Section with Gradient */
-    .hero { 
-      padding: 120px 5%; 
-      background: linear-gradient(135deg, #1a1410 0%, #4a3e35 100%); 
-      color: white; 
-      text-align: center; 
-    }
-    h1 { font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; margin-bottom: 20px; }
-    
-    /* Colorful Section Logic */
-    .section-wrap { padding: 80px 5%; }
-    
-    /* FMCG Section */
-    .fmcg-sec { background: var(--fmcg-bg); }
-    /* Cloth Section */
-    .cloth-sec { background: var(--cloth-bg); }
-    /* Legal Section */
-    .legal-sec { background: var(--legal-bg); }
-
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
-    .card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; }
-    
-    /* Buttons with specific colors */
-    .btn-fmcg { background: var(--fmcg-prime); color: white; padding: 15px 30px; border-radius: 50px; border: none; cursor: pointer; font-weight: bold; }
-    .btn-cloth { background: var(--cloth-prime); color: white; padding: 15px 30px; border-radius: 50px; border: none; cursor: pointer; font-weight: bold; }
-    .btn-legal { background: var(--legal-prime); color: white; padding: 15px 30px; border-radius: 50px; border: none; cursor: pointer; font-weight: bold; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRSSKO | Official Portal</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; color: #333; }
+        header { background: #004a99; color: #fff; padding: 2rem; text-align: center; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #f9f9f9; }
+        .credentials { background: #fff; border: 2px solid #004a99; padding: 20px; margin-top: 40px; border-radius: 8px; }
+        .director-box { text-align: center; margin-top: 20px; }
+        .director-img { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; border: 4px solid #004a99; }
+    </style>
 </head>
 <body>
 
-<!-- Hero -->
-<section class="hero">
-  <h1>TRSSKO Enterprises</h1>
-  <p>Director: Kashish Chhabra | Advocate & Entrepreneur</p>
-</section>
+    <header>
+        <h1>TRSSKO Fashion (OPC) Private Limited</h1>
+        <p>Excellence in FMCG, Legal Services, and Textiles</p>
+    </header>
 
-<!-- FMCG Section -->
-<section class="section-wrap fmcg-sec">
-  <div style="max-width: 1000px; margin: auto;">
-    <h2 style="color: var(--fmcg-prime)">● FMCG & Agri-Foods</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Organic Jaggery</h3>
-        <p>Export grade, natural process.</p>
-        <button class="btn-fmcg" onclick="alert('Added to cart')">Buy Now</button>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="container">
+        <!-- Business Verticals -->
+        <div class="grid">
+            <div class="card">
+                <h2>FMCG</h2>
+                <p>Exporting high-quality jaggery powder, tea, mustard oil, and spices to global markets.</p>
+            </div>
+            <div class="card">
+                <h2>Legal</h2>
+                <p>Professional legal consultancy and advisory services led by registered advocates.</p>
+            </div>
+            <div class="card">
+                <h2>Cloth</h2>
+                <p>Premium textile and fashion solutions designed for quality and durability.</p>
+            </div>
+        </div>
 
-<!-- Cloth Section -->
-<section class="section-wrap cloth-sec">
-  <div style="max-width: 1000px; margin: auto;">
-    <h2 style="color: var(--cloth-prime)">● Fashion & Textile</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Designer Apparel</h3>
-        <p>Premium combed cotton.</p>
-        <button class="btn-cloth" onclick="alert('Added to cart')">Buy Now</button>
-      </div>
-    </div>
-  </div>
-</section>
+        <!-- Corporate Credentials -->
+        <div class="credentials">
+            <h2>Corporate Credentials</h2>
+            <p><strong>IEC Number:</strong> BKQPC7409C</p>
+            <p><strong>Status:</strong> 
+                <span style="color: green; font-weight: bold;">FSSAI Verified</span> | 
+                <span style="color: green; font-weight: bold;">GST Verified</span>
+            </p>
+        </div>
 
-<!-- Legal Section -->
-<section class="section-wrap legal-sec">
-  <div style="max-width: 1000px; margin: auto;">
-    <h2 style="color: var(--legal-prime)">● Legal Services</h2>
-    <div class="card">
-      <h3>Professional Consultation</h3>
-      <p>Director & Advocate Consultation.</p>
-      <p><b>Fee: ₹2100</b></p>
-      <button class="btn-legal" onclick="window.location.href='legal.html'">Book Appointment</button>
+        <!-- Director Profile -->
+        <div class="director-box">
+            <h3>Director</h3>
+            <img src="resize-17392847861333677345resize17392846401006196471002 (1).jpg" alt="Director of TRSSKO" class="director-img">
+            <p><strong>Kashish Chhabra</strong></p>
+        </div>
     </div>
-  </div>
-</section>
 
 </body>
 </html>
