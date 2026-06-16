@@ -3,47 +3,388 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Premium FMCG | TRSSKO</title>
+    <title>TRSSKO | Premium Exports: Spices, Tea, Fashion & Consulting</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; margin: 0; color: #333; }
-        .hero { background: #f4f4f4; padding: 50px; text-align: center; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px; max-width: 1000px; margin: auto; }
-        .product-card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; text-align: center; }
-        .btn { background: #27ae60; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px; }
-        .credentials { text-align: center; padding: 40px; background: #004a99; color: white; margin-top: 20px; }
+        /* --- CORE STYLES --- */
+        :root {
+            --primary: #002d62; /* Rich Deep Blue for Trust */
+            --secondary: #0056b3; /* Lighter Blue */
+            --accent: #d4af37; /* Accent Gold for Premium feel */
+            --bg: #ffffff;
+            --text-dark: #333333;
+            --text-light: #fefefe;
+            --fssai-green: #27ae60;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background: var(--bg);
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; padding: 0; margin: 0; }
+        
+        /* --- REUSABLE UTILITIES --- */
+        .premium-btn {
+            background: var(--primary);
+            color: var(--text-light);
+            padding: 14px 28px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .premium-btn:hover {
+            background: white;
+            color: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+        .header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: 1px;
+        }
+        nav ul { display: flex; gap: 30px; font-weight: 500; font-size: 0.95rem; }
+        nav a { color: #555; }
+        nav a:hover { color: var(--accent); }
+
+        /* --- HERO SECTION (ATTRACTION) --- */
+        .hero {
+            padding: 160px 0 100px 0;
+            background: linear-gradient(rgba(0,45,98,0.85), rgba(0,45,98,0.95)),
+                        url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2000') no-repeat center center/cover;
+            color: var(--text-light);
+            text-align: center;
+        }
+        .hero h1 {
+            color: var(--text-light);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+        }
+        .hero-btn {
+            background: var(--accent);
+            border: 2px solid var(--accent);
+            padding: 16px 35px;
+            font-size: 1rem;
+        }
+        .hero-btn:hover {
+            background: transparent;
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* --- TRUST BADGES (UNDER HERO) --- */
+        .trust-strip {
+            background: #fdfdfd;
+            padding: 30px 0;
+            border-bottom: 1px solid #eee;
+            margin-top: -20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 10;
+        }
+        .trust-wrap {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        .badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .badge strong { font-weight: 800; color: #555; }
+        .verified-fssai { color: var(--fssai-green); font-weight: 800; text-transform: uppercase; }
+        .verified-gst { color: var(--secondary); font-weight: 800; text-transform: uppercase; }
+
+        /* --- VERTICALS SECTIONS (FMCG, LEGAL, CLOTH) --- */
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.8rem; letter-spacing: -1px; margin-bottom: 10px; }
+        .section-header p { color: #777; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+
+        .fmcg-section { padding: 100px 0; background: #fafafa; }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        .fmcg-card {
+            background: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid #f1f1f1;
+            transition: transform 0.3s ease;
+        }
+        .fmcg-card:hover { transform: translateY(-5px); }
+        .fmcg-img { height: 200px; width: 100%; object-fit: cover; }
+        .fmcg-body { padding: 25px; text-align: center; }
+        .fmcg-body h3 { font-size: 1.4rem; margin-bottom: 10px; color: var(--primary); }
+        .fmcg-body p { color: #666; font-size: 0.95rem; margin-bottom: 25px; min-height: 50px; }
+
+        /* General Section style for Legal/Cloth */
+        .general-section { padding: 100px 0; border-bottom: 1px solid #f0f0f0; }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .legal-img { width: 100%; height: 400px; object-fit: cover; border-radius: 6px; box-shadow: 0 15px 40px rgba(0,0,0,0.06); }
+        .cloth-img { width: 100%; height: 400px; object-fit: cover; border-radius: 6px; box-shadow: 0 15px 40px rgba(0,0,0,0.06); }
+
+        /* --- DIRECTOR SECTION (PERSONAL TRUST) --- */
+        .director-section {
+            padding: 100px 0;
+            background: #fcfcfc;
+            text-align: center;
+        }
+        .director-box {
+            background: #fff;
+            padding: 50px;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 6px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+        }
+        .director-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+        .director-box h3 { font-size: 1.8rem; color: #555; }
+        .director-quote { font-style: italic; color: #666; max-width: 600px; margin: 30px auto; font-size: 1.05rem; }
+
+        /* --- FOOTER & COMPLIANCE --- */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.8);
+            padding: 80px 0 30px 0;
+            font-size: 0.9rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        .footer-logo { font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 10px; display: block;}
+        .compliance-box { background: rgba(255,255,255,0.05); padding: 25px; border-radius: 4px; }
+        .compliance-box h4 { color: #fff; margin-top: 0; }
+        .compliance-list li { margin-bottom: 10px; display: flex; justify-content: space-between; }
+        .compliance-list li strong { color: #fff; margin-right: 15px;}
+        
+        .footer-btm { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; font-size: 0.85rem; }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 2.8rem; }
+            .two-col { grid-template-columns: 1fr; gap: 40px; text-align: center;}
+            .director-box { padding: 30px; }
+        }
+        @media (max-width: 700px) {
+            nav ul { display: none; } /* Simplified nav for mobile */
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
+            .trust-wrap { grid-template-columns: 1fr; gap: 15px; }
+            .fmcg-body h3 { font-size: 1.2rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px;}
+        }
     </style>
 </head>
 <body>
 
-    <header class="hero">
-        <h1>TRSSKO Premium FMCG</h1>
-        <p>Pure, Organic, and Export-Quality Essentials delivered to you.</p>
+    <!-- NAV BAR -->
+    <header>
+        <div class="container header-wrap">
+            <a href="#" class="logo">TRSSKO</a>
+            <nav>
+                <ul>
+                    <li><a href="#fmcg">FMCG</a></li>
+                    <li><a href="#legal">Legal</a></li>
+                    <li><a href="#cloth">Cloth</a></li>
+                    <li><a href="#director">About Us</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="premium-btn nav-btn">Request Quote</a>
+        </div>
     </header>
 
-    <div class="product-grid">
-        <div class="product-card">
-            <h3>Premium Tea</h3>
-            <p>Hand-picked, aromatic tea leaves for the perfect brew.</p>
-            <a href="#" class="btn">Order Now</a>
+    <!-- HERO SECTION (ATTRACTION) -->
+    <section class="hero">
+        <div class="container">
+            <h1>Premium Exports & Consulting</h1>
+            <p>From fine FMCG goods and bespoke fashion to professional legal consulting—TRSSKO bridges quality with the global market.</p>
+            <a href="#fmcg" class="premium-btn hero-btn">Explore Our Catalog</a>
         </div>
-        <div class="product-card">
-            <h3>Organic Spices</h3>
-            <p>Authentic Indian spices, freshly ground and packed.</p>
-            <a href="#" class="btn">Order Now</a>
-        </div>
-        <div class="product-card">
-            <h3>Mushroom Powder</h3>
-            <p>Premium dried mushroom powder, rich in nutrients.</p>
-            <a href="#" class="btn">Order Now</a>
+    </section>
+
+    <!-- COMPLIANCE/TRUST STRIP -->
+    <div class="container trust-strip">
+        <div class="trust-wrap">
+            <div class="badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                IEC: <strong>BKQPC7409C</strong>
+            </div>
+            <div class="badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                FSSAI No: <span class="verified-fssai">Verified</span>
+            </div>
+            <div class="badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0056b3" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                GSTIN: <span class="verified-gst">Verified</span>
+            </div>
         </div>
     </div>
 
-    <div class="credentials">
-        <h2>Certified Quality</h2>
-        <p>IEC: BKQPC7409C | FSSAI Verified | GST Verified</p>
-        <p><strong>Director:</strong> Kashish Chhabra</p>
-        <img src="resize-17392847861333677345resize17392846401006196471002 (1).jpg" alt="Director" style="width:100px; border-radius:50%; margin-top:10px;">
-    </div>
+    <!-- FMCG VERTICAL (SHOP SECTION) -->
+    <section id="fmcg" class="fmcg-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Premium FMCG Exports</h2>
+                <p>Curated, pure, and high-standard essential goods for global distribution.</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Spices -->
+                <div class="fmcg-card">
+                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=600" alt="Authentic Indian Spices" class="fmcg-img">
+                    <div class="fmcg-body">
+                        <h3>Authentic Spices</h3>
+                        <p>Export-quality ground and whole spices. Jaggery powder, Mustard oil.</p>
+                        <a href="#contact" class="premium-btn">Wholesale Inquiry</a>
+                    </div>
+                </div>
+                <!-- Tea -->
+                <div class="fmcg-card">
+                    <img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8c79a?q=80&w=600" alt="Fine Indian Tea" class="fmcg-img">
+                    <div class="fmcg-body">
+                        <h3>Premium Tea</h3>
+                        <p>Fine aromatic tea leaves harvested for superior taste.</p>
+                        <a href="#contact" class="premium-btn">Request Samples</a>
+                    </div>
+                </div>
+                <!-- Mushroom -->
+                <div class="fmcg-card">
+                    <img src="https://images.unsplash.com/photo-1534321307223-1d0f507b9a7c?q=80&w=600" alt="Dried Mushroom Powder" class="fmcg-img">
+                    <div class="fmcg-body">
+                        <h3>Mushroom Powder</h3>
+                        <p>Nutrient-rich, dried mushroom powder for health & culinary use.</p>
+                        <a href="#contact" class="premium-btn">Order Wholesale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</body>
-</html>
+    <!-- LEGAL VERTICAL -->
+    <section id="legal" class="general-section">
+        <div class="container two-col">
+            <div>
+                <h2>Legal Consulting</h2>
+                <p>Professional legal consultancy and advisory services led by registered advocates. We specialize in corporate compliance, export documentation, and trade dispute resolution.</p>
+                <a href="#contact" class="premium-btn">Book Consultation</a>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=800" alt="Professional Legal Consulting" class="legal-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- CLOTH VERTICAL -->
+    <section id="cloth" class="general-section">
+        <div class="container two-col">
+            <div>
+                <img src="https://images.unsplash.com/photo-1521335629791-cf4bacaa014d?q=80&w=800" alt="Premium Textiles" class="cloth-img">
+            </div>
+            <div>
+                <h2>Quality Cloth & Textiles</h2>
+                <p>Bespoke fashion solutions and premium textile manufacturing. From raw fabrics to finished apparel, TRSSKO ensures durability and premium quality for the international fashion industry.</p>
+                <a href="#contact" class="premium-btn">View Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIRECTOR SECTION (PERSONAL TRUST) -->
+    <section id="director" class="director-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Vision</h2>
+            </div>
+            <div class="director-box">
+                <!-- IMPORTANT: Ensure this file name is exact -->
+                <img src="resize-17392847861333677345resize17392846401006196471002 (1).jpg" alt="Kashish Chhabra, Director of TRSSKO" class="director-img">
+                <h3>Kashish Chhabra</h3>
+                <p style="color:var(--accent); font-weight: bold; margin-bottom: 0;">Director</p>
+                <p class="director-quote">"Our foundation rests on impeccable quality, full government compliance, and unwavering trust. At TRSSKO, we ensure that every client—domestic or international—receives excellence as a standard."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER & COMPLIANCE -->
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div>
+                <span class="footer-logo">TRSSKO</span>
+                <p>Premium Exports, Verified Quality, Professional Consulting.</p>
+                <p><strong>CIN:</strong> U18209UP2023OPC176366</p>
+            </div>
+            <div class="compliance-box">
+                <h4>Compliance & Licenses</h4>
+                <ul class="compliance-list">
+                    <li><strong>IEC (Import Export)</strong> BKQPC7409C</li>
+                    <li><strong>FSSAI No.</strong> <span class="verified-fssai">Verified</span></li>
+                    <li><strong>GST No.
