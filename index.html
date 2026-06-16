@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TRSSKO Enterprises | Premium Indian FMCG & Fashion Exports</title>
-  <meta name="description" content="TRSSKO — India's trusted merchant exporter of premium FMCG foods and fashion apparel. IEC licensed. Shipping to UAE, UK, USA and 40+ countries." />
+  <title>TRSSKO Enterprises | Global FMCG, Textiles & Legal Advisory</title>
+  <meta name="description" content="TRSSKO — India's multi-divisional conglomerate offering premium FMCG foods export, retail garment textiles, and international trade legal services." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -19,6 +19,8 @@
       --ink-30: #C5B9B0;
       --leaf: #2E5C3A;
       --leaf-lt: #E8F2EA;
+      --navy: #1B365D;
+      --navy-lt: #E8EEF5;
       --white: #FFFFFF;
       --gold: #C9A84C;
       --border: #E8E0D8;
@@ -26,7 +28,7 @@
       --ff-body: 'DM Sans', system-ui, sans-serif;
       --ff-mono: 'DM Mono', monospace;
       --max-w: 1200px;
-      --r: 6px;
+      --r: 8px;
       --transition: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -40,70 +42,115 @@
     section { padding: 100px 24px; }
     .section-inner { max-width: var(--max-w); margin: 0 auto; }
     .section-label { font-family: var(--ff-mono); font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--saffron); margin-bottom: 12px; display: block; }
-    .section-title { font-family: var(--ff-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; color: var(--ink); margin-bottom: 16px; }
-    .section-sub { color: var(--ink-60); font-size: 1rem; max-width: 580px; margin-bottom: 56px; }
+    .section-title { font-family: var(--ff-display); font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 600; color: var(--ink); margin-bottom: 16px; line-height: 1.15; }
+    .section-sub { color: var(--ink-60); font-size: 1.05rem; max-width: 620px; margin-bottom: 56px; }
 
     /* ── NAVIGATION BAR ──────────────────────────────── */
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(250,247,242,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
-    .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { font-family: var(--ff-display); font-size: 1.65rem; font-weight: 600; letter-spacing: 0.1em; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(250,247,242,0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; height: 80px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--ff-display); font-size: 1.8rem; font-weight: 600; letter-spacing: 0.08em; }
     .nav-logo span { color: var(--saffron); }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
     .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--ink-60); transition: color 0.25s; }
     .nav-links a:hover { color: var(--ink); }
-    .nav-cta { background: var(--saffron); color: var(--white) !important; padding: 10px 20px; border-radius: var(--r); font-weight: 600; transition: all 0.2s; }
-    .nav-cta:hover { background: #B8521A; }
-    .hamburger { display: none; background: none; border: none; cursor: pointer; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 5px 0; }
+    .nav-cta { background: var(--ink); color: var(--white) !important; padding: 12px 24px; border-radius: var(--r); font-weight: 600; transition: all 0.25s; }
+    .nav-cta:hover { background: var(--saffron); transform: translateY(-1px); }
 
     /* ── HERO BANNER ────────────────────────────────── */
-    .hero { max-width: var(--max-w); margin: 0 auto; padding: 90px 24px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
-    .hero h1 { font-family: var(--ff-display); font-size: clamp(2.8rem, 5.5vw, 4.2rem); font-weight: 600; line-height: 1.1; margin-bottom: 24px; }
-    .hero em { font-style: italic; color: var(--saffron); font-weight: 400; }
-    .hero-sub { font-size: 1.05rem; color: var(--ink-60); margin-bottom: 40px; max-width: 480px; }
+    .hero { max-width: var(--max-w); margin: 0 auto; padding: 80px 24px 100px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
+    .hero h1 { font-family: var(--ff-display); font-size: clamp(3rem, 6vw, 4.5rem); font-weight: 600; line-height: 1.05; margin-bottom: 24px; color: var(--ink); }
+    .hero h1 em { font-style: italic; color: var(--saffron); font-weight: 400; }
+    .hero-sub { font-size: 1.1rem; color: var(--ink-60); margin-bottom: 40px; max-width: 520px; line-height: 1.7; }
     .hero-actions { display: flex; gap: 16px; }
-    .btn-primary { background: var(--saffron); color: var(--white); padding: 16px 32px; border-radius: var(--r); font-weight: 600; border: none; cursor: pointer; }
-    .btn-outline { background: transparent; color: var(--ink); padding: 16px 32px; border-radius: var(--r); font-weight: 600; border: 1.5px solid var(--border); }
-    .hero-mosaic { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 16px; }
-    .hero-mosaic img { border-radius: 8px; width: 100%; height: 400px; object-fit: cover; }
+    .btn-primary { background: var(--saffron); color: var(--white); padding: 16px 36px; border-radius: var(--r); font-weight: 600; border: none; cursor: pointer; transition: all 0.25s var(--transition); }
+    .btn-primary:hover { background: #B8521A; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,98,27,0.15); }
+    .btn-outline { background: transparent; color: var(--ink); padding: 16px 36px; border-radius: var(--r); font-weight: 600; border: 1.5px solid var(--border); transition: all 0.25s; }
+    .btn-outline:hover { border-color: var(--ink); background: rgba(26,20,16,0.02); }
+    .hero-mosaic { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 16px; position: relative; }
+    .hero-mosaic img { border-radius: var(--r); width: 100%; height: 440px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.04); }
 
-    /* ── SUBSIDIARY SECTOR GRIDS ──────────────────────── */
+    /* ── RESTRUCTURED VERTICAL SECTIONS ────────────────── */
     .sector-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-    .sector-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: all 0.3s var(--transition); }
-    .sector-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(26,20,16,0.06); border-color: var(--saffron); }
-    .sector-img { height: 220px; width: 100%; object-fit: cover; }
-    .sector-body { padding: 32px; flex: 1; display: flex; flex-direction: column; }
-    .sector-title { font-family: var(--ff-display); font-size: 1.6rem; font-weight: 600; margin-bottom: 12px; }
-    .sector-desc { font-size: 0.9rem; color: var(--ink-60); margin-bottom: 24px; flex: 1; }
-    .sector-link { color: var(--saffron); font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; }
+    .sector-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; display: flex; flex-direction: column; transition: all 0.3s var(--transition); }
+    .sector-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(26,20,16,0.08); }
+    
+    /* Segment specific accents on hover */
+    .sector-card.fmcg-card:hover { border-color: var(--leaf); }
+    .sector-card.cloth-card:hover { border-color: var(--saffron); }
+    .sector-card.legal-card:hover { border-color: var(--navy); }
 
-    /* ── FOOTER STYLE ───────────────────────────────── */
+    .sector-img-wrapper { position: relative; height: 240px; overflow: hidden; background: #eee; }
+    .sector-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s var(--transition); }
+    .sector-card:hover .sector-img { transform: scale(1.04); }
+    
+    .sector-badge { position: absolute; top: 16px; left: 16px; font-family: var(--ff-mono); font-size: 0.68rem; font-weight: 600; padding: 4px 12px; border-radius: 100px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--white); }
+    .fmcg-badge { background: var(--leaf); }
+    .cloth-badge { background: var(--saffron); }
+    .legal-badge { background: var(--navy); }
+
+    .sector-body { padding: 36px; flex: 1; display: flex; flex-direction: column; }
+    .sector-title { font-family: var(--ff-display); font-size: 1.75rem; font-weight: 600; margin-bottom: 12px; color: var(--ink); }
+    .sector-desc { font-size: 0.92rem; color: var(--ink-60); margin-bottom: 28px; flex: 1; line-height: 1.65; }
+    .sector-link { font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; transition: gap 0.2s; }
+    
+    .fmcg-link { color: var(--leaf); }
+    .cloth-link { color: var(--saffron); }
+    .legal-link { color: var(--navy); }
+    .sector-card:hover .sector-link { gap: 14px; }
+
+    /* ── TRUST INTEGRITY METRICS ────────────────────── */
+    .metrics-bar { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 40px 24px; }
+    .metrics-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center; }
+    .metric-item h3 { font-family: var(--ff-display); font-size: 2.5rem; font-weight: 600; color: var(--saffron); margin-bottom: 4px; }
+    .metric-item p { font-size: 0.85rem; font-family: var(--ff-mono); text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-60); }
+
+    /* ── CONTACT INTAKE MODULE ──────────────────────── */
+    #contact { background: var(--white); border-top: 1px solid var(--border); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: start; }
+    .contact-info h3 { font-family: var(--ff-display); font-size: 2rem; font-weight: 600; margin-bottom: 16px; }
+    .contact-info p { color: var(--ink-60); font-size: 0.95rem; margin-bottom: 32px; }
+    .contact-channels { display: flex; flex-direction: column; gap: 16px; }
+    .channel-card { display: flex; align-items: center; gap: 16px; padding: 20px; background: var(--cream); border: 1px solid var(--border); border-radius: var(--r); }
+    .channel-icon { font-size: 1.5rem; }
+    
+    .contact-form { background: var(--cream); padding: 44px; border-radius: var(--r); border: 1px solid var(--border); display: flex; flex-direction: column; gap: 20px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 0.78rem; font-weight: 600; color: var(--ink-60); text-transform: uppercase; letter-spacing: 0.05em; }
+    .form-group input, .form-group select, .form-group textarea { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--r); padding: 12px 16px; font-size: 0.95rem; color: var(--ink); outline: none; transition: border-color 0.2s; width: 100%; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--saffron); }
+
+    /* ── FOOTER SYSTEM ───────────────────────────────── */
     footer { background: var(--ink); color: rgba(255,255,255,0.55); padding: 80px 24px 32px; border-top: 4px solid var(--saffron); }
     .footer-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-    .footer-brand h3 { color: var(--white); font-family: var(--ff-display); font-size: 1.5rem; margin-bottom: 16px; }
-    .footer-col h4 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: rgba(255,255,255,0.9); margin-bottom: 20px; letter-spacing: 0.1em; }
+    .footer-brand h3 { color: var(--white); font-family: var(--ff-display); font-size: 1.6rem; margin-bottom: 16px; font-weight: 600; letter-spacing: 0.05em; }
+    .footer-brand h3 span { color: var(--saffron); }
+    .footer-col h4 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: rgba(255,255,255,0.9); margin-bottom: 20px; letter-spacing: 0.12em; }
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-    .footer-col ul li a { font-size: 0.88rem; color: rgba(255,255,255,0.6); }
+    .footer-col ul li a { font-size: 0.88rem; color: rgba(255,255,255,0.6); transition: color 0.2s; }
     .footer-col ul li a:hover { color: var(--white); }
-    .footer-bottom { max-width: var(--max-w); margin: 0 auto; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; font-size: 0.82rem; }
+    .footer-bottom { max-width: var(--max-w); margin: 0 auto; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; font-size: 0.82rem; flex-wrap: wrap; gap: 16px; }
 
-    @media (max-width: 968px) {
+    @media (max-width: 1024px) {
       .hero { grid-template-columns: 1fr; text-align: center; }
+      .hero-sub { margin-left: auto; margin-right: auto; }
+      .hero-actions { justify-content: center; }
       .hero-mosaic { display: none; }
-      .sector-grid { grid-template-columns: 1fr; }
+      .sector-grid { grid-template-columns: 1fr; gap: 24px; }
+      .metrics-inner { grid-template-columns: 1fr; gap: 24px; }
+      .contact-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- MASTER NAVIGATION -->
+  <!-- MASTER MULTI-DIVISIONAL NAVIGATION -->
   <nav>
     <div class="nav-inner">
       <div class="nav-logo"><a href="index.html">TRSSKO<span>.</span></a></div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="fmcg.html">FMCG Portfolio</a></li>
-        <li><a href="cloth.html">Textile & Apparel</a></li>
-        <li><a href="legal.html">Regulatory File</a></li>
+      <ul class="nav-links">
+        <li><a href="#fmcg-sector">FMCG Foods</a></li>
+        <li><a href="#textile-sector">Textile Apparel</a></li>
+        <li><a href="#legal-sector">Legal & Advisory</a></li>
       </ul>
       <div>
         <a href="#contact" class="nav-cta">Corporate Intake</a>
@@ -111,59 +158,144 @@
     </div>
   </nav>
 
-  <!-- ENTRY HERO PORTAL -->
+  <!-- ENTERPRISE HERO PORTAL -->
   <section class="hero">
     <div>
-      <div class="section-label">Global Export Enterprise</div>
-      <h1>Connecting Indian Agribusiness to <em>Global Supply Lines</em></h1>
-      <p class="hero-sub">TRSSKO Enterprises orchestrates multi-ton commodity logistics and premium retail apparel exports matching strict regulatory standards.</p>
+      <div class="section-label">Multi-Divisional Conglomerate</div>
+      <h1>Sovereign Supply Solutions & <em>Corporate Advisory</em></h1>
+      <p class="hero-sub">TRSSKO Enterprises operates across three institutional pillars—facilitating global food trade, manufacturing high-end retail apparel, and provisioning cross-border legal compliance solutions.</p>
       <div class="hero-actions">
-        <a href="#divisions" class="btn-primary">Browse Divisions</a>
-        <a href="legal.html" class="btn-outline">Verify Licenses</a>
+        <a href="#divisions" class="btn-primary">Explore Segments</a>
+        <a href="#contact" class="btn-outline">Corporate RFQ</a>
       </div>
     </div>
     <div class="hero-mosaic">
-      <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=600" alt="Indian Trade Operations" />
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600" alt="TRSSKO Executive Trade Management Operations" />
     </div>
   </section>
 
-  <!-- SECTOR LINK PANELS -->
-  <section id="divisions" style="background: var(--white);">
+  <!-- OPERATIONAL HIGH-VALUE METRICS -->
+  <div class="metrics-bar">
+    <div class="metrics-inner">
+      <div class="metric-item">
+        <h3>APEDA / IEC</h3>
+        <p>Sovereign Food Export Licenses</p>
+      </div>
+      <div class="metric-item">
+        <h3>100% Combed</h3>
+        <p>Premium Retail-Grade Cottons</p>
+      </div>
+      <div class="metric-item">
+        <h3>Global Trade</h3>
+        <p>Compliant Legal Frameworks</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIVISIONS STRUCTURE ARCHITECTURE -->
+  <section id="divisions">
     <div class="section-inner">
-      <span class="section-label">Enterprise Divisions</span>
-      <h2 class="section-title">Primary Operational Gateways</h2>
-      <p class="section-sub">Select a corporate segment below to view custom specifications, dynamic item grids, and target freight pricing indexes.</p>
+      <span class="section-label">Enterprise Footprint</span>
+      <h2 class="section-title">Primary Operational Pillars</h2>
+      <p class="section-sub">Select an enterprise sector below to review product specifications, manufacturing parameters, or governance solutions maps.</p>
       
       <div class="sector-grid">
-        <!-- FMCG LINK BLOCK -->
-        <div class="sector-card">
-          <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=500" class="sector-img" alt="Premium Foods Division" />
+        
+        <!-- SECTION 1: FMCG FOODS -->
+        <div class="sector-card fmcg-card" id="fmcg-sector">
+          <div class="sector-img-wrapper">
+            <span class="sector-badge fmcg-badge">Division 01</span>
+            <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=500" class="sector-img" alt="TRSSKO Premium Foods Supply" />
+          </div>
           <div class="sector-body">
             <h3 class="sector-title">Premium FMCG Foods</h3>
-            <p class="sector-desc">Export-grade spices, cold-pressed vegetable oils, processed grains, and pure sugarcane derivatives optimized for international food frameworks.</p>
-            <a href="fmcg.html" class="sector-link">Access FMCG Catalog &rarr;</a>
+            <p class="sector-desc">Export-grade spice ground matrices, cold-pressed vegetable oils, processed food grains, and pure artisanal sugarcane jaggery blocks cleared to FDA & ESMA standards.</p>
+            <a href="#contact" class="sector-link fmcg-link">Enquire FMCG Supply &rarr;</a>
           </div>
         </div>
 
-        <!-- CLOTH LINK BLOCK -->
-        <div class="sector-card">
-          <img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&q=80&w=500" class="sector-img" alt="Textile Division" />
+        <!-- SECTION 2: TEXTILE & APPAREL -->
+        <div class="sector-card cloth-card" id="textile-sector">
+          <div class="sector-img-wrapper">
+            <span class="sector-badge cloth-badge">Division 02</span>
+            <img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&q=80&w=500" class="sector-img" alt="TRSSKO Textile Apparel Line" />
+          </div>
           <div class="sector-body">
             <h3 class="sector-title">Fashion & Textiles</h3>
-            <p class="sector-desc">Combed industrial cotton, retail-weight ready garments, and customized manufacturing production cycles engineered for global apparel labels.</p>
-            <a href="cloth.html" class="sector-link">Explore Textile Line &rarr;</a>
+            <p class="sector-desc">Industrial combed cotton fibers, luxury linen options, and customizable garment production patterns optimized for premium international fashion house catalogs.</p>
+            <a href="#contact" class="sector-link cloth-link">Request Textile Run &rarr;</a>
           </div>
         </div>
 
-        <!-- LEGAL LINK BLOCK -->
-        <div class="sector-card">
-          <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=500" class="sector-img" alt="Legal Assurance" />
+        <!-- SECTION 3: LEGAL SERVICES -->
+        <div class="sector-card legal-card" id="legal-sector">
+          <div class="sector-img-wrapper">
+            <span class="sector-badge legal-badge">Division 03</span>
+            <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=500" class="sector-img" alt="TRSSKO Corporate Legal Counsel" />
+          </div>
           <div class="sector-body">
-            <h3 class="sector-title">Governance & Legal</h3>
-            <p class="sector-desc">Complete transparency file containing active government registration IDs, IEC codes, APEDA memberships, and custom clearance parameters.</p>
-            <a href="legal.html" class="sector-link">View Legal Registry &rarr;</a>
+            <h3 class="sector-title">Legal Services & Advisory</h3>
+            <p class="sector-desc">Comprehensive merchant regulatory support, maritime clearing compliance files, custom tariff structures auditing, and cross-border commercial litigation solutions frameworks.</p>
+            <a href="#contact" class="sector-link legal-link">Retain Legal Desk &rarr;</a>
           </div>
         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- UNIFIED CONTACT INTAKE HUB -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="section-label">Global Intake Desk</span>
+          <h3>Initiate Institutional Communications</h3>
+          <p>Contact our central registrar desk. Please specify the organizational division required to facilitate prompt routing to our specialized heads.</p>
+          
+          <div class="contact-channels">
+            <div class="channel-card">
+              <span class="channel-icon">✉️</span>
+              <div>
+                <strong style="font-size: 0.75rem; text-transform: uppercase; color: var(--ink-60); display: block;">Central Hub Email</strong>
+                <a href="mailto:info.chhabraenterprices@gmail.com" style="font-weight: 600; color: var(--saffron);">info.chhabraenterprices@gmail.com</a>
+              </div>
+            </div>
+            <div class="channel-card">
+              <span class="channel-icon">🏛️</span>
+              <div>
+                <strong style="font-size: 0.75rem; text-transform: uppercase; color: var(--ink-60); display: block;">Corporate Registration</strong>
+                <span style="font-weight: 600;">TRSSKO Enterprises, Sovereign Hub, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTROL FORM ROUTING TO 3 SECTORS -->
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Your portfolio request has been safely captured. The corresponding division manager will respond within 12 standard banking hours.');">
+          <div class="form-group">
+            <label>Target Enterprise Division</label>
+            <select required style="background: var(--white); font-weight: 500;">
+              <option value="">Select Target Sector...</option>
+              <option value="fmcg">Division 01: Premium FMCG Foods Export</option>
+              <option value="textile">Division 02: Fashion & Garment Textiles</option>
+              <option value="legal">Division 03: Corporate Legal & Advisory Services</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Corporate Entity Name</label>
+            <input type="text" placeholder="e.g., Global Distribution Corp" required />
+          </div>
+          <div class="form-group">
+            <label>Authorized Official Email</label>
+            <input type="email" placeholder="procurement@firm.com" required />
+          </div>
+          <div class="form-group">
+            <label>Operational Scope Summary</label>
+            <textarea placeholder="Outline targeted volume thresholds, customs documentation priorities, or legal retainer timelines required..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="align-self: flex-start;">Transmit Corporate Request</button>
+        </form>
       </div>
     </div>
   </section>
@@ -172,33 +304,37 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <h3>TRSSKO Enterprises</h3>
-        <p>Premium global merchant exporter managing safe international shipping lines for agricultural foods and ready-made clothing lines.</p>
+        <h3>TRSSKO<span>.</span></h3>
+        <p>Premium multi-sector conglomerate driving global supply standards across premium foods, textile arrays, and commercial trade compliance advisory ecosystems.</p>
       </div>
       <div class="footer-col">
-        <h4>Operational Sectors</h4>
+        <h4>FMCG Food Sector</h4>
         <ul>
-          <li><a href="fmcg.html">Foods & Agri Products</a></li>
-          <li><a href="cloth.html">Apparel & Fabrics</a></li>
-          <li><a href="legal.html">Compliance Portfolio</a></li>
+          <li><a href="#fmcg-sector">Agri Commodities</a></li>
+          <li><a href="#fmcg-sector">Ground Spices Portfolio</a></li>
+          <li><a href="#fmcg-sector">Cold-Pressed Extracts</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Enterprise Hub</h4>
+        <h4>Textile & Fashion</h4>
         <ul>
-          <li><a href="index.html">Master Homepage</a></li>
-          <li><a href="legal.html">IEC Certificate Files</a></li>
-          <li><a href="mailto:info.chhabraenterprices@gmail.com">Corporate Mail Desk</a></li>
+          <li><a href="#textile-sector">Combed Cotton Wares</a></li>
+          <li><a href="#textile-sector">Retail Ready Garments</a></li>
+          <li><a href="#textile-sector">Custom Production Cycles</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact Point</h4>
-        <p style="font-size:0.85rem; line-height:1.6; color:rgba(255,255,255,0.7);">Email: info.chhabraenterprices@gmail.com<br>Location: Registered Hub, India</p>
+        <h4>Legal & Corporate</h4>
+        <ul>
+          <li><a href="#legal-sector">Maritime Clearances</a></li>
+          <li><a href="#legal-sector">Tariff Matrix Audits</a></li>
+          <li><a href="#legal-sector">Cross-Border Retainers</a></li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 TRSSKO Enterprises. All Rights Reserved. Tracked changes obey global trade compliance laws.</p>
-      <p>Global Architecture Managed with AI Collaborative Framework Modules.</p>
+      <p>&copy; 2026 TRSSKO Enterprises. All Rights Reserved. Tracked allocations obey sovereign global logistics rules.</p>
+      <p>Technical Infrastructure Engineered with AI Collaborative Matrix Framework Modules.</p>
     </div>
   </footer>
 
