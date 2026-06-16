@@ -3,110 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TRSSKO Enterprises | Official E-Store</title>
+  <title>TRSSKO | Premium FMCG, Textiles & Legal Advisory</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    :root { --saffron: #D4621B; --leaf: #2E5C3A; --navy: #1B365D; --cream: #FAF7F2; --ink: #1A1410; --white: #FFFFFF; --r: 8px; }
+    :root { --fmcg: #2E5C3A; --cloth: #D4621B; --legal: #1B365D; --ink: #1A1410; --cream: #FAF7F2; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); line-height: 1.6; }
     
-    /* Nav */
-    nav { background: var(--white); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #eee; }
-    .cart-btn { background: var(--saffron); color: white; padding: 10px 20px; border-radius: var(--r); cursor: pointer; border: none; font-weight: bold; }
+    /* Navigation */
+    nav { background: white; padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #eee; }
+    .cart-btn { background: var(--ink); color: white; padding: 12px 24px; border-radius: 6px; cursor: pointer; border: none; font-weight: bold; }
+
+    /* Sections */
+    .container { max-width: 1100px; margin: auto; padding: 60px 5%; }
+    .hero { text-align: center; padding: 100px 5%; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: 4rem; margin-bottom: 20px; }
     
-    /* Hero */
-    .hero { padding: 80px 5%; text-align: center; }
-    h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; margin-bottom: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 30px; }
+    .card { background: white; padding: 30px; border-radius: 12px; border: 1px solid #eee; display: flex; flex-direction: column; transition: 0.3s; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
     
-    /* Grid */
-    .container { max-width: 1200px; margin: auto; padding: 40px 5%; }
-    .category-title { margin: 40px 0 20px; font-family: 'Cormorant Garamond', serif; font-size: 2rem; border-bottom: 2px solid var(--saffron); display: inline-block; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
-    .card { background: white; padding: 20px; border-radius: var(--r); border: 1px solid #eee; transition: 0.3s; }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-    .btn-buy { background: var(--ink); color: white; width: 100%; padding: 12px; border-radius: 5px; cursor: pointer; border: none; margin-top: 10px; }
-    
+    /* Buttons per Vertical */
+    .btn-fmcg { background: var(--fmcg); color: white; padding: 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: auto; }
+    .btn-cloth { background: var(--cloth); color: white; padding: 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: auto; }
+    .btn-legal { background: var(--legal); color: white; padding: 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: auto; }
+
     /* Cart Modal */
-    #cart-modal { position: fixed; top: 0; right: -400px; width: 350px; height: 100%; background: white; box-shadow: -5px 0 15px rgba(0,0,0,0.1); padding: 20px; transition: 0.3s; z-index: 2000; }
-    #cart-modal.open { right: 0; }
+    #cart-panel { position: fixed; top: 0; right: -400px; width: 350px; height: 100%; background: white; padding: 40px; box-shadow: -5px 0 20px rgba(0,0,0,0.1); transition: 0.3s; z-index: 1000; }
+    #cart-panel.open { right: 0; }
   </style>
 </head>
 <body>
 
 <nav>
   <h2>TRSSKO<span>.</span></h2>
-  <button class="cart-btn" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</button>
+  <button class="cart-btn" onclick="document.getElementById('cart-panel').classList.toggle('open')">Order Manifest (<span id="count">0</span>)</button>
 </nav>
 
 <div class="hero">
-  <h1>Official TRSSKO Store</h1>
-  <p>Select your items from FMCG, Fashion, or Legal services to request a quotation/order.</p>
+  <h1>TRSSKO Enterprises</h1>
+  <p>Global Exports | Textile Manufacturing | Legal Advisory</p>
 </div>
 
 <div class="container">
-  <!-- FMCG SECTION -->
-  <h2 class="category-title" id="fmcg">Premium FMCG Foods</h2>
+  <!-- FMCG -->
+  <h2 style="color:var(--fmcg)">● FMCG & Agri-Foods</h2>
   <div class="grid">
     <div class="card">
-      <h3>Organic Jaggery Powder</h3>
-      <p>Export-grade, pure sweetness.</p>
-      <p><b>₹250 / KG</b></p>
-      <button class="btn-buy" onclick="addToCart('Jaggery Powder', 250)">Add to Order</button>
+      <h3>Premium Jaggery Powder</h3>
+      <p>100% Organic, Export Grade.</p>
+      <p><b>₹350 / 1kg</b></p>
+      <button class="btn-fmcg" onclick="addItem('Jaggery Powder', 350)">Add to Manifest</button>
     </div>
     <div class="card">
-      <h3>Cold-Pressed Mustard Oil</h3>
-      <p>TRSSKO Premium Label.</p>
-      <p><b>₹190 / Liter</b></p>
-      <button class="btn-buy" onclick="addToCart('Mustard Oil', 190)">Add to Order</button>
-    </div>
-  </div>
-
-  <!-- CLOTH SECTION -->
-  <h2 class="category-title" id="cloth">Textile & Apparel</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Women's Ethnic Wear</h3>
-      <p>Premium export collection.</p>
-      <p><b>₹1200 / Set</b></p>
-      <button class="btn-buy" onclick="addToCart('Ethnic Set', 1200)">Add to Order</button>
+      <h3>Cold Pressed Mustard Oil</h3>
+      <p>Purity Guaranteed.</p>
+      <p><b>₹290 / Liter</b></p>
+      <button class="btn-fmcg" onclick="addItem('Mustard Oil', 290)">Add to Manifest</button>
     </div>
   </div>
 
-  <!-- LEGAL SECTION -->
-  <h2 class="category-title" id="legal">Legal Services</h2>
+  <!-- CLOTH -->
+  <h2 style="color:var(--cloth); margin-top:60px">● Fashion & Textiles</h2>
   <div class="grid">
     <div class="card">
-      <h3>Consultation Fee</h3>
-      <p>Legal document/trade advisory.</p>
-      <p><b>₹2000 / Session</b></p>
-      <button class="btn-buy" onclick="addToCart('Legal Consultation', 2000)">Add to Order</button>
+      <h3>Corporate Cotton Shirts</h3>
+      <p>Export Quality Combed Cotton.</p>
+      <p><b>₹999 / Piece</b></p>
+      <button class="btn-cloth" onclick="addItem('Cotton Shirt', 999)">Add to Manifest</button>
+    </div>
+  </div>
+
+  <!-- LEGAL -->
+  <h2 style="color:var(--legal); margin-top:60px">● Legal Advisory</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Trade Law Consultation</h3>
+      <p>Expert advice on Exports/IEC.</p>
+      <p><b>₹2500 / Session</b></p>
+      <button class="btn-legal" onclick="addItem('Legal Consultation', 2500)">Book Consultation</button>
     </div>
   </div>
 </div>
 
-<div id="cart-modal">
-  <h3>Your Order Manifest</h3>
-  <div id="cart-items"></div>
-  <hr>
-  <button class="btn-buy" onclick="sendOrder()">Finalize & Send Order to TRSSKO</button>
-  <button class="btn-buy" style="background:#666" onclick="toggleCart()">Close</button>
+<div id="cart-panel">
+  <h3>Order Manifest</h3>
+  <div id="cart-items" style="margin: 20px 0;"></div>
+  <button class="btn-fmcg" style="width:100%" onclick="checkout()">Checkout via Email</button>
 </div>
 
 <script>
   let cart = [];
-  function addToCart(name, price) {
+  function addItem(name, price) {
     cart.push({name, price});
-    updateCart();
+    document.getElementById('count').innerText = cart.length;
+    document.getElementById('cart-items').innerHTML += `<p>${name} - ₹${price}</p>`;
+    alert(name + " added to your order.");
   }
-  function updateCart() {
-    document.getElementById('cart-count').innerText = cart.length;
-    let itemsDiv = document.getElementById('cart-items');
-    itemsDiv.innerHTML = cart.map(i => `<p>${i.name} - ₹${i.price}</p>`).join('');
-  }
-  function toggleCart() { document.getElementById('cart-modal').classList.toggle('open'); }
-  function sendOrder() {
-    let orderDetails = cart.map(i => i.name).join(', ');
-    window.location.href = `mailto:info.chhabraenterprices@gmail.com?subject=New Order Request&body=Please process this order: ${orderDetails}`;
+  function checkout() {
+    let msg = cart.map(i => i.name).join(', ');
+    window.location.href = `mailto:info.chhabraenterprices@gmail.com?subject=New Order Request&body=I would like to order: ${msg}`;
   }
 </script>
 
