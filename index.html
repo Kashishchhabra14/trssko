@@ -1,110 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TRSSKO | Premium FMCG, Textiles & Legal Advisory</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>TRSSKO Enterprises | Global Conglomerate</title>
   <style>
-    :root { --fmcg: #2E5C3A; --cloth: #D4621B; --legal: #1B365D; --ink: #1A1410; --cream: #FAF7F2; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); line-height: 1.6; }
-    
-    /* Navigation */
-    nav { background: white; padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #eee; }
-    .cart-btn { background: var(--ink); color: white; padding: 12px 24px; border-radius: 6px; cursor: pointer; border: none; font-weight: bold; }
-
-    /* Sections */
-    .container { max-width: 1100px; margin: auto; padding: 60px 5%; }
-    .hero { text-align: center; padding: 100px 5%; }
-    h1 { font-family: 'Cormorant Garamond', serif; font-size: 4rem; margin-bottom: 20px; }
-    
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 30px; }
-    .card { background: white; padding: 30px; border-radius: 12px; border: 1px solid #eee; display: flex; flex-direction: column; transition: 0.3s; }
-    .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-    
-    /* Buttons per Vertical */
-    .btn-fmcg { background: var(--fmcg); color: white; padding: 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: auto; }
-    .btn-cloth { background: var(--cloth); color: white; padding: 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: auto; }
-    .btn-legal { background: var(--legal); color: white; padding: 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: auto; }
-
-    /* Cart Modal */
-    #cart-panel { position: fixed; top: 0; right: -400px; width: 350px; height: 100%; background: white; padding: 40px; box-shadow: -5px 0 20px rgba(0,0,0,0.1); transition: 0.3s; z-index: 1000; }
-    #cart-panel.open { right: 0; }
+    /* Styling for Corporate Identity */
+    body { font-family: 'DM Sans', sans-serif; background: #FAF7F2; margin: 0; }
+    .hero { text-align: center; padding: 100px 5%; background: #1A1410; color: white; }
+    .hero h1 { font-size: 3.5rem; font-family: 'Cormorant Garamond', serif; }
+    .profile-section { max-width: 900px; margin: 50px auto; padding: 20px; text-align: center; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 50px 5%; }
+    .card { background: white; padding: 30px; border-radius: 12px; text-align: center; border: 1px solid #ddd; }
+    .btn { display: inline-block; padding: 12px 25px; margin-top: 20px; background: #D4621B; color: white; text-decoration: none; border-radius: 6px; }
   </style>
 </head>
 <body>
 
-<nav>
-  <h2>TRSSKO<span>.</span></h2>
-  <button class="cart-btn" onclick="document.getElementById('cart-panel').classList.toggle('open')">Order Manifest (<span id="count">0</span>)</button>
-</nav>
-
 <div class="hero">
   <h1>TRSSKO Enterprises</h1>
-  <p>Global Exports | Textile Manufacturing | Legal Advisory</p>
+  <p>Director: [kashish chhabra] | Advocate & Tech Entrepreneur</p>
+  <p><em>"Taste the purity, wear the identity."</em></p>
 </div>
 
-<div class="container">
-  <!-- FMCG -->
-  <h2 style="color:var(--fmcg)">● FMCG & Agri-Foods</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Premium Jaggery Powder</h3>
-      <p>100% Organic, Export Grade.</p>
-      <p><b>₹350 / 1kg</b></p>
-      <button class="btn-fmcg" onclick="addItem('Jaggery Powder', 350)">Add to Manifest</button>
-    </div>
-    <div class="card">
-      <h3>Cold Pressed Mustard Oil</h3>
-      <p>Purity Guaranteed.</p>
-      <p><b>₹290 / Liter</b></p>
-      <button class="btn-fmcg" onclick="addItem('Mustard Oil', 290)">Add to Manifest</button>
-    </div>
-  </div>
-
-  <!-- CLOTH -->
-  <h2 style="color:var(--cloth); margin-top:60px">● Fashion & Textiles</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Corporate Cotton Shirts</h3>
-      <p>Export Quality Combed Cotton.</p>
-      <p><b>₹999 / Piece</b></p>
-      <button class="btn-cloth" onclick="addItem('Cotton Shirt', 999)">Add to Manifest</button>
-    </div>
-  </div>
-
-  <!-- LEGAL -->
-  <h2 style="color:var(--legal); margin-top:60px">● Legal Advisory</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Trade Law Consultation</h3>
-      <p>Expert advice on Exports/IEC.</p>
-      <p><b>₹2500 / Session</b></p>
-      <button class="btn-legal" onclick="addItem('Legal Consultation', 2500)">Book Consultation</button>
-    </div>
-  </div>
+<div class="profile-section">
+  <h2>Company Overview</h2>
+  <p>TRSSKO is a diversified conglomerate founded in 2023, specializing in global FMCG exports, premium fashion manufacturing, and professional legal advisory services. We bridge the gap between Indian craftsmanship and global markets with integrity and technical innovation.</p>
 </div>
 
-<div id="cart-panel">
-  <h3>Order Manifest</h3>
-  <div id="cart-items" style="margin: 20px 0;"></div>
-  <button class="btn-fmcg" style="width:100%" onclick="checkout()">Checkout via Email</button>
+<div class="grid">
+  <div class="card"><h3>FMCG Exports</h3><p>Pure agricultural goods.</p><a href="fmcg.html" class="btn">View Store</a></div>
+  <div class="card"><h3>Fashion & Cloth</h3><p>Export-grade textiles.</p><a href="cloth.html" class="btn">View Store</a></div>
+  <div class="card"><h3>Legal Services</h3><p>Professional Counsel.</p><a href="legal.html" class="btn">Book Appointment</a></div>
 </div>
-
-<script>
-  let cart = [];
-  function addItem(name, price) {
-    cart.push({name, price});
-    document.getElementById('count').innerText = cart.length;
-    document.getElementById('cart-items').innerHTML += `<p>${name} - ₹${price}</p>`;
-    alert(name + " added to your order.");
-  }
-  function checkout() {
-    let msg = cart.map(i => i.name).join(', ');
-    window.location.href = `mailto:info.chhabraenterprices@gmail.com?subject=New Order Request&body=I would like to order: ${msg}`;
-  }
-</script>
 
 </body>
 </html>
