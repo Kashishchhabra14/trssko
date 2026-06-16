@@ -1,595 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TRSSKO FMCG — Premium Indian exports: Cold-Pressed Mustard Oil, Masala Tea, Jaggery Cubes, Turmeric Powder, Desi Ghee, Roasted Chana. Buy online with Razorpay.">
-  <title>TRSSKO FMCG | Premium Export Food Products</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FMCG Food Exports Portfolio | TRSSKO Enterprises</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --navy: #002147;
-      --navy2: #003366;
-      --gold: #C5A059;
-      --gold-dark: #a8832a;
-      --gold-light: #f5e8cc;
-      --light: #f8f9fb;
-      --white: #ffffff;
-      --text-muted: #6b7280;
-      --border: #e5e7eb;
+      --saffron: #D4621B; --saffron-lt: #F5E8DF; --cream: #FAF7F2; --ink: #1A1410; --ink-60: #6B5E54; --white: #FFFFFF; --border: #E8E0D8; --leaf: #2E5C3A; --leaf-lt: #E8F2EA;
+      --ff-display: 'Cormorant Garamond', Georgia, serif; --ff-body: 'DM Sans', sans-serif; --ff-mono: 'DM Mono', monospace; --max-w: 1200px; --r: 6px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--light); color: #1a1a2e; line-height: 1.6; }
+    body { font-family: var(--ff-body); background: var(--cream); color: var(--ink); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(250,247,242,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--ff-display); font-size: 1.65rem; font-weight: 600; }
+    .nav-logo span { color: var(--saffron); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--ink-60); }
+    .nav-links .active-page { color: var(--saffron); font-weight: 600; }
 
-    /* ── HEADER ── */
-    header {
-      background: var(--navy2);
-      padding: 0 6%;
-      display: flex; justify-content: space-between; align-items: center;
-      height: 68px; position: sticky; top: 0; z-index: 100;
-      box-shadow: 0 3px 16px rgba(0,0,0,0.2);
-    }
-    .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: #fff; letter-spacing: 1px; text-decoration: none; }
-    .logo span { color: var(--gold); }
-    .header-right { display: flex; align-items: center; gap: 18px; }
-    .header-right a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
-    .header-right a:hover { color: var(--gold); }
-    .fssai-badge { background: rgba(197,160,89,0.15); border: 1px solid rgba(197,160,89,0.4); color: var(--gold); font-size: 0.7rem; font-weight: 700; padding: 5px 12px; border-radius: 20px; letter-spacing: 0.5px; display: flex; align-items: center; gap: 5px; }
+    /* LAYOUT */
+    section { padding: 80px 24px; }
+    .section-inner { max-width: var(--max-w); margin: 0 auto; }
+    .page-header { background: var(--saffron-lt); padding: 60px 24px; text-align: center; border-bottom: 1px solid var(--border); }
+    .page-header h1 { font-family: var(--ff-display); font-size: 3rem; color: var(--ink); }
 
-    /* ── PAGE HERO ── */
-    .page-hero {
-      background: linear-gradient(135deg, #1a2a0e 0%, var(--navy2) 40%, #2d5a1b 100%);
-      padding: 60px 6% 52px; text-align: center;
-    }
-    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); color: #fff; margin-bottom: 12px; }
-    .page-hero p { color: rgba(255,255,255,0.72); font-size: 0.95rem; max-width: 560px; margin: 0 auto 20px; }
-    .hero-tags { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-    .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.85); font-size: 0.75rem; font-weight: 600; padding: 6px 14px; border-radius: 30px; }
-    .hero-tag i { color: var(--gold); }
+    /* CATALOGUE GRIDS */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 32px; margin-top: 40px; }
+    .card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+    .card-img { height: 220px; width: 100%; object-fit: cover; }
+    .card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .card-tag { font-family: var(--ff-mono); font-size: 0.7rem; color: var(--saffron); text-transform: uppercase; margin-bottom: 6px; display: block; }
+    .card-title { font-family: var(--ff-display); font-size: 1.4rem; font-weight: 600; margin-bottom: 8px; }
+    .card-desc { font-size: 0.88rem; color: var(--ink-60); margin-bottom: 20px; flex: 1; }
+    .card-meta { display: flex; justify-content: space-between; align-items: baseline; font-weight: 600; background: var(--cream); padding: 12px; border-radius: 4px; font-size: 0.9rem; }
+    .moq-badge { font-size: 0.75rem; color: var(--leaf); background: var(--leaf-lt); padding: 2px 8px; border-radius: 4px; }
 
-    /* ── CONTAINER ── */
-    .container { max-width: 1100px; margin: 0 auto; padding: 56px 6%; }
-
-    /* ── PRODUCT CARD ── */
-    .spec-card {
-      background: var(--white); border-radius: 18px; overflow: hidden;
-      margin-bottom: 36px;
-      box-shadow: 0 4px 24px rgba(0,33,71,0.07);
-      border: 1px solid var(--border);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .spec-card:hover { transform: translateY(-5px); box-shadow: 0 16px 44px rgba(0,33,71,0.13); }
-
-    /* Card layout: image left + content right on desktop */
-    .card-inner { display: grid; grid-template-columns: 300px 1fr; }
-    .card-img-wrap { position: relative; overflow: hidden; }
-    .card-img-wrap img { width: 100%; height: 100%; min-height: 280px; object-fit: cover; display: block; transition: transform 0.5s; }
-    .spec-card:hover .card-img-wrap img { transform: scale(1.04); }
-    .card-content { display: flex; flex-direction: column; }
-
-    .card-top {
-      background: linear-gradient(135deg, var(--navy2), #004070);
-      padding: 24px 28px 20px;
-      display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;
-    }
-    .card-top-left { display: flex; align-items: center; gap: 14px; }
-    .card-icon { width: 48px; height: 48px; background: rgba(255,255,255,0.12); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #fff; flex-shrink: 0; }
-    .card-title h2 { font-family: 'Playfair Display', serif; color: #fff; font-size: 1.15rem; margin-bottom: 3px; }
-    .card-title p { color: rgba(255,255,255,0.62); font-size: 0.8rem; }
-    .card-badge { background: var(--gold); color: #fff; font-size: 0.68rem; font-weight: 700; padding: 5px 11px; border-radius: 5px; flex-shrink: 0; letter-spacing: 0.3px; }
-
-    .card-body { padding: 22px 28px 18px; flex: 1; }
-
-    /* Price badge */
-    .price-badge {
-      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
-      background: var(--gold-light); border: 1.5px solid #e8c97e;
-      border-radius: 10px; padding: 12px 18px; margin-bottom: 18px;
-    }
-    .price-main { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--navy2); font-weight: 700; }
-    .price-main span { font-size: 0.85rem; font-weight: 400; color: var(--text-muted); font-family: 'DM Sans', sans-serif; }
-    .price-qty { background: var(--navy2); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; }
-    .price-moq { color: var(--text-muted); font-size: 0.78rem; margin-left: auto; }
-
-    /* Spec table */
-    .spec-table { width: 100%; border-collapse: collapse; margin-bottom: 6px; }
-    .spec-table tr { border-bottom: 1px solid var(--border); }
-    .spec-table tr:last-child { border-bottom: none; }
-    .spec-table th { background: #f4f6f9; color: var(--navy2); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; padding: 10px 14px; text-align: left; width: 36%; }
-    .spec-table td { padding: 10px 14px; font-size: 0.86rem; color: #374151; }
-
-    /* Buy area */
-    .card-footer { padding: 16px 28px 24px; border-top: 1px solid var(--border); background: #fafbfc; }
-    .action-row { display: flex; gap: 10px; flex-wrap: wrap; }
-    .btn-buy {
-      flex: 1; min-width: 180px;
-      background: linear-gradient(135deg, #072654, #1a56b0);
-      color: #fff; border: none; cursor: pointer;
-      padding: 13px 20px; border-radius: 8px;
-      font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 700;
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      transition: all 0.25s; box-shadow: 0 4px 14px rgba(7,38,84,0.22);
-    }
-    .btn-buy:hover { background: linear-gradient(135deg, #0d3a7a, #2065cc); transform: translateY(-2px); }
-    .btn-wa {
-      background: #fff; color: #25d366; border: 1.5px solid #25d366;
-      cursor: pointer; padding: 12px 18px; border-radius: 8px;
-      font-family: 'DM Sans', sans-serif; font-size: 0.84rem; font-weight: 700;
-      display: inline-flex; align-items: center; gap: 7px; transition: all 0.2s; text-decoration: none;
-    }
-    .btn-wa:hover { background: #25d366; color: #fff; }
-    .rzp-note { font-size: 0.72rem; color: #bbb; margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 4px; }
-    .rzp-note i { color: #072654; }
-
-    /* ── MODAL ── */
-    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.52); z-index: 999; align-items: center; justify-content: center; }
-    .modal-overlay.active { display: flex; }
-    .modal { background: #fff; border-radius: 18px; padding: 36px 30px; width: 90%; max-width: 440px; box-shadow: 0 24px 64px rgba(0,0,0,0.22); position: relative; animation: popIn 0.3s cubic-bezier(.22,.68,0,1.2); }
-    @keyframes popIn { from { transform: scale(0.92) translateY(20px); opacity: 0; } to { transform: scale(1) translateY(0); opacity: 1; } }
-    .modal-close { position: absolute; top: 14px; right: 16px; background: none; border: none; font-size: 1.25rem; cursor: pointer; color: #9ca3af; transition: color 0.2s; }
-    .modal-close:hover { color: #374151; }
-    .modal h3 { font-family: 'Playfair Display', serif; color: var(--navy2); font-size: 1.3rem; margin-bottom: 4px; }
-    .modal-subtitle { color: var(--text-muted); font-size: 0.82rem; margin-bottom: 22px; }
-    .form-group { margin-bottom: 14px; }
-    .form-group label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--navy2); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
-    .form-group input { width: 100%; padding: 11px 14px; border: 1.5px solid var(--border); border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: #374151; outline: none; transition: border-color 0.2s; }
-    .form-group input:focus { border-color: var(--navy2); }
-    .modal-total { background: var(--gold-light); border: 1.5px solid #e8c97e; border-radius: 10px; padding: 14px 18px; margin: 18px 0; display: flex; justify-content: space-between; align-items: center; }
-    .modal-total span { font-size: 0.85rem; color: #92400e; font-weight: 500; }
-    .modal-total strong { font-family: 'Playfair Display', serif; color: var(--navy2); font-size: 1.6rem; }
-    .modal-pay-btn { width: 100%; background: linear-gradient(135deg, #072654, #1a56b0); color: #fff; border: none; cursor: pointer; padding: 15px; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.25s; box-shadow: 0 4px 16px rgba(7,38,84,0.25); }
-    .modal-pay-btn:hover { background: linear-gradient(135deg, #0d3a7a, #2065cc); }
-
-    /* ── TRUST BANNER ── */
-    .trust-banner { background: linear-gradient(135deg, var(--navy2), #001426); border-radius: 18px; padding: 44px 40px; text-align: center; margin-top: 60px; }
-    .trust-banner h3 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.6rem; margin-bottom: 8px; }
-    .trust-banner p { color: rgba(255,255,255,0.65); margin-bottom: 28px; font-size: 0.9rem; }
-    .cred-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
-    .cred-item { border: 1px solid rgba(197,160,89,0.3); background: rgba(197,160,89,0.07); padding: 16px 18px; border-radius: 10px; text-align: left; }
-    .cred-item span { font-size: 0.65rem; color: var(--gold); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; display: block; margin-bottom: 5px; }
-    .cred-item strong { color: #fff; font-size: 0.88rem; }
-
-    .wa-float { position: fixed; bottom: 26px; right: 26px; width: 56px; height: 56px; background: #25d366; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 5px 18px rgba(37,211,102,0.4); z-index: 500; text-decoration: none; transition: all 0.25s; }
-    .wa-float:hover { transform: scale(1.1); background: #1da851; }
-
-    footer { text-align: center; padding: 36px; color: var(--text-muted); font-size: 0.82rem; border-top: 1px solid var(--border); }
-    footer a { color: var(--navy2); text-decoration: none; font-weight: 600; }
-
-    @media (max-width: 860px) {
-      .card-inner { grid-template-columns: 1fr; }
-      .card-img-wrap img { min-height: 220px; max-height: 260px; }
-      .container { padding: 36px 5%; }
-      .card-top, .card-body, .card-footer { padding-left: 20px; padding-right: 20px; }
-      .action-row { flex-direction: column; }
-      .btn-buy { min-width: unset; }
-    }
+    footer { background: var(--ink); color: rgba(255,255,255,0.55); padding: 60px 24px 32px; margin-top: 100px; }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
   </style>
 </head>
 <body>
 
-<header>
-  <a href="index.html" class="logo">TRSSKO<span> FMCG</span></a>
-  <div class="header-right">
-    <div class="fssai-badge"><i class="fas fa-leaf"></i> FSSAI Licensed</div>
-    <a href="index.html"><i class="fas fa-home"></i> Home</a>
-  </div>
-</header>
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo"><a href="index.html">TRSSKO<span>.</span></a></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fmcg.html" class="active-page">FMCG Portfolio</a></li>
+        <li><a href="cloth.html">Textile & Apparel</a></li>
+        <li><a href="legal.html">Regulatory File</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<!-- Purchase Modal -->
-<div class="modal-overlay" id="payModal">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal()" aria-label="Close"><i class="fas fa-times"></i></button>
-    <h3 id="modal-product-name">Product</h3>
-    <p class="modal-subtitle">Enter your details to proceed with secure payment</p>
-    <div class="form-group">
-      <label>Full Name</label>
-      <input type="text" id="buyer-name" placeholder="Your full name" autocomplete="name">
-    </div>
-    <div class="form-group">
-      <label>Email Address</label>
-      <input type="email" id="buyer-email" placeholder="email@example.com" autocomplete="email">
-    </div>
-    <div class="form-group">
-      <label>Phone Number</label>
-      <input type="tel" id="buyer-phone" placeholder="+91 XXXXXXXXXX" autocomplete="tel">
-    </div>
-    <div class="form-group">
-      <label>Quantity</label>
-      <input type="number" id="order-qty" placeholder="Enter quantity" min="1" oninput="updateTotal()">
-    </div>
-    <div class="modal-total">
-      <span>Total Payable</span>
-      <strong id="modal-total-price">₹0</strong>
-    </div>
-    <button class="modal-pay-btn" onclick="initiateRazorpay()">
-      <i class="fas fa-lock"></i> Pay Securely via Razorpay
-    </button>
-    <p style="font-size:0.72rem;color:#bbb;text-align:center;margin-top:12px;"><i class="fas fa-shield-alt" style="color:#072654;"></i> 100% Secure · SSL Encrypted · UPI, Cards, Net Banking</p>
-  </div>
-</div>
+  <header class="page-header">
+    <h1>Premium FMCG Food Exporters</h1>
+    <p style="color: var(--ink-60); margin-top: 8px;">Export-Grade Organic Commodities &amp; Ground Spices Processed to Global Quality Baselines.</p>
+  </header>
 
-<!-- Page Hero -->
-<div class="page-hero">
-  <h1>Premium FMCG Products</h1>
-  <p>Export-grade Indian food products — pure, unrefined, and sourced directly from the finest origins across India.</p>
-  <div class="hero-tags">
-    <span class="hero-tag"><i class="fas fa-leaf"></i> FSSAI Licensed: 10820093022177366</span>
-    <span class="hero-tag"><i class="fas fa-lock"></i> Secure Razorpay Checkout</span>
-    <span class="hero-tag"><i class="fas fa-shipping-fast"></i> Pan-India Delivery</span>
-    <span class="hero-tag"><i class="fas fa-passport"></i> IEC Export Licensed</span>
-  </div>
-</div>
-
-<div class="container">
-
-  <!-- ── PRODUCT 1: Masala Tea ── -->
-  <div class="spec-card">
-    <div class="card-inner">
-      <div class="card-img-wrap">
-        <img src="https://m.media-amazon.com/images/I/41r8++mJYsL._SY300_SX300_QL70_FMwebp_.jpg" alt="TRSSKO Best Masala Tea 200g" loading="lazy">
-      </div>
-      <div class="card-content">
-        <div class="card-top">
-          <div class="card-top-left">
-            <div class="card-icon"><i class="fas fa-mug-hot"></i></div>
-            <div class="card-title">
-              <h2>TRSSKO Best Masala Tea</h2>
-              <p>Assam CTC + Natural Spice Blend</p>
+  <section>
+    <div class="section-inner">
+      <div class="grid">
+        
+        <!-- ITEM 1 -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=500" class="card-img" alt="Jaggery Blocks" />
+          <div class="card-body">
+            <span class="card-tag">Agri Commodities</span>
+            <h3 class="card-title">Artisanal Jaggery Blocks</h3>
+            <p class="card-desc">Clarified organic sugarcane derivatives processed cleanly without added sulphur modifiers or chemicals.</p>
+            <div class="card-meta">
+              <span>₹140 <small style="font-weight:400; color:var(--ink-60);">/ KG</small></span>
+              <span class="moq-badge">MOQ: 5 Metric Tons</span>
             </div>
           </div>
-          <span class="card-badge">Export Grade</span>
         </div>
-        <div class="card-body">
-          <div class="price-badge">
-            <span class="price-main">₹180 <span>/ pack</span></span>
-            <span class="price-qty">200 gm Pouch</span>
-            <span class="price-moq">MOQ: 2 packs</span>
-          </div>
-          <table class="spec-table">
-            <tr><th>Ingredients</th><td>Assam Tea Leaf, Ginger, Cardamom, Clove</td></tr>
-            <tr><th>Net Weight</th><td>200 gm Pouch</td></tr>
-            <tr><th>Grade</th><td>Export Quality CTC + Natural Spices</td></tr>
-            <tr><th>FSSAI No.</th><td>10820093022177366</td></tr>
-          </table>
-        </div>
-        <div class="card-footer">
-          <div class="action-row">
-            <button class="btn-buy" onclick="openModal('TRSSKO Best Masala Tea (200gm)', 180)"><i class="fas fa-shopping-cart"></i> Buy Now</button>
-            <a href="https://wa.me/917417685168?text=Inquiry%20for%20TRSSKO%20Masala%20Tea%20(bulk%20order)" class="btn-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Bulk Inquiry</a>
-          </div>
-          <p class="rzp-note"><i class="fas fa-shield-alt"></i> Secured by Razorpay</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- ── PRODUCT 2: Mustard Oil ── -->
-  <div class="spec-card">
-    <div class="card-inner">
-      <div class="card-img-wrap">
-        <img src="https://res.cloudinary.com/dbkw0m6xs/image/upload/v1775836527/TRSSKO_mustard_oil_advertisement_close-up_cvlyqt.png" alt="TRSSKO Pure Cold Pressed Mustard Oil 1L" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&q=80'">
-      </div>
-      <div class="card-content">
-        <div class="card-top">
-          <div class="card-top-left">
-            <div class="card-icon"><i class="fas fa-tint"></i></div>
-            <div class="card-title">
-              <h2>Pure Cold Pressed Mustard Oil</h2>
-              <p>Kachi Ghani — 100% Natural, Unrefined</p>
+        <!-- ITEM 2 -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&q=80&w=500" class="card-img" alt="Mustard Oil" />
+          <div class="card-body">
+            <span class="card-tag">Edible Extracts</span>
+            <h3 class="card-title">Cold-Pressed Mustard Oil</h3>
+            <p class="card-desc">High pungency, cold-expressed pure seed oil retaining maximal aroma profile parameters perfectly.</p>
+            <div class="card-meta">
+              <span>₹190 <small style="font-weight:400; color:var(--ink-60);">/ LTR</small></span>
+              <span class="moq-badge">MOQ: 2,000 Liters</span>
             </div>
           </div>
-          <span class="card-badge">Kachi Ghani</span>
         </div>
-        <div class="card-body">
-          <div class="price-badge">
-            <span class="price-main">₹260 <span>/ bottle</span></span>
-            <span class="price-qty">1 Litre Bottle</span>
-            <span class="price-moq">MOQ: 1 bottle</span>
-          </div>
-          <table class="spec-table">
-            <tr><th>Method</th><td>Kachi Ghani (Cold Pressed)</td></tr>
-            <tr><th>Purity</th><td>100% Natural, Unrefined</td></tr>
-            <tr><th>Packaging</th><td>Leak-Proof Export Grade Bottle</td></tr>
-            <tr><th>Free From</th><td>Mineral Oil, Argemone Oil</td></tr>
-          </table>
-        </div>
-        <div class="card-footer">
-          <div class="action-row">
-            <button class="btn-buy" onclick="openModal('Pure Cold Pressed Mustard Oil (1L)', 260)"><i class="fas fa-shopping-cart"></i> Buy Now</button>
-            <a href="https://wa.me/917417685168?text=Inquiry%20for%20TRSSKO%20Mustard%20Oil%20(bulk%20order)" class="btn-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Bulk Inquiry</a>
-          </div>
-          <p class="rzp-note"><i class="fas fa-shield-alt"></i> Secured by Razorpay</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- ── PRODUCT 3: Jaggery Cubes ── -->
-  <div class="spec-card">
-    <div class="card-inner">
-      <div class="card-img-wrap">
-        <img src="https://kommodo.ai/i/Zh9JESMHQ9FQJxrLZsBQ" alt="TRSSKO Dry Fruit Jaggery Cubes 500g" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=400&q=80'">
-      </div>
-      <div class="card-content">
-        <div class="card-top">
-          <div class="card-top-left">
-            <div class="card-icon"><i class="fas fa-cubes"></i></div>
-            <div class="card-title">
-              <h2>Dry Fruit Jaggery Cubes</h2>
-              <p>Organic Sugarcane Base, No Added Sugar</p>
+        <!-- ITEM 3 -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1627754432135-c06db1eb87bf?auto=format&fit=crop&q=80&w=500" class="card-img" alt="Coriander Powder" />
+          <div class="card-body">
+            <span class="card-tag">Ground Spices</span>
+            <h3 class="card-title">Premium Dhaniya Powder</h3>
+            <p class="card-desc">Compliance checked ultra-pure ground coriander offering absolute technical oil and aroma preservation.</p>
+            <div class="card-meta">
+              <span>₹240 <small style="font-weight:400; color:var(--ink-60);">/ KG</small></span>
+              <span class="moq-badge">MOQ: 1 Metric Ton</span>
             </div>
           </div>
-          <span class="card-badge">Iron Rich</span>
         </div>
-        <div class="card-body">
-          <div class="price-badge">
-            <span class="price-main">₹320 <span>/ box</span></span>
-            <span class="price-qty">500 gm Box</span>
-            <span class="price-moq">MOQ: 2 boxes</span>
-          </div>
-          <table class="spec-table">
-            <tr><th>Base</th><td>Organic Sugarcane Jaggery</td></tr>
-            <tr><th>Additives</th><td>Sesame Seeds, Fennel, Dry Fruits</td></tr>
-            <tr><th>Benefit</th><td>No Added Sugar, Iron Rich</td></tr>
-            <tr><th>HS Code</th><td>170113 (Cane Jaggery)</td></tr>
-          </table>
-        </div>
-        <div class="card-footer">
-          <div class="action-row">
-            <button class="btn-buy" onclick="openModal('Dry Fruit Jaggery Cubes (500gm)', 320)"><i class="fas fa-shopping-cart"></i> Buy Now</button>
-            <a href="https://wa.me/917417685168?text=Inquiry%20for%20TRSSKO%20Jaggery%20Cubes%20(bulk%20order)" class="btn-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Bulk Inquiry</a>
-          </div>
-          <p class="rzp-note"><i class="fas fa-shield-alt"></i> Secured by Razorpay</p>
-        </div>
+
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ── PRODUCT 4: Turmeric Powder ── -->
-  <div class="spec-card">
-    <div class="card-inner">
-      <div class="card-img-wrap">
-        <img src="https://5.imimg.com/data5/SELLER/Default/2026/4/599287973/RJ/BK/GJ/216812623/haldi-500x500.png" alt="TRSSKO Pure Turmeric Powder 250g" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=400&q=80'">
-      </div>
-      <div class="card-content">
-        <div class="card-top">
-          <div class="card-top-left">
-            <div class="card-icon"><i class="fas fa-mortar-pestle"></i></div>
-            <div class="card-title">
-              <h2>Pure Turmeric Powder</h2>
-              <p>Erode Premium Grade, High Curcumin</p>
-            </div>
-          </div>
-          <span class="card-badge">≥3.5% Curcumin</span>
-        </div>
-        <div class="card-body">
-          <div class="price-badge">
-            <span class="price-main">₹150 <span>/ pouch</span></span>
-            <span class="price-qty">200 gm Pouch</span>
-            <span class="price-moq">MOQ: 2 pouch</span>
-          </div>
-          <table class="spec-table">
-            <tr><th>Origin</th><td>Erode, Tamil Nadu (Premium Grade)</td></tr>
-            <tr><th>Curcumin Content</th><td>≥ 3.5%</td></tr>
-            <tr><th>Moisture</th><td>Max 10%</td></tr>
-            <tr><th>FSSAI No.</th><td>10820093022177366</td></tr>
-          </table>
-        </div>
-        <div class="card-footer">
-          <div class="action-row">
-            <button class="btn-buy" onclick="openModal('Pure Turmeric Powder (250gm)', 150)"><i class="fas fa-shopping-cart"></i> Buy Now</button>
-            <a href="https://wa.me/917417685168?text=Inquiry%20for%20TRSSKO%20Turmeric%20Powder%20(bulk%20order)" class="btn-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Bulk Inquiry</a>
-          </div>
-          <p class="rzp-note"><i class="fas fa-shield-alt"></i> Secured by Razorpay</p>
-        </div>
-      </div>
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; 2026 TRSSKO Enterprises. FMCG Division Processing Network.</p>
+      <a href="mailto:info.chhabraenterprices@gmail.com" style="color: #fff;">Contact Agri Desk</a>
     </div>
-  </div>
-
-  <!-- ── PRODUCT 5: Desi Ghee ── -->
-  <div class="spec-card">
-    <div class="card-inner">
-      <div class="card-img-wrap">
-        <img src="https://res.cloudinary.com/dbkw0m6xs/image/upload/v1775836050/Golden_goodness_in_a_jar_egjru9.png" alt="TRSSKO Pure Desi Cow Ghee 500ml" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1631730259-4a5ffe7d4aef?w=400&q=80'">
-      </div>
-      <div class="card-content">
-        <div class="card-top">
-          <div class="card-top-left">
-            <div class="card-icon"><i class="fas fa-fire-alt"></i></div>
-            <div class="card-title">
-              <h2>Pure Desi Cow Ghee</h2>
-              <p>A2 Bilona Method — Glass Jar</p>
-            </div>
-          </div>
-          <span class="card-badge">A2 Bilona</span>
-        </div>
-        <div class="card-body">
-          <div class="price-badge">
-            <span class="price-main">₹850 <span>/ jar</span></span>
-            <span class="price-qty">500 ml Glass Jar</span>
-            <span class="price-moq">MOQ: 1 jar</span>
-          </div>
-          <table class="spec-table">
-            <tr><th>Source</th><td>A2 Desi Cow Milk (Bilona Method)</td></tr>
-            <tr><th>Fat Content</th><td>Min 99.5% Milk Fat</td></tr>
-            <tr><th>Shelf Life</th><td>18 Months (Sealed)</td></tr>
-            <tr><th>HS Code</th><td>040510 (Butter &amp; Dairy Fats)</td></tr>
-          </table>
-        </div>
-        <div class="card-footer">
-          <div class="action-row">
-            <button class="btn-buy" onclick="openModal('Pure Desi Cow Ghee (500ml)', 850)"><i class="fas fa-shopping-cart"></i> Buy Now</button>
-            <a href="https://wa.me/917417685168?text=Inquiry%20for%20TRSSKO%20Desi%20Ghee%20(bulk%20order)" class="btn-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Bulk Inquiry</a>
-          </div>
-          <p class="rzp-note"><i class="fas fa-shield-alt"></i> Secured by Razorpay</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── PRODUCT 6: Roasted Chana ── -->
-  <div class="spec-card">
-    <div class="card-inner">
-      <div class="card-img-wrap">
-        <img src="https://res.cloudinary.com/dbkw0m6xs/image/upload/v1775836160/TRSSKO_roasted_chana_snack_pouch_yemtqh.png" alt="TRSSKO Roasted Chana 400g" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=400&q=80'">
-      </div>
-      <div class="card-content">
-        <div class="card-top">
-          <div class="card-top-left">
-            <div class="card-icon"><i class="fas fa-seedling"></i></div>
-            <div class="card-title">
-              <h2>Roasted Chana (Chickpeas)</h2>
-              <p>High Protein Snack — Salted &amp; Crunchy</p>
-            </div>
-          </div>
-          <span class="card-badge">22g Protein</span>
-        </div>
-        <div class="card-body">
-          <div class="price-badge">
-            <span class="price-main">₹120 <span>/ pack</span></span>
-            <span class="price-qty">400 gm Pack</span>
-            <span class="price-moq">MOQ: 1 pack</span>
-          </div>
-          <table class="spec-table">
-            <tr><th>Variety</th><td>Desi Kabuli Chana, Roasted &amp; Salted</td></tr>
-            <tr><th>Protein</th><td>22g per 100g serving</td></tr>
-            <tr><th>Additives</th><td>Rock Salt, Lemon Flavor (Natural)</td></tr>
-            <tr><th>HS Code</th><td>071320 (Chickpeas, Dried)</td></tr>
-          </table>
-        </div>
-        <div class="card-footer">
-          <div class="action-row">
-            <button class="btn-buy" onclick="openModal('Roasted Chana / Chickpeas (400gm)', 120)"><i class="fas fa-shopping-cart"></i> Buy Now</button>
-            <a href="https://wa.me/917417685168?text=Inquiry%20for%20TRSSKO%20Roasted%20Chana%20(bulk%20order)" class="btn-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Bulk Inquiry</a>
-          </div>
-          <p class="rzp-note"><i class="fas fa-shield-alt"></i> Secured by Razorpay</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Trust Banner -->
-  <div class="trust-banner">
-    <h3>TRSSKO Enterprises — Verified Credentials</h3>
-    <p>Licensed Merchant Exporter from Uttar Pradesh, India</p>
-    <div class="cred-grid">
-      <div class="cred-item"><span>GSTIN</span><strong>09BKQPC7409C1Z6</strong></div>
-      <div class="cred-item"><span>PAN</span><strong>BKQPC7409C</strong></div>
-      <div class="cred-item"><span>CIN</span><strong>U18209UP2023OPC176366</strong></div>
-      <div class="cred-item"><span>FSSAI</span><strong>10820093022177366</strong></div>
-    </div>
-  </div>
-
-</div>
-
-<a href="https://wa.me/917417685168" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<footer>
-  <p>© 2026 TRSSKO Fashion (OPC) Private Limited &nbsp;·&nbsp; <a href="index.html">TRSSKO Enterprises</a> &nbsp;·&nbsp; Meerut, Uttar Pradesh, India</p>
-  <p style="margin-top:6px;">Maintained by TRSSKO Infotech &nbsp;·&nbsp; www.trssko.in</p>
-</footer>
-
-<script>
-  const RAZORPAY_KEY_ID = "rzp_test_ScG0GJd4QqHdet";
-  const MERCHANT_NAME   = "TRSSKO Enterprises";
-  const MERCHANT_LOGO   = "https://www.trssko.in/logo.png";
-  const GSHEET_WEBHOOK  = "https://script.google.com/macros/s/AKfycbygrmYr-WEVBGwJF_-LYnsBNLzijfCBDQenOMInqVyU8LAwgrh0iDfHzYzZV-3uHdDv/exec";
-
-  let currentProduct = "";
-  let currentUnitPrice = 0;
-
-  function openModal(productName, unitPrice) {
-    currentProduct = productName;
-    currentUnitPrice = unitPrice;
-    document.getElementById('modal-product-name').textContent = productName;
-    ['buyer-name','buyer-email','buyer-phone','order-qty'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('modal-total-price').textContent = '₹0';
-    document.getElementById('payModal').classList.add('active');
-  }
-
-  function closeModal() {
-    document.getElementById('payModal').classList.remove('active');
-  }
-
-  document.getElementById('payModal').addEventListener('click', function(e) {
-    if (e.target === this) closeModal();
-  });
-
-  function updateTotal() {
-    const qty = parseInt(document.getElementById('order-qty').value) || 0;
-    document.getElementById('modal-total-price').textContent = '₹' + (qty * currentUnitPrice).toLocaleString('en-IN');
-  }
-
-  function initiateRazorpay() {
-    const name  = document.getElementById('buyer-name').value.trim();
-    const email = document.getElementById('buyer-email').value.trim();
-    const phone = document.getElementById('buyer-phone').value.trim();
-    const qty   = parseInt(document.getElementById('order-qty').value) || 0;
-
-    if (!name)   return alert('Please enter your full name.');
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return alert('Please enter a valid email address.');
-    if (!phone || phone.replace(/\D/g,'').length < 10) return alert('Please enter a valid 10-digit phone number.');
-    if (qty < 1) return alert('Please enter a valid quantity (minimum 1).');
-
-    const options = {
-      key: RAZORPAY_KEY_ID,
-      amount: qty * currentUnitPrice * 100,
-      currency: 'INR',
-      name: MERCHANT_NAME,
-      description: currentProduct + ' × ' + qty,
-      image: MERCHANT_LOGO,
-      prefill: { name, email, contact: phone },
-      notes: { product: currentProduct, quantity: qty },
-      theme: { color: '#003366' },
-      handler: function(response) {
-        closeModal();
-        logOrderToSheet({
-          order_no: 'ORD-' + Date.now(),
-          order_time: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
-          payment_id: response.razorpay_payment_id,
-          product: currentProduct, qty,
-          unit_price: '₹' + currentUnitPrice,
-          total: '₹' + (qty * currentUnitPrice).toLocaleString('en-IN'),
-          buyer_name: name, buyer_email: email, buyer_phone: phone, status: 'PAID'
-        });
-        showSuccess(response.razorpay_payment_id);
-      },
-      modal: { ondismiss: function() {} }
-    };
-
-    const rzp = new Razorpay(options);
-    rzp.on('payment.failed', function(resp) {
-      alert('Payment failed: ' + resp.error.description + '\nPlease try again or contact us on WhatsApp.');
-    });
-    rzp.open();
-  }
-
-  function logOrderToSheet(order) {
-    fetch(GSHEET_WEBHOOK, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(order) })
-      .catch(err => console.error('Sheet log error:', err));
-  }
-
-  function showSuccess(paymentId) {
-    const overlay = document.createElement('div');
-    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.55);display:flex;align-items:center;justify-content:center;z-index:9999;';
-    overlay.innerHTML = `
-      <div style="background:#fff;border-radius:20px;padding:44px 36px;max-width:420px;width:90%;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,0.22);">
-        <div style="width:68px;height:68px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:2rem;color:#15803d;">✓</div>
-        <h3 style="font-family:'Playfair Display',serif;color:#002147;font-size:1.5rem;margin-bottom:10px;">Order Confirmed!</h3>
-        <p style="color:#6b7280;font-size:0.9rem;margin-bottom:8px;">Thank you for your order from TRSSKO Enterprises.</p>
-        <p style="color:#9ca3af;font-size:0.8rem;margin-bottom:20px;">Your order has been logged. We'll reach out to confirm delivery details shortly.</p>
-        <p style="font-size:0.75rem;color:#d1d5db;word-break:break-all;">Payment ID: <strong style="color:#6b7280">${paymentId}</strong></p>
-        <button onclick="this.closest('div').parentElement.remove()" style="margin-top:22px;background:linear-gradient(135deg,#072654,#1a56b0);color:#fff;border:none;padding:13px 38px;border-radius:8px;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:700;font-size:0.95rem;">Done</button>
-      </div>`;
-    document.body.appendChild(overlay);
-    overlay.addEventListener('click', e => { if (e.target === overlay) overlay.remove(); });
-  }
-</script>
+  </footer>
 
 </body>
 </html>
