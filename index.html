@@ -1,37 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>TRSSKO Enterprises | Global Conglomerate</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRSSKO Enterprises | Premium Global Conglomerate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    /* Styling for Corporate Identity */
-    body { font-family: 'DM Sans', sans-serif; background: #FAF7F2; margin: 0; }
-    .hero { text-align: center; padding: 100px 5%; background: #1A1410; color: white; }
-    .hero h1 { font-size: 3.5rem; font-family: 'Cormorant Garamond', serif; }
-    .profile-section { max-width: 900px; margin: 50px auto; padding: 20px; text-align: center; }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 50px 5%; }
-    .card { background: white; padding: 30px; border-radius: 12px; text-align: center; border: 1px solid #ddd; }
-    .btn { display: inline-block; padding: 12px 25px; margin-top: 20px; background: #D4621B; color: white; text-decoration: none; border-radius: 6px; }
+    :root {
+      /* Dynamic Color Palette */
+      --fmcg-bg: #E8F5E9; --fmcg-prime: #2E7D32;
+      --cloth-bg: #FFF3E0; --cloth-prime: #E65100;
+      --legal-bg: #E3F2FD; --legal-prime: #1565C0;
+      --ink: #1A1410; --white: #FFFFFF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: #fff; color: var(--ink); line-height: 1.6; }
+
+    /* Hero Section with Gradient */
+    .hero { 
+      padding: 120px 5%; 
+      background: linear-gradient(135deg, #1a1410 0%, #4a3e35 100%); 
+      color: white; 
+      text-align: center; 
+    }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; margin-bottom: 20px; }
+    
+    /* Colorful Section Logic */
+    .section-wrap { padding: 80px 5%; }
+    
+    /* FMCG Section */
+    .fmcg-sec { background: var(--fmcg-bg); }
+    /* Cloth Section */
+    .cloth-sec { background: var(--cloth-bg); }
+    /* Legal Section */
+    .legal-sec { background: var(--legal-bg); }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
+    .card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; }
+    
+    /* Buttons with specific colors */
+    .btn-fmcg { background: var(--fmcg-prime); color: white; padding: 15px 30px; border-radius: 50px; border: none; cursor: pointer; font-weight: bold; }
+    .btn-cloth { background: var(--cloth-prime); color: white; padding: 15px 30px; border-radius: 50px; border: none; cursor: pointer; font-weight: bold; }
+    .btn-legal { background: var(--legal-prime); color: white; padding: 15px 30px; border-radius: 50px; border: none; cursor: pointer; font-weight: bold; }
   </style>
 </head>
 <body>
 
-<div class="hero">
+<!-- Hero -->
+<section class="hero">
   <h1>TRSSKO Enterprises</h1>
-  <p>Director: [kashish chhabra] | Advocate & Tech Entrepreneur</p>
-  <p><em>"Taste the purity, wear the identity."</em></p>
-</div>
+  <p>Director: Kashish Chhabra | Advocate & Entrepreneur</p>
+</section>
 
-<div class="profile-section">
-  <h2>Company Overview</h2>
-  <p>TRSSKO is a diversified conglomerate founded in 2023, specializing in global FMCG exports, premium fashion manufacturing, and professional legal advisory services. We bridge the gap between Indian craftsmanship and global markets with integrity and technical innovation.</p>
-</div>
+<!-- FMCG Section -->
+<section class="section-wrap fmcg-sec">
+  <div style="max-width: 1000px; margin: auto;">
+    <h2 style="color: var(--fmcg-prime)">● FMCG & Agri-Foods</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Organic Jaggery</h3>
+        <p>Export grade, natural process.</p>
+        <button class="btn-fmcg" onclick="alert('Added to cart')">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="grid">
-  <div class="card"><h3>FMCG Exports</h3><p>Pure agricultural goods.</p><a href="fmcg.html" class="btn">View Store</a></div>
-  <div class="card"><h3>Fashion & Cloth</h3><p>Export-grade textiles.</p><a href="cloth.html" class="btn">View Store</a></div>
-  <div class="card"><h3>Legal Services</h3><p>Professional Counsel.</p><a href="legal.html" class="btn">Book Appointment</a></div>
-</div>
+<!-- Cloth Section -->
+<section class="section-wrap cloth-sec">
+  <div style="max-width: 1000px; margin: auto;">
+    <h2 style="color: var(--cloth-prime)">● Fashion & Textile</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Designer Apparel</h3>
+        <p>Premium combed cotton.</p>
+        <button class="btn-cloth" onclick="alert('Added to cart')">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Legal Section -->
+<section class="section-wrap legal-sec">
+  <div style="max-width: 1000px; margin: auto;">
+    <h2 style="color: var(--legal-prime)">● Legal Services</h2>
+    <div class="card">
+      <h3>Professional Consultation</h3>
+      <p>Director & Advocate Consultation.</p>
+      <p><b>Fee: ₹2100</b></p>
+      <button class="btn-legal" onclick="window.location.href='legal.html'">Book Appointment</button>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
