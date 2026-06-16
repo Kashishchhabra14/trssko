@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compliance & Government Accreditations | TRSSKO Enterprises</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --saffron: #D4621B; --cream: #FAF7F2; --ink: #1A1410; --ink-60: #6B5E54; --white: #FFFFFF; --border: #E8E0D8; --gold: #C9A84C;
+      --ff-display: 'Cormorant Garamond', Georgia, serif; --ff-body: 'DM Sans', sans-serif; --ff-mono: 'DM Mono', monospace; --max-w: 1200px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--ff-body); background: var(--cream); color: var(--ink); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(250,247,242,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--ff-display); font-size: 1.65rem; font-weight: 600; }
+    .nav-logo span { color: var(--saffron); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--ink-60); }
+    .nav-links .active-page { color: var(--saffron); font-weight: 600; }
+
+    section { padding: 80px 24px; }
+    .section-inner { max-width: var(--max-w); margin: 0 auto; }
+    .legal-hero { background: var(--ink); color: var(--white); padding: 80px 24px; text-align: center; }
+    
+    .table-container { background: var(--white); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-top: 40px; }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem; }
+    th { background: #EFECE6; color: var(--ink); font-weight: 600; padding: 16px 24px; border-bottom: 1px solid var(--border); }
+    td { padding: 20px 24px; border-bottom: 1px solid var(--border); color: var(--ink-60); }
+    tr:last-child td { border-bottom: none; }
+    .code-string { font-family: var(--ff-mono); background: #FAF7F2; padding: 4px 8px; border-radius: 4px; color: var(--saffron); font-size: 0.85rem; font-weight: 500; }
+
+    footer { background: var(--ink); color: rgba(255,255,255,0.55); padding: 60px 24px 32px; margin-top: 100px; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo"><a href="index.html">TRSSKO<span>.</span></a></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fmcg.html">FMCG Portfolio</a></li>
+        <li><a href="cloth.html">Textile & Apparel</a></li>
+        <li><a href="legal.html" class="active-page">Regulatory File</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="legal-hero">
+    <span style="font-family: var(--ff-mono); color: var(--gold); letter-spacing: 0.2em; font-size: 0.8rem; text-transform: uppercase;">Verified Operational Assets</span>
+    <h1 style="font-family: var(--ff-display); font-size: 3rem; margin-top: 8px;">Government Accreditations Registry</h1>
+  </header>
+
+  <section>
+    <div class="section-inner">
+      <p style="color: var(--ink-60); max-width: 600px;">TRSSKO Enterprises is a registered corporate body operating inside sovereign clearance structures. We guarantee friction-free customs handovers.</p>
+      
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Regulatory Framework</th>
+              <th>Status / Verification Type</th>
+              <th>Logistical Application Scope</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>IEC (Import Export Code)</strong></td>
+              <td><span class="code-string">VERIFIED REGISTERED</span></td>
+              <td>Primary clearance code required for ocean and airborne freight shipments out of Indian maritime terminals.</td>
+            </tr>
+            <tr>
+              <td><strong>APEDA Registration</strong></td>
+              <td><span class="code-string">ACTIVE MEMBER</span></td>
+              <td>Authorizes global export pathways for certified Indian agricultural foods, processed grains, and commodities.</td>
+            </tr>
+            <tr>
+              <td><strong>GSTIN Network</strong></td>
+              <td><span class="code-string">COMPLIANT PROFILE</span></td>
+              <td>Unified corporate tax registration ledger verifying transparent banking transactions and clean operations.</td>
+            </tr>
+            <tr>
+              <td><strong>SGS Global Rules</strong></td>
+              <td><span class="code-string">STANDARDIZED BATCHES</span></td>
+              <td>Pre-arranged frameworks to implement cargo testing and certified third-party sealing when buyers ask for it.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div style="max-width: var(--max-w); margin: 0 auto; text-align: center;">
+      <p>&copy; 2026 TRSSKO Enterprises. Corporate Governance &amp; Regulatory Tracking Hub.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
