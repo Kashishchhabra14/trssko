@@ -1,126 +1,22 @@
+<!-- Example Template for fmcg.html (Repeat for cloth.html & legal.html) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FMCG Food Exports Portfolio | TRSSKO Enterprises</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --saffron: #D4621B; --saffron-lt: #F5E8DF; --cream: #FAF7F2; --ink: #1A1410; --ink-60: #6B5E54; --white: #FFFFFF; --border: #E8E0D8; --leaf: #2E5C3A; --leaf-lt: #E8F2EA;
-      --ff-display: 'Cormorant Garamond', Georgia, serif; --ff-body: 'DM Sans', sans-serif; --ff-mono: 'DM Mono', monospace; --max-w: 1200px; --r: 6px;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--ff-body); background: var(--cream); color: var(--ink); line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
-    
-    /* NAV */
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(250,247,242,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
-    .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { font-family: var(--ff-display); font-size: 1.65rem; font-weight: 600; }
-    .nav-logo span { color: var(--saffron); }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
-    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--ink-60); }
-    .nav-links .active-page { color: var(--saffron); font-weight: 600; }
-
-    /* LAYOUT */
-    section { padding: 80px 24px; }
-    .section-inner { max-width: var(--max-w); margin: 0 auto; }
-    .page-header { background: var(--saffron-lt); padding: 60px 24px; text-align: center; border-bottom: 1px solid var(--border); }
-    .page-header h1 { font-family: var(--ff-display); font-size: 3rem; color: var(--ink); }
-
-    /* CATALOGUE GRIDS */
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 32px; margin-top: 40px; }
-    .card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
-    .card-img { height: 220px; width: 100%; object-fit: cover; }
-    .card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
-    .card-tag { font-family: var(--ff-mono); font-size: 0.7rem; color: var(--saffron); text-transform: uppercase; margin-bottom: 6px; display: block; }
-    .card-title { font-family: var(--ff-display); font-size: 1.4rem; font-weight: 600; margin-bottom: 8px; }
-    .card-desc { font-size: 0.88rem; color: var(--ink-60); margin-bottom: 20px; flex: 1; }
-    .card-meta { display: flex; justify-content: space-between; align-items: baseline; font-weight: 600; background: var(--cream); padding: 12px; border-radius: 4px; font-size: 0.9rem; }
-    .moq-badge { font-size: 0.75rem; color: var(--leaf); background: var(--leaf-lt); padding: 2px 8px; border-radius: 4px; }
-
-    footer { background: var(--ink); color: rgba(255,255,255,0.55); padding: 60px 24px 32px; margin-top: 100px; }
-    .footer-inner { max-width: var(--max-w); margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
-  </style>
+  <!-- Keep your CSS structure, just change the H1 and Content -->
+  <title>FMCG Division | TRSSKO Enterprises</title>
 </head>
 <body>
-
-  <nav>
-    <div class="nav-inner">
-      <div class="nav-logo"><a href="index.html">TRSSKO<span>.</span></a></div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="fmcg.html" class="active-page">FMCG Portfolio</a></li>
-        <li><a href="cloth.html">Textile & Apparel</a></li>
-        <li><a href="legal.html">Regulatory File</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <header class="page-header">
-    <h1>Premium FMCG Food Exporters</h1>
-    <p style="color: var(--ink-60); margin-top: 8px;">Export-Grade Organic Commodities &amp; Ground Spices Processed to Global Quality Baselines.</p>
-  </header>
-
+  <!-- Use the same Nav as index.html for consistency -->
+  <section class="hero-subpage">
+    <h1>FMCG Food & Agri-Commodities</h1>
+    <p>Specialized export logistics for Jaggery, Spices, and Oils.</p>
+  </section>
+  
   <section>
     <div class="section-inner">
-      <div class="grid">
-        
-        <!-- ITEM 1 -->
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=500" class="card-img" alt="Jaggery Blocks" />
-          <div class="card-body">
-            <span class="card-tag">Agri Commodities</span>
-            <h3 class="card-title">Artisanal Jaggery Blocks</h3>
-            <p class="card-desc">Clarified organic sugarcane derivatives processed cleanly without added sulphur modifiers or chemicals.</p>
-            <div class="card-meta">
-              <span>₹140 <small style="font-weight:400; color:var(--ink-60);">/ KG</small></span>
-              <span class="moq-badge">MOQ: 5 Metric Tons</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- ITEM 2 -->
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&q=80&w=500" class="card-img" alt="Mustard Oil" />
-          <div class="card-body">
-            <span class="card-tag">Edible Extracts</span>
-            <h3 class="card-title">Cold-Pressed Mustard Oil</h3>
-            <p class="card-desc">High pungency, cold-expressed pure seed oil retaining maximal aroma profile parameters perfectly.</p>
-            <div class="card-meta">
-              <span>₹190 <small style="font-weight:400; color:var(--ink-60);">/ LTR</small></span>
-              <span class="moq-badge">MOQ: 2,000 Liters</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- ITEM 3 -->
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1627754432135-c06db1eb87bf?auto=format&fit=crop&q=80&w=500" class="card-img" alt="Coriander Powder" />
-          <div class="card-body">
-            <span class="card-tag">Ground Spices</span>
-            <h3 class="card-title">Premium Dhaniya Powder</h3>
-            <p class="card-desc">Compliance checked ultra-pure ground coriander offering absolute technical oil and aroma preservation.</p>
-            <div class="card-meta">
-              <span>₹240 <small style="font-weight:400; color:var(--ink-60);">/ KG</small></span>
-              <span class="moq-badge">MOQ: 1 Metric Ton</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
+       <!-- Add specific product galleries, price tables, or legal download buttons here -->
     </div>
   </section>
-
-  <footer>
-    <div class="footer-inner">
-      <p>&copy; 2026 TRSSKO Enterprises. FMCG Division Processing Network.</p>
-      <a href="mailto:info.chhabraenterprices@gmail.com" style="color: #fff;">Contact Agri Desk</a>
-    </div>
-  </footer>
-
+  <!-- Reuse your global Footer -->
 </body>
 </html>
