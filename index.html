@@ -9,19 +9,17 @@
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: var(--text); line-height: 1.6; }
         .container { max-width: 1100px; margin: auto; padding: 0 20px; }
         
-        /* --- HEADER & HERO --- */
         .hero { background: linear-gradient(rgba(10,37,64,0.9), rgba(10,37,64,0.9)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8317d?q=80&w=2000'); background-size: cover; height: 50vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
         .cred-strip { background: var(--primary); color: var(--accent); padding: 20px; text-align: center; font-weight: bold; border-bottom: 3px solid var(--accent); }
 
-        /* --- LAYOUT --- */
         .section { padding: 80px 20px; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
         .img-box { width: 100%; height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
         
-        /* --- DIRECTOR --- */
-        .director-section { text-align: center; padding: 80px 20px; background: #fff; }
+        /* WhatsApp Button */
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; padding: 15px 20px; border-radius: 50px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; }
+        
         .dir-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 5px solid var(--accent); margin-bottom: 20px; }
-
         footer { background: var(--primary); color: white; text-align: center; padding: 30px; }
     </style>
 </head>
@@ -38,44 +36,45 @@
         <div class="container grid">
             <div>
                 <h2>FMCG Excellence</h2>
-                <p>We supply a curated selection of premium Indian goods. Our exports combine authentic aromatic spices with high-grade tea, ensuring purity and international quality.</p>
+                <p>Authentic Indian spices and high-grade tea, ensuring purity and international quality.</p>
             </div>
-            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800" class="img-box" alt="Spices and Tea">
+            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800" class="img-box" alt="Spices">
         </div>
     </section>
 
     <!-- LEGAL -->
     <section class="section" style="background: var(--light);" id="legal">
         <div class="container grid">
-            <img src="https://images.unsplash.com/photo-1589829545856-d13054f02847?w=800" class="img-box" alt="Legal Services">
+            <img src="https://images.unsplash.com/photo-1589829545856-d13054f02847?w=800" class="img-box" alt="Legal">
             <div>
                 <h2>⚖️ Professional Legal Consulting</h2>
-                <p>Led by qualified advocates, we provide expert advisory in corporate compliance, export documentation, and trade dispute resolution to safeguard your international business interests.</p>
+                <p>Expert advisory in corporate compliance, export documentation, and trade dispute resolution.</p>
             </div>
         </div>
     </section>
 
-    <!-- FASHION -->
+    <!-- FASHION (Fixed Link) -->
     <section class="section" id="cloth">
         <div class="container grid">
             <div>
                 <h2>Premium Ladies Fashion</h2>
-                <p>Bespoke textile solutions and high-fashion apparel. We bridge the gap between traditional craftsmanship and modern elegance.</p>
+                <p>Bespoke textiles bridging traditional craftsmanship and modern elegance.</p>
             </div>
-            <img src="https://images.unsplash.com/photo-1595777457583-95e059d5b73b?w=800" class="img-box" alt="Ladies Fashion">
+            <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a1?w=800" class="img-box" alt="Ladies Fashion">
         </div>
     </section>
 
     <!-- DIRECTOR -->
-    <section class="director-section" id="director">
-        <div class="container">
-            <h2>Meet the Director</h2>
-            <!-- Ensure director.jpg is in your folder -->
-            <img src="director.jpg" class="dir-img" alt="Kashish Chhabra">
-            <h3>Kashish Chhabra</h3>
-            <p>Director, TRSSKO</p>
-        </div>
+    <section class="section" style="text-align:center;" id="director">
+        <h2>Meet the Director</h2>
+        <!-- Ensure director.jpg is in the same folder -->
+        <img src="director.jpg" class="dir-img" alt="Kashish Chhabra" onerror="this.src='https://via.placeholder.com/200?text=Director'">
+        <h3>Kashish Chhabra</h3>
+        <p>Director, TRSSKO</p>
     </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/917417685168" class="whatsapp-float" target="_blank">Chat on WhatsApp</a>
 
     <footer>
         <p>&copy; 2026 TRSSKO Global Enterprises. All Rights Reserved.</p>
