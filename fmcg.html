@@ -1,70 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRSSKO | Premium Artisanal & Organic Goods</title>
-    <style>
-        :root { --primary: #002d62; --accent: #d4af37; --bg: #f9f9f9; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; }
-        header { background: var(--primary); color: white; padding: 60px 20px; text-align: center; }
-        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
-        
-        /* Product Styles */
-        .featured-product { border: 2px solid var(--accent); padding: 30px; border-radius: 12px; background: white; text-align: center; margin-bottom: 40px; }
-        .btn { background: var(--accent); color: white; padding: 15px 30px; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; }
-        
-        /* Compliance Styles */
-        .compliance-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
-        .box { background: white; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
-        
-        /* Director Profile */
-        .profile { text-align: center; margin-top: 50px; padding-top: 30px; border-top: 2px solid #eee; }
-        .director-img { width: 180px; border-radius: 50%; border: 4px solid var(--primary); }
-    </style>
-</head>
-<body>
+<section id="fmcg" class="alt">
+  <div class="container">
+    <span class="eyebrow">FMCG Product Catalog</span>
+    <h2 class="section-title">Premium Quality, Flexible MOQs</h2>
+    <div class="divider green"></div>
+    <p style="color:var(--mid);max-width:640px;font-size:0.93rem;line-height:1.8;">
+        Now serving both <strong>International Export</strong> and <strong>Domestic Indian Markets</strong>. Choose your requirement below to see specific MOQs and pricing tiers.
+    </p>
 
-    <header>
-        <h1>TRSSKO</h1>
-        <p>Pure, Artisanal, and Authentic | 2026 Brand Portfolio</p>
-    </header>
-
-    <div class="container">
-        <!-- Featured Product -->
-        <section class="featured-product">
-            <h2>Premium Dried Mushroom Powder</h2>
-            <p>Nutrient-rich, high-quality mushroom powder, expertly processed for superior culinary and health benefits.</p>
-            <a href="mailto:kashish@trssko.in" class="btn">Order Wholesale Now</a>
-        </section>
-
-        <!-- Compliance & Trust -->
-        <section>
-            <h2>Verified Corporate Compliance</h2>
-            <div class="compliance-grid">
-                <div class="box">
-                    <strong>GSTIN:</strong><br> 09BKQPC7409C1Z6[cite: 2]
-                </div>
-                <div class="box">
-                    <strong>FSSAI Registration:</strong><br> 22721356000355
-                </div>
-                <div class="box">
-                    <strong>Trademark Status:</strong><br> Application Filed (TM-A)
-                </div>
-            </div>
-            <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">
-                TRSSKO Enterprises is based in Ramraj, Meerut, and maintains full compliance with national food safety and tax regulations[cite: 1, 2].
-            </p>
-        </section>
-
-        <!-- Director Profile -->
-        <div class="profile">
-            <img src="1000586618.jpg" alt="Director of TRSSKO" class="director-img">
-            <h3>Kashish Chhabra</h3>
-            <p>Director, TRSSKO Enterprises</p>
-            <p>Email: kashish@trssko.in | Phone: +91 98086-85168[cite: 1]</p>
+    <div class="catalog-grid">
+      <div class="prod-card">
+        <div class="prod-header">
+          <div class="prod-icon">🟡</div>
+          <div>
+            <h4>Turmeric Powder</h4>
+            <div class="prod-sub">Pure · Unadulterated</div>
+          </div>
         </div>
-    </div>
+        
+        <div class="prod-specs" id="specs-turmeric">
+          <p style="font-size:0.85rem; color:var(--mid); margin-bottom:15px;">
+            Export grade quality now available for domestic B2B supply.
+          </p>
+          <div class="spec-row"><span class="spec-label">Export MOQ</span><span class="spec-val">100 kg</span></div>
+          <div class="spec-row"><span class="spec-label">Domestic MOQ</span><span class="spec-val" style="color:var(--green);">20 kg</span></div>
+        </div>
 
-</body>
-</html>
+        <div class="prod-footer">
+          <a href="#rfq" class="btn-rfq" onclick="setInquiry('Turmeric Powder')">Inquire Now</a>
+          <button class="prod-moq" style="background:none; border:none; cursor:pointer; color:var(--gold);" onclick="showDetails('turmeric')">View Full Specs →</button>
+        </div>
+      </div>
+      </div>
+  </div>
+</section>
+
+<script>
+  function setInquiry(productName) {
+      // Automatically selects the product in your RFQ dropdown
+      const select = document.getElementById('f-product');
+      select.value = productName;
+  }
+</script>
