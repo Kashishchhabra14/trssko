@@ -7,7 +7,6 @@
     <style>
         :root {
             --primary: #0a2540;
-            --secondary: #1a3a5a;
             --accent: #c5a059;
             --text: #333;
             --white: #ffffff;
@@ -23,7 +22,7 @@
                         url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8317d?q=80&w=2000');
             background-size: cover;
             background-position: center;
-            height: 70vh;
+            height: 60vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -62,20 +61,15 @@
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
-        .director-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent); margin-bottom: 20px; }
+        .director-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--accent); margin-bottom: 20px; object-fit: cover; }
 
-        /* --- FOOTER --- */
         footer { background: var(--primary); color: white; text-align: center; padding: 40px; }
         
-        @media (max-width: 768px) {
-            .grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2rem; }
-        }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
-    <!-- HERO -->
     <section class="hero">
         <div class="container">
             <h1>TRSSKO GLOBAL ENTERPRISES</h1>
@@ -83,62 +77,57 @@
         </div>
     </section>
 
-    <!-- CREDENTIALS -->
     <div class="cred-strip">
         <div class="cred-item"><span>IEC Registration</span><b>BKQPC7409C</b></div>
         <div class="cred-item"><span>GST Status</span><b>VERIFIED</b></div>
         <div class="cred-item"><span>Corporate ID (CIN)</span><b>U18209UP2023OPC176366</b></div>
     </div>
 
-    <!-- FMCG -->
     <section class="section" id="fmcg">
         <div class="container grid">
             <div>
                 <h2>Premium FMCG Exports</h2>
-                <p>We supply authentic Indian spices, high-grade tea, and organic produce with strict quality control. Our supply chain ensures that products reach global markets while maintaining peak freshness and international compliance.</p>
+                <p>Authentic Indian spices, tea, and organic produce with strict international quality control.</p>
             </div>
             <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800" class="img-box" alt="Spices">
         </div>
     </section>
 
-    <!-- LEGAL -->
     <section class="section bg-light" id="legal">
         <div class="container grid">
             <img src="https://images.unsplash.com/photo-1589829545856-d13054f02847?w=800" class="img-box" alt="Legal">
             <div>
                 <h2>Professional Legal Consulting</h2>
-                <p>Navigating international trade requires precision. We provide expert advisory in corporate law, export documentation, and trade dispute resolution to ensure your operations remain secure and legally sound.</p>
+                <p>Corporate compliance, export documentation, and trade dispute resolution services.</p>
             </div>
         </div>
     </section>
 
-    <!-- TEXTILES -->
     <section class="section" id="textiles">
         <div class="container grid">
             <div>
                 <h2>Textile & Fashion Supply</h2>
-                <p>TRSSKO delivers premium textile solutions to the global fashion industry. We prioritize durability, quality materials, and ethical manufacturing practices for every order.</p>
+                <p>Bespoke textile solutions prioritizing durability and ethical manufacturing standards.</p>
             </div>
             <img src="https://images.unsplash.com/photo-1521335629791-cf4bacaa014d?w=800" class="img-box" alt="Textiles">
         </div>
     </section>
 
-    <!-- DIRECTOR -->
+    <!-- DIRECTOR SECTION -->
     <section class="section bg-light" id="director">
         <div class="container">
             <div class="director-card">
+                <!-- Change src to your local file path, e.g., "director.jpg" -->
                 <img src="director.jpg" class="director-img" alt="Kashish Chhabra">
                 <h3 style="margin-bottom: 5px;">Kashish Chhabra</h3>
                 <p style="color: var(--primary); font-weight: bold; margin-top: 0;">Director, TRSSKO</p>
-                <p style="font-style: italic; color: #666;">"Our foundation rests on impeccable quality, full government compliance, and unwavering trust. At TRSSKO, we ensure that every client receives excellence as a standard."</p>
+                <p style="font-style: italic; color: #666;">"Our foundation rests on impeccable quality, full government compliance, and unwavering trust."</p>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 TRSSKO Global Enterprises. All Rights Reserved.</p>
-        <p>Your Trusted Partner in Global Commerce.</p>
     </footer>
 
 </body>
