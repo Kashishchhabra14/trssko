@@ -17,13 +17,13 @@
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: var(--text); line-height: 1.7; }
         .container { max-width: 1100px; margin: auto; padding: 0 20px; }
 
-        /* --- HERO SECTION --- */
+        /* --- HERO --- */
         .hero {
             background: linear-gradient(rgba(10,37,64,0.85), rgba(10,37,64,0.85)), 
                         url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8317d?q=80&w=2000');
             background-size: cover;
             background-position: center;
-            height: 80vh;
+            height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -43,15 +43,26 @@
             border-bottom: 4px solid var(--accent);
         }
         .cred-item { text-align: center; }
-        .cred-item span { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
-        .cred-item b { font-size: 1.2rem; color: var(--accent); }
+        .cred-item span { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #ccc; }
+        .cred-item b { font-size: 1.1rem; color: var(--accent); }
 
-        /* --- THREE PILLAR SECTIONS --- */
+        /* --- SECTIONS --- */
         .section { padding: 80px 20px; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
         .img-box { width: 100%; height: 350px; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        
         .bg-light { background: var(--light-gray); }
+
+        /* --- DIRECTOR SECTION --- */
+        .director-card {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .director-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent); margin-bottom: 20px; }
 
         /* --- FOOTER --- */
         footer { background: var(--primary); color: white; text-align: center; padding: 40px; }
@@ -68,7 +79,7 @@
     <section class="hero">
         <div class="container">
             <h1>TRSSKO GLOBAL ENTERPRISES</h1>
-            <p>Excellence in Export, Integrity in Consulting.</p>
+            <p>Premium Exports, Legal Consulting, and Textile Excellence.</p>
         </div>
     </section>
 
@@ -79,36 +90,48 @@
         <div class="cred-item"><span>Corporate ID (CIN)</span><b>U18209UP2023OPC176366</b></div>
     </div>
 
-    <!-- PILLAR 1: FMCG -->
+    <!-- FMCG -->
     <section class="section" id="fmcg">
         <div class="container grid">
             <div>
                 <h2>Premium FMCG Exports</h2>
-                <p>We bridge the gap between premium Indian agricultural produce and global markets. From aromatic spices to high-grade tea, our supply chain ensures purity, safety, and compliance with international food standards.</p>
+                <p>We supply authentic Indian spices, high-grade tea, and organic produce with strict quality control. Our supply chain ensures that products reach global markets while maintaining peak freshness and international compliance.</p>
             </div>
             <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800" class="img-box" alt="Spices">
         </div>
     </section>
 
-    <!-- PILLAR 2: LEGAL -->
+    <!-- LEGAL -->
     <section class="section bg-light" id="legal">
         <div class="container grid">
             <img src="https://images.unsplash.com/photo-1589829545856-d13054f02847?w=800" class="img-box" alt="Legal">
             <div>
                 <h2>Professional Legal Consulting</h2>
-                <p>Navigating the complexity of international trade requires precise legal oversight. We provide expert advisory in corporate compliance, export documentation, and trade dispute resolution to keep your business operating smoothly.</p>
+                <p>Navigating international trade requires precision. We provide expert advisory in corporate law, export documentation, and trade dispute resolution to ensure your operations remain secure and legally sound.</p>
             </div>
         </div>
     </section>
 
-    <!-- PILLAR 3: TEXTILES -->
+    <!-- TEXTILES -->
     <section class="section" id="textiles">
         <div class="container grid">
             <div>
-                <h2>Textiles & Fashion Supply</h2>
+                <h2>Textile & Fashion Supply</h2>
                 <p>TRSSKO delivers premium textile solutions to the global fashion industry. We prioritize durability, quality materials, and ethical manufacturing practices for every order.</p>
             </div>
             <img src="https://images.unsplash.com/photo-1521335629791-cf4bacaa014d?w=800" class="img-box" alt="Textiles">
+        </div>
+    </section>
+
+    <!-- DIRECTOR -->
+    <section class="section bg-light" id="director">
+        <div class="container">
+            <div class="director-card">
+                <img src="director.jpg" class="director-img" alt="Kashish Chhabra">
+                <h3 style="margin-bottom: 5px;">Kashish Chhabra</h3>
+                <p style="color: var(--primary); font-weight: bold; margin-top: 0;">Director, TRSSKO</p>
+                <p style="font-style: italic; color: #666;">"Our foundation rests on impeccable quality, full government compliance, and unwavering trust. At TRSSKO, we ensure that every client receives excellence as a standard."</p>
+            </div>
         </div>
     </section>
 
