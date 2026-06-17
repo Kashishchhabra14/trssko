@@ -2,39 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Buy FMCG | TRSSKO Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRSSKO | FMCG Low MOQ Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; background: #f4f4f4; padding: 40px; }
-        .product-card { background: white; padding: 30px; border-radius: 10px; max-width: 400px; margin: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .moq-badge { color: #d4621b; font-weight: bold; }
+        :root { --navy: #0b1f3a; --gold: #c9a84c; --cream: #faf8f4; --white: #ffffff; }
+        body { font-family: 'Inter', sans-serif; background: var(--cream); margin: 0; color: #333; }
+        .header { background: var(--navy); color: var(--white); padding: 40px 20px; text-align: center; }
+        .header h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 0; color: var(--gold); }
+        
+        .store-container { max-width: 1000px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        .product-card { background: var(--white); border-radius: 12px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eaeaea; text-align: center; }
+        .product-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; }
+        .product-card h2 { font-family: 'Playfair Display', serif; color: var(--navy); font-size: 1.5rem; margin-bottom: 10px; }
+        .moq-tag { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 15px; }
+        .price { font-size: 2rem; font-weight: 700; color: var(--navy); margin-bottom: 20px; }
+        
+        .back-link { display: block; text-align: center; margin: 40px; font-weight: bold; color: var(--navy); text-decoration: underline; }
     </style>
-    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID_HERE"></script>
+
+    <!-- PAYPAL SDK: Replace YOUR_CLIENT_ID with your actual PayPal Client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
 </head>
 <body>
 
-<div class="product-card">
-    <h2>Turmeric Powder</h2>
-    <p>Premium export quality.</p>
-    <p><strong>Low MOQ:</strong> <span class="moq-badge">10 KG</span></p>
-    <p><strong>Price:</strong> $50.00</p>
-    
-    <div id="paypal-button-container"></div>
-</div>
+    <div class="header">
+        <h1>FMCG Direct Ordering</h1>
+        <p>Premium Indian Spices & Grains - Ready for Dispatch</p>
+    </div>
 
-<script>
-    paypal.Buttons({
-        createOrder: function(data, actions) {
-            return actions.order.create({
-                purchase_units: [{ amount: { value: '50.00' } }]
-            });
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Transaction completed by ' + details.payer.name.given_name);
-            });
-        }
-    }).render('#paypal-button-container');
-</script>
+    <div class="store-container">
+        
+        <!-- PRODUCT 1 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=400&q=80" alt="Turmeric Powder">
+            <h2>Premium Turmeric Powder</h2>
+            <p>Export-grade, high curcumin content. Fully documented.</p>
+            <span class="moq-tag">Low MOQ: 25 KG</span>
+            <div class="price">$150.00</div>
+            
+            <!-- PayPal Button Container 1 -->
+            <div id="paypal-button-turmeric"></div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=400&q=80" alt="Basmati Rice">
+            <h2>Aged Basmati Rice</h2>
+            <p>Long-grain, aromatic Indian Basmati. FSSAI Compliant.</p>
+            <span class="moq-tag">Low MOQ: 50 KG</span>
+            <div class="price">$120.00</div>
+            
+            <!-- PayPal Button Container 2 -->
+            <div id="paypal-button-rice"></div>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="back-link">&larr; Back to Main Website</a>
+
+    <script>
+        // Render PayPal button for Turmeric
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{ amount: { value: '150.00' }, description: '25KG Premium Turmeric Powder' }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '! We will begin processing your shipment.');
+                });
+            }
+        }).render('#paypal-button-turmeric');
+
+        // Render PayPal button for Rice
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{ amount: { value: '120.00' }, description: '50KG Aged Basmati Rice' }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '! We will begin processing your shipment.');
+                });
+            }
+        }).render('#paypal-button-rice');
+    </script>
 
 </body>
 </html>
