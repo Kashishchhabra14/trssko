@@ -4,61 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRSSKO | Premium Indian Export & Domestic Supply</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* BASE STYLES */
-        :root { --navy: #0b1f3a; --gold: #c9a84c; --green: #1e5631; --white: #ffffff; --cream: #faf8f4; }
-        body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--navy); margin: 0; }
+        :root { --navy: #0b1f3a; --gold: #c9a84c; --green: #1e5631; --white: #ffffff; --cream: #faf8f4; --mid: #5a6a7a; }
+        body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--navy); margin: 0; line-height: 1.6; }
+        .container { max-width: 1140px; margin: auto; padding: 0 24px; }
         
-        /* TAB SYSTEM (The 'Secret' to your request) */
-        .tabs { display: flex; border-bottom: 2px solid #eee; margin-bottom: 15px; }
-        .tab-item { flex: 1; text-align: center; padding: 10px; cursor: pointer; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-bottom: 2px solid transparent; }
+        /* HERO */
+        #hero { position: relative; height: 80vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center; overflow: hidden; }
+        #hero img { position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+        
+        /* TABS */
+        .tabs { display: flex; border-bottom: 2px solid #eee; margin-top: 15px; }
+        .tab-item { flex: 1; padding: 10px; cursor: pointer; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; text-align: center; border-bottom: 2px solid transparent; }
         .tab-item.active { border-bottom: 2px solid var(--gold); color: var(--gold); }
-        .tab-panel { display: none; }
-        .tab-panel.active { display: block; animation: fadeIn 0.3s; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .tab-panel { display: none; padding: 15px 0; }
+        .tab-panel.active { display: block; }
 
-        /* PRODUCT CARDS */
-        .prod-card { background: var(--white); border-radius: 10px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .spec-row { display: flex; justify-content: space-between; padding: 8px 0; font-size: 0.85rem; border-bottom: 1px solid #f9f9f9; }
-        .moq-highlight { color: var(--green); font-weight: 800; font-size: 1rem; }
+        /* CARDS */
+        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; }
+        .prod-card { background: var(--white); border-radius: 12px; padding: 24px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 1px solid #eee; }
+        .spec-row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 0.85rem; border-bottom: 1px solid #f9f9f9; }
+        .moq-highlight { color: var(--green); font-weight: 800; }
+        .section-img { width: 100%; max-width: 600px; border-radius: 10px; margin: 20px 0; border: 3px solid var(--gold); }
     </style>
 </head>
 <body>
 
+<!-- HERO -->
+<section id="hero">
+    <img src="hero-bg.jpg" alt="Background">
+    <div class="container">
+        <h1>Premium Indian Products.<br>Delivered Globally.</h1>
+        <p>Export-Grade quality for International & Domestic markets.</p>
+    </div>
+</section>
+
 <!-- FMCG SECTION -->
-<section id="fmcg" style="padding: 60px 20px;">
-    <div style="max-width: 1000px; margin: auto;">
+<section id="fmcg" style="padding: 80px 0;">
+    <div class="container">
         <h2>FMCG & Food Products</h2>
-        <div class="catalog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-            
-            <!-- PRODUCT ITEM -->
+        <div class="catalog-grid">
+            <!-- Product Card -->
             <div class="prod-card">
                 <h4>Turmeric Powder</h4>
                 <div class="tabs">
-                    <div class="tab-item active" onclick="switchTab(this, 'exp-1')">Export</div>
-                    <div class="tab-item" onclick="switchTab(this, 'dom-1')">Domestic</div>
+                    <div class="tab-item active" onclick="switchTab(this, 'exp-turm')">Export</div>
+                    <div class="tab-item" onclick="switchTab(this, 'dom-turm')">Domestic</div>
                 </div>
-                
-                <div id="exp-1" class="tab-panel active">
+                <div id="exp-turm" class="tab-panel active">
                     <div class="spec-row"><span>MOQ</span><span class="moq-highlight">100 KG</span></div>
-                    <p style="font-size: 0.8rem;">Full documentation, Phytosanitary, CoA.</p>
+                    <p style="font-size: 0.8rem;">Ready for Int'l Customs.</p>
                 </div>
-                <div id="dom-1" class="tab-panel">
+                <div id="dom-turm" class="tab-panel">
                     <div class="spec-row"><span>MOQ</span><span class="moq-highlight">20 KG</span></div>
-                    <p style="font-size: 0.8rem;">GST Compliant, Fast Local Shipping.</p>
+                    <p style="font-size: 0.8rem;">Fast Domestic Supply.</p>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 
 <!-- LEGAL SECTION -->
-<section id="legal" style="background: var(--navy); color: white; padding: 60px 20px;">
-    <div style="max-width: 1000px; margin: auto;">
+<section id="legal" style="background: var(--navy); color: white; padding: 80px 0;">
+    <div class="container">
         <h2>Legal & Compliance Advisory</h2>
-        <p>Specialist services for Cyber Law, DPDP Act 2023, and Corporate Compliance.</p>
-        <!-- Legal content grid here -->
+        <img src="legal-law.jpg" alt="Law & Compliance" class="section-img">
+        <p>Specialist counsel on Cyber Law, DPDP Act 2023, and Corporate Compliance.</p>
+    </div>
+</section>
+
+<!-- APPAREL SECTION -->
+<section id="cloth" style="padding: 80px 0;">
+    <div class="container">
+        <h2>Fashion Apparel & Textiles</h2>
+        <img src="apparel-fashion.jpg" alt="Fashion Apparel" class="section-img">
+        <p>Sourced from India's best hubs for the global market.</p>
     </div>
 </section>
 
