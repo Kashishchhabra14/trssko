@@ -3,98 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRSSKO | Premium Exports & Consulting</title>
+    <title>TRSSKO | Premium Global Enterprises</title>
     <style>
         :root { --primary: #0a2540; --accent: #c5a059; --light: #f4f7f6; --text: #333; }
-        <body>
-
-    <!-- ADDED IDENTITY IMAGE AT THE TOP -->
-    <section style="background: #fdfdfd; padding: 20px 0; text-align: center;">
-        <div class="container">
-            <img src="1000586618.jpg" alt="The TRSSKO Identity" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-        </div>
-    </section>
-
-    <!-- YOUR EXISTING HERO SECTION -->
-    <section class="hero">
-        <div><h1>TRSSKO GLOBAL ENTERPRISES</h1><p>Premium Exports & Professional Consulting</p></div>
-    </section>
-    
-    <!-- Rest of your code follows... -->body 
-        { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: var(--text); line-height: 1.6; }
-        .container { max-width: 1100px; margin: auto; padding: 0 20px; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: var(--text); line-height: 1.6; }
+        .container { max-width: 900px; margin: auto; padding: 20px; }
         
-        .hero { background: linear-gradient(rgba(10,37,64,0.9), rgba(10,37,64,0.9)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8317d?q=80&w=2000'); background-size: cover; height: 50vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
-        .cred-strip { background: var(--primary); color: var(--accent); padding: 20px; text-align: center; font-weight: bold; border-bottom: 3px solid var(--accent); }
+        /* Corporate Styles */
+        .identity-img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .cred-strip { background: var(--primary); color: var(--accent); padding: 15px; text-align: center; font-weight: bold; border-bottom: 3px solid var(--accent); margin-bottom: 30px; }
+        
+        .corp-list { list-style: none; padding: 0; }
+        .corp-item { padding: 20px 0; border-bottom: 1px solid #eee; }
+        .corp-item a { display: flex; justify-content: space-between; align-items: center; font-size: 1.3rem; font-weight: 600; color: var(--primary); text-decoration: none; }
+        .corp-item p { color: #666; font-size: 0.95rem; margin-top: 5px; }
 
-        .section { padding: 80px 20px; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-        .img-box { width: 100%; height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .director-box { text-align: center; padding: 40px; background: var(--light); margin-top: 40px; border-radius: 8px; }
+        .dir-img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover; }
         
-        /* WhatsApp Button */
-        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; padding: 15px 20px; border-radius: 50px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; }
-        
-        .dir-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 5px solid var(--accent); margin-bottom: 20px; }
-        footer { background: var(--primary); color: white; text-align: center; padding: 30px; }
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; padding: 15px 20px; border-radius: 50px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <div><h1>TRSSKO ENTERPRISES</h1><p>Premium Exports & Professional Consulting</p></div>
-    </section>
+    <!-- IDENTITY IMAGE -->
+    <div class="container">
+        <img src="1000586618.jpg" alt="The TRSSKO Identity" class="identity-img">
+    </div>
 
-    <div class="cred-strip">IEC: BKQPC7409C | GST: VERIFIED | CIN: U18209UP2023OPC176366</div>
+    <!-- CREDENTIALS -->
+    <div class="cred-strip">
+        IEC: BKQPC7409C | GST: VERIFIED | CIN: U18209UP2023OPC176366
+    </div>
 
-    <!-- FMCG -->
-    <section class="section" id="fmcg">
-        <div class="container grid">
-            <div>
-                <h2>FMCG Excellence</h2>
-                <p>Authentic Indian spices and high-grade tea, ensuring purity and international quality.</p>
-            </div>
-            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800" class="img-box" alt="Spices">
-        </div>
-    </section>
+    <!-- CORPORATE NAVIGATION -->
+    <div class="container">
+        <h2 style="color: var(--primary);">Corporate Overview</h2>
+        <ul class="corp-list">
+            <li class="corp-item">
+                <a href="#fmcg">Businesses <span>&gt;</span></a>
+                <p>Operations in FMCG, Textiles, and Legal Consulting.</p>
+            </li>
+            <li class="corp-item">
+                <a href="#director">About Us <span>&gt;</span></a>
+                <p>Leadership and the vision behind TRSSKO Global.</p>
+            </li>
+            <li class="corp-item">
+                <a href="https://wa.me/917417685168">Contact Us <span>&gt;</span></a>
+                <p>Direct communication with our corporate office.</p>
+            </li>
+        </ul>
+    </div>
 
-    <!-- LEGAL -->
-    <section class="section" style="background: var(--light);" id="legal">
-        <div class="container grid">
-            <img src="https://images.unsplash.com/photo-1589829545856-d13054f02847?w=800" class="img-box" alt="Legal">
-            <div>
-                <h2>⚖️ Professional Legal Consulting</h2>
-                <p>Expert advisory in corporate compliance, export documentation, and trade dispute resolution.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FASHION (Fixed Link) -->
-    <!-- FASHION SECTION (FIXED IMAGE) -->
-    <section class="section" id="cloth">
-        <div class="container grid">
-            <div>
-                <h2>Premium Ladies Fashion</h2>
-                <p>Bespoke textile solutions and high-fashion apparel. We bridge the gap between traditional craftsmanship and modern elegance, ensuring superior quality for the global market.</p>
-            </div>
-            <!-- Using a stable Unsplash URL to ensure it loads -->
-            <img src="https://images.unsplash.com/photo-1595777457583-95e059d5b73b?w=800" class="img-box" alt="Premium Ladies Fashion">
-        </div>
-    </section>
-    <!-- DIRECTOR -->
-    <section class="section" style="text-align:center;" id="director">
-        <h2>Meet the Director</h2>
-        <!-- Ensure director.jpg is in the same folder -->
-        <img src="director.jpg" class="dir-img" alt="Kashish Chhabra" onerror="this.src='https://via.placeholder.com/200?text=Director'">
+    <!-- DIRECTOR PROFILE -->
+    <section class="container director-box" id="director">
+        <img src="director.jpg" class="dir-img" alt="Kashish Chhabra">
         <h3>Kashish Chhabra</h3>
-        <p>Director, TRSSKO</p>
+        <p>Director, TRSSKO Global Enterprises</p>
     </section>
 
-    <!-- WhatsApp Button -->
+    <!-- WHATSAPP FLOAT -->
     <a href="https://wa.me/917417685168" class="whatsapp-float" target="_blank">Chat on WhatsApp</a>
-
-    <footer>
-        <p>&copy; 2026 TRSSKO Global Enterprises. All Rights Reserved.</p>
-    </footer>
 
 </body>
 </html>
