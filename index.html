@@ -13,6 +13,7 @@
             --text-light: #F7F9FC;
             --bg-light: #F4F7F6;
             --white: #FFFFFF;
+            --whatsapp-green: #25D366;
         }
 
         /* Global Reset & Typography */
@@ -65,13 +66,26 @@
         }
 
         .nav-links a {
-            margin-left: 25px;
+            margin-left: 20px;
             color: var(--text-dark);
             font-weight: 500;
         }
 
         .nav-links a:hover {
             color: var(--secondary-color);
+        }
+
+        .nav-legal {
+            color: var(--whatsapp-green) !important;
+            font-weight: bold !important;
+            border: 1px solid var(--whatsapp-green);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        .nav-legal:hover {
+            background-color: var(--whatsapp-green);
+            color: var(--white) !important;
         }
 
         /* Hero Section */
@@ -123,6 +137,19 @@
         .btn-outline:hover {
             background-color: var(--white);
             color: var(--primary-color);
+        }
+        
+        .btn-whatsapp {
+            background-color: var(--whatsapp-green);
+            color: var(--white);
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #1ebe57;
         }
 
         /* Credentials Bar */
@@ -320,11 +347,12 @@
         <div class="navbar">
             <div class="logo">TRSSKO</div>
             <nav class="nav-links">
-                <a href="#about">About</a>
                 <a href="#products">Products</a>
                 <a href="#export">Export & B2B</a>
                 <a href="#director">Director's Desk</a>
                 <a href="#contact">Contact</a>
+                <!-- New Legal Services Nav Link -->
+                <a href="https://wa.me/919808685168?text=Hello,%20I%20am%20looking%20for%20legal%20services%20and%20consultation." target="_blank" class="nav-legal">⚖️ Legal Services</a>
             </nav>
         </div>
     </header>
@@ -334,7 +362,7 @@
         <span>✅ FSSAI Certified</span>
         <span>✅ IEC Registered Exporter</span>
         <span>✅ CIN Compliant Corporate Entity</span>
-        <span>✅ TradeIndia Verified Supplier</span>
+        <span>✅ Advocate, Bar Council of UP</span>
     </div>
 
     <!-- Hero Section -->
@@ -378,7 +406,6 @@
                     <p>Processed and packaged under strict FSSAI guidelines. Pure, unadulterated flavors for kitchens globally.</p>
                     <div class="buying-options">
                         <small><strong>For Retail (Single Units):</strong></small>
-                        <!-- Routes directly to your store link where items appear once active -->
                         <a href="https://www.amazon.in/s?k=TRSSKO&ref=bl_dp_s_web_0" target="_blank" class="b2c-btn">🛒 View Store Directory</a>
                         
                         <small><strong>For Export (MOQ: 500 Kg):</strong></small>
@@ -430,9 +457,14 @@
     <!-- Director's Desk -->
     <section id="director" class="director-desk">
         <h2>From the Director's Desk</h2>
-        <p style="max-width: 800px; margin: 0 auto; font-size: 18px;">
-            "At TRSSKO Enterprises, our foundation is built on legal integrity and uncompromising quality. As an Advocate and Director, I ensure that our international trade operations adhere to the highest global legal compliance standards. Whether you are a family enjoying our basmati rice or an importer bringing our products to a new continent, our commitment to transparency remains the same."
+        <p style="max-width: 800px; margin: 0 auto 30px; font-size: 18px;">
+            "At TRSSKO Enterprises, our foundation is built on legal integrity and uncompromising quality. As an Advocate and Director, I ensure that our international trade operations adhere to the highest global legal compliance standards. Beyond our export operations, I also provide dedicated legal consultation and services."
         </p>
+        
+        <!-- New Legal WhatsApp Button -->
+        <a href="https://wa.me/919808685168?text=Hello,%20I%20am%20looking%20for%20legal%20services%20and%20consultation." target="_blank" class="btn btn-whatsapp">
+            💬 Chat on WhatsApp for Legal Services
+        </a>
     </section>
 
     <!-- B2B RFQ Form -->
@@ -487,7 +519,8 @@
 
                 <button type="submit">Submit Request for Quote</button>
                 <p style="text-align: center; margin-top: 15px; font-size: 14px; color: #666;">
-                    Prefer WhatsApp? <a href="https://wa.me/YOUR_PHONE_NUMBER_HERE" style="color: #25D366; font-weight: bold;">Click here to chat.</a>
+                    <!-- Updated WhatsApp link for Business -->
+                    Prefer WhatsApp for Business? <a href="https://wa.me/919808685168?text=Hello,%20I%20have%20a%20B2B%20export%20inquiry." target="_blank" style="color: var(--whatsapp-green); font-weight: bold;">Click here to chat.</a>
                 </p>
             </form>
         </div>
