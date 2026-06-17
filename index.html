@@ -5,25 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRSSKO | Premium Exports & Consulting</title>
     <style>
-        :root {
-            --primary: #0a2540;
-            --accent: #c5a059;
-            --light: #f4f7f6;
-            --text: #333;
-        }
+        :root { --primary: #0a2540; --accent: #c5a059; --light: #f4f7f6; --text: #333; }
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: var(--text); line-height: 1.6; }
         .container { max-width: 1100px; margin: auto; padding: 0 20px; }
-
-        /* --- HEADER & CREDENTIALS --- */
+        
+        /* --- HEADER & HERO --- */
         .hero { background: linear-gradient(rgba(10,37,64,0.9), rgba(10,37,64,0.9)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8317d?q=80&w=2000'); background-size: cover; height: 50vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
         .cred-strip { background: var(--primary); color: var(--accent); padding: 20px; text-align: center; font-weight: bold; border-bottom: 3px solid var(--accent); }
 
-        /* --- SECTIONS --- */
+        /* --- LAYOUT --- */
         .section { padding: 80px 20px; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-        .img-box { width: 100%; height: 300px; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .icon { font-size: 3rem; color: var(--accent); margin-bottom: 10px; display: block; }
+        .img-box { width: 100%; height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
         
+        /* --- DIRECTOR --- */
+        .director-section { text-align: center; padding: 80px 20px; background: #fff; }
+        .dir-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 5px solid var(--accent); margin-bottom: 20px; }
+
         footer { background: var(--primary); color: white; text-align: center; padding: 30px; }
     </style>
 </head>
@@ -33,43 +31,49 @@
         <div><h1>TRSSKO GLOBAL ENTERPRISES</h1><p>Premium Exports & Professional Consulting</p></div>
     </section>
 
-    <div class="cred-strip">
-        IEC: BKQPC7409C | GST: VERIFIED | CIN: U18209UP2023OPC176366
-    </div>
+    <div class="cred-strip">IEC: BKQPC7409C | GST: VERIFIED | CIN: U18209UP2023OPC176366</div>
 
-    <!-- COMBINED FMCG -->
+    <!-- FMCG -->
     <section class="section" id="fmcg">
         <div class="container grid">
             <div>
                 <h2>FMCG Excellence</h2>
-                <p>We supply a curated selection of premium Indian goods. Our exports combine <strong>authentic aromatic spices</strong> with <strong>high-grade tea leaves</strong>, ensuring purity and international quality compliance in every shipment.</p>
+                <p>We supply a curated selection of premium Indian goods. Our exports combine authentic aromatic spices with high-grade tea, ensuring purity and international quality.</p>
             </div>
             <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800" class="img-box" alt="Spices and Tea">
         </div>
     </section>
 
-    <!-- LEGAL WITH LOGO -->
+    <!-- LEGAL -->
     <section class="section" style="background: var(--light);" id="legal">
         <div class="container grid">
-            <div style="text-align: center;">
-                <span class="icon">⚖️</span>
-                <h3>Legal Advisory</h3>
-            </div>
+            <img src="https://images.unsplash.com/photo-1589829545856-d13054f02847?w=800" class="img-box" alt="Legal Services">
             <div>
-                <h2>Professional Legal Consulting</h2>
+                <h2>⚖️ Professional Legal Consulting</h2>
                 <p>Led by qualified advocates, we provide expert advisory in corporate compliance, export documentation, and trade dispute resolution to safeguard your international business interests.</p>
             </div>
         </div>
     </section>
 
-    <!-- LADIES FASHION -->
+    <!-- FASHION -->
     <section class="section" id="cloth">
         <div class="container grid">
             <div>
                 <h2>Premium Ladies Fashion</h2>
-                <p>Bespoke textile solutions and high-fashion apparel. We bridge the gap between traditional craftsmanship and modern elegance, ensuring superior quality for the global market.</p>
+                <p>Bespoke textile solutions and high-fashion apparel. We bridge the gap between traditional craftsmanship and modern elegance.</p>
             </div>
             <img src="https://images.unsplash.com/photo-1595777457583-95e059d5b73b?w=800" class="img-box" alt="Ladies Fashion">
+        </div>
+    </section>
+
+    <!-- DIRECTOR -->
+    <section class="director-section" id="director">
+        <div class="container">
+            <h2>Meet the Director</h2>
+            <!-- Ensure director.jpg is in your folder -->
+            <img src="director.jpg" class="dir-img" alt="Kashish Chhabra">
+            <h3>Kashish Chhabra</h3>
+            <p>Director, TRSSKO</p>
         </div>
     </section>
 
