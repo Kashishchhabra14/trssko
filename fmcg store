@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buy FMCG | TRSSKO Store</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; padding: 40px; }
+        .product-card { background: white; padding: 30px; border-radius: 10px; max-width: 400px; margin: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .moq-badge { color: #d4621b; font-weight: bold; }
+    </style>
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID_HERE"></script>
+</head>
+<body>
+
+<div class="product-card">
+    <h2>Turmeric Powder</h2>
+    <p>Premium export quality.</p>
+    <p><strong>Low MOQ:</strong> <span class="moq-badge">10 KG</span></p>
+    <p><strong>Price:</strong> $50.00</p>
+    
+    <div id="paypal-button-container"></div>
+</div>
+
+<script>
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{ amount: { value: '50.00' } }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Transaction completed by ' + details.payer.name.given_name);
+            });
+        }
+    }).render('#paypal-button-container');
+</script>
+
+</body>
+</html>
