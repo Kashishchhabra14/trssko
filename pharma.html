@@ -18,7 +18,7 @@
     
     nav { position: sticky; top: 0; z-index: 100; background: rgba(250,247,242,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
     .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { font-family: var(--ff-display); font-size: 1.65rem; font-weight: 600; }
+    .nav-logo-box { display: flex; align-items: center; gap: 10px; font-family: var(--ff-display); font-size: 1.65rem; font-weight: 600; }
     .nav-logo span { color: var(--saffron); }
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--ink-60); }
@@ -39,6 +39,10 @@
     .card-meta { display: flex; justify-content: space-between; align-items: baseline; font-weight: 600; background: var(--cream); padding: 12px; border-radius: 4px; font-size: 0.9rem; }
     .moq-badge { font-size: 0.75rem; color: var(--saffron); background: var(--saffron-lt); padding: 2px 8px; border-radius: 4px; }
 
+    /* Director Section */
+    .director-section { display: flex; align-items: center; gap: 40px; background: var(--white); padding: 40px; border-radius: 8px; border: 1px solid var(--border); }
+    .director-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; }
+
     footer { background: var(--ink); color: rgba(255,255,255,0.55); padding: 60px 24px 32px; margin-top: 100px; }
     .footer-inner { max-width: var(--max-w); margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
   </style>
@@ -47,7 +51,13 @@
 
   <nav>
     <div class="nav-inner">
-      <div class="nav-logo"><a href="index.html">TRSSKO<span>.</span></a></div>
+      <div class="nav-logo-box">
+        <svg width="40" height="40" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" fill="#D4621B" />
+          <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="white" font-size="50" font-family="Arial">T</text>
+        </svg>
+        <a href="index.html">TRSSKO<span>.</span></a>
+      </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="fmcg.html">FMCG Portfolio</a></li>
@@ -64,9 +74,15 @@
 
   <section>
     <div class="section-inner">
+      <div class="director-section" style="margin-bottom: 60px;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBiWUHg9N3FocfzJKpsOLtTRqF4X2XoDcyypWXbYqhUQ&s" alt="Director" class="director-img" />
+        <div>
+          <h2 style="font-family: var(--ff-display);">A Note from the Director</h2>
+          <p style="color: var(--ink-60);">"At TRSSKO, we bridge the gap between quality Indian manufacturing and global retail standards. Our commitment to excellence is reflected in every shipment."</p>
+        </div>
+      </div>
+
       <div class="grid">
-        
-        <!-- COLLECTION 1 -->
         <div class="card">
           <img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&q=80&w=500" class="card-img" alt="Combed Cotton Tops" />
           <div class="card-body">
@@ -80,7 +96,6 @@
           </div>
         </div>
 
-        <!-- COLLECTION 2 -->
         <div class="card">
           <img src="https://images.unsplash.com/photo-1571513722275-4b41940f54b8?auto=format&fit=crop&q=80&w=500" class="card-img" alt="Bulk Linen Woven Ware" />
           <div class="card-body">
@@ -93,7 +108,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
