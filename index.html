@@ -3,23 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRSSKO | Premium Indian Export</title>
+    <title>TRSSKO | Premium Export House</title>
     <style>
-        :root { --navy: #0b1f3a; --gold: #c9a84c; }
-        body { font-family: sans-serif; line-height: 1.6; margin: 0; }
-        .container { max-width: 1140px; margin: auto; padding: 20px; }
-        .btn { display: inline-block; background: var(--gold); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        :root { --navy: #0b1f3a; --gold: #c9a84c; --cream: #faf8f4; }
+        body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--navy); margin: 0; }
+        .container { max-width: 1140px; margin: auto; padding: 0 24px; }
+        
+        /* HERO */
+        #hero { height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR_ezwrZfJogexyQgxRuaMbuadBqS40tn0-trZX7xLrQ&s') center/cover; color: white; }
+        
+        /* DIRECTOR SECTION */
+        .director { padding: 50px 0; display: flex; align-items: center; gap: 40px; background: white; }
+        .director img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid var(--gold); }
+        
+        /* SECTIONS */
+        section { padding: 60px 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
     </style>
 </head>
 <body>
+
+<section id="hero">
     <div class="container">
-        <h1>Welcome to TRSSKO</h1>
-        <p>Premium Indian Products Delivered Globally.</p>
-        <section id="fmcg">
-            <h2>FMCG & Food Products</h2>
-            <p>Ready for low-MOQ orders.</p>
-            <a href="fmcg-store.html" class="btn">View Store & Buy Now</a>
-        </section>
+        <h1>TRSSKO Enterprises</h1>
+        <p>Premium Indian Export & Domestic Supply</p>
     </div>
+</section>
+
+<section class="director">
+    <div class="container" style="display:flex; align-items:center; gap:40px;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBiWUHg9N3FocfzJKpsOLtTRqF4X2XoDcyypWXbYqhUQ&s" alt="Director">
+        <div>
+            <h2>Message from the Director</h2>
+            <p>At TRSSKO, we bridge the gap between Indian craftsmanship and global markets with transparency and quality.</p>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <section id="fmcg">
+        <h2>FMCG & Food Products</h2>
+        <div class="card">
+            <p>Export-quality spices, rice, and jaggery available for bulk and retail.</p>
+        </div>
+    </section>
+
+    <section id="legal">
+        <h2>Legal & Compliance</h2>
+        <div class="card">
+            <p>Expert advisory on Cyber Law, DPDP Act 2023, and corporate compliance.</p>
+        </div>
+    </section>
+
+    <section id="cloth">
+        <h2>Fashion Apparel & Textiles</h2>
+        <div class="card">
+            <p>High-quality fabrics sourced from India's best manufacturing hubs.</p>
+        </div>
+    </section>
+</div>
+
 </body>
 </html>
