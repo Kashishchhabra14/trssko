@@ -91,32 +91,56 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)), url('https://images.unsplash.com/photo-1586528116311-ad8ed7c83a7f?w=1500&q=80') center/cover;
+            background: var(--primary-color);
             color: var(--white);
             text-align: center;
-            padding: 80px 20px;
+            padding: 60px 20px;
         }
 
         .hero h1 {
             color: var(--white);
             font-size: 48px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .hero p {
             font-size: 20px;
             max-width: 700px;
             margin: 0 auto 30px;
+            color: #d1d5db;
+        }
+
+        /* New Feature Pillars for Spices, Oil, Cloth, Legal */
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .feature-badge {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--secondary-color);
+            letter-spacing: 0.5px;
         }
 
         .hero-banner-img {
             max-width: 100%;
-            width: 700px;
+            width: 800px;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            margin: 30px auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin: 0 auto 30px;
             display: block;
+            border: 3px solid var(--secondary-color);
         }
 
         .btn {
@@ -183,13 +207,14 @@
 
         /* Credentials Bar */
         .credentials {
-            background-color: var(--primary-color);
-            color: var(--white);
+            background-color: #061524;
+            color: var(--whatsapp-green);
             display: flex;
             justify-content: center;
             gap: 40px;
             padding: 15px;
             font-size: 14px;
+            font-weight: bold;
             flex-wrap: wrap;
         }
 
@@ -251,7 +276,7 @@
 
         .b2c-btn {
             display: block;
-            background-color: #FF9900; /* Amazon Orange */
+            background-color: #FF9900;
             color: #111;
             padding: 10px;
             border-radius: 5px;
@@ -277,10 +302,53 @@
             border-radius: 5px;
         }
 
-        /* Footer & Forms (Truncated for brevity, assuming standard styling) */
-        .b2b-capabilities, .director-desk, .rfq-section, footer {
-            /* Styles remain unchanged from previous version */
+        /* B2B & Forms */
+        .b2b-capabilities {
+            background-color: var(--white);
+            padding: 60px 5%;
+            text-align: center;
         }
+
+        .b2b-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
+
+        .b2b-item {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .director-desk {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 80px 5%;
+            text-align: center;
+        }
+        
+        .director-desk h2 {
+            color: var(--secondary-color);
+        }
+
+        .rfq-section {
+            background: var(--white);
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: -40px auto 80px;
+        }
+
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-row { display: flex; gap: 20px; }
+        .form-row .form-group { flex: 1; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: var(--primary-color); }
+        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; }
+        button[type="submit"] { width: 100%; background-color: var(--secondary-color); color: var(--primary-color); padding: 15px; border: none; border-radius: 4px; font-size: 18px; font-weight: bold; cursor: pointer; }
 
         footer {
             background-color: #061524;
@@ -291,9 +359,11 @@
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
+            .form-row { flex-direction: column; gap: 0; }
             .hero h1 { font-size: 32px; }
             .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
             .whatsapp-float svg { width: 28px; height: 28px; }
+            .feature-badge { font-size: 14px; padding: 8px 12px; }
         }
     </style>
 </head>
@@ -301,7 +371,7 @@
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/917417685168?text=Hello,%20I%20have%20an%20inquiry%20regarding%20TRSSKO." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2022 Fonticons, Inc.--><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 414.4c-32.9 0-65.1-8.8-93.5-25.6l-6.7-4-69.5 18.2 18.5-67.8-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.4 82.6-184 184.1-184 50.8 0 98.4 19.8 134.2 55.6s55.5 83.4 55.5 134.2c0 101.4-82.6 184-184.1 184zM324.9 281.3c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-2.2-3.8-.2-5.9 1.2-7.7 1.3-1.6 2.8-3.3 4.2-4.9 1.4-1.6 1.9-2.8 2.8-4.6.9-1.9.5-3.7-.2-5.1-.7-1.4-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 414.4c-32.9 0-65.1-8.8-93.5-25.6l-6.7-4-69.5 18.2 18.5-67.8-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.4 82.6-184 184.1-184 50.8 0 98.4 19.8 134.2 55.6s55.5 83.4 55.5 134.2c0 101.4-82.6 184-184.1 184zM324.9 281.3c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-2.2-3.8-.2-5.9 1.2-7.7 1.3-1.6 2.8-3.3 4.2-4.9 1.4-1.6 1.9-2.8 2.8-4.6.9-1.9.5-3.7-.2-5.1-.7-1.4-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
     </a>
 
     <!-- Navigation -->
@@ -329,10 +399,18 @@
     <!-- Hero Section -->
     <section class="hero">
         <h1>Global Standard. Local Excellence.</h1>
-        <p>Premium FMCG, Foods, Fashion, and Professional Legal Services globally.</p>
+        <p>Your Trusted Partner in International Trade & Professional Services</p>
         
-        <!-- NEW: Added Main Page Image inside the Hero Section -->
-        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80" alt="TRSSKO Global Shipping and Logistics" class="hero-banner-img">
+        <!-- NEW: Added visual tags highlighting your 4 core verticals -->
+        <div class="hero-features">
+            <span class="feature-badge">🌿 Premium Spices</span>
+            <span class="feature-badge">💧 Pure Oils</span>
+            <span class="feature-badge">👕 Fashion Apparel</span>
+            <span class="feature-badge">⚖️ Legal & Corporate Services</span>
+        </div>
+
+        <!-- NEW: Replaced vegetables with the TRSSKO product image -->
+        <img src="1000586618.jpg" alt="The TRSSKO Identity - Pure & Authentic Spices" class="hero-banner-img">
 
         <div>
             <a href="https://www.amazon.in/s?k=TRSSKO&ref=bl_dp_s_web_0" target="_blank" class="btn btn-primary">Shop Retail Store</a>
@@ -354,21 +432,19 @@
                     <p>Dedicated legal consultation and support by certified advocates. We ensure that international trade operations and corporate affairs adhere to the highest compliance standards.</p>
                     <div class="buying-options">
                         <small><strong>Direct Legal Consultation:</strong></small>
-                        <!-- Updated Number -->
                         <a href="https://wa.me/917417685168?text=Hello,%20I%20need%20legal%20assistance." target="_blank" class="b2b-btn" style="background-color: var(--whatsapp-green);">💬 Chat on WhatsApp</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Section 2: Rice & Masala (FMCG) -->
+            <!-- Section 2: FMCG (Spices, Oil, Rice) -->
             <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/81v1jEEQazL._AC_UF894,1000_QL80_.jpg" alt="TRSSKO Rice and Masala">
+                <img src="https://m.media-amazon.com/images/I/81v1jEEQazL._AC_UF894,1000_QL80_.jpg" alt="TRSSKO Rice, Oil and Masala">
                 <div class="product-info">
-                    <h3>Premium Rice & Authentic Spices</h3>
-                    <p>Aromatic, long-grain basmati rice and pure, unadulterated spices. Processed and packaged under strict FSSAI guidelines for kitchens worldwide.</p>
+                    <h3>Premium FMCG: Spices, Oils & Rice</h3>
+                    <p>Aromatic basmati rice, cold-pressed pure oils, and unadulterated spices. Processed and packaged under strict FSSAI guidelines for kitchens worldwide.</p>
                     <div class="buying-options">
                         <small><strong>For Retail (Single Units):</strong></small>
-                        <!-- NEW: Points to broad Amazon Search Link -->
                         <a href="https://www.amazon.in/s?k=TRSSKO&ref=bl_dp_s_web_0" target="_blank" class="b2c-btn">🛒 Buy on Amazon</a>
                         
                         <small><strong>For Export (MOQ: Bulk):</strong></small>
@@ -385,7 +461,6 @@
                     <p>High-quality textiles and modern apparel manufacturing. Consistently meeting and exceeding global fashion retail standards.</p>
                     <div class="buying-options">
                         <small><strong>For Retail (Single Units):</strong></small>
-                        <!-- NEW: Points to Instagram Page -->
                         <a href="https://www.instagram.com/trssko._.fashion/" target="_blank" class="b2c-insta-btn">📸 View on Instagram</a>
                         
                         <small><strong>For Export (MOQ: 500 Pieces):</strong></small>
@@ -394,6 +469,97 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <!-- B2B Capabilities Section -->
+    <section id="export" class="b2b-capabilities">
+        <h2 class="section-title">International Wholesale & Export</h2>
+        <p>As a registered Global Merchant Exporter, we facilitate smooth, compliant international trade. We work side-by-side with verified marketplace ecosystems like TradeIndia to guarantee transparency.</p>
+        
+        <div class="b2b-grid">
+            <div class="b2b-item">
+                <h3>🌍 Global Reach</h3>
+                <p>Shipping terms customized to your needs: FOB Nhava Sheva (Mumbai) or CIF to your destination port.</p>
+            </div>
+            <div class="b2b-item">
+                <h3>📦 Custom Packaging</h3>
+                <p>From retail packaging variations to bulk options, built to protect long-haul shipments effortlessly.</p>
+            </div>
+            <div class="b2b-item">
+                <h3>⚖️ Strict Compliance</h3>
+                <p>All shipments are accompanied by valid Certificates of Analysis (COA), Certificates of Origin, and export documentation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Director's Desk -->
+    <section id="director" class="director-desk">
+        <h2>From the Director's Desk</h2>
+        <p style="max-width: 800px; margin: 0 auto 30px; font-size: 18px;">
+            "At TRSSKO Enterprises, our foundation is built on legal integrity and uncompromising quality. As an Advocate and Director, I ensure that our international trade operations adhere to the highest global legal compliance standards. Beyond our export operations, I also provide dedicated legal consultation and services."
+        </p>
+        
+        <a href="https://wa.me/917417685168?text=Hello,%20I%20am%20looking%20for%20legal%20services%20and%20consultation." target="_blank" class="btn btn-whatsapp" style="background-color: var(--white); color: var(--primary-color);">
+            💬 Chat on WhatsApp for Legal Services
+        </a>
+    </section>
+
+    <!-- B2B RFQ Form -->
+    <section id="contact" style="background-color: var(--bg-light); padding-top: 80px;">
+        <h2 class="section-title">Request a Bulk Export Quote</h2>
+        <div class="rfq-section">
+            <form action="#" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Contact Name</label>
+                        <input type="text" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" required placeholder="Global Imports LLC">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Country of Destination</label>
+                        <input type="text" required placeholder="e.g., UAE, USA, UK">
+                    </div>
+                    <div class="form-group">
+                        <label>Target Port (Optional)</label>
+                        <input type="text" placeholder="e.g., Jebel Ali, Dubai">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Product of Interest</label>
+                        <select required>
+                            <option value="">-- Select Product --</option>
+                            <option value="Spices">Premium Spices & Seasonings</option>
+                            <option value="Oils">Pure Oils</option>
+                            <option value="Rice">Basmati Rice</option>
+                            <option value="Fashion">Fashion & Apparel</option>
+                            <option value="Legal Services">Legal Services / Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Estimated Quantity</label>
+                        <input type="text" required placeholder="e.g., 1 x 20ft Container">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Additional Specifications or Questions</label>
+                    <textarea rows="4" placeholder="Mention preferred packaging, target price, or compliance requirements..."></textarea>
+                </div>
+
+                <button type="submit">Submit Request</button>
+                <p style="text-align: center; margin-top: 15px; font-size: 14px; color: #666;">
+                    Prefer WhatsApp for Business? <a href="https://wa.me/917417685168?text=Hello,%20I%20have%20an%20inquiry." target="_blank" style="color: var(--whatsapp-green); font-weight: bold;">Click here to chat.</a>
+                </p>
+            </form>
         </div>
     </section>
 
