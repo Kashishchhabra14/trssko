@@ -110,7 +110,7 @@
             color: #d1d5db;
         }
 
-        /* New Feature Pillars for Spices, Oil, Cloth, Legal */
+        /* Feature Pillars for Spices, Oil, Cloth, Legal */
         .hero-features {
             display: flex;
             justify-content: center;
@@ -141,6 +141,7 @@
             margin: 0 auto 30px;
             display: block;
             border: 3px solid var(--secondary-color);
+            background-color: var(--white);
         }
 
         .btn {
@@ -151,6 +152,7 @@
             text-transform: uppercase;
             margin: 10px;
             cursor: pointer;
+            text-align: center;
         }
 
         .btn-primary {
@@ -211,7 +213,7 @@
             color: var(--whatsapp-green);
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 30px;
             padding: 15px;
             font-size: 14px;
             font-weight: bold;
@@ -302,7 +304,7 @@
             border-radius: 5px;
         }
 
-        /* B2B & Forms */
+        /* B2B Capabilities */
         .b2b-capabilities {
             background-color: var(--white);
             padding: 60px 5%;
@@ -323,17 +325,38 @@
             border-radius: 5px;
         }
 
+        /* Director's Desk */
         .director-desk {
             background-color: var(--primary-color);
             color: var(--white);
             padding: 80px 5%;
-            text-align: center;
-        }
-        
-        .director-desk h2 {
-            color: var(--secondary-color);
         }
 
+        .director-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .director-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--secondary-color);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            flex-shrink: 0;
+        }
+
+        .director-text {
+            flex: 1;
+        }
+
+        /* RFQ Form */
         .rfq-section {
             background: var(--white);
             padding: 60px;
@@ -364,6 +387,7 @@
             .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
             .whatsapp-float svg { width: 28px; height: 28px; }
             .feature-badge { font-size: 14px; padding: 8px 12px; }
+            .director-container { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
@@ -388,8 +412,9 @@
         </div>
     </header>
 
-    <!-- Trust Badges -->
+    <!-- Trust Badges (UPDATED with Trademark) -->
     <div class="credentials">
+        <span>✅ Trademark Registered ™</span>
         <span>✅ FSSAI Certified</span>
         <span>✅ IEC Registered Exporter</span>
         <span>✅ CIN Compliant Corporate Entity</span>
@@ -401,16 +426,17 @@
         <h1>Global Standard. Local Excellence.</h1>
         <p>Your Trusted Partner in International Trade & Professional Services</p>
         
-        <!-- NEW: Added visual tags highlighting your 4 core verticals -->
+        <!-- Feature Pillars -->
         <div class="hero-features">
             <span class="feature-badge">🌿 Premium Spices</span>
             <span class="feature-badge">💧 Pure Oils</span>
             <span class="feature-badge">👕 Fashion Apparel</span>
-            <span class="feature-badge">⚖️ Legal & Corporate Services</span>
+            <span class="feature-badge">⚖️ Legal Services</span>
         </div>
 
-        <!-- NEW: Replaced vegetables with the TRSSKO product image -->
-        <img src="1000586618.jpg" alt="The TRSSKO Identity - Pure & Authentic Spices" class="hero-banner-img">
+        <!-- Official TRSSKO Trademark Products Image -->
+        <!-- Note: Ensure 1000586618.jpg is saved in the exact same folder as your HTML file -->
+        <img src="1000586618.jpg" alt="TRSSKO Registered Trademark Products - Pure & Authentic Spices" class="hero-banner-img">
 
         <div>
             <a href="https://www.amazon.in/s?k=TRSSKO&ref=bl_dp_s_web_0" target="_blank" class="btn btn-primary">Shop Retail Store</a>
@@ -432,7 +458,7 @@
                     <p>Dedicated legal consultation and support by certified advocates. We ensure that international trade operations and corporate affairs adhere to the highest compliance standards.</p>
                     <div class="buying-options">
                         <small><strong>Direct Legal Consultation:</strong></small>
-                        <a href="https://wa.me/917417685168?text=Hello,%20I%20need%20legal%20assistance." target="_blank" class="b2b-btn" style="background-color: var(--whatsapp-green);">💬 Chat on WhatsApp</a>
+                        <a href="https://wa.me/917417685168?text=Hello,%20I%20need%20legal%20assistance." target="_blank" class="b2b-btn" style="background-color: var(--whatsapp-green); display: flex; justify-content: center; align-items: center;">💬 Chat on WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -442,7 +468,7 @@
                 <img src="https://m.media-amazon.com/images/I/81v1jEEQazL._AC_UF894,1000_QL80_.jpg" alt="TRSSKO Rice, Oil and Masala">
                 <div class="product-info">
                     <h3>Premium FMCG: Spices, Oils & Rice</h3>
-                    <p>Aromatic basmati rice, cold-pressed pure oils, and unadulterated spices. Processed and packaged under strict FSSAI guidelines for kitchens worldwide.</p>
+                    <p>Aromatic basmati rice, cold-pressed pure oils, and our trademark registered unadulterated spices. Processed and packaged under strict FSSAI guidelines.</p>
                     <div class="buying-options">
                         <small><strong>For Retail (Single Units):</strong></small>
                         <a href="https://www.amazon.in/s?k=TRSSKO&ref=bl_dp_s_web_0" target="_blank" class="b2c-btn">🛒 Buy on Amazon</a>
@@ -493,16 +519,23 @@
         </div>
     </section>
 
-    <!-- Director's Desk -->
+    <!-- Director's Desk (UPDATED with Layout & Image) -->
     <section id="director" class="director-desk">
-        <h2>From the Director's Desk</h2>
-        <p style="max-width: 800px; margin: 0 auto 30px; font-size: 18px;">
-            "At TRSSKO Enterprises, our foundation is built on legal integrity and uncompromising quality. As an Advocate and Director, I ensure that our international trade operations adhere to the highest global legal compliance standards. Beyond our export operations, I also provide dedicated legal consultation and services."
-        </p>
+        <h2 class="section-title" style="color: var(--secondary-color); margin-bottom: 40px;">From the Director's Desk</h2>
         
-        <a href="https://wa.me/917417685168?text=Hello,%20I%20am%20looking%20for%20legal%20services%20and%20consultation." target="_blank" class="btn btn-whatsapp" style="background-color: var(--white); color: var(--primary-color);">
-            💬 Chat on WhatsApp for Legal Services
-        </a>
+        <div class="director-container">
+            <!-- Using a professional placeholder for the Director. You can replace the src link with your actual photo later -->
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80" alt="Director of TRSSKO Enterprises" class="director-img">
+            
+            <div class="director-text">
+                <p style="font-size: 18px; font-style: italic; margin-bottom: 25px; line-height: 1.8;">
+                    "At TRSSKO Enterprises, our foundation is built on legal integrity and uncompromising quality. As an Advocate and Director, I ensure that our international trade operations adhere to the highest global legal compliance standards. Beyond our export operations, I also provide dedicated legal consultation and services."
+                </p>
+                <a href="https://wa.me/917417685168?text=Hello,%20I%20am%20looking%20for%20legal%20services%20and%20consultation." target="_blank" class="btn btn-whatsapp" style="background-color: var(--white); color: var(--primary-color); display: inline-flex; align-items: center; gap: 10px;">
+                    💬 Chat on WhatsApp for Legal Services
+                </a>
+            </div>
+        </div>
     </section>
 
     <!-- B2B RFQ Form -->
@@ -566,7 +599,7 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 TRSSKO Enterprises. All Rights Reserved.</p>
-        <p style="font-size: 12px; margin-top: 10px; color: #aaa;">FSSAI | IEC | TradeIndia Verified</p>
+        <p style="font-size: 12px; margin-top: 10px; color: #aaa;">Trademark Registered | FSSAI | IEC | TradeIndia Verified</p>
     </footer>
 
 </body>
