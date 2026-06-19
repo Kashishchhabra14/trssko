@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TRSSKO | Premium Indian Export House — FMCG · Apparel · Legal</title>
   <meta name="description" content="TRSSKO is an IEC-licensed Indian export house supplying bulk export-quality spices, jaggery, basmati rice and fashion apparel to UAE, UK, USA, Canada & Australia. Request a quote today.">
-  <meta name="keywords" content="Indian spices bulk supplier, export quality turmeric, coriander powder exporter, basmati rice exporter India, jaggery supplier UAE, FMCG export India, IEC licensed exporter Meerut">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -221,27 +220,28 @@
     .cloth-cta h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; }
     .cloth-cta p  { opacity: 0.7; font-size: 0.9rem; margin-top: 6px; }
 
-    /* ── ABOUT ── */
+    /* ── ABOUT & TEAM ── */
     #about { background: var(--white); }
-    .about-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: start; }
-    .detail-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: 64px; align-items: start; }
+    
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 32px; }
+    
+    .detail-table { width: 100%; border-collapse: collapse; margin-top: 20px; max-width: 600px; }
     .detail-table tr { border-bottom: 1px solid #eee; }
     .detail-table td { padding: 11px 0; font-size: 0.86rem; vertical-align: top; }
     .detail-table td:first-child { color: var(--mid); width: 46%; font-weight: 500; }
     .detail-table td:last-child { color: var(--navy); font-weight: 600; }
     .detail-table a { color: var(--gold); text-decoration: none; }
-    .director-card { background: var(--navy); border-radius: 12px; overflow: hidden; box-shadow: 0 8px 36px rgba(11,31,58,0.18); }
-    .dir-photo-wrap { position: relative; }
-    .dir-photo-wrap img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top center; display: block; }
+    
+    .director-card { background: var(--navy); border-radius: 12px; overflow: hidden; box-shadow: 0 8px 36px rgba(11,31,58,0.18); height: 100%; display: flex; flex-direction: column; }
+    .dir-photo-wrap { position: relative; flex: 1; min-height: 320px; }
+    .dir-photo-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; position: absolute; inset: 0; }
     .dir-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent 0%, rgba(11,31,58,0.97) 55%); padding: 60px 28px 28px; }
-    .dir-overlay h3 { font-family: 'Playfair Display', serif; font-size: 1.45rem; color: var(--white); }
-    .dir-overlay .dir-title { color: var(--gold-lt); font-size: 0.83rem; margin-top: 4px; }
+    .dir-overlay h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--white); }
+    .dir-overlay .dir-title { color: var(--gold-lt); font-size: 0.8rem; margin-top: 4px; line-height: 1.4; }
     .dir-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
     .dir-tag { background: rgba(201,168,76,0.14); border: 1px solid rgba(201,168,76,0.3); color: var(--gold-lt); font-size: 0.7rem; padding: 4px 11px; border-radius: 20px; }
-    .dir-footer { padding: 22px 28px; display: flex; gap: 12px; flex-wrap: wrap; background: #081629; }
-    .dir-footer .btn { flex: 1; text-align: center; padding: 12px; font-size: 0.82rem; }
-    .dir-outline { border: 2px solid var(--gold); color: var(--gold); background: transparent; }
-
+    
     /* ── CONTACT & SOCIALS ── */
     #contact { background: var(--navy); text-align: center; padding: 80px 0; }
     #contact .eyebrow { color: var(--gold-lt); }
@@ -279,7 +279,6 @@
       .hamburger { display: flex; }
       .biz-grid { grid-template-columns: 1fr; }
       .rfq-wrap { grid-template-columns: 1fr; }
-      .about-grid { grid-template-columns: 1fr; }
       .cloth-grid { grid-template-columns: 1fr 1fr; }
       .process-steps { grid-template-columns: 1fr 1fr; }
       .process-steps::before { display: none; }
@@ -379,7 +378,7 @@
         <div class="biz-card-head">
           <div class="biz-icon">🌿</div>
           <h3>FMCG & Food Exports</h3>
-          <p>Export-quality spices, jaggery, basmati rice & masala tea — FSSAI compliant, hygienically packed, with full B2B data sheets and MOQ guidance for international buyers.</p>
+          <p>Export-quality spices, jaggery, basmati rice & normal tea in elichi flavour — FSSAI compliant, hygienically packed, with full B2B data sheets and MOQ guidance for international buyers.</p>
         </div>
         <div class="biz-card-foot"><span>View Catalog + MOQs</span><span>→</span></div>
       </a>
@@ -481,13 +480,13 @@
         <div class="prod-header">
           <div class="prod-icon">🍵</div>
           <div>
-            <h4>Masala Tea (Chai)</h4>
-            <div class="prod-sub">Spiced CTC Blend · Export Grade</div>
+            <h4>Normal Tea in Elichi Flavour</h4>
+            <div class="prod-sub">Premium Blend · Export Grade</div>
           </div>
         </div>
         <div class="prod-specs">
           <div class="spec-row"><span class="spec-label">Tea Base</span><span class="spec-val">Premium CTC Assam</span></div>
-          <div class="spec-row"><span class="spec-label">Spice Blend</span><span class="spec-val">Cardamom, Ginger, Clove, Pepper</span></div>
+          <div class="spec-row"><span class="spec-label">Spice Blend</span><span class="spec-val">Cardamom (Elichi) Infused</span></div>
           <div class="spec-row"><span class="spec-label">Moisture</span><span class="spec-val">≤ 8%</span></div>
           <div class="spec-row"><span class="spec-label">Packaging</span><span class="spec-val">200g / 500g / 1kg / Bulk</span></div>
           <div class="spec-row"><span class="spec-label">Shelf Life</span><span class="spec-val">24 months</span></div>
@@ -611,7 +610,7 @@
         <div class="cert-badge-icon">🏛️</div>
         <h4>MCA Company Registration</h4>
         <div class="cert-num">CIN: U18209UP2023OPC176366</div>
-        <p>Registered as TRSSKO Fashion (OPC) Private Limited under Companies Act, 2013. Verifiable on MCA21 portal.</p>
+        <p>Registered as TRSSKO FASHION (OPC) PRIVATE LIMITED under Companies Act, 2013. Verifiable on MCA21 portal.</p>
         <span class="cert-status cert-active">✓ Active · OPC</span>
       </div>
       <div class="cert-card">
@@ -648,11 +647,11 @@
         <div class="divider"></div>
         <p>Fill in your requirements and we'll respond within 24 hours with a formal Proforma Invoice, product data sheets, and shipping options.</p>
         <div class="rfq-channels">
-          <a href="mailto:kashish@trssko.in" class="rfq-channel">
+          <a href="mailto:info.chhabraenterprices@gmail.com" class="rfq-channel">
             <div class="ch-icon">📧</div>
             <div>
               <h5>Email (Formal Inquiries)</h5>
-              <p>kashish@trssko.in · Response within 24 hrs</p>
+              <p>info.chhabraenterprices@gmail.com</p>
             </div>
           </a>
           <a href="https://wa.me/917417685168" class="rfq-channel" target="_blank">
@@ -704,7 +703,7 @@
               <option>Turmeric Powder</option>
               <option>Coriander Powder</option>
               <option>Red Chilli Powder</option>
-              <option>Masala Tea</option>
+              <option>Normal Tea in Elichi Flavour</option>
               <option>Organic Jaggery</option>
               <option>Basmati Rice</option>
               <option>Multiple FMCG Products</option>
@@ -749,7 +748,7 @@
     <span class="eyebrow">Legal & Compliance Advisory</span>
     <h2 class="section-title" style="color:var(--white);">Where Technology Meets the Law.</h2>
     <div class="divider"></div>
-    <p style="color:rgba(255,255,255,0.58);max-width:620px;font-size:0.92rem;line-height:1.8;">Led by Advocate & Director Kashish Chhabra — enrolled with the Bar Council of Uttar Pradesh (2026) — combining BCA, LL.B, and PG Diploma in Cyber Crime expertise.</p>
+    <p style="color:rgba(255,255,255,0.58);max-width:620px;font-size:0.92rem;line-height:1.8;">Led by Founder & Director Kashish Chhabra — enrolled with the Bar Council of Uttar Pradesh (2026) — combining BCA, LL.B, and PG Diploma in Cyber Crime expertise.</p>
     <div class="legal-grid">
       <div class="legal-card"><div class="lc-num">01</div><h4>Cyber Law Advisory</h4><p>Counsel on cyber offences, digital evidence, IT Act 2000 compliance.</p></div>
       <div class="legal-card"><div class="lc-num">02</div><h4>DPDP Act 2023</h4><p>End-to-end compliance under India's Data Protection Act.</p></div>
@@ -780,40 +779,68 @@
     <div class="about-grid">
       <div>
         <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:12px;">Company Profile</h3>
-        <p style="color:var(--mid);font-size:0.9rem;line-height:1.8;">TRSSKO Fashion (OPC) Private Limited is a Meerut-based One Person Company incorporated under the Companies Act, 2013. Founded in 2023, we operate as an IEC-licensed merchant exporter across FMCG food products and fashion apparel, with an in-house legal advisory vertical.</p>
+        <p style="color:var(--mid);font-size:0.9rem;line-height:1.8;">TRSSKO FASHION (OPC) PRIVATE LIMITED is a Meerut-based One Person Company incorporated under the Companies Act, 2013. Founded in 2023, we operate as an IEC-licensed merchant exporter across FMCG food products and fashion apparel, with an in-house legal advisory vertical.</p>
 
         <table class="detail-table">
-          <tr><td>Legal Name</td><td>TRSSKO Fashion (OPC) Pvt. Ltd.</td></tr>
+          <tr><td>Legal Name</td><td>TRSSKO FASHION (OPC) PRIVATE LIMITED</td></tr>
           <tr><td>CIN</td><td>U18209UP2023OPC176366</td></tr>
           <tr><td>IEC</td><td>BKQPC7409C</td></tr>
           <tr><td>Registered Office</td><td>Meerut, Uttar Pradesh, India</td></tr>
           <tr><td>Website</td><td><a href="https://trssko.in" target="_blank">trssko.in</a></td></tr>
-          <tr><td>Email</td><td><a href="mailto:kashish@trssko.in">kashish@trssko.in</a></td></tr>
+          <tr><td>Email</td><td><a href="mailto:info.chhabraenterprices@gmail.com">info.chhabraenterprices@gmail.com</a></td></tr>
           <tr><td>Phone / WhatsApp</td><td><a href="https://wa.me/917417685168">+91 74176 85168</a></td></tr>
         </table>
       </div>
 
       <div>
-        <div class="director-card">
-          <div class="dir-photo-wrap">
-            <img src="director-kashish.jpg" alt="Kashish Chhabra — Advocate & Director, TRSSKO" onerror="this.style.display='none'">
-            <div class="dir-overlay">
-              <h3>Kashish Chhabra</h3>
-              <p class="dir-title">Advocate & Director · TRSSKO Fashion (OPC) Pvt. Ltd.</p>
-              <div class="dir-tags">
-                <span class="dir-tag">Advocate · Bar Council UP</span>
-                <span class="dir-tag">BCA + LL.B</span>
-                <span class="dir-tag">PG Diploma · Cyber Crime</span>
-                <span class="dir-tag">Export Trade Specialist</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:12px;">Our Leadership</h3>
+        <div class="team-grid">
+          
+          <div class="director-card">
+            <div class="dir-photo-wrap">
+              <img src="director-kashish.jpg" alt="Kashish Chhabra" onerror="this.style.display='none'">
+              <div class="dir-overlay">
+                <h3>Mr. Kashish Chhabra</h3>
+                <p class="dir-title">Founder & Director<br><span style="color:rgba(255,255,255,0.7);font-size:0.75rem;">Focus: Worldwide Business Expansion</span></p>
+                <div class="dir-tags">
+                  <span class="dir-tag">Advocate · Bar Council UP</span>
+                  <span class="dir-tag">Export Trade Specialist</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="dir-footer">
-            <a href="https://wa.me/917417685168" class="btn btn-gold" target="_blank">WhatsApp</a>
-            <a href="mailto:kashish@trssko.in" class="btn dir-outline">Email</a>
+
+          <div class="director-card">
+            <div class="dir-photo-wrap">
+              <img src="director-satyam.jpg" alt="Satyam Chhabra" onerror="this.style.display='none'">
+              <div class="dir-overlay">
+                <h3>Satyam Chhabra</h3>
+                <p class="dir-title">Co-Founder<br><span style="color:rgba(255,255,255,0.7);font-size:0.75rem;">Focus: Product Quality & Sourcing</span></p>
+                <div class="dir-tags">
+                  <span class="dir-tag">Quality Control</span>
+                  <span class="dir-tag">Supply Chain Operations</span>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <div class="director-card">
+            <div class="dir-photo-wrap">
+              <img src="director-ojasvi.jpg" alt="Ojasvi Chhabra" onerror="this.style.display='none'">
+              <div class="dir-overlay">
+                <h3>Ojasvi Chhabra</h3>
+                <p class="dir-title">Head of Fashion & Apparels<br><span style="color:rgba(255,255,255,0.7);font-size:0.75rem;">Focus: Textile Exports & Design</span></p>
+                <div class="dir-tags">
+                  <span class="dir-tag">Fashion Procurement</span>
+                  <span class="dir-tag">Private Label Development</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -827,15 +854,14 @@
     
     <div class="contact-cards">
       <div class="contact-card"><div class="cc-icon">📋</div><h4>Formal RFQ</h4><p><a href="#rfq">Submit Inquiry</a></p></div>
-      <div class="contact-card"><div class="cc-icon">📧</div><h4>Email</h4><p><a href="mailto:kashish@trssko.in">kashish@trssko.in</a></p></div>
+      <div class="contact-card"><div class="cc-icon">📧</div><h4>Email</h4><p><a href="mailto:info.chhabraenterprices@gmail.com">info.chhabraenterprices@gmail.com</a></p></div>
       <div class="contact-card"><div class="cc-icon">💬</div><h4>WhatsApp</h4><p><a href="https://wa.me/917417685168">+91 74176 85168</a></p></div>
       <div class="contact-card"><div class="cc-icon">📍</div><h4>Location</h4><p style="color:rgba(255,255,255,0.65);">Meerut, UP, India</p></div>
     </div>
 
     <div class="social-btn-group">
       <a href="https://www.amazon.in/" target="_blank" class="btn btn-gold">🛒 Shop on Amazon</a>
-      <a href="https://instagram.com/theindiareport_" target="_blank" class="btn btn-outline">📸 Follow on Instagram</a>
-      <a href="https://linkedin.com/" target="_blank" class="btn btn-outline">💼 Connect on LinkedIn</a>
+      <a href="https://instagram.com/" target="_blank" class="btn btn-outline">📸 Follow on Instagram</a>
     </div>
   </div>
 </section>
@@ -853,11 +879,12 @@
   
   <div class="footer-socials">
     <a href="https://www.amazon.in/" target="_blank">Amazon Store</a>
-    <a href="https://instagram.com/theindiareport_" target="_blank">Instagram</a>
+    <a href="https://instagram.com/" target="_blank">Instagram</a>
     <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
   </div>
 
-  <p class="footer-legal" style="margin-top: 24px;">© 2024 TRSSKO Fashion (OPC) Pvt. Ltd. · CIN: U18209UP2023OPC176366 · IEC: BKQPC7409C · Meerut, UP, India</p>
+  <p class="footer-legal" style="margin-top: 24px;">© 2024 TRSSKO FASHION (OPC) PRIVATE LIMITED · CIN: U18209UP2023OPC176366 · IEC: BKQPC7409C · Meerut, UP, India</p>
+  <p class="footer-legal" style="margin-top: 8px; color:rgba(255,255,255,0.15);">Site maintained by TRSSKO Infotech</p>
 </footer>
 
 <a href="https://wa.me/917417685168" class="wa-float" target="_blank" title="WhatsApp">💬</a>
