@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TRSSKO Enterprises exports premium FMCG products, specializing in authentic Indian Masala Tea, pure spices, and mustard oil. FSSAI Licensed & globally certified.">
+    <meta name="description" content="TRSSKO Enterprises exports premium FMCG products, specializing in authentic Indian Masala Tea and pure spices. FSSAI Licensed & globally certified.">
     <meta name="keywords" content="Masala Tea, Premium Indian Spices, Authentic Masala, Buy Tea Online, TRSSKO Tea, FMCG Export">
     <title>TRSSKO Enterprises | Premium Masala Tea & Authentic Indian Spices</title>
     <style>
@@ -181,11 +181,14 @@
             height: 380px;
             border-radius: 14px;
             overflow: hidden;
-            background: #F5F5F5;
+            background: #FFFFFF;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             border: 3px solid transparent;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .carousel-item:hover {
@@ -333,7 +336,7 @@
         /* Products Grid */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -342,9 +345,12 @@
             background: #FFFFFF;
             border: 2px solid var(--border-color);
             border-radius: 12px;
-            padding: 2rem;
+            padding: 1.5rem;
             text-align: center;
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         
         .product-card:hover {
@@ -353,13 +359,17 @@
             transform: translateY(-5px);
         }
         
-        .product-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+        .product-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
         }
         
         .product-name {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--green);
             font-weight: 700;
             margin-bottom: 0.5rem;
@@ -368,24 +378,25 @@
         .product-desc {
             font-size: 0.9rem;
             color: var(--text-muted);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
         }
 
         /* Buy Button */
         .btn-buy {
             background: var(--green);
             color: #FFFFFF;
-            padding: 0.6rem 1.5rem;
+            padding: 0.8rem 1.5rem;
             border-radius: 8px;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: 700;
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
-            margin-top: 1rem;
             letter-spacing: 0.5px;
+            width: 100%;
         }
         
         .btn-buy:hover {
@@ -524,17 +535,17 @@
         <div class="carousel-showcase">
             <div class="carousel-wrapper">
                 <div class="carousel-scroll">
-                    <div class="carousel-item"><img id="prod-1" alt="TRSSKO Premium Indian Masala and Spices"></div>
-                    <div class="carousel-item"><img id="prod-2" alt="TRSSKO Authentic Masala Tea Blend"></div>
-                    <div class="carousel-item"><img id="prod-3" alt="Fresh Tea Leaves and Masala Export"></div>
-                    <div class="carousel-item"><img id="prod-4" alt="TRSSKO Premium Pack"></div>
-                    <div class="carousel-item"><img id="prod-5" alt="TRSSKO Mustard Oil"></div>
+                    <!-- Carousel Images updated with provided URLs -->
+                    <div class="carousel-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sWBZD92PhXemqMoKciNRXL8OvWWk0suIE7SBIwVzAvLQRPtIBSLav60&s" alt="All Masala Combined"></div>
+                    <div class="carousel-item"><img src="https://lsmedia.linker-cdn.net/1062229/2026/14843280.jpeg?d=322x192" alt="TRSSKO Authentic Masala Tea Blend"></div>
+                    <div class="carousel-item"><img src="https://5.imimg.com/data5/ANDROID/Default/2026/4/603099637/WD/BU/BK/35944363/prod-20260426-163908908699614597730616-jpg-500x500.jpg" alt="Dhaniya Powder"></div>
+                    <div class="carousel-item"><img src="https://5.imimg.com/data5/ANDROID/Default/2026/4/603099676/QH/NO/ZX/35944363/prod-20260426-1639192698632040267410448-jpg-500x500.jpg" alt="Mirch Powder"></div>
+                    
                     <!-- Duplicates for seamless loop -->
-                    <div class="carousel-item"><img id="prod-1-dup" alt="TRSSKO Premium Indian Masala and Spices"></div>
-                    <div class="carousel-item"><img id="prod-2-dup" alt="TRSSKO Authentic Masala Tea Blend"></div>
-                    <div class="carousel-item"><img id="prod-3-dup" alt="Fresh Tea Leaves and Masala Export"></div>
-                    <div class="carousel-item"><img id="prod-4-dup" alt="TRSSKO Premium Pack"></div>
-                    <div class="carousel-item"><img id="prod-5-dup" alt="TRSSKO Mustard Oil"></div>
+                    <div class="carousel-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sWBZD92PhXemqMoKciNRXL8OvWWk0suIE7SBIwVzAvLQRPtIBSLav60&s" alt="All Masala Combined"></div>
+                    <div class="carousel-item"><img src="https://lsmedia.linker-cdn.net/1062229/2026/14843280.jpeg?d=322x192" alt="TRSSKO Authentic Masala Tea Blend"></div>
+                    <div class="carousel-item"><img src="https://5.imimg.com/data5/ANDROID/Default/2026/4/603099637/WD/BU/BK/35944363/prod-20260426-163908908699614597730616-jpg-500x500.jpg" alt="Dhaniya Powder"></div>
+                    <div class="carousel-item"><img src="https://5.imimg.com/data5/ANDROID/Default/2026/4/603099676/QH/NO/ZX/35944363/prod-20260426-1639192698632040267410448-jpg-500x500.jpg" alt="Mirch Powder"></div>
                 </div>
             </div>
         </div>
@@ -549,7 +560,7 @@
                 <div class="team-scroll">
                     <!-- Team 1 -->
                     <div class="team-member">
-                        <div class="team-image"><img id="team-1" alt="Kashish Chhabra"></div>
+                        <div class="team-image"><img src="https://placehold.co/380x320/F9F6F1/2D5016?text=Kashish+Chhabra" alt="Kashish Chhabra"></div>
                         <div class="team-info">
                             <div class="team-role">Founder & Legal Advisor</div>
                             <div class="team-name">Kashish Chhabra</div>
@@ -559,19 +570,19 @@
                     
                     <!-- Team 2 -->
                     <div class="team-member">
-                        <div class="team-image"><img id="team-2" alt="Co-Founders"></div>
+                        <div class="team-image"><img src="https://placehold.co/380x320/F9F6F1/2D5016?text=Satyam+Chhabra" alt="Satyam Chhabra"></div>
                         <div class="team-info">
-                            <div class="team-role">Co-Founders</div>
-                            <div class="team-name">Leadership Team</div>
+                            <div class="team-role">Partner & Co-Founder</div>
+                            <div class="team-name">Satyam Chhabra</div>
                             <div class="team-description">Quality Management | Supply Chain Excellence | International Business Development</div>
                         </div>
                     </div>
                     
                     <!-- Team 3 -->
                     <div class="team-member">
-                        <div class="team-image"><img id="team-3" alt="Operations Team"></div>
+                        <div class="team-image"><img src="https://placehold.co/380x320/F9F6F1/2D5016?text=Operations+Team" alt="Operations Team"></div>
                         <div class="team-info">
-                            <div class="team-role">Operations & Team</div>
+                            <div class="team-role">Operations & Management</div>
                             <div class="team-name">Dedicated Team</div>
                             <div class="team-description">Premium Quality Assurance | Export Excellence | Customer Satisfaction First</div>
                         </div>
@@ -579,7 +590,7 @@
                     
                     <!-- Duplicates -->
                     <div class="team-member">
-                        <div class="team-image"><img id="team-1-dup" alt="Kashish Chhabra"></div>
+                        <div class="team-image"><img src="https://placehold.co/380x320/F9F6F1/2D5016?text=Kashish+Chhabra" alt="Kashish Chhabra"></div>
                         <div class="team-info">
                             <div class="team-role">Founder & Legal Advisor</div>
                             <div class="team-name">Kashish Chhabra</div>
@@ -588,18 +599,18 @@
                     </div>
                     
                     <div class="team-member">
-                        <div class="team-image"><img id="team-2-dup" alt="Co-Founders"></div>
+                        <div class="team-image"><img src="https://placehold.co/380x320/F9F6F1/2D5016?text=Satyam+Chhabra" alt="Satyam Chhabra"></div>
                         <div class="team-info">
-                            <div class="team-role">Co-Founders</div>
-                            <div class="team-name">Leadership Team</div>
+                            <div class="team-role">Partner & Co-Founder</div>
+                            <div class="team-name">Satyam Chhabra</div>
                             <div class="team-description">Quality Management | Supply Chain Excellence | Growth Strategy</div>
                         </div>
                     </div>
                     
                     <div class="team-member">
-                        <div class="team-image"><img id="team-3-dup" alt="Operations Team"></div>
+                        <div class="team-image"><img src="https://placehold.co/380x320/F9F6F1/2D5016?text=Operations+Team" alt="Operations Team"></div>
                         <div class="team-info">
-                            <div class="team-role">Operations & Team</div>
+                            <div class="team-role">Operations & Management</div>
                             <div class="team-name">Dedicated Team</div>
                             <div class="team-description">Quality Assurance | Export Excellence | Service Excellence</div>
                         </div>
@@ -655,33 +666,33 @@
             
             <!-- Product 1: Masala Tea -->
             <div class="product-card">
-                <div class="product-icon">☕</div>
+                <img src="https://lsmedia.linker-cdn.net/1062229/2026/14843280.jpeg?d=322x192" alt="Premium Masala Tea" class="product-image">
                 <div class="product-name">Premium Masala Tea</div>
                 <div class="product-desc">An authentic Indian blend of rich tea leaves and aromatic spices.</div>
-                <a href="YOUR_PAYMENT_LINK_HERE" class="btn-buy">Buy Now</a>
+                <a href="https://razorpay.me/@trsskoenterprices" class="btn-buy" target="_blank">Buy Now</a>
             </div>
 
-            <!-- Product 2: Spices/Masala -->
+            <!-- Product 2: Dhaniya Powder -->
             <div class="product-card">
-                <div class="product-icon">🌶️</div>
-                <div class="product-name">Authentic Indian Masala</div>
-                <div class="product-desc">Pure, aromatic spices sourced directly from the finest farms.</div>
-                <a href="YOUR_PAYMENT_LINK_HERE" class="btn-buy">Buy Now</a>
+                <img src="https://5.imimg.com/data5/ANDROID/Default/2026/4/603099637/WD/BU/BK/35944363/prod-20260426-163908908699614597730616-jpg-500x500.jpg" alt="Dhaniya Powder" class="product-image">
+                <div class="product-name">Dhaniya Powder (Coriander)</div>
+                <div class="product-desc">Pure, finely milled coriander sourced directly from the finest farms.</div>
+                <a href="https://razorpay.me/@trsskoenterprices" class="btn-buy" target="_blank">Buy Now</a>
             </div>
 
-            <!-- Product 3: Mustard Oil -->
+            <!-- Product 3: Mirch Powder -->
             <div class="product-card">
-                <div class="product-icon">🌾</div>
-                <div class="product-name">Pure Mustard Oil</div>
-                <div class="product-desc">Cold-pressed mustard oil retaining natural flavors and health benefits.</div>
-                <a href="YOUR_PAYMENT_LINK_HERE" class="btn-buy">Buy Now</a>
+                <img src="https://5.imimg.com/data5/ANDROID/Default/2026/4/603099676/QH/NO/ZX/35944363/prod-20260426-1639192698632040267410448-jpg-500x500.jpg" alt="Mirch Powder" class="product-image">
+                <div class="product-name">Mirch Powder (Red Chili)</div>
+                <div class="product-desc">Vibrant and spicy authentic red chili powder for rich flavors.</div>
+                <a href="https://razorpay.me/@trsskoenterprices" class="btn-buy" target="_blank">Buy Now</a>
             </div>
             
-            <!-- Existing Category: Fashion -->
+            <!-- Product 4: Fashion (Placeholder Image) -->
             <div class="product-card">
-                <div class="product-icon">👗</div>
+                <img src="https://placehold.co/400x300/F9F6F1/2D5016?text=Fashion+Apparel" alt="Fashion and Apparel" class="product-image">
                 <div class="product-name">Fashion & Apparel</div>
-                <div class="product-desc">Contemporary & Traditional Wear | International Quality</div>
+                <div class="product-desc">Contemporary & Traditional Wear | International Quality Standard.</div>
                 <a href="https://www.instagram.com/trssko._.fashion/" target="_blank" class="btn-buy">View Collection</a>
             </div>
 
@@ -724,36 +735,9 @@
         <div class="footer-bottom">
             <p style="margin-bottom: 1rem;"><strong>TRSSKO Enterprises (OPC) Private Limited</strong></p>
             <p>Premium FMCG | Fashion | Legal Advisory | International B2B Trade Partner</p>
-            <p style="margin-top: 1.5rem;">© 2024 TRSSKO Enterprises. All Rights Reserved.</p>
+            <p style="margin-top: 1.5rem;">© 2026 TRSSKO Enterprises. All Rights Reserved.</p>
             <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">CIN: U18209UP2023OPC176366 | Quality • Trust • International Standards</p>
         </div>
     </div>
-
-    <script>
-        // Load Product Images
-        const products = {
-            'prod-1': '/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMCAgoKCggICAoICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAoICAgICgoKCAgNDQoIDQgICggBAwQEBgUGCgYGCg0NCg0PDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDf/AABEIArAEAAMBIgACEQEDEQH/xAAdAAAABgMBAAAAAAAAAAAAAAAA...', // base64 truncated for brevity
-            'prod-2': '/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMCAgoKCgoKCgoKCgoICgoICgoICggKCggICAoKCggICAoKCAgICggICAgICAoKCAgICgoKCAgLDQoIDQgICggBAwQEBgUGCgYGCg8OCw0QDw8PDQ8PEA8PDw8PDQ0NDQ0PDQ0PDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDf/AABEIARQEAAMBIgACEQEDEQH/xAAdAAABBAMBAQAAAAAAAAAAAAA...', // base64 truncated for brevity
-            'prod-3': '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...' // base64 truncated for brevity
-        };
-
-        // Initialize images
-        Object.keys(products).forEach(id => {
-            const el = document.getElementById(id);
-            const dupEl = document.getElementById(id + '-dup');
-            if (el && products[id]) el.src = 'data:image/jpeg;base64,' + products[id];
-            if (dupEl && products[id]) dupEl.src = 'data:image/jpeg;base64,' + products[id];
-        });
-
-        // Initialize team placeholders
-        const teamImages = ['team-1', 'team-2', 'team-3', 'team-1-dup', 'team-2-dup', 'team-3-dup'];
-        teamImages.forEach(id => {
-            const el = document.getElementById(id);
-            if (el) {
-                // Set a placeholder pattern/color since we don't have the base64 for team
-                el.style.backgroundColor = 'transparent'; 
-            }
-        });
-    </script>
 </body>
 </html>
