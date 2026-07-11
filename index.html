@@ -137,4 +137,38 @@
             text-align: center;
             color: var(--text-muted);
             margin-bottom: 2rem;
+            font-size: 1.1rem;            color: var(--gold);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            color: var(--green);
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: 800;
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+        
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--gold), var(--green));
+            margin: 1rem auto 0;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
             font-size: 1.1rem;
