@@ -197,6 +197,15 @@
   footer a:hover{color:var(--gold);}
   .footer-bottom{max-width:1240px;margin:36px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:.76rem;color:#8C8874;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
 
+  /* ===== Floating WhatsApp button ===== */
+  .whatsapp-float{
+    position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;
+    background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);z-index:400;transition:.15s;
+  }
+  .whatsapp-float:hover{transform:scale(1.06);}
+  .whatsapp-float svg{width:30px;height:30px;}
+
   /* ===== Modal ===== */
   .modal-overlay{
     position:fixed;inset:0;background:rgba(20,41,10,.55);display:none;align-items:center;justify-content:center;
@@ -219,6 +228,8 @@
   .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
   .submit-btn{width:100%;padding:13px;background:var(--green);color:var(--white);border-radius:var(--radius);font-weight:700;font-size:.94rem;margin-top:6px;}
   .submit-btn:hover{background:var(--green-light);}
+  .whatsapp-btn{background:#25D366;color:#0B3D22;margin-top:10px;}
+  .whatsapp-btn:hover{background:#1EBE5A;}
   .form-status{font-size:.85rem;margin-top:12px;padding:10px 12px;border-radius:var(--radius);display:none;}
   .form-status.ok{display:block;background:#E7F1DD;color:var(--green);border:1px solid #BFDBA0;}
   .form-status.err{display:block;background:#FBE9E5;color:var(--red);border:1px solid #E9BDB2;}
@@ -247,8 +258,8 @@
     <nav class="main">
       <a href="#shop">Shop</a>
       <a href="#how">How it works</a>
-      <a href="fashion.html">Fashion</a>
-      <a href="legal-advisory.html">Legal Advisory</a>
+      <a href="https://www.instagram.com/trssko._.fashion/" target="_blank" rel="noopener">Fashion</a>
+      <a href="https://www.instagram.com/lawtotrssko/" target="_blank" rel="noopener">Legal Advisory</a>
       <a href="#team">Team</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -366,8 +377,8 @@
       <h5>Shop</h5>
       <ul>
         <li><a href="#shop">FMCG Products</a></li>
-        <li><a href="fashion.html">Fashion</a></li>
-        <li><a href="legal-advisory.html">Legal Advisory</a></li>
+        <li><a href="https://www.instagram.com/trssko._.fashion/" target="_blank" rel="noopener">Fashion (Instagram)</a></li>
+        <li><a href="https://www.instagram.com/lawtotrssko/" target="_blank" rel="noopener">Legal Advisory (Instagram)</a></li>
       </ul>
     </div>
     <div>
@@ -382,6 +393,7 @@
       <ul>
         <li><a href="mailto:trade@trssko.in">trade@trssko.in</a></li>
         <li><a href="mailto:export@trssko.in">export@trssko.in</a></li>
+        <li><a href="https://wa.me/917417685168" target="_blank" rel="noopener">WhatsApp: +91 74176 85168</a></li>
       </ul>
     </div>
   </div>
@@ -392,6 +404,13 @@
 </footer>
 
 <!-- ===================== INQUIRY MODAL ===================== -->
+<!-- Floating WhatsApp button -->
+<a href="https://wa.me/917417685168" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat with TRSSKO on WhatsApp">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="currentColor" d="M16.02 3C9.4 3 4 8.38 4 15.02c0 2.36.66 4.56 1.8 6.44L4 29l7.72-1.74a11.9 11.9 0 0 0 4.3.8h.01c6.63 0 12.02-5.38 12.02-12.02C28.05 8.38 22.66 3 16.02 3zm0 21.8h-.01a9.7 9.7 0 0 1-4.94-1.35l-.35-.21-3.66.82.84-3.57-.23-.37a9.72 9.72 0 0 1-1.5-5.1c0-5.38 4.38-9.76 9.86-9.76 2.63 0 5.1 1.03 6.96 2.9a9.75 9.75 0 0 1 2.88 6.94c0 5.38-4.38 9.7-9.85 9.7zm5.4-7.28c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.66.15-.2.3-.76.96-.93 1.16-.17.2-.34.22-.63.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.66-1.59-.9-2.17-.24-.57-.48-.5-.66-.5-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.24-.7.24-1.29.17-1.42-.07-.13-.27-.2-.56-.35z"/>
+  </svg>
+</a>
+
 <div class="modal-overlay" id="inquiryOverlay">
   <div class="modal">
     <button class="modal-close" onclick="closeInquiry()" aria-label="Close">×</button>
@@ -442,6 +461,7 @@
         <textarea id="inqMsg" placeholder="Any specifications, target price, or timeline"></textarea>
       </div>
       <button type="submit" class="submit-btn">Send Inquiry</button>
+      <button type="button" class="submit-btn whatsapp-btn" onclick="sendInquiryToWhatsApp()">Send via WhatsApp instead</button>
       <div class="form-status" id="inqStatus"></div>
     </form>
   </div>
@@ -726,6 +746,41 @@ Message: ${payload.message}`
     statusEl.className = "form-status ok";
     statusEl.textContent = "Opening your email app to send this inquiry to info.chhabraenterprices@gmail.com.";
   }
+}
+
+/* ---------- International: send inquiry straight to WhatsApp ----------
+   Opens wa.me with the form fields pre-filled as a message to
+   TRSSKO's export desk on WhatsApp (+91 74176 85168).
+------------------------------------------------------------------ */
+function sendInquiryToWhatsApp(){
+  const productName = PRODUCTS.find(p => p.id === document.getElementById("inqProduct").value)?.name || "";
+  const name = document.getElementById("inqName").value;
+  const country = document.getElementById("inqCountry").value;
+  const email = document.getElementById("inqEmail").value;
+  const phone = document.getElementById("inqPhone").value;
+  const qty = document.getElementById("inqQty").value;
+  const incoterm = document.getElementById("inqIncoterm").value;
+  const msg = document.getElementById("inqMsg").value;
+
+  if(!name || !country || !email){
+    const statusEl = document.getElementById("inqStatus");
+    statusEl.className = "form-status err";
+    statusEl.textContent = "Please fill in your name, country and email before sending on WhatsApp.";
+    return;
+  }
+
+  const text =
+`Trade Inquiry — TRSSKO Enterprises
+Product: ${productName}
+Name: ${name}
+Country: ${country}
+Email: ${email}
+Phone: ${phone}
+Quantity: ${qty}
+Incoterm: ${incoterm}
+Message: ${msg}`;
+
+  window.open(`https://wa.me/917417685168?text=${encodeURIComponent(text)}`, "_blank");
 }
 
 /* ---------- Init ---------- */
