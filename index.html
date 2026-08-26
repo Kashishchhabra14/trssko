@@ -1,3 +1,94 @@
+Pasted text.txt
+Document
+
+I've got your Measurement ID from Tag Manager: G-8LR6NJ7W0M. I'll wire this in properly — including making pageviews fire when someone switches between your Group/Legal/FMCG sections (since your site is all one URL with JS-toggled views, a plain snippet alone would only ever log the first pageview). ADD TAG SO THAT I CAN ANALYSE SITE AND REGENERATE CODE
+
+Yes. I reviewed your uploaded TRSSKO website code and integrated GA4 Measurement ID G-8LR6NJ7W0M into the existing single-page JavaScript structure. Your current site uses showView() to switch between Group, Legal and FMCG without changing the URL, so I specifically added virtual pageviews rather than relying only on the initial page load.
+
+What is now tracked
+TRSSKO Group → virtual /group
+Legal & BPO → virtual /legal
+FMCG Shop → virtual /fmcg
+Section switching
+FMCG Begin Checkout
+Successful Razorpay purchase
+Failed payment
+WhatsApp clicks
+TRSSKO Fashion Instagram clicks
+Product name, product ID, price and currency for ecommerce events
+No customer name, email, phone or address is sent to GA4
+
+I also checked the generated JavaScript for syntax errors; it passes validation.
+
+Updated website code
+
+Download the GA4-integrated TRSSKO HTML
+
+Your existing Razorpay checkout remains intact; the current site already uses Razorpay and opens WhatsApp after successful payment.
+
+Important: after uploading this HTML to your website, open Google Analytics → Reports → Realtime and test switching Group → Legal → FMCG. You should see the corresponding activity.
+
+TRSSKO_GA4_Analytics_Integrated.html
+HTML
+make it more user frindly so that person can buy from site and international client can anso buy from india in uae us 
+
+Done. I upgraded the TRSSKO website to make the shopping experience much more customer-friendly and international-buyer oriented.
+
+What I changed
+
+For Indian customers
+
+Country selector → India
+Quantity selection
+Clear order total
+Pay Securely button
+Razorpay checkout remains integrated
+WhatsApp ordering remains available
+Product prices can be viewed in INR/USD/AED
+
+For UAE / USA / international customers
+
+“Shop from India — we also serve international buyers” section
+UAE, USA and other-country selection
+International order form collects:
+Name
+Email
+WhatsApp/phone
+Country
+Quantity
+Complete delivery address
+International Order button
+Shipping/export charges are confirmed before payment instead of charging a customer an incorrect shipping amount.
+The order request is automatically formatted and sent to your TRSSKO WhatsApp.
+
+This is important because you haven't provided fixed UAE/USA shipping rates yet; I didn't invent shipping prices.
+
+International payment
+
+Razorpay can accept foreign-issued cards for Indian businesses, but international card payments must be enabled on your Razorpay account and Razorpay requires appropriate website policies such as Terms, Privacy, Refund/Cancellation and Shipping policies.
+
+Razorpay also supports 100+ international currencies, including USD and AED, when the international-payment feature is enabled.
+
+For larger B2B/export buyers, Razorpay also offers international bank-transfer facilities for currencies such as USD, GBP, EUR and AED.
+
+One important improvement still recommended
+
+Your current Razorpay implementation is browser-side. The existing code itself notes that there is no server-side order creation/payment-signature verification.
+
+For a serious international e-commerce site, I recommend the next version has:
+
+Customer → Cart → Shipping calculation → Razorpay international payment → Server verifies payment → Order ID → Invoice → Email/WhatsApp confirmation → Admin order dashboard
+
+That will make TRSSKO look much more like a proper international export/e-commerce business rather than a simple HTML shop.
+
+Download the upgraded website
+
+Download TRSSKO International Shopping Website – HTML
+
+The code has also been syntax-checked after the modifications.
+
+My recommendation: the next upgrade should be a proper TRSSKO checkout system with cart + quantity + India/UAE/USA shipping + international Razorpay payment + automatic invoice/order confirmation, while keeping your GA4 tracking so you can see exactly where customers abandon the purchase.
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +98,41 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<!-- ============================================================= -->
+<!-- GOOGLE ANALYTICS 4 — Google tag -->
+<!-- Measurement ID: G-8LR6NJ7W0M -->
+<!-- Virtual pageviews are sent when the JS-switched views change. -->
+<!-- ============================================================= -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8LR6NJ7W0M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  // Disable GA4's automatic first page_view so this SPA sends one
+  // controlled page_view for the initial Group view below.
+  gtag('config', 'G-8LR6NJ7W0M', { send_page_view: false });
+
+  function trackPageView(viewName, pageTitle) {
+    var paths = {
+      group: '/group',
+      legal: '/legal',
+      fmcg: '/fmcg'
+    };
+    var key = viewName || 'group';
+    gtag('event', 'page_view', {
+      page_title: pageTitle || document.title,
+      page_location: window.location.origin + (paths[key] || '/'),
+      page_path: paths[key] || '/',
+      virtual_page: key
+    });
+  }
+
+  function trackEvent(eventName, params) {
+    gtag('event', eventName, params || {});
+  }
+</script>
 <style>
   :root{
     --ink:#101827; --paper:#F0E6D2; --gold:#B9924A; --clay:#A34A28;
@@ -186,6 +312,24 @@
     background:#25D366; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 22px rgba(0,0,0,0.35); transition:.2s; }
   .wa-float:hover{ transform:scale(1.08); }
   .wa-float svg{ width:30px; height:30px; }
+
+  /* ================= INTERNATIONAL SHOPPING UX ================= */
+  .shop-tools{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:-18px auto 38px;max-width:900px}
+  .shop-tools .tool{background:var(--white);border:1px solid var(--paper-dim);padding:9px 12px;border-radius:4px;font-size:12.5px;color:#4A4436}
+  .shop-tools select{border:1px solid var(--paper-dim);background:#fff;padding:8px 28px 8px 10px;border-radius:3px;font:inherit;color:var(--ink)}
+  .global-banner{max-width:980px;margin:0 auto 42px;padding:18px 20px;border:1px solid var(--paper-dim);border-radius:6px;background:linear-gradient(135deg,rgba(95,115,80,.10),rgba(185,146,74,.08));display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+  .global-banner h3{font-size:18px;margin-bottom:4px}.global-banner p{font-size:12.5px;color:#625b49}
+  .global-actions{display:flex;gap:8px;flex-wrap:wrap}.global-actions button,.global-actions a{padding:10px 13px;border-radius:3px;font-size:12px;font-weight:600;border:1px solid var(--ink);background:var(--ink);color:#fff}
+  .global-actions a.secondary{background:transparent;color:var(--ink)}
+  .delivery-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 auto 55px;max-width:980px}
+  .delivery-item{padding:14px;border:1px solid var(--paper-dim);background:rgba(255,255,255,.55);border-radius:4px;text-align:center}.delivery-item strong{display:block;font-size:12.5px}.delivery-item span{display:block;margin-top:3px;font-size:11.5px;color:#756e5d}
+  @media(max-width:700px){.delivery-strip{grid-template-columns:1fr}.global-banner{margin-left:18px;margin-right:18px}.shop-tools{margin-left:18px;margin-right:18px}}
+  .country-help{font-size:11.5px;color:#6b6552;background:rgba(95,115,80,.07);border:1px solid var(--paper-dim);padding:9px 10px;border-radius:3px;margin-top:10px}
+  .co-box{max-height:90vh;overflow:auto}.co-box select{width:100%;padding:10px 12px;border:1px solid var(--paper-dim);border-radius:3px;font:inherit;background:#fff}
+  .co-summary{display:flex;justify-content:space-between;gap:10px;margin-top:12px;padding:11px;background:#f5efe2;border-radius:3px;font-size:12.5px}.co-summary strong{color:var(--clay)}
+  .international-note{font-size:11.5px;color:#6b6552;margin-top:8px;line-height:1.5}
+  .policy-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:980px;margin:0 auto 50px}.policy-card{padding:15px;border:1px solid var(--paper-dim);border-radius:4px;background:rgba(255,255,255,.5)}.policy-card h4{font-family:'Fraunces',serif;font-size:15px;margin-bottom:5px}.policy-card p{font-size:11.5px;color:#6b6552}
+  @media(max-width:850px){.policy-grid{grid-template-columns:repeat(2,1fr)}} @media(max-width:500px){.policy-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -412,6 +556,32 @@
     <p>Tea, spices and jaggery sourced and packed near our own studio, sold directly to you — no middle layer between the field and your door.</p>
   </div>
 
+  <div class="global-banner">
+    <div>
+      <h3>Shop from India — we also serve international buyers</h3>
+      <p>Choose your destination at checkout. India orders can pay online; UAE, USA and other export orders can request a shipping-inclusive quote before payment.</p>
+    </div>
+    <div class="global-actions">
+      <button type="button" onclick="openInternationalQuote()">International Order</button>
+      <a class="secondary" href="https://wa.me/917417685168?text=Hi%2C%20I%27m%20an%20international%20buyer%20and%20want%20to%20order%20TRSSKO%20products." target="_blank" rel="noopener">Chat with TRSSKO</a>
+    </div>
+  </div>
+
+  <div class="shop-tools" aria-label="Shopping preferences">
+    <div class="tool">Deliver to <select id="shopCountry" onchange="setShopCountry(this.value)">
+      <option value="IN">India</option><option value="AE">United Arab Emirates</option><option value="US">United States</option><option value="OTHER">Other country</option>
+    </select></div>
+    <div class="tool">Display currency <select id="displayCurrency" onchange="setDisplayCurrency(this.value)">
+      <option value="INR">INR ₹</option><option value="USD">USD $</option><option value="AED">AED د.إ</option>
+    </select></div>
+  </div>
+
+  <div class="delivery-strip">
+    <div class="delivery-item"><strong>Secure online checkout</strong><span>Cards & supported payment methods</span></div>
+    <div class="delivery-item"><strong>International buyers</strong><span>UAE · USA · other destinations</span></div>
+    <div class="delivery-item"><strong>Export / wholesale</strong><span>Request MOQ & shipping quote</span></div>
+  </div>
+
   <div class="wrap">
     <div class="product-grid">
       <div class="product-card">
@@ -505,7 +675,14 @@
       </div>
     </div>
     <div class="razorpay-note">
-      <strong>Setup note for TRSSKO team:</strong> "Pay & Buy Now" collects the buyer's name, email, phone and address, then opens Razorpay Checkout using your existing live Key ID. Payments will work as soon as this file is live. One thing to add before relying on this for real fulfilment: there's no backend here creating the order or verifying the payment signature server-side — currently the browser sets the amount directly, which Razorpay allows but doesn't recommend for production. Every product also has a working "Order via WhatsApp" button as a fallback, and a successful payment now offers to open a WhatsApp message with the Payment ID pre-filled for easy order confirmation.
+      <strong>Buying from outside India?</strong> Select UAE, USA or another destination above. TRSSKO will confirm the shipping cost and export delivery details before charging an international order. For Indian orders, use <b>Pay & Buy Now</b> for online checkout. For wholesale/export quantities, use <b>International Order</b> for a quotation.
+    </div>
+
+    <div class="policy-grid" id="policies">
+      <div class="policy-card"><h4>Shipping</h4><p>Domestic and international shipping options are confirmed according to destination, product and order quantity.</p></div>
+      <div class="policy-card"><h4>Returns & Refunds</h4><p>Refunds and returns are handled according to the product-specific terms shown before order confirmation.</p></div>
+      <div class="policy-card"><h4>Privacy</h4><p>Checkout details are used to process and fulfil your order. Payment processing is handled by the payment provider.</p></div>
+      <div class="policy-card"><h4>Terms</h4><p>Prices, availability, taxes, shipping and export requirements may vary by destination and order type.</p></div>
     </div>
   </div>
 
@@ -526,13 +703,24 @@
       <input type="text" id="coName" required>
       <label>Email</label>
       <input type="email" id="coEmail" required>
-      <label>Phone</label>
-      <input type="tel" id="coPhone" required>
+      <label>Phone / WhatsApp</label>
+      <input type="tel" id="coPhone" required autocomplete="tel">
+      <label>Country</label>
+      <select id="coCountry" required onchange="updateCheckoutMode()">
+        <option value="IN">India</option>
+        <option value="AE">United Arab Emirates (UAE)</option>
+        <option value="US">United States (USA)</option>
+        <option value="OTHER">Other country</option>
+      </select>
+      <label>Quantity</label>
+      <input type="number" id="coQty" min="1" value="1" required onchange="updateCheckoutMode()">
       <label>Delivery address</label>
-      <textarea id="coAddress" required></textarea>
+      <textarea id="coAddress" required autocomplete="street-address"></textarea>
+      <div class="co-summary"><span>Order total</span><strong id="coTotal">₹0</strong></div>
+      <div class="country-help" id="coCountryHelp">India: continue to secure online payment.</div>
       <div class="co-actions">
         <button type="button" class="co-cancel" onclick="closeCheckoutDetails()">Cancel</button>
-        <button type="submit" class="co-submit">Continue to payment</button>
+        <button type="submit" class="co-submit" id="coSubmit">Continue</button>
       </div>
     </form>
   </div>
@@ -547,7 +735,23 @@
     document.querySelectorAll('.view').forEach(function(v){ v.classList.remove('active'); });
     document.getElementById(id).classList.add('active');
     window.scrollTo(0, 0);
+
+    // GA4 virtual pageview for this single-URL / JS-switched site.
+    var viewMap = {
+      'view-group': { name: 'group', title: 'TRSSKO Group — Legal & BPO · FMCG · Fashion' },
+      'view-legal': { name: 'legal', title: 'TRSSKO Legal & BPO — Legal Services' },
+      'view-fmcg': { name: 'fmcg', title: 'TRSSKO FMCG — Shop' }
+    };
+    var view = viewMap[id];
+    if (view) trackPageView(view.name, view.title);
+
+    trackEvent('view_section', { section_name: view ? view.name : id });
   }
+
+  // Track the initial landing view after GA4 is ready.
+  window.addEventListener('load', function () {
+    trackPageView('group', 'TRSSKO Group — Legal & BPO · FMCG · Fashion');
+  });
 
   /* ---------- Razorpay public Key ID (safe for client-side use) ----------
      Pulled from TRSSKO's existing live site. The secret key is never
@@ -565,10 +769,20 @@
   ];
 
   let PENDING_CHECKOUT = null; // { productId, btnEl, originalLabel }
+  let SHOP_COUNTRY = 'IN';
+  let DISPLAY_CURRENCY = 'INR';
+  const DISPLAY_RATES = { INR: 1, USD: 0.0119, AED: 0.0437 };
+  const CURRENCY_SYMBOL = { INR:'₹', USD:'$', AED:'د.إ' };
 
   function buyNow(productId, btnEl) {
     const product = PRODUCTS.find(p => p.id === productId);
     if (!product) return;
+
+    trackEvent('begin_checkout', {
+      currency: 'INR',
+      value: product.priceINR,
+      items: [{ item_id: product.id, item_name: product.name, price: product.priceINR, quantity: 1 }]
+    });
 
     if (typeof Razorpay === "undefined") {
       alert("Payment gateway is still loading — please try again in a moment, or use 'Order via WhatsApp' below.");
@@ -577,7 +791,10 @@
 
     PENDING_CHECKOUT = { productId, btnEl, originalLabel: btnEl ? btnEl.textContent : null };
     document.getElementById("checkoutForm").reset();
+    document.getElementById("coCountry").value = SHOP_COUNTRY;
+    document.getElementById("coQty").value = 1;
     document.getElementById("checkoutOverlay").classList.add("open");
+    updateCheckoutMode();
   }
 
   function closeCheckoutDetails() {
@@ -597,12 +814,18 @@
       name: document.getElementById("coName").value.trim(),
       email: document.getElementById("coEmail").value.trim(),
       phone: document.getElementById("coPhone").value.trim(),
+      country: document.getElementById("coCountry").value,
+      quantity: Math.max(1, Number(document.getElementById("coQty").value || 1)),
       address: document.getElementById("coAddress").value.trim()
     };
 
-    document.getElementById("checkoutOverlay").classList.remove("open");
-
     const { productId, btnEl, originalLabel } = PENDING_CHECKOUT;
+    if (customer.country !== 'IN') {
+      requestInternationalOrder(productId, customer);
+      return;
+    }
+
+    document.getElementById("checkoutOverlay").classList.remove("open");
     proceedToPayment(productId, customer, btnEl, originalLabel);
     PENDING_CHECKOUT = null;
   }
@@ -623,14 +846,21 @@
 
     const options = {
       key: RAZORPAY_KEY_ID,
-      amount: product.priceINR * 100,
+      amount: product.priceINR * customer.quantity * 100,
       currency: "INR",
       name: "TRSSKO Enterprises (OPC) Pvt. Ltd.",
-      description: product.name + " (" + product.unit + ")",
+      description: product.name + " x" + customer.quantity + " (" + product.unit + ")",
       handler: function (response) {
+        trackEvent('purchase', {
+          transaction_id: response.razorpay_payment_id,
+          currency: 'INR',
+          value: product.priceINR * customer.quantity,
+          items: [{ item_id: product.id, item_name: product.name, price: product.priceINR, quantity: customer.quantity }]
+        });
+
         alert("Payment successful!\nPayment ID: " + response.razorpay_payment_id + "\n\nWe'll confirm your order shortly.");
         const msg = encodeURIComponent(
-          "Hi, I just paid for " + product.name + " (₹" + product.priceINR + " / " + product.unit + ").\n" +
+          "Hi, I just paid for " + product.name + " x" + customer.quantity + " (₹" + (product.priceINR * customer.quantity) + ").\n" +
           "Payment ID: " + response.razorpay_payment_id + "\n" +
           "Name: " + customer.name + "\nAddress: " + customer.address
         );
@@ -652,12 +882,105 @@
 
     const rzp = new Razorpay(options);
     rzp.on("payment.failed", function (response) {
+      trackEvent('payment_failed', {
+        currency: 'INR',
+        value: product.priceINR,
+        item_id: product.id,
+        item_name: product.name,
+        error_code: response && response.error ? response.error.code : undefined
+      });
       alert("Payment failed: " + response.error.description);
       if (btnEl) { btnEl.disabled = false; btnEl.textContent = originalLabel; }
     });
     rzp.open();
     if (btnEl) { btnEl.disabled = false; btnEl.textContent = originalLabel; }
   }
+
+  function setShopCountry(country) {
+    SHOP_COUNTRY = country || 'IN';
+    var c = document.getElementById('coCountry');
+    if (c) c.value = SHOP_COUNTRY;
+    trackEvent('select_destination', { destination_country: SHOP_COUNTRY });
+  }
+
+  function setDisplayCurrency(currency) {
+    DISPLAY_CURRENCY = currency || 'INR';
+    document.querySelectorAll('.product-card').forEach(function(card){
+      var priceEl = card.querySelector('.price');
+      if (!priceEl) return;
+      var txt = priceEl.getAttribute('data-inr');
+      if (!txt) {
+        var m = priceEl.textContent.match(/([0-9]+)/);
+        if (!m) return;
+        txt = m[1]; priceEl.setAttribute('data-inr', txt);
+      }
+      var value = Math.round(Number(txt) * DISPLAY_RATES[DISPLAY_CURRENCY]);
+      priceEl.textContent = CURRENCY_SYMBOL[DISPLAY_CURRENCY] + value.toLocaleString() + ' / pack';
+    });
+    trackEvent('select_currency', { currency: DISPLAY_CURRENCY });
+  }
+
+  function updateCheckoutMode() {
+    var country = document.getElementById('coCountry').value;
+    var qty = Math.max(1, Number(document.getElementById('coQty').value || 1));
+    var product = PENDING_CHECKOUT ? PRODUCTS.find(function(p){return p.id === PENDING_CHECKOUT.productId;}) : null;
+    var total = product ? product.priceINR * qty : 0;
+    document.getElementById('coTotal').textContent = '₹' + total.toLocaleString();
+    var help = document.getElementById('coCountryHelp');
+    var submit = document.getElementById('coSubmit');
+    if (country === 'IN') {
+      help.textContent = 'India: continue to secure online payment. Shipping is confirmed for your address.';
+      submit.textContent = 'Pay securely';
+    } else {
+      help.textContent = 'International: we will confirm destination shipping/export charges before payment. Your order request is not charged now.';
+      submit.textContent = 'Request international quote';
+    }
+  }
+
+  function requestInternationalOrder(productId, customer) {
+    var product = PRODUCTS.find(function(p){return p.id === productId;});
+    if (!product) return;
+    var countryName = ({AE:'United Arab Emirates',US:'United States',OTHER:'International'})[customer.country] || customer.country;
+    var total = product.priceINR * customer.quantity;
+    trackEvent('international_order_request', {
+      destination_country: customer.country, item_id: product.id, item_name: product.name,
+      quantity: customer.quantity, value_inr: total, currency: 'INR'
+    });
+    var msg = encodeURIComponent(
+      'Hello TRSSKO, I want to buy from India for delivery to ' + countryName + '.\n' +
+      'Product: ' + product.name + '\nQuantity: ' + customer.quantity + ' ' + product.unit + '\n' +
+      'Product value: ₹' + total + '\nName: ' + customer.name + '\nEmail: ' + customer.email + '\nPhone: ' + customer.phone + '\nAddress: ' + customer.address + '\n' +
+      'Please send the international shipping/export-inclusive payment instructions.'
+    );
+    document.getElementById('checkoutOverlay').classList.remove('open');
+    window.open('https://wa.me/917417685168?text=' + msg, '_blank');
+    PENDING_CHECKOUT = null;
+  }
+
+  function openInternationalQuote() {
+    var first = document.querySelector('.btn-buy');
+    if (first) { buyNow(PRODUCTS[0].id, first); setShopCountry('AE'); updateCheckoutMode(); }
+  }
+
+  // Lightweight interaction tracking. No names, emails, phones or addresses are sent.
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest ? event.target.closest('a') : null;
+    if (!link) return;
+
+    var href = link.getAttribute('href') || '';
+    var text = (link.innerText || '').trim().replace(/\s+/g, ' ').slice(0, 80);
+
+    if (href.indexOf('wa.me/') !== -1) {
+      trackEvent('whatsapp_click', {
+        link_text: text || 'WhatsApp',
+        link_url: href.split('?')[0]
+      });
+    } else if (href.indexOf('instagram.com/') !== -1) {
+      trackEvent('fashion_instagram_click', {
+        link_text: text || 'TRSSKO Fashion'
+      });
+    }
+  });
 </script>
 
 </body>
